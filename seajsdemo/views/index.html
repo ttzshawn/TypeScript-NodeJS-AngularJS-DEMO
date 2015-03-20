@@ -5,6 +5,11 @@
 	<script src="../static/config.js"></script>
 </head>
 <body>
-	<script type="text/javascript">seajs.use(['pages/index','general']);</script>
+	<script type="text/javascript">seajs.use(['pages/index'],function(a){
+		alert(a.name);
+	});
+	</script>
+
+	<div id="d1" style="height:400px;width:300px;background:red;">fslejfklejflseflse</div>
 </body>
 </html>
