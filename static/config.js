@@ -6,7 +6,8 @@ seajs.config({
     alias: {
         // 当模块标识很长时，可以使用 alias 来简化
         'jquery': 'lib/jquery/1.8.3/jquery-min.js',
-        'form': 'lib/jqueryform/3.51.0/jquery.form.js'
+        'form': 'lib/jqueryform/3.51.0/jquery.form.js',
+        'fullpage': 'lib/fullpage/2.6.3/jquery.fullPage'
             /*        'asyncSlider': 'lib/asyncSlider/1.0.0/asyncSlider.js',
             'city': 'lib/city/1.0.0/city.js',
             'new-city': 'lib/city/1.0.1/new-city.js',
