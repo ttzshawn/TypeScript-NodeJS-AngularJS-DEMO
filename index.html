@@ -1,1 +1,24 @@
-index.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>团团转</title>
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<script src="static/js/seajs/2.3.0/sea.js"></script>
+	<script src="static/config.js"></script>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section">第一屏</div>
+		<div class="section">第二屏</div>
+		<div class="section">
+			<div class="slide">第三屏的第一屏</div>
+			<div class="slide">第三屏的第二屏</div>
+			<div class="slide">第三屏的第三屏</div>
+			<div class="slide">第三屏的第四屏</div>
+		</div>
+		<div class="section">第四屏</div>
+	</div>
+	<script type="text/javascript">seajs.use(['pages/index']);</script>
+</body>
+</html>
