@@ -17,9 +17,11 @@ define(function(require, exports, module) {
 	s.render();
 
 
-  module.exports = {
-    h: function() {alert('fe');}
-  };
+	module.exports = {
+		h: (function() {
+			alert('fe');
+		})()
+	};
 	/*	exports.h = function() {
 			
 		};*/
