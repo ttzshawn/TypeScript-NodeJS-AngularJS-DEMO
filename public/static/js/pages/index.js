@@ -8,7 +8,7 @@ define('pages/index', ['jquery', 'fullpage'], function(require, exports, module)
 	module.exports = (function() {
 		$(function() {
 			$('#fullpage').fullpage({
-				'verticalCentered': false,
+				'verticalCentered': true,
 				'css3': true,
 				'sectionsColor': ['#254875', '#00FF00', '#254587', '#695684'],
 				anchors: ['page1', 'page2', 'page3', 'page4'],
@@ -18,26 +18,4 @@ define('pages/index', ['jquery', 'fullpage'], function(require, exports, module)
 			})
 		})
 	})();
-
-
-	/*	function Main(container) {
-			this.container = $(container);
-		}
-
-		Main.prototype.render = function() {
-			this.container.css("background", "green");
-		}
-
-		var s = new Main("#div1");
-		s.render();
-
-
-		module.exports = {
-			h: function() {
-				alert('fe');
-			}
-		};*/
-	/*	exports.h = function() {
-			
-		};*/
 });
