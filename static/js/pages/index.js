@@ -5,7 +5,7 @@ define('pages/index', ['jquery', 'fullpage'], function(require, exports, module)
 	var $ = require('jquery'),
 		fullPage = require('fullpage');
 
-	module.exports = (function() {
+	(function() {
 		$(function() {
 			$('#fullpage').fullpage({
 				'verticalCentered': false,
@@ -18,26 +18,4 @@ define('pages/index', ['jquery', 'fullpage'], function(require, exports, module)
 			})
 		})
 	})();
-
-
-	/*	function Main(container) {
-			this.container = $(container);
-		}
-
-		Main.prototype.render = function() {
-			this.container.css("background", "green");
-		}
-
-		var s = new Main("#div1");
-		s.render();
-
-
-		module.exports = {
-			h: function() {
-				alert('fe');
-			}
-		};*/
-	/*	exports.h = function() {
-			
-		};*/
 });
