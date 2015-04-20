@@ -8,7 +8,7 @@ define('pages/index', ['jquery', 'fullpage'], function(require, exports, module)
 	(function() {
 		$(function() {
 			$('#fullpage').fullpage({
-				'verticalCentered': false,
+				'verticalCentered': true,
 				'css3': true,
 				'sectionsColor': ['#254875', '#00FF00', '#254587', '#695684'],
 				anchors: ['page1', 'page2', 'page3', 'page4'],

@@ -1,0 +1,9 @@
+body{margin:0;}
+
+*{margin:0 auto;}
+
+.section .inner{height: 100%; width: 100%;}
+.sec-1 .inner{background: url('../img/a.jpg') no-repeat center;}
+.sec-2 .inner{background: url('../img/b.jpg') no-repeat center;}
+.sec-3 .inner{background: url('../img/c.jpg') no-repeat center;}
+.sec-4 .inner{background: url('../img/d.jpg') no-repeat center;}
