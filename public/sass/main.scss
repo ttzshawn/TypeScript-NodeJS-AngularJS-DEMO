@@ -1,0 +1,10 @@
+@import "normalize";
+
+*{margin:0 auto; font-family: Microsoft Yahei;}
+
+.section .inner{height: 100%; width: 100%;}
+.sec-1 .inner{background: url('../img/a.jpg') no-repeat center;}
+.sec-2 .inner .build{color:#FFF; bottom:20px;left:50px;position:absolute;}
+.sec-2 .inner{background: url('../img/b.jpg') no-repeat center;}
+.sec-3 .inner{background: url('../img/c.jpg') no-repeat center;}
+.sec-4 .inner{background: url('../img/d.jpg') no-repeat center;}
