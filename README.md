@@ -8,3 +8,4 @@ Development Environment
 	Ejs: 2.3.1
 	Sass: 3.4.13
 	Compass: 1.0.3
+	PM2: 0.12.13
