@@ -1,0 +1,23 @@
+{
+  "name": "ttz",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shawnzhang009/web",
+  "authors": [
+    "Shawn <shawnzhang009@gmail.com>"
+  ],
+  "main": "bin\\www",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
