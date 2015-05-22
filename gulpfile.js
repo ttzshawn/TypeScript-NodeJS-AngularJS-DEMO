@@ -120,35 +120,39 @@ gulp.task('default', ['build-lib', 'build-client']);
 
 
 
+// preborwerify
+gulp.task('pre', function() {
+    var options = {
+        'entries': ['./public/js-bs/views/beep.js'],
+    };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return browserify(options)
+        .external('./public/js-bs/views/robot.js')
+        .external('./public/js-bs/views/common.js')
+        .bundle()
+        .pipe(source('e.js'))
+        .pipe(gulp.dest('./public/js-bs/views/'))
+        /*    return browserify('./public/js-bs/views/beep.js')
+                .bundle()*/
+        //Pass desired output filename to vinyl-source-stream
+        /*.pipe(source('index.js'))*/
+        // Start piping stream to tasks!
+});
 
 
 // browserify task
 gulp.task('browserify', function() {
     var options = {
-        'entries': ['./public/js-bs/views/beep.js', './public/js-bs/views/boop.js'],
-        'transform': ['browserify-shim']
+        'entries': ['./public/js-bs/views/beep.js'],
+        'basedir ': '',
+        'paths ': '',
+        'debug': 'false'
     };
 
+    var externals = ['./public/js-bs/views/robot.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js']
+
     return browserify(options)
-        .external('./bower_components/jquery/dist/jquery.js')
-        .external('./public/js-bs/views/robot.js')
-        .external('./public/js-bs/views/common.js')
+        .external(externals)
         .bundle()
         .pipe(source('e.js'))
         .pipe(gulp.dest('./public/js-bs/views/'))
