@@ -13,8 +13,8 @@
     "main": "./bin/www",
     "browser": {
         "jquery": "./bower_components/jquery/dist/jquery.js",
-        "moment":"./bower_components/jquery/dist/jquery.js"
-        "fullpage": "./src/javascript/vendor/jquery-plugin.js"
+        "moment":"./bower_components/jquery/dist/jquery.js",
+        "fullpage":"./src/javascript/vendor/jquery-plugin.js"
     },
     "browserify-shim": {
         "jquery": "$",
