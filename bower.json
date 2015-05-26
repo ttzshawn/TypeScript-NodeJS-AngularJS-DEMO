@@ -20,6 +20,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "moment": "~2.10.3",
-    "fullpage": "~2.6.5"
+    "fullpage": "~2.6.5",
+    "bootstrap": "~3.3.4"
   }
 }
