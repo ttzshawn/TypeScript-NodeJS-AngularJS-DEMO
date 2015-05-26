@@ -123,7 +123,8 @@ gulp.task('default', ['build-lib', 'build-client']);
 // preborwerify
 gulp.task('pre', function() {
     var options = {
-        'entries': ['./public/js-bs/views/beep.js'],
+        'entries': ['./bower_components/jquery/dist/jquery.js',
+        './bower_components/fullpage/']
     };
 
     return browserify(options)
@@ -149,10 +150,14 @@ gulp.task('browserify', function() {
         'debug': 'false'
     };
 
-    var externals = ['./public/js-bs/views/robot.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js', './public/js-bs/views/common.js']
+    var EXTERNALS = ['./public/js-bs/views/robot.js',
+        './public/js-bs/views/common.js',
+        './public/js-bs/views/common.js',
+        './public/js-bs/views/common.js'
+    ]
 
     return browserify(options)
-        .external(externals)
+        .external(EXTERNALS)
         .bundle()
         .pipe(source('e.js'))
         .pipe(gulp.dest('./public/js-bs/views/'))
