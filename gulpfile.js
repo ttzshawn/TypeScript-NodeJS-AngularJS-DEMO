@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 var source = require('vinyl-source-stream');
 
 var paths = {
+    base: './public/',
     js: './public/js-bs/**/*.js',
     sass: 'public/sass/**/*.scss',
     img: 'public/img-bs/**/*'
