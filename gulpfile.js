@@ -12,8 +12,8 @@ var source = require('vinyl-source-stream');
 var paths = {
     base: './public/',
     js: './public/js-bs/**/*.js',
-    sass: 'public/sass/**/*.scss',
-    img: 'public/img-bs/**/*'
+    sass: './public/sass/**/*.scss',
+    img: './public/img-bs/**/*'
 };
 
 
@@ -81,59 +81,22 @@ gulp.task('build-client', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['build-lib', 'build-client']);
-
-
-
-    var EXTERNALS = [{
-        require: "lodash",
-        expose: 'underscore'
-    }, {
-        require: "jquery",
-        expose: 'jquery'
-    }, {
-        require: "es5-shim"
-    }, {
-        require: "rsvp",
-        expose: 'rsvp'
-    }, {
-        require: "../../#{VENDOR_DIR}backbone-1.1.2",
-        expose: 'backbone'
-    }, {
-        require: "../../#{VENDOR_DIR}d3-3.4.3",
-        expose: 'd3'
-    }, {
-        require: "../../#{VENDOR_DIR}jquery.nouisliSder-5.0.0",
-        expose: 'jquery.nouislider'
-    }, {
-        require: "../../#{VENDOR_DIR}topojson-1.4.9",
-        expose: 'topojson'
-    }, {
-        require: "../../#{VENDOR_DIR}matchMedia-0.2.0.js",
-        expose: 'matchmedia'
-    }]
-
 */
-
-
-
-
-
-
 
 // preborwerify
 gulp.task('pre', function() {
     var options = {
         'entries': ['./bower_components/jquery/dist/jquery.js',
-        './bower_components/fullpage/']
+            './bower_components/fullpage/'
+        ]
     };
 
     return browserify(options)
-        .external('./public/js-bs/views/robot.js')
-        .external('./public/js-bs/views/common.js')
+        .external(paths.base + 'js-bs/views/robot.js')
+        .external(paths.base + 'js-bs/views/common.js')
         .bundle()
         .pipe(source('e.js'))
-        .pipe(gulp.dest('./public/js-bs/views/'))
+        .pipe(gulp.dest(paths.base + 'js-bs/views/'))
         /*    return browserify('./public/js-bs/views/beep.js')
                 .bundle()*/
         //Pass desired output filename to vinyl-source-stream
@@ -145,24 +108,24 @@ gulp.task('pre', function() {
 // browserify task
 gulp.task('browserify', function() {
     var options = {
-        'entries': ['./public/js-bs/views/beep.js'],
+        'entries': [paths.base + 'js-bs/views/beep.js'],
         'basedir ': '',
         'paths ': '',
         'debug': 'false'
     };
 
-    var EXTERNALS = ['./public/js-bs/views/robot.js',
-        './public/js-bs/views/common.js',
-        './public/js-bs/views/common.js',
-        './public/js-bs/views/common.js'
+    var EXTERNALS = [paths.base + 'js-bs/views/robot.js',
+        paths.base + 'js-bs/views/common.js',
+        paths.base + 'js-bs/views/common.js',
+        paths.base + 'js-bs/views/common.js'
     ]
 
     return browserify(options)
         .external(EXTERNALS)
         .bundle()
         .pipe(source('e.js'))
-        .pipe(gulp.dest('./public/js-bs/views/'))
-        /*    return browserify('./public/js-bs/views/beep.js')
+        .pipe(gulp.dest(paths.base + 'js-bs/views/'))
+        /*    return browserify(paths.base + 'js-bs/views/beep.js')
                 .bundle()*/
         //Pass desired output filename to vinyl-source-stream
         /*.pipe(source('index.js'))*/

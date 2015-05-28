@@ -5,6 +5,7 @@
     "scripts": {
         "start": "node ./bin/www"
     },
+    
     "browserify": {
         "transform": [
             "browserify-shim"
@@ -13,15 +14,14 @@
     "main": "./bin/www",
     "browser": {
         "jquery": "./bower_components/jquery/dist/jquery.js",
-        "moment":"./bower_components/jquery/dist/jquery.js",
-        "fullpage":"./src/javascript/vendor/jquery-plugin.js"
+        "fullpage":"./bower_components/fullpage/jquery.fullPage.js"
     },
     "browserify-shim": {
         "jquery": "$",
-        "plugin": {
-            "exports": "plugin",
+        "fullpage": {
+            "exports": "fullpage",
             "depends": [
-                "jquery:$"
+                "jquery:jQuery"
             ]
         }
     },
