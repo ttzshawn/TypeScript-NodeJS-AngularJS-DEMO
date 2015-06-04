@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-cn">
 <head>
+    <meta charset="UTF-8">
     <title>手风琴效果</title>
     <style type="text/css">
     #box {
@@ -26,6 +26,7 @@
         list-style-type: none;
         height: 300px;
         width: 315px;
+        transition: left 0.3s;
     }
     
     #box ul li:nth-child(1) {
@@ -58,15 +59,17 @@
         }
 
         for (var i = 0; i < aLiUl.length; i++) {
+            aLiUl[i].index = i;
             aLiUl[i].onmouseover = function() {
                 for (var i = 0; i < aLiUl.length; i++) {
-                	alert(this.index);
                     if (i <= this.index) {
-                        aLiUl[i].style.left = i * 655 / (aLiUl.length - 1);
-                    } else {}
+                        aLiUl[i].style.left = i * 655 / (aLiUl.length - 1) + 'px';
+                    } else {
+                        aLiUl[i].style.left = 315 + 655 / (aLiUl.length - 1) * (i - 1) + 'px';;
+                    }
                 }
             }
-        };
+        }
     }
     </script>
 </head>
