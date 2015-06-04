@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>手风琴效果</title>
+    <style type="text/css">
+    #box {
+        width: 970px;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    #box ul {
+        margin: 0px;
+        padding: 0px;
+        width: 970px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+    }
+    
+    #box ul li {
+        position: absolute;
+        list-style-type: none;
+        height: 300px;
+        width: 315px;
+    }
+    
+    #box ul li:nth-child(1) {
+        background: red;
+    }
+    
+    #box ul li:nth-child(2) {
+        background: green;
+    }
+    
+    #box ul li:nth-child(3) {
+        background: blue;
+    }
+    
+    #box ul li:nth-child(4) {
+        background: gray;
+    }
+    
+    #box ul li:nth-child(5) {
+        background: orange;
+    }
+    </style>
+    <script type="text/javascript">
+    window.onload = function() {
+        var oUl = document.getElementsByTagName('ul')[0];
+        var aLiUl = oUl.getElementsByTagName('li');
+
+        for (var i = 1; i < aLiUl.length; i++) {
+            aLiUl[i].style.left = 315 + 655 / (aLiUl.length - 1) * (i - 1) + 'px';
+        }
+
+        for (var i = 0; i < aLiUl.length; i++) {
+            aLiUl[i].onmouseover = function() {
+                for (var i = 0; i < aLiUl.length; i++) {
+                	alert(this.index);
+                    if (i <= this.index) {
+                        aLiUl[i].style.left = i * 655 / (aLiUl.length - 1);
+                    } else {}
+                }
+            }
+        };
+    }
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>
