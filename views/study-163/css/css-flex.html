@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>a</title>
+    <style type="text/css">
+    html,body {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        flex-flow: column wrap;
+    }
+    
+    .header,
+    .footer {
+        height: 150px;
+        background: gray;
+    }
+    
+    .container {
+        height: 100%;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .side {
+        width: 200px;
+        background: blue;
+    }
+    
+    .main {
+        margin-left: 10px;
+        background: green;
+        flex:1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">头部</div>
+    <div class="container">
+        <div class="side">侧边栏</div>
+        <div class="main">主要内容</div>
+    </div>
+    <div class="footer">尾部</div>
+</body>
+
+</html>

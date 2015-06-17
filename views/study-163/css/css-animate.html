@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>a</title>
+    <style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main {
+        padding-top: 200px;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto;
+        position: relative;
+        perspective:400px;
+    }
+    
+    .main>div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 200px;
+        border: 1px solid #555;
+        text-align: center;
+        line-height: 200px;
+    }
+    
+    .top {
+        transform: rotate3d(1, 0, 0, 90deg);
+        transition: all 2s;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">top</div>
+<!--         <div class="bottom">bottom</div>
+<div class="left">left</div>
+<div class="right">right</div>
+<div class="back">back</div>
+<div class="front">front</div> -->
+    </div>
+</body>
+
+</html>
