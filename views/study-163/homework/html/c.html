@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+	<style type="text/css">
+		ul{list-style: none;}
+	</style>
+<body>
+    <form name="info-form">
+        <ul>
+            <li>
+                <label for="head">头像</label>
+                <input type="file" name="head">
+            </li>
+            <li>
+                <label for="nickname">昵称</label>
+                <input type="text" name="nickname">
+            </li>
+            <li>
+                <label for="edu">学历</label>
+                <select name="edu" id="edu">
+                    <option value="大专" selected>大专</option>
+                    <option value="本科">本科</option>
+                </select>
+            </li>
+            <li>
+                <label for="sex">性别</label>
+                <input type="radio" name="male" value="" checked="checked">男
+                <input type="radio" name="female" value="">女
+            </li>
+            <li>
+                <label for="hobby">爱好</label>
+                <input type="checkbox" name="hobby" value="" checked="checked">电影
+                <input type="checkbox" name="hobby" value="">摄影
+                <input type="checkbox" name="hobby" value="">音乐
+                <input type="checkbox" name="hobby" value="" checked="checked">阅读
+            </li>
+            <li>
+                <label for="sign">签名</label>
+				<textarea name="sign" id="sign" cols="30" rows="10"></textarea>
+            </li>
+            <li>
+                <label for=""></label>
+                <input type="submit" name="" value="提交">
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

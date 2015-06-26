@@ -3,16 +3,44 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <title>
-        <%=title %>
-    </title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/views/index.js"></script>
-    <script type="text/javascript">
-    </script>
+    <title>homework</title>
+    <style type="text/css">
+    .slide {
+        width: 200px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        background: cornflowerblue;
+    }
+    
+    .pointer {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .pointer>i {
+        float: left;
+        margin-left: 5px;
+        position: relative;
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background: #000;
+    }
+    
+    .pointer>i.current {
+        background: #FFF;
+    }
+    </style>
 </head>
 
 <body>
+    <div class="slide">
+        <!-- 图片省略 -->
+        <!-- 以下是指示器 -->
+        <div class="pointer"><i class="current"></i><i></i><i></i></div>
+    </div>
 </body>
 
 </html>
