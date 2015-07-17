@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var canvas = document.getElementById('tutorial');
+    var ctx = canvas.getContext('2d'); // 渲染上下文对象
+    ctx.globalCompositeOperation = 'destination-over';
+
+    var sun = new Image();
+    var moon = new Image();
+    var earth = new Image();
+
+    // 加载的时候保存到内存而非通过网络
+    function init() {
+        sun.src = '_sun.png';
+        moon.src = '_moon.png';
+        earth.src = '_earth.png';
+        window.requestAnimationFrame(draw);
+    }
+
+    function draw() {
+
+    }
+    init();
+    </script>
+</body>
+
+</html>

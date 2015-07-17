@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    div {
+        width: 200px;
+        height: 200px;
+        background: green;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <script type="text/javascript">
+    var elem = document.getElementById('div1');
+    var clientX, clientY, moving;
+    var mouseDownHandler = function(event) {
+        event = event || window.event;
+        clientX = event.clientX;
+        clientY = event.clientY;
+        moving = !0;
+    }
+
+    var mouseMoveHandler = function(event) {
+        if (!moving) return;
+        event = event || window.event;
+        var newClientX = event.clientX;
+        var newClientY = event.clientY;
+        var left = parseInt(elem.style.left) || 0,
+            top = parseInt(elem.style.top) || 0;
+        elem.style.left = left + (newClientX - clientX) + 'px';
+        elem.style.top = top + (newClientY - clientY) + 'px';
+        clientX = newClientX;
+        clientY = newClientY;
+    }
+
+    var mouseUpHandler = function(event) {
+        moving = !1;
+    }
+
+    elem.addEventListener('mousedown', mouseDownHandler);
+    elem.addEventListener('mousemove', mouseMoveHandler);
+    elem.addEventListener('mouseup', mouseUpHandler);
+    </script>
+</body>
+
+</html>

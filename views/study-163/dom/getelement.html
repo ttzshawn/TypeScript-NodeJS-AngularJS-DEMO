@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>getElement</title>
+</head>
+
+<body>
+    <div id="users">
+        <h2>学习中</h2>
+        <ul>
+            <li class="user"><a href="/user/1">helo</a></li>
+            <li class="user"><a href="/user/2">23222</a></li>
+            <li id="lastUser" class="user last"><a href="/user/1">helo3</a></li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript">
+var users = document.getElementById('users');
+var a = users.getElementByTagName('li');
+var all = users.getElementByTagName( '*' ); // 可通过*获取子代所有元素
+var lastUser = document.getElementById('lastUser');
+lastUser.parentNode.removeChild(lastUser);
+alert(a.length); // a.length会实时变化
+
+users.getElementsByClassName('user last');
+
+// IE8不支持getElementsByClassName
+function getElementsByClassName(element, names) {
+    if (element.getElementsByClassName) {// 特性侦测
+    	return element.getElementsByClassName(names);
+    } else {
+    	var elements = element.getElementsByTagName('*');
+    	var result = [];
+    	var element, classNameStr, flag;
+    	name = names.split(' ');
+    	for (var i = 0; element = elements[i]; i++) {
+    		classNameStr = ' ' + element.className + ' ';
+    		flag = true;
+    		for (var j = 0, name; name = name[j]; j++) {
+    			if (classNameStr.indexOf(' ' + name + '')) = -1 {
+    				flag = false;
+    				break;
+    			}
+    		}
+    		if (flag) {
+    			result.push(element);
+    		}
+    	}
+    	return result;
+    }
+}
+var users = getElementsByClassName(document, 'user');
+var lastUser = getElementsByClassName(document, 'user last')[0];
+
+// quertSelector
+
+</script>
+
+</html>

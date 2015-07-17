@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 创建XHR对象
+    var xhr = new XMLHttpRequest;
+
+    // 处理返回数据
+    xhr.onreadystatechange = function(callback) {
+        if (xhr.readyState == 4) {
+            if ((xhr.status >= 200 && xhr.status < 300 || xhr.status == 304)) {
+                callback(xhr.responseText);
+            } else {
+                alert('Unsuccess: ' + xhr.status);
+            }
+        }
+    }
+
+    // 发送请求
+    xhr.open('get', 'example.json', true);
+    xhr.setRequestHeader('myHeader', 'myValue');
+    xhr.send(null);
+    </script>
+</body>
+
+</html>
