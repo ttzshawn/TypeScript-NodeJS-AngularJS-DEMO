@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4Season</title>
+  <!-- Bootstrap -->
+  <link href="../js/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../js/lib/swiper/css/swiper.css" rel="stylesheet">
+  <link href="../css/general.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../js/lib/wow/animate.css">
+  <link rel="stylesheet" href="../js/lib/wow/site.css">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<header class="header" style="min-height:600px;">
+
+ <!-- Swiper -->
+    <div id="warp" class="swiper-container" >
+        <div class="swiper-wrapper">
+            <div class="swiper-slide bg1"></div>
+            <div class="swiper-slide bg2"></div>
+            <div class="swiper-slide bg3"></div>
+            <div class="swiper-slide bg4"></div>
+            <div class="swiper-slide bg5"></div>
+            <div class="swiper-slide bg6"></div>
+            <div class="swiper-slide bg7"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+      <div id="header-out" >
+        <div class="navbar navbar-default nav-bg login-bar">
+          <div class="container login-bar-xs">
+            <!-- 导航条头部：logo+折叠展开按钮  -->
+            <div class="navbar-header">
+               <a href="#" class="navbar-brand">
+                    <img src="../img/logo-sus1.png" alt="" style="width: 200px"/>
+                </a>
+              <button type="button" class="navbar-toggle" data-target="#login" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- 折叠菜单  -->
+            <div class="collapse navbar-collapse" id="login">
+              <ul class=" navbar-right nav navbar-nav ">
+                <li>
+                  <a href="#" data-toggle="dropdown" class="btn btn-default ben-success" role="button">登录</a>
+                  <div class="dropdown-menu">
+                    <div class="login-menu">
+                      <h4 role="button" class="">登录</h4>
+                      <form action="">
+                        <div class="form-group">
+                          <label class="nav-land" for="uname">用户名</label>
+                          <input type="text" class="form-control" id="uname" placeholder="用户名"/>
+                        </div>
+                        <div class="form-group">
+                          <label class="nav-land" for="upwd">密 码：</label>
+                          <input type="text" class="form-control" id="upwd" placeholder="密码"/>
+                        </div>
+                        <input type="button" class="btn btn-info btn-sm" value="登录"/>
+                      </form>
+                    </div>
+                  </div>
+                </li>
+                <li><a href="registrar.html" class="btn btn-default bg-danger" role="button">注册</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="introduce">
+          <h1 class="text-center">为您计划下一个旅行</h1>
+        </div>
+        
+        <div style="height:150px;"></div>
+
+      <!--   <div id="translucentwrap" style="height: 160px">
+          <div class="row">
+            <div class="col-md-10 col-sm-10 text-center" id="typeword"></div>
+          </div>
+        </div> -->
+      </div><!-- end of header out -->
+</header>
+
+
+
+
+<div id="intro" >
+  <div class="container">
+    <div class="page-header text-center">
+      <h2>为您的旅行团队量身定制目的地<br/>
+        <small>4season自动为您搜索航线和旅行代理人，给您提供最高效的行程计划</small>
+      </h2>
+    </div>
+    <ul class="nav nav-pills nav-justified step step-round">
+          <li class="active"><a>step1</a>
+          </li>
+          <li><a>step2</a>
+          </li>
+          <li><a>step3</a>
+          </li>
+    </ul>
+    <div class="input-group selector-box">
+      <input type="text" class="form-control" placeholder="您想去的城市" >
+      <span class="input-group-addon bg-success">搜索</span>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+<div id="tick" class="bg-primary">
+  <div class="container" >
+    <h2 class="text-center"><span class=" glyphicon glyphicon-camera"></span>环球视觉</h2>
+    <div>
+      <div class="row ">
+        <a href="news.html" target="_blank">
+          <div class="col-md-4 col-sm-4 col-xs-12 thumbnail tick-item">
+            <img src="../img/20151113104053120.jpg" alt="" class="img-responsive"/>
+            <div class="carousel-caption mask">
+              <h4>阿富汗的伤疤 震撼世界的痛与美</h4>
+            </div>
+          </div>
+        </a>
+       <div class="col-md-4 col-sm-4 col-xs-12 ">
+          <a href="news-2.html" target="_blank">
+            <div class="col-md-12 tick-item">
+              <img src="../img/20151115094344d561d_550.jpg" alt="" class="img-responsive "/>
+              <div class="carousel-caption mask">
+                <h4>古巴旅游须知及注意事项</h4>
+              </div>
+            </div>
+          </a>
+          <a href="news-3.html" target="_blank">
+            <div class="col-md-12 tick-item">
+              <img src="../img/20150423104229d6406_550.jpg" alt="" class="img-responsive"/>
+              <div class="carousel-caption mask ">
+                <h4>跟着《小王子》 游不一样的法国</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+       <a href="news-4.html" target="_blank">
+          <div class="col-md-4 col-sm-4 col-xs-12 thumbnail tick-item">
+            <img src="../img/20151113104146313.jpg" alt="" class="img-responsive"/>
+            <div class="carousel-caption mask">
+               <h4>2015年欧洲必去的11大跳蚤市场，出国淘货可不能错过哦!</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="media" >
+  <div class="container " >
+  <h2>骆驼书 <small>读骆驼书行万里路</small></h2>
+    <ul class="nav nav-pills" >
+      <li role="presentation" class="active"><a data-toggle="tab" href="#special">专题</a>
+      </li>
+      <li role="presentation"><a data-toggle="tab" href="#asia">亚洲</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#Europe">欧洲</a></li>
+      <li role="presentation"><a data-toggle="tab" href="#North">北美洲</a></li>
+    </ul>
+    <div class="tab-content " style="text-align: center">
+      <div class="tab-pane fade in active" id="special">
+        <div class="row ">
+          <div class="col-md-3 col-sm-3 hidden-xs"><a href=""><img src="../img/front-theme.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4 wow fadeInRight" data-wow-delay="0.1s"><a href=""><img src="../img/c1.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4 wow fadeInRight" data-wow-delay="0.3s"><a href=""><img src="../img/ea.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4 wow fadeInRight" data-wow-delay="0.5s"><a href=""><img src="../img/e4.jpg" alt="" class="img-responsive"/></a></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="asia" >
+        <div class="row ">
+          <div class="col-md-3 col-sm-3 hidden-xs "><a href=""><img src="../img/front-asia.png" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/7c.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/8c.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/88.jpg" alt="" class="img-responsive"/></a></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Europe">
+        <div class="row ">
+          <div class="col-md-3 col-sm-3 hidden-xs "><a href=""><img src="../img/front-europe.png" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/55.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/ca.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/7a.jpg" alt="" class="img-responsive"/></a></div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="North">
+        <div class="row ">
+          <div class="col-md-3 col-sm-3 hidden-xs "><a href=""><img src="../img/front-theme.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/jh.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/2e.jpg" alt="" class="img-responsive"/></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-4"><a href=""><img src="../img/35.jpg" alt="" class="img-responsive"/></a></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+
+
+<!-- footer -->
+<div id="footer"  class="bg-primary">
+  <div class="container" >
+  <div class="row ft">
+    <div class="col-md-3">
+      <a href=""><img src="../img/logo_skyscanner.png" alt=""/></a>
+    </div>
+    <div class="col-md-4 ft">
+      <a href=""><img src="../img/linkedin.png" alt=""/></a>
+      <a href=""><img src="../img/facebook.png" alt=""/></a>
+      <a href=""><img src="../img/twitter.png" alt=""/></a>
+      <a href=""><img src="../img/instagram.png" alt=""/></a>
+    </div>
+    <div class="col-md-5">
+      <div class="row ft ">
+        <div class="col-md-3 col-sm-6"><a href="">酒店加盟</a></div>
+        <div class="col-md-3 col-sm-6"><a href="">业务合作</a></div>
+        <div class="col-md-3 col-sm-6"><a href="">我要投诉</a></div>
+        <div class="col-md-3 col-sm-6"><a href="">关于我们</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<script src="../js/lib/jquery/jquery-1.11.3.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/lib/swiper/js/swiper.js"></script>
+<script src="../js/general.js"></script>
+<script src="../js/lib/wow/wow.js"></script>
+
+  <script type="text/javascript">
+    <!-- Initialize Swiper -->
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        effect:'fade',
+        speed:1000,
+        autoplay: 3000
+    });
+
+
+
+ 
+      wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset: 100,
+        callback: function() {
+        }
+      }
+    );
+    wow.init();
+
+    // var i = 0;
+    // var str = "";
+    // window.onload = function typing(){
+    //     var mydiv = document.getElementById("typeword");
+    //     mydiv.innerHTML += str.charAt(i);
+    //     i++;
+    //     var id = setTimeout(typing,150);
+    //     if(i==str.length){
+    //         clearTimeout(id);
+    //         //alert("程序执行完毕！");
+    //     }
+ // }
+  </script>
+</body>
+</html>

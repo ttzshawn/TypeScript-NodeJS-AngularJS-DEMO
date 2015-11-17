@@ -1,0 +1,27 @@
+/***************************************header**************************************************/
+.header {
+
+}
+.header .login-bar {
+  background: transparent;
+  border: none;
+}
+
+
+/***************************************footer**************************************************/
+#footer{
+  padding:30px;
+  background-color: #003755;
+
+}
+.ft{
+  text-align: center;
+  line-height:50px;
+  font-size:16px;
+  font-family: "Î¢ÈíÑÅºÚ";
+}
+.ft>a>img{
+  width:30px;
+  height:30px;
+  margin:0px 5px;
+}

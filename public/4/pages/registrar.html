@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regist-4season</title>
+  <!-- Bootstrap -->
+  <link href="../js/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../css/general.css" rel="stylesheet">
+  <link href="../css/registrar.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<!-- 页头部分 -->
+<div id="header">
+  <div class=" container-fluid bg1"></div>
+</div>
+
+<!-- 主体部分 -->
+<div id="section"  style="min-height: 500px;">
+  <div class="container" >
+    <form class="form-horizontal" action="" onsubmit="return formVaildator();" id="myform" name="myform">  <!--水平表单中，.form-horizontal作用相当于.container-->
+      <div class="form-group">
+        <label class="col-sm-2 col-md-4 control-label">Email：</label>
+        <div class="col-sm-6 col-md-4">
+          <input class="form-control tr" id="email" type="text"  />
+        </div>
+        <div class="col-sm-4 col-md-4" id="emailTip">请输入正确的邮箱地址 </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 col-md-4 control-label" >用户名：</label>
+        <div class="col-sm-6 col-md-4 ">
+          <input class="form-control tr" id="user" type="text" />
+        </div>
+        <div class="col-sm-4 col-md-4" id="userTip">用户名必须为6至12之间的英文和数字</div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 col-md-4  control-label" >密码：</label>
+        <div class="col-sm-6 col-md-4  ">
+          <input class="form-control tr" id="pwd" type="password"/>
+        </div>
+        <div class="col-sm-4 col-md-4 " id="pwdTip">密码必须为6位的英文.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 col-md-4  control-label" >重复密码：</label>
+        <div class="col-sm-6 col-md-4 ">
+          <input class="form-control tr" id="repwd" type="password" />
+        </div>
+        <div class="col-sm-4 col-md-4 " id="repwdTip">确认密码必须为6位的英文.</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-2 col-md-offset-4">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"/>我同意本站的使用条款
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-4 col-xs-12 col-sm-12 col-sm-offset-2">
+          <input class="btn btn-success" type="submit" value="注册用户" id="submit"/>
+          <input class="btn btn-warning" type="button" value="清空重填" id="clear" onclick="clearVal();" />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- footer -->
+<div id="footer"  class="bg-primary">
+  <div class="container" >
+    <div class="row ft">
+      <div class="col-md-4">
+        <a href=""><img src="../img/logo_skyscanner.png" alt=""/></a>
+      </div>
+      <div class="col-md-4 ft">
+        <a href=""><img src="../img/linkedin.png" alt=""/></a>
+        <a href=""><img src="../img/facebook.png" alt=""/></a>
+        <a href=""><img src="../img/twitter.png" alt=""/></a>
+        <a href=""><img src="../img/instagram.png" alt=""/></a>
+      </div>
+      <div class="col-md-4">
+        <div class="row ft ">
+          <div class="col-md-3 col-sm-6"><a href="">酒店加盟</a></div>
+          <div class="col-md-3 col-sm-6"><a href="">业务合作</a></div>
+          <div class="col-md-3 col-sm-6"><a href="">我要投诉</a></div>
+          <div class="col-md-3 col-sm-6"><a href="">关于我们</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/lib/jquery/jquery-1.11.3.js"></script>
+<script src="../js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/general.js"></script>
+<script src="../js/registrar.js"></script>
+</body>
+</html>

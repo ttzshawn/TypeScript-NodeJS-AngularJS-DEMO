@@ -1,0 +1,130 @@
+/****************************header*******************************************/
+.bg1,.bg2,.bg3,.bg4,.bg5,.bg6,.bg7,.bg8{
+  height:600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:#464646;
+}
+.bg1{background-image: url(../img/1.jpg); }
+.bg2{background-image: url(../img/2.jpg); }
+.bg3{background-image: url(../img/3.jpg); }
+.bg4{background-image: url(../img/4.jpg); }
+.bg5{background-image: url(../img/5.jpg); }
+.bg6{background-image: url(../img/6.jpg); }
+.bg7{background-image: url(../img/7.jpg); }
+.bg8{background-image: url(../img/8.jpg); }
+
+/********************wrap**************************/
+
+#warp{
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+}
+.item{
+
+}
+/*****************header-out**********************/
+@media (max-width: 768px) {
+  #header-out .login-bar-xs{
+  }
+}
+
+
+#introduce{
+  margin-top:120px; 
+  background: transparent;
+}
+#introduce h1{
+  font-size: 50px;
+  color: #ffffff;
+}
+
+#intro {
+  background: #fff;
+  background-image: url(../img/trama.svg);
+  padding: 20px 0 50px 0;
+}
+#translucentwrap{
+  background-color:rgba(0,0,0,0.5);
+  position: relative;
+
+}
+#translucentwrap .container{
+  position: relative;
+  top: 35%;
+
+}
+#typeword{
+  color: #fff;
+  font-size: 28px;
+  vertical-align: 160px;
+}
+.form-group{
+  text-align: center;
+  font-family: "微软雅黑";
+  color: #5f5f5f;
+}
+
+.selector-box{
+  margin-top: 30px;
+}
+.form-control{
+  padding:25px;
+}
+.input-group-addon{
+  padding:6px 45px;
+  font-size: 22px;
+}
+a:hover,a:focus{
+  background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > li > a:focus{
+  background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > li > a{
+  font-size: 18px;
+}
+
+
+
+/****************************************tick²¿·Ö******************************************************/
+#tick{
+  background-image:url("../img/travelMake_equalTxtList.png");
+  color:#fff;
+}
+#tick .tick-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+#tick .tick-item h4{
+  cursor: pointer;
+}
+#tick .tick-item img{
+   transition:transform 0.4s;
+}
+#tick .tick-item img:hover{
+  transform:scale(1.1);
+}
+
+#tick .mask{
+  width: 100%;
+  left:0;
+  background: #000000;
+  opacity: 0.5;
+  padding: 10px;
+  color: #fff;
+}
+
+
+
+
+/***************************************media²¿·Ö*********************************************************/
+#media{
+  padding:30px;
+  background: #fff;
+}
+

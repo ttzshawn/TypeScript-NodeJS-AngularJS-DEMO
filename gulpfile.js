@@ -4,8 +4,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    imageminJpegtran = require('imagemin-jpegtran'),
-    browserify = require('browserify');
+    imageminJpegtran = require('imagemin-jpegtran');
 
 var source = require('vinyl-source-stream');
 
@@ -16,19 +15,7 @@ var paths = {
     img: './public/img-bs/**/*'
 };
 
-
-
-
-
-
-
-
-
 /*
-
-
-
-
 var path = require('path');
 var gulp = require('gulp');
 var browserify = require('browserify');
@@ -84,7 +71,7 @@ gulp.task('build-client', function() {
 */
 
 // preborwerify
-gulp.task('pre', function() {
+/*gulp.task('pre', function() {
     var options = {
         'entries': ['./bower_components/jquery/dist/jquery.js',
             './bower_components/fullpage/'
@@ -97,49 +84,10 @@ gulp.task('pre', function() {
         .bundle()
         .pipe(source('e.js'))
         .pipe(gulp.dest(paths.base + 'js-bs/views/'))
-        /*    return browserify('./public/js-bs/views/beep.js')
-                .bundle()*/
+                .bundle()
         //Pass desired output filename to vinyl-source-stream
-        /*.pipe(source('index.js'))*/
         // Start piping stream to tasks!
-});
-
-
-// browserify task
-gulp.task('browserify', function() {
-    var options = {
-        'entries': [paths.base + 'js-bs/views/beep.js'],
-        'basedir ': '',
-        'paths ': '',
-        'debug': 'false'
-    };
-
-    var EXTERNALS = [paths.base + 'js-bs/views/robot.js',
-        paths.base + 'js-bs/views/common.js',
-        paths.base + 'js-bs/views/common.js',
-        paths.base + 'js-bs/views/common.js'
-    ]
-
-    return browserify(options)
-        .external(EXTERNALS)
-        .bundle()
-        .pipe(source('e.js'))
-        .pipe(gulp.dest(paths.base + 'js-bs/views/'))
-        /*    return browserify(paths.base + 'js-bs/views/beep.js')
-                .bundle()*/
-        //Pass desired output filename to vinyl-source-stream
-        /*.pipe(source('index.js'))*/
-        // Start piping stream to tasks!
-});
-
-
-
-
-
-
-
-
-
+});*/
 
 
 // 创建 Compass 任务

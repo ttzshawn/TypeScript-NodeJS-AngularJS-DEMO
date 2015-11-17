@@ -1,0 +1,22 @@
+/************************************ҳͷ????***************************************************/
+.bg1{
+  height:284px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:#464646;
+  background-image: url("../img/1er.jpg");
+}
+#header{
+  margin-bottom: 30px;
+}
+/************************************???岿??***************************************************/
+.form-group>label{
+  color: #5e5e5e;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:17px;
+}
+
+#emailTip,#userTip,#pwdTip,#repwdTip{
+  color:#888;
+}
