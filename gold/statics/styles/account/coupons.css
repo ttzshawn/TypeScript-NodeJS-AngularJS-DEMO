@@ -1,0 +1,381 @@
+.gbanker-account-frame .conpons-tab {
+	padding-top: 31px;
+}
+.gbanker-account-frame .conpons-tab .difCou{
+	width:100%;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice{
+	border-bottom: 2px solid #eeece6;
+	height: 40px;
+	margin-bottom: 17px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .banner{
+	float:left;
+	padding-top:8px;
+	padding-bottom: 16px;
+	padding-left: 28px;
+	cursor:pointer;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .active{
+	border-bottom:2px solid #ffa800;
+	color:#fc962c;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .active a{
+	color:#fc962c;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .banner a{
+	border-right:1px solid #e7e7e7;
+	padding-right:20px;
+	font-size:16px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper{
+	float:right;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper a{
+	display:inline-block;
+	line-height:32px;
+	color:#fff;
+}
+
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper a,
+.gbanker-account-frame .conpons-tab  .conpons-static ul li.use-case,
+.gbanker-account-frame .conpons-tab .conspons-detail li,
+.gbanker-account-frame .conpons-tab .conspons-detail li .gold{
+	background-image:url(/statics/images/coupons_img.png);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper .exchange{
+	background-position: 0 0;
+	height:32px;
+	width:83px;
+	padding-left:5px;
+	margin-right:10px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper .get{
+	background-position: -101px 0;
+	height:32px;
+	width:111px;
+	padding-left:5px;
+	margin-right:10px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-choice .conpons-oper .instruction{
+	background-position: -229px 0;
+	height:32px;
+	width:104px;
+	padding-left:5px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static{
+	padding-bottom:22px;
+	border-bottom:1px solid #eeece6;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static ul{
+	height:38px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static ul li.use-case{
+	float:left;
+	background-position:-104px -45px;
+	width:90px;
+	height:38px;
+	line-height:38px;
+	margin-right:15px;
+	text-align:center;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static ul li.use-case a{
+	width:100%;
+	height:100%;
+	display:inline-block;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static ul li.active{
+	background-position:0 -45px;
+}
+.gbanker-account-frame .conpons-tab  .conpons-static ul li.active a{
+	color:#fff;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail{
+	/* width:608px; */
+	float:left;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li{
+	float:left;
+}
+/* .gbanker-account-frame .conpons-tab  .conspons-detail li:nth-child(odd){
+	float:left;
+} */
+.gbanker-account-frame .conpons-tab #used,
+.gbanker-account-frame .conpons-tab #expired{
+	diplay:none;
+}
+#buyGold,#checkGold{
+	display:none;
+}
+.float-div{
+	border-radius:5px;
+	z-index:21;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-217px;
+	margin-top:-200px;
+	background:#fff none repeat scroll 0 0;
+	display:none;
+}
+.exchange-float{
+	width:437px;
+	height:262px;
+}
+.more-coupons{
+	width:438px;
+	height:381px;
+}
+.no-coupons{
+
+	width:347px;
+	margin:0 auto;
+	margin-top:53px;
+}
+.no-coupons .font{
+	font-size:16px;
+}
+.no-coupons ul{text-align:center;}
+.no-coupons .img{
+	background:url(/statics/images/coupons-us.png) no-repeat;
+	height:199px;
+	width:199px;
+	margin: 53px auto;
+	border:1px solid #eeece6;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init{
+	/* float:left; */
+	margin-top:25px;
+	margin-right:36px;
+	background-position:0 -209px;
+	height:112px;
+	width:284px;
+}
+
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .buyGold{
+	background-position:-283px -97px;
+	height:112px;
+	width:121px;
+	float:left;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .checkGold{
+	background-position:-283px -209px;
+	height:112px;
+	width:121px;
+	float:left;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold p{
+	margin:0px;
+	padding-top:24px;
+	color:#fff;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold p.sum{
+	padding-left:20%;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold p.sum span{
+	font-size:34px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold p.condition{
+	padding-left:20%;
+	padding-top:10px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold-intro{
+	padding-left:130px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold-intro .p1{
+	font-size:16px;
+	color:#000;
+	margin-bottom:27px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.init .gold-intro .p2{
+	font-size:12px;
+	color:#a1a1a1;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.expire{
+	background-position:0 -97px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.expired{
+	background-position:0 -321px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.used{
+	background-position:0 -433px;
+}
+.gbanker-account-frame .conpons-tab  .conspons-detail li.used div.gold,
+.gbanker-account-frame .conpons-tab  .conspons-detail li.expired div.gold{
+	background-position:-284px -322px;
+}
+/* 悬浮框 */
+.float-div{
+	border-radius:5px;
+	z-index:21;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-217px;
+	margin-top:-200px;
+	background:#fff none repeat scroll 0 0;
+	display:none;
+}
+.exchange-float{
+	width:437px;
+	height:262px;
+}
+.more-coupons{
+	width:438px;
+	height:381px;
+}
+.more-coupons .float-font,.coupons-intro .float-font{
+	height:90px;
+	line-height:90px;
+	text-align:center;
+	font-size:24px;
+	color:#3e3e3e;
+}
+.more-coupons p{
+	width:210px;
+	margin-top:0;
+	margin-left:auto;
+	margin-right:auto;
+	color:#8b8b8b;
+	font-size:16px;
+}
+.more-coupons p.us{
+	background:url(/statics/images/coupons-us.png) no-repeat;
+	height:199px;
+	width:199px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.coupons-intro{
+	width:618px;
+	height:454px;
+}
+.coupons-intro p{
+	margin-left:30px;
+}
+.coupons-intro p.p1{
+	margin-top:30px;
+}
+.coupons-intro p.p2{
+	font-size:14px;
+	color:#858585;
+}
+.coupons-intro p.p1 span{
+	display:inline-block;
+	font-size:16px;
+	color:#353535;
+
+}
+.coupons-intro p.p1 span.text2{
+	margin-left:10px;
+	margin-top:2px;
+
+}
+.coupons-intro p.p1 .text-banner{
+	background:url(/statics/images/aboutUs/about_intro_icon.png) no-repeat scroll 0 0;
+	height:23px;
+	width:8px;
+	float:left;
+}
+.exchange-float .float-font{
+	height:90px;
+	border-bottom:1px solid #e9e9e9;
+	line-height:90px;
+	text-align:center;
+	font-size:24px;
+	color:#3e3e3e;
+}
+.exchange-float .exchange-input{
+	width:325px;
+	margin:0 auto;
+	margin-top:44px;
+}
+.exchange-float .exchange-input input{
+	border:1px solid #b9b9b9;
+	border-right:0 none;
+	color:#000;
+	width:242px;
+	height:16px;
+	padding:12px 4px !important;
+	padding:11px 4px;
+	float:left;
+}
+.exchange-float .exchange-input a{
+	display:inline-block;
+	width:70px;
+	height:42px;
+	background-color:#fc962c;
+	color:#fff;
+	line-height:42px;
+	text-align:center;
+	cursor:pointer;
+}
+.exchange-float p{
+	margin-left:55px;
+}
+.exchange-float p.error{
+	color:#f85f5f;
+}
+.exchange-float p.success{
+	color:#43d78c;
+}
+.exchange-float p.error .icon{
+	background:url("/statics/images/user/user_new_icons.png") no-repeat scroll 0 -43px;
+	height:15px;
+}
+.exchange-float p.success .icon{
+	background:url("/statics/images/user/user_new_icons.png") no-repeat scroll 0 -58px;
+	height:15px;
+}
+.close-img{
+	background:url(/statics/images/coupons_close.png) no-repeat;
+	width:23px;
+    height:23px;
+    display:inline-block;
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+}
+.mask_bank{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #7f7f7f;
+	opacity: .6;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	display:none;
+}
+.gbanker-account-frame .primary .coupons-page .current-page{
+
+	border:1px solid #bebebe;
+	border-radius: 3px;
+	background-color: #e9e9e9;
+}
+.gbanker-account-frame .primary .coupons-page .other-page{
+	width:30px;
+	height:30px;
+	border:1px solid #bebebe;
+	border-radius: 3px;
+	background-color: #fff;
+	cursor:pointer;
+}
+.gbanker-account-frame .primary .coupons-page{
+	margin-top:20px;
+	height:30px;
+	text-align:center;
+	display:table;
+	margin:0 auto;
+}
+.gbanker-account-frame .primary .coupons-page .pages{
+	float:left;
+	margin-right:20px;
+	width:30px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}

@@ -1,0 +1,790 @@
+form.frame{
+-webkit-box-shadow: 1px 1px 4px #e7e6e6;
+-moz-box-shadow: 1px 1px 4px #e7e6e6;
+box-shadow: 1px 1px 4px #e7e6e6; 
+border-radius:9px;
+}
+.bg_reg{
+	padding-top: 78px;
+	padding-bottom: 107px;
+	background-color:#fdfdfd;
+}
+input[disabled=disabled] {
+	background-color: #fff;
+}
+
+form input[type="password"] {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #a3a3a3;
+	padding: 10px 15px;
+	outline: 0
+}
+
+.gbanker-navbar {
+	border-bottom: 1px solid #e4e4e4
+}
+
+.row1 {
+	width: 610px;
+}
+
+.row1 .content .reg_title {
+	background:url(../../images/user/user_banner.png) no-repeat 0 -180px;
+	width: 100%;
+	height: 78px;
+	line-height: 78px;
+}
+
+.row1 .content .otherTips {
+	background-color: #FFE2E2;
+	padding: 15px 8px 15px 8px;
+	color: #ff6262;
+	text-align: center;
+	display: none;
+}
+
+.row1 .content .reg_title div {
+	width: 220px;
+	height: 100%;
+	color: #fff;
+	font-size: 26px;
+	margin: 0 auto;
+}
+
+.row1 .content .reg_content {
+	padding: 65px 150px 20px 150px;
+}
+
+.row1 .content .reg_content2 {
+	padding: 0px 150px 60px 150px;
+}
+
+.row1 .content .reg_exist {
+	display: none;
+}
+
+.row1 .content .reg_content .reg_input {
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	position: relative;
+}
+
+.row1 .content .reg_content .reg_input .infor_input {
+	border-bottom: 1px solid #dedede;
+	height: 52px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .infor_label {
+	width: 90px;
+	line-height: 52px;
+	font-size: 16px;
+	margin-right: 0px;
+	text-align: right;
+	float: left;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .infor_input_in {
+	height: 52px;
+	padding: 6px 9px;
+	border: 0px;
+	width: 190px;
+	font-family:"微软雅黑"
+}
+
+.row1 .content .reg_content .reg_input .infor_input .warn_icons {
+	background: url(../../images/user/user_new_icons.png) no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	float: right;
+	display: none;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .warn_icons2 {
+	background: url(../../images/user/user_new_icons.png) no-repeat 0 0;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	margin-top: 20px;
+	display: none;
+	left: 140px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .error {
+	background-position: 0 -28px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .warn {
+	background-position: 0 -43px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .success {
+	background-position: 0 -58px;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .getNewCode {
+	height: 52px;
+	line-height: 52px;
+	display: inline-block;
+	position: absolute;
+	left: 255px;
+	cursor: pointer;
+}
+
+.row1 .content .reg_content .reg_input .infor_input .getNewCode a {
+	color: #ff9e35;
+}
+
+.row1 .content .reg_content .reg_input .warn_text {
+	display: none;
+	background: url(../../images/user/_icon.png) no-repeat 0 0;
+	height: 28px;
+	position: absolute;
+	left: 350px;
+	padding: 0 6px 0 7px;
+}
+
+.row1 .content .reg_content .agreement  #agreeWarn {
+	color: #ff6262;
+	margin-top: 10px;
+	display: none;
+}
+
+.row1 .content .reg_content .reg_input .warn_tel, .row1 .content .reg_content .reg_input .warn_jym
+	{
+	left: 310px;
+	top: 10px;
+}
+
+.row1 .content .reg_content .reg_input .warn_yzm, .row1 .content .reg_content .reg_input .warn_pwd
+	{
+	left: 310px;
+	top: 60px;
+}
+
+.row1 .content .reg_content .reg_input .warn_confirm {
+	left: 310px;
+	top: 110px;
+}
+
+.row1 .content .reg_content .reg_input .warn_text span {
+	display: inline-block;
+}
+
+.row1 .content .reg_content .reg_input .warn_name {
+	left: 310px;
+	top: 60px;
+}
+
+.row1 .content .reg_content .reg_input .warn_card {
+	left: 310px;
+	top: 110px;
+}
+.row1 .content .reg_content .reg_input .warn_name_card {
+	left: 310px;
+	top: 110px;
+}
+.row1 .content .reg_content .reg_input .warn_pwd_reset2 {
+	left: 310px;
+	top: 60px;
+}
+
+.row1 .content .reg_content .reg_input .warn_pwd_reset {
+	left: 310px;
+	top: 170px;
+}
+
+.row1 .content .reg_content .reg_input .warn_confirm_reset2 {
+	left: 310px;
+	top: 110px;
+}
+
+.row1 .content .reg_content .reg_input .warn_confirm_reset {
+	left: 310px;
+	top: 220px;
+}
+
+.row1 .content .reg_content .reg_input .warn_text .warn_border {
+	height: 27px;
+	line-height: 26px;
+	padding: 0 4px 0 0;
+	background: #ffe2e2 none repeat scroll 0 0;
+	color: #ff6262;
+	border-bottom: 1px solid #ffc3c3;
+	border-top: 1px solid #ffc3c3;
+	border-right: 1px solid #ffc3c3;
+	white-space: nowrap;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.row1 .content  .check_code {
+	height: 42px;
+	line-height: 42px;
+	padding-left: 150px;
+	margin-bottom: 20px;
+}
+
+.row1 .content  .check_code button.code_get {
+	background:url(../../images/user/user_banner.png) no-repeat 0 -258px;
+	/* background: #fe9711; */
+	padding: 0;
+	width:146px;
+	height:42px;
+	line-height: 42px;
+	float: left;
+	display: block
+}
+.row1 .content  .check_code button.code_get_click{
+	background:url(../../images/user/user_banner.png) no-repeat 0 -300px;
+	padding: 0;
+	width:146px;
+	height:42px;
+	line-height: 42px;
+	float: left;
+	display: block;
+}
+.row1 .content .reg_content .agreement {
+	margin-top: 20px;
+	margin-bottom: 32px;
+	position: relative;
+}
+
+form fieldset .agreement input {
+	width: 10px;
+	margin-right: 6px;
+}
+
+form fieldset .agreement a {
+	color: #fe9711;
+}
+
+form fieldset .content .action button {
+	background:url(../../images/user/user_banner.png) no-repeat 0 0;
+	width: 308px;
+	padding: 0;
+	height:48px;
+	line-height: 48px;
+	display: block;
+	font-size: 22px;
+}
+form fieldset .content .action button.submit_click {
+	background:url(../../images/user/user_banner.png) no-repeat 0 -48px;
+	width: 308px;
+	padding: 0;
+	height:48px;
+	line-height: 48px;
+	display: block;
+	font-size: 22px;
+}
+
+.row1 .content .reg_content .to_denglu {
+	margin-top: 15px;
+}
+
+.row1 .content .reg_content .to_denglu a {
+	color: #fe9711;
+}
+
+.codeImgDiv img {
+	width: 72px;
+	height: 30px;
+	border: 1px solid #bebebe;
+}
+
+.codeImgDiv {
+	height: 40px;
+	margin-top: 12px;
+	display: inline-block;
+	position: absolute;
+	left: 175px;
+}
+
+.success_icons {
+	background: url(../../images/user/user_icons.png) no-repeat 0 -42px;
+	width: 73px;
+	height: 73px;
+	float: left;
+}
+
+.suces {
+	padding: 110px 0 250px 137px;
+}
+.suces_reset {
+	padding: 110px 0 250px 80px;
+}
+.success_text {
+	float: left;
+	padding: 0 0 20px 20px;
+}
+
+.button {
+	background: #fe9711;
+	width: 308px;
+	padding: 0;
+	line-height: 48px;
+	display: block;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 85px;
+}
+
+.success_text h3.success {
+	margin: 0;
+	margin-bottom: 28px;
+	font-size: 30px;
+	font-weight: normal;
+}
+
+.success_text h3 .spe {
+	color: #b4b4b4;
+}
+
+.yuyinCode {
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+.yuyinCode .busy_tips {
+	color: #ff6262;
+	display: none;
+	margin-left: 10px;
+}
+
+.yuyinCode span#yuYinCode {
+	color: #fe9711;
+	cursor: pointer;
+}
+
+form fieldset .content .input-group .refresh {
+	width: 60px;
+	line-height: 40px;
+	height: 40px;
+	margin-left: 17px;
+	cursor: pointer;
+	float: left;
+}
+
+form fieldset .content .input-group .refresh button {
+	background: #fe9711;
+	width: 60px;
+	padding: 0;
+	line-height: 40px;
+	display: block;
+	border-radius: 5px;
+}
+form .alert {
+	display: none;
+	color: red;
+	float: left;
+	width: 220px;
+	padding: 10px 0 0 10px;
+}
+
+form .alert .codeicon {
+	background: url(../../images/user_prompt.png) no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-right: 5px;
+}
+
+form fieldset .content .unit button.code_get {
+	background: #fe9711;
+	width: 109px;
+	padding: 0;
+	line-height: 40px;
+	border-radius: 5px;
+	display: block
+}
+
+form fieldset .lock-info {
+	display: none;
+	height: 50px;
+	line-height: 50px;
+	background-color: #faf9f5;
+	padding-left: 350px;
+}
+
+.input-group input {
+	width: 259px;
+}
+
+.gbanker-reg {
+	/* margin-top: 78px;
+	margin-bottom: 107px; */
+}
+
+.gbanker-reg form legend {
+	text-indent: -999999px;
+	overflow: hidden;
+	height: 64px;
+	width: 100%;
+	background: url(../../images/user/user_reg_step.png) no-repeat
+}
+
+.gbanker-reg form fieldset {
+	width: 100%;
+	border: 0;
+}
+
+.gbanker-password-recovery form fieldset .content {
+	width: 620px;
+	margin: 85px 59px 92px 260px;
+}
+
+.gbanker-reg form fieldset .content input.half {
+	width: 120px
+}
+
+.gbanker-reg form fieldset .content p {
+	float: right;
+	padding: 0px 15px;
+	color: red;
+}
+
+.gbanker-reg form fieldset .content .code {
+	margin-left: 10px
+}
+
+.gbanker-reg form fieldset .content .code a {
+	font-size: 14px;
+	font-weight: bolder;
+	border-bottom: 1px solid #595959;
+	display: inline-block;
+	color: #595959
+}
+
+.login-banner {
+	height: 620px;
+}
+
+.gbanker-login {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	background: #fff;
+}
+
+.gbanker-login form {
+	border: 1px solid #dedede;
+	padding: 40px 70px 30px 60px;
+	width: 285px
+}
+
+.gbanker-login form .error {
+	position: absolute;
+	color: red;
+	display: none;
+}
+
+.gbanker-login form .input-icon-group input {
+	width: 195px
+}
+
+.gbanker-login form .input-icon-group label {
+	line-height: inherit
+}
+
+.gbanker-login form legend h2 {
+	font-size: 18px
+}
+
+.gbanker-login form .find-password {
+	margin-top: 40px;
+}
+
+.gbanker-login form .link-find-password {
+	text-align: right;
+	display: block;
+	font-size: 14px
+}
+
+.gbanker-login form .actions {
+	line-height: 40px
+}
+
+.gbanker-login form .actions .button, .gbanker-login form .actions button
+	{
+	padding: 0
+}
+
+.gbanker-login form .actions .button-alpha {
+	background: #fe9711;
+	width: 200px;
+	height: 40px;
+	font-family: "Microsoft YaHei", Arial, SansSerif;
+	border: 0;
+	display: block;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.gbanker-login form .actions .button-beta {
+	color: #ff4e00;
+	padding-left: 25px
+}
+
+.gbanker-login form .security-info {
+	margin-top: 50px;
+	clear: both;
+	background: url(../../images/user_shield.png) no-repeat 0 6px;
+	padding-left: 40px;
+	font-size: 14px;
+	line-height: 20px
+}
+
+.gbanker-reg-step-1 form legend {
+	background-position: 0 0
+}
+
+.gbanker-reg-step-1 form legend {
+	background-position: 0 -63px;
+}
+
+.gbanker-reg-step-3 form legend {
+	background-position: 0 -127px
+}
+.gbanker-reg-step-1 form .input-group .unit:first-child {
+	width: 125px;
+	text-align: right;
+}
+
+.gbanker-reg-step-1 form label {
+	line-height: 40px;
+}
+
+.gbanker-reg-step-1 form input[disabled] {
+	border: 0;
+	padding-left: 0;
+	padding-right: 0
+}
+
+.gbanker-reg-step-1 form .info {
+	padding-left: 10px;
+	color: #595959
+}
+
+.gbanker-reg-step-1 form .info a {
+	border-bottom: 1px solid #595959
+}
+
+.gbanker-reg-step-3 .content {
+	background: url(../../images/user_reg_tick.png) no-repeat;
+	font-size: 16px;
+	text-align: center
+}
+
+.gbanker-reg-step-3 .content .alert {
+	width: 240px;
+	height: 160px;
+	margin-left: 140px;
+	padding-top: 7px
+}
+
+.gbanker-reg-step-3 .content h3 span {
+	color: #000;
+}
+
+.gbanker-reg-step-3 .content h3.success {
+	color: #000;
+	font-size: 26px;
+}
+
+.gbanker-reg-step-3 .content a {
+	background: #fe9711;
+	font-weight: bolder;
+	color: #fff;
+}
+
+.login-wrapper .intro {
+	width: 586px;
+	height: 372px;
+	margin-top: 106px;
+}
+
+.login-wrapper .intro .before {
+	background: url(../../images/login_before.png) no-repeat;
+	width: 21px;
+	height: 36px;
+	margin-top: 115px;
+	margin-left: 180px;
+	float: left;
+	cursor: pointer;
+}
+
+.login-wrapper .intro .image {
+	width: 220px;
+	height: 260px;
+	float: left;
+	margin-top: 64px;
+}
+
+.login-wrapper .intro .image .active {
+	z-index: 2;
+}
+
+.login-wrapper .intro .image1 {
+	background: url(../../images/login_1.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .image2 {
+	background: url(../../images/login_2.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .image3 {
+	background: url(../../images/login_3.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .after {
+	background: url(../../images/login_after.png) no-repeat;
+	width: 21px;
+	height: 36px;
+	float: left;
+	margin-top: 115px;
+	cursor: pointer;
+}
+
+.gbanker-password-recovery {
+	margin-top: 85px;
+	margin-bottom: 107px
+}
+
+.gbanker-password-recovery form legend {
+	text-indent: -999999px;
+	overflow: hidden;
+	height: 64px;
+	width: 1004px;
+	background: url(../../images/user/user_recovery_step.png) no-repeat
+		scroll 0 0;
+}
+
+.recovery1 form legend {
+	background-position: 0 0;
+}
+
+.recovery2 form legend {
+	background-position: 0 -64px;
+}
+
+.recovery3 form legend {
+	background-position: 0 -64px;
+}
+
+.gbanker-password-recovery form legend h2 {
+	font-size: 18px;
+	line-height: 30px
+}
+
+.gbanker-password-recovery .input-group .unit:first-child {
+	width: 125px;
+	text-align: right
+}
+
+.gbanker-password-recovery .input-group .action-get-code {
+	background: url(../../images/user_verify_bg.png) no-repeat;
+	width: 92px;
+	padding: 0;
+	line-height: 40px;
+	margin-left: 15px;
+	font-size: 12px;
+	display: block;
+}
+
+.gbanker-password-recovery .input-group .get-code .action-get-code.disabled
+	{
+	border-color: gray
+}
+
+.gbanker-password-recovery .actions {
+	margin: 30px 0 0 125px;
+}
+
+.gbanker-password-recovery .actions button {
+	background: #fe9711;
+	width: 259px;
+	font-size: 16px
+}
+
+.gbanker-password-recovery .detail {
+	margin: 70px 0 30px 300px;
+	padding: 15px 0 80px 150px;
+}
+
+.gbanker-password-recovery  .final {
+	background: url(../../images/trade_success_tick.png) no-repeat
+}
+
+.gbanker-password-recovery .detail h2 {
+	font-weight: bolder;
+	font-size: 24px;
+	margin-top: -10px;
+}
+
+.regdoc .title {
+	font-size: 24px;
+	color: #000;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+}
+
+.regdoc  .title2 {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+.gbanker-reg-step-1 form .input-group .unit .call {
+	background: #f3f3f3;
+	padding: 10px 42px 10px 10px;
+	line-height: 34px;
+	display: none;
+}
+
+.gbanker-reg-step-1 form .input-group .unit .call span {
+	color: #fe8111;
+	margin-left: 10px;
+}
+
+.gbanker-password-recovery .input-group .unit .yuyinCode {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.gbanker-password-recovery .input-group .unit .yuyinCode span {
+	color: #FE9711;
+	cursor: pointer;
+}
+
+.gbanker-password-recovery .input-group .unit .call {
+	background: #f3f3f3;
+	padding: 10px 42px 10px 10px;
+	line-height: 34px;
+	display: none;
+}
+
+.gbanker-password-recovery .input-group .unit .call span {
+	color: #fe8111;
+	margin-left: 10px;
+}

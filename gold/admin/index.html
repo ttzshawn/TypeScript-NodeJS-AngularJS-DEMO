@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="adminApp">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title>Example--后台管理</title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="../statics/js/lib/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/bootstrap-material-design.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/ripples.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/swiper/css/swiper.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../statics/css/admin/one.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div class="wrapper">
+        <!-- navbar begin -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid" ng-if="!!currentUser">
+                <div class="navbar-header">
+                    <!-- 响应式菜单按钮 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a ui-sref="project.list" class="navbar-brand">Example</a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse ">
+                    <ul class="nav navbar-nav ">
+                        <!-- <li ui-sref-active="active"><a ui-sref="page" href="#">页面管理</a></li> -->
+                        <li ui-sref-active="active"><a ui-sref="project.list" href="#">项目管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="store.list" href="#">店铺管理</a></li>
+                        <!-- <li ui-sref-active="active"><a ui-sref="user" href="#">用户管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="audit" href="#">认证管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="auth" href="#">权限管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="system" href="#">系统管理</a></li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ">
+
+                        <!-- {{msg}}
+                        <div ng-if="currentUser">Welcome, {{ currentUser.name }}</div>
+                        <div ng-if="isAuthorized(userRoles.admin)">You're admin.</div>
+                        <div ng-switch on="currentUser.role">
+                            <div ng-switch-when="userRoles.admin">You're admin.</div>
+                            <div ng-switch-when="userRoles.editor">You're editor.</div>
+                            <div ng-switch-default>You're something else.</div>
+                        </div> -->
+                        <li><a href="javascript:void(0)">欢迎, {{currentUser}}</a></li>
+                        <li><a href="javascript:void(0)" ng-click="logout()">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+
+        <div ui-view style="padding-top: 60px;"></div>
+
+
+        <!-- <footer class="footer-wrap" ng-if="currentUser">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="btn-group btn-group-sm ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <div class="center-block ">&copy;2016 vtcomm.com, All rights reserved.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="btn-group btn-group-sm ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    </div>
+    <!-- 第三方库 -->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+    <script src="../statics/js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script src="../statics/js/lib/angular/angular.min.js "></script>
+    <script src="../statics/js/lib/angular-ui-router/angular-ui-router.min.js "></script>
+    <script src="../statics/js/lib/bootstrap/js/bootstrap.min.js "></script>
+    <!-- <script src="../js/lib/bmd/js/material.min.js "></script> -->
+    <script src="../statics/js/lib/bmd/js/ripples.min.js "></script>
+    <script src="../statics/js/lib/swiper/js/swiper.min.js "></script>
+
+    <link rel="stylesheet" href="../statics/js/lib/umeditor/themes/default/css/umeditor.css">
+    <script src="../statics/js/lib/umeditor/umeditor.config.js"></script>
+    <script src="../statics/js/lib/umeditor/umeditor.min.js"></script>
+    <script src="../statics/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+    <!-- 自定义 -->
+    <script src="../statics/js/admin/one.js "></script>
+    <script src="../statics/js/admin/app.admin.js "></script>
+    <script src="../statics/js/admin/controllers.admin.js "></script>
+    <script src="../statics/js/admin/services.admin.js "></script>
+    <script src="../statics/js/admin/filters.admin.js "></script>
+    <script src="../statics/js/admin/directives.admin.js "></script>
+
+
+    <script>
+        // $.material.init();
+    </script>
+</body>
+
+</html>

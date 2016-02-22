@@ -1,0 +1,541 @@
+
+.home-bannar {
+	position: relative;
+	overflow: hidden;
+}
+
+.home-bannar .bannar_bg {
+	height: 310px;
+	overflow: hidden;
+}
+
+.home-bannar .bannar_bg  li {
+	position: absolute;
+	width: 100%;
+	opacity: 1;
+}
+
+.home-bannar .bannar_bg .content {
+	height: 310px;
+}
+
+.home-bannar .account-bg {
+	width: 270px;
+	height: 230px;
+	background: #000;
+	margin-left: 735px;
+	margin-top: -370px;
+	filter: alpha(opacity = 0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: 20;
+	top: 52px;
+	filter: alpha(opacity = 30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+}
+
+.home-bannar .bannar_button {
+	position: absolute;
+	width: 100%;
+	z-index: 30;
+}
+
+.home-bannar .bannar_button ul {
+	right: 0;
+	position: absolute;
+	bottom: 10px;
+}
+
+.home-bannar .bannar_button .sliderBtn {
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	border-radius: 20px;
+	background: #000;
+	opacity: 0.3;
+	font-family: Arial;
+}
+
+.home-bannar .bannar_button ul li.active {
+	color: #000;
+	background: #fff;
+	opacity: 1;
+}
+
+.home-bannar .account-info {
+	width: 184px;
+	height: 175px;
+	padding:32px 48px 23px 48px;
+	margin-left: 735px;
+	margin-top: -370px;
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	z-index: 20;
+	top: 52px;
+}
+
+.home-bannar .account-info .title {
+	font-size:20px;
+	text-align: left;
+	margin-bottom:15px;
+}
+
+.home-bannar .account-info .price-logo {
+	background: url(../../images/home_bannar_price.png) no-repeat;
+	width: 27px;
+	height: 27px;
+}
+
+.home-bannar .account-info .price {
+	color: #ffd56d;
+	font-size: 48px;
+	text-align: left;
+	letter-spacing: 1.5px;
+	margin-bottom:15px;
+}
+
+.home-bannar .account-info .market-price {
+	margin-bottom:17px;
+	text-align: left;
+}
+.home-bannar .account-info .market-price .number{
+	text-decoration:line-through;
+}
+.home-bannar .account-info .update-unit {
+	color: #fff;
+	margin-left: -45px;
+	padding: 4px 10px 9px 10px;
+	display: inline-block;
+}
+
+.home-bannar .account-info .unit1 {
+	padding: 5px 10px;
+	cursor:default;
+}
+
+.home-bannar .account-info .actions{
+	height: 43px;
+	width: 172px;
+	background-color:#ff7a19;
+	text-align: center;
+	line-height: 43px;
+	border-radius:5px;
+	font-size: 18px;
+	color: #fff;
+	display:block;
+}
+.home-intro{
+	background-color:#f4f4f4;
+}
+.home-intro .row-info {
+	width: 100%;
+	background-color: #f4f4f4;
+}
+.home-intro .manage-info {
+	border:1px solid #efefef;
+	background-color:#fff;
+	height:39px;
+	width:941px;
+	margin-top:13px;
+	padding:15px 27px 15px 34px;
+	font-size:18px;
+}
+.home-intro .manage-info span{
+	color:#000;
+}
+.home-intro .manage-info .goldWeight{
+	margin:0 10px;
+}
+.home-intro .manage-info .goldWeight span{
+	color:#ff7a19;
+	font-size:18px;
+}
+.home-intro .manage-info .goldWeight .number{
+	font-size:30px;
+}
+.home-intro .manage-info .manage{
+	float:left;
+}
+.home-intro .manage-info .insurance{
+	float:right;
+}
+.home-intro .manage-info .insurance .insurance-link{
+	float:right;
+	margin-top:10px;
+}
+.home-intro .manage-info .insurance .insurance-link a{
+	color: #ff7a19;
+}
+.home-intro .show {
+	margin-top:9px;
+	height:240px;
+}
+.home-intro .show .picture {
+	border:1px solid #efefef;
+	height:240px;
+	margin-right:9px;
+	float:left;
+}
+.home-intro .show .picture .store{
+	background:url("../../images/home_store.png") no-repeat;
+	border-right:1px solid #fff;
+	width:240px;
+	height:240px;
+	float:left;
+}
+.home-intro .show .picture .price{
+	background:url("../../images/home_price.png") no-repeat;
+	border-right:1px solid #fff;
+	width:240px;
+	height:240px;
+	float:left;
+}
+.home-intro .show .picture .interest{
+	background:url("../../images/home_interest.png") no-repeat;
+	border-right:1px solid #fff;
+	width:240px;
+	height:240px;
+	float:left;
+}
+.home-intro .show .video{
+	background:url("../../images/home_video_14a47.png?1.png") no-repeat;
+	width:270px;
+	height:240px;
+	float:left;
+	cursor:pointer;
+}
+.home-intro  .product-info{
+	margin-top:22px;
+	border:1px solid #efefef;
+	background-color:#fff;
+}
+.home-intro  .product-info .product-header{
+	padding: 23px 27px 23px 34px;
+	border-bottom:1px solid #efefef;
+	height:18px;
+}
+.home-intro  .product-info .product-header .title{
+	color:#000;
+	font-size:18px;
+}
+.home-intro  .product-info .product-header .more{
+	float:right;
+}
+.home-intro  .product-info .product-list{
+	height: 295px;
+}
+.home-intro  .product-info .product-list .product{
+	border-right:1px solid #efefef;
+	padding-bottom: 20px;
+	padding-top:37px;
+	float:left;
+	width: 333px;
+    text-align: center;
+}
+.home-intro  .product-info .product-list .product-last{
+	border:0;
+}
+.home-intro  .product-info .product-list .name{
+	color:#000;
+	font-size:24px;
+}
+.home-intro  .product-info .product-list .desc{
+	margin-top:8px;
+	color:#d59a3d;
+	font-size:20px;
+	height:20px;
+}
+.home-intro  .product-info .product-list .rate{
+	margin-top:35px;
+}
+.home-intro  .product-info .product-list .rate .number{
+	color:#ff7a19;
+	font-size:72px;
+}
+.home-intro  .product-info .product-list .rate .specs{
+	display: inline-block;
+    width: 40px;
+    color:#ff7a19;
+    font-size:16px;
+}
+.home-intro  .product-info .product-list .rate .specs .annual{
+	border: 1px solid #ff7a19;
+    border-radius: 5px;
+    width: 38px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+.home-intro  .product-info .product-list .rate .specs .percent{
+	font-size:36px;
+}
+.home-intro .product-info .product-list .actions{
+	height: 43px;
+	width: 172px;
+	background-color:#ff7a19;
+	text-align: center;
+	line-height: 43px;
+	border-radius:5px;
+	font-size: 18px;
+	color: #fff;
+	margin:0 auto;
+	margin-top:36px;
+	cursor:pointer;
+	display:block;
+}
+.home-intro  .news-info{
+	margin-top:22px;
+	border:1px solid #efefef;
+	background-color:#fff;
+}
+.home-intro  .news-info .news-header{
+	padding: 23px 27px 23px 34px;
+	border-bottom:1px solid #efefef;
+	height:18px;
+}
+.home-intro  .news-info .news-header .title{
+	color:#000;
+	font-size:18px;
+}
+.home-intro  .news-info .news-header .more{
+	float:right;
+}
+.home-intro  .news-info .news-list{
+	height: 133px;
+	padding:39px 26px 39px 28px;
+}
+
+.home-intro  .news-info .news-list .news{
+	height:52px;
+	width:419px;
+	margin-bottom:30px;
+	display: block;
+    float: left;
+}
+.home-intro  .news-info .news-list .news-odd{
+	margin-right:110px;
+}
+.home-intro  .news-info .news-list .news .news-left{
+	width: 307px;
+	float:left;
+}
+.home-intro  .news-info .news-list .news .news-left .news-title{
+	width: 307px;
+    display: block;
+    margin-bottom:11px;
+    color:#000;
+    font-size:16px;
+    line-height:20px;
+}
+.home-intro .row .news-info .news-footer {
+	font-size:12px;
+	color:#7f7f7f
+}
+.home-intro .row .news-info .news-list .news .logo-div {
+	float: left;
+    width: 110px;
+    border: 1px solid #efefef;
+}
+.home-intro .row .news-info .news-list .news .logo {
+	background:url(../../images/news_logob9ed.png?20150916.png) no-repeat;
+	float: left;
+	height: 50px;
+	width: 100px;
+	overflow: hidden;
+	margin-left: 6px;
+}
+.home-intro .row .news-info .news-list .news  .renmin {
+	background-position:-50px -38px;
+}
+
+.home-intro .row .news-info .news-list .news  .hexun {
+	background-position:-183px -38px;
+}
+
+.home-intro .row .news-info .news-list .news  .Kr {
+	background-position:-305px -38px;
+}
+
+.home-intro .row .news-info .news-list .news  .beichen {
+	background-position:-50px -116px;
+}
+
+.home-intro .row .news-info .news-list .news  .xinwen {
+	background-position:-183px -116px;
+}
+
+.home-intro .row .news-info .news-list .news  .caifu {
+	background-position:-305px -116px;
+}
+
+.home-intro .row .news-info .news-list .news  .jinghua {
+	background-position:-50px -196px;
+}
+
+.home-intro .row .news-info .news-list .news  .xinlang {
+	background-position:-183px -196px;
+}
+
+.home-intro .row .news-info .news-list .news  .jinrong {
+	background-position:-305px -196px;
+}
+
+.home-intro .row .news-info .news-list .news  .xinhua {
+	background-position:-50px -274px;
+}
+
+.home-intro .row .news-info .news-list .news  .wangyi {
+	background-position:-183px -274px;
+}
+
+.home-intro .row .news-info .news-list .news  .tengxun {
+	background-position:-305px -274px;
+}
+
+.home-intro .row .news-info .news-list .news  .caixin {
+	background-position:-50px -362px;
+}
+
+.home-intro .row .news-info .news-list .news  .fenghuang {
+	background-position:-183px -362px;
+}
+
+.home-intro .row .news-info .news-list .news  .jiemian {
+	background-position:-305px -362px;
+}
+
+.home-intro .row .news-info .news-list .news  .chuangye {
+	background-position:-50px -442px;
+}
+
+.home-intro .row .news-info .news-list .news  .dicai {
+	background-position:-183px -442px;
+}
+
+.home-intro .row .news-info .news-list .news  .zhengquan {
+	background-position:-305px -442px;
+}
+
+.home-intro .row .news-info .news-list .news  .caijing {
+	background-position:-50px -522px;
+}
+
+.home-intro .row .news-info .news-list .news  .beiqing {
+	background-position:-183px -522px;
+}
+
+.home-intro .row .news-info .news-list .news  .zhongjin {
+	background-position:-305px -522px;
+}
+
+.home-intro .row .news-info .news-list .news  .CN {
+	background-position:-50px -602px;
+}
+
+.home-intro .row .news-info .news-list .news  .guangming {
+	background-position:-183px -602px;
+}
+
+.home-intro .row .news-info .news-list .news  .mrcjw {
+	background-position:-305px -602px;
+}
+
+.home-intro .row .news-info .news-list .news  .zgqyw {
+	background-position:-50px -682px;
+}
+.home-intro .row .news-info .news-list .news  .fbs {
+	background-position:-183px -682px;
+}
+.home-intro .row .news-info .news-list .news  .zhonghua {
+	background-position:-305px -682px;
+}
+.home-intro .row .news-info .news-list .news  .huanqiu {
+	background-position:-50px -762px;
+}
+.home-intro .row .news-info .news-list .news  .iheima {
+	background-position:-183px -762px;
+}
+.home-intro  .institutions-info{
+	margin-top:22px;
+	border:1px solid #efefef;
+	margin-bottom:39px;
+	background-color:#fff;
+}
+.home-intro  .institutions-info .institutions-header{
+	padding: 23px 27px 23px 34px;
+	border-bottom:1px solid #efefef;
+	height:18px;
+}
+.home-intro  .institutions-info .institutions-header .title{
+	color:#000;
+	font-size:18px;
+}
+.home-intro  .institutions-info .institutions-header .more{
+	float:right;
+}
+.home-intro  .institutions-info .institutions{
+	background: url(../../images/institutions3e89.png?1130.png) no-repeat;
+	width:948px;
+	height:164px;
+	margin:37px 27px 54px 27px;
+}
+.home-intro .row .gonggao {
+	margin: 24px 0px;
+	height: 40px;
+}
+
+.home-intro .row .gonggao .logo {
+	background: url(../../images/gg_01.png) no-repeat;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+.home-intro .row .gonggao .gonggao-info {
+	display: block;
+	font-size: 16px;
+	color: #5A5A5A;
+	margin: 9px 0px 9px 20px;
+	float: left;
+}
+
+.home-intro .row .gonggao .more {
+	float: right;
+	margin: 9px 0px;
+	font-size: 16px;
+	color: rgb(254, 151, 17);
+	cursor: pointer;
+}
+
+.home-intro .row .gonggao .more span {
+	float: left;
+}
+
+.home-intro .row .gonggao .more .more-logo {
+	background: url(../../images/gg_02.png) no-repeat;
+	width: 8px;
+	height: 10px;
+	margin-left: 10px;
+	float: left;
+	margin-top: 3px;
+}
+
+.home-intro .row .gonggao .more .more-logo {
+	background: url(../../images/gg_02.png) no-repeat;
+	width: 8px;
+	height: 10px;
+	margin-left: 10px;
+	float: left;
+	margin-top: 3px;
+}

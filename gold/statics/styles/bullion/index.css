@@ -1,0 +1,189 @@
+body{
+	color:#555555;
+}
+.span{
+	font-family: "Helvetica";
+}
+.bullionTitle{
+	width:388px;
+	margin:38px auto;
+}
+.lineImg{
+	background:url("../../images/bullion/bullion_line.png") no-repeat;
+	width:388px;
+	height:1px;
+	margin-top:31px;
+}
+
+
+.bullionTitle p{
+	width:388px;
+	text-align:center;
+	color:#ff7a19;
+	font-size:24px;
+	margin-top:-16px;
+}
+.bullionContent{
+	background-color:#fff;
+	width:100%;
+	padding-top:20px;
+}
+.bullionContent ul{
+	width:952px;
+	height:197px;
+	border-bottom:1px solid #d3d3d3;
+	margin:0 auto;
+}
+.bullionContent ul li{
+	width:49%;
+	height:161px;
+	float:left;
+}
+.bullionContent ul li.li1{
+	border-right:1px solid #d3d3d3;
+}
+.bullionContent ul li img{
+	margin:0 auto;
+	display:block;
+	border:0;
+}
+.bullionContent ul li p{
+	font-size:20px;
+	color:#555555;
+	margin:17px auto;
+	width:100%;
+	text-align:center;
+}
+.bullionContent p.p1{
+	width:100%;
+	text-align:center;
+	font-size:18px;
+	color:#555555;
+	margin:0;
+	line-height:70px;
+}
+.goldShop{
+	background-color:#fff;
+	width:100%;
+	height:77px;
+	margin-bottom:16px;
+}
+.goldShop ul{
+	width:536px;
+	height:100%;
+	float:left;
+}
+.goldShop ul li{
+	width:24%;
+	height:100%;
+	float:left;
+	cursor:pointer;
+}
+.goldShop ul li.active{
+	border-bottom:3px solid #ff7a19;
+}
+.goldShop ul li p{
+	font-size:20px;
+	margin:30px 0;
+	text-align:center;
+	border-right:1px solid #d3d3d3;
+}
+.goldShop ul li.active p{
+	color:#ff7a19;
+}
+.goldShop p.p2{
+	text-align:center;
+	width:430px;
+	float:right;
+	margin:30px 0;
+	font-size:16px;
+}
+.goldList{float:left;width:546px;}
+.goldList ul{
+	width:546px;
+	display:inline-block;
+	background-color:#fff;
+	float:left;
+}
+.goldList ul li{
+	padding:21px;
+	height:100px;
+	border-bottom:1px solid #d3d3d3;
+}
+/* 金店图片样式 */
+.goldShopImg{
+	width:100px;
+	height:100px;
+	background:url("../../images/bullion/goldShop_list_img.html") no-repeat;
+	float:left;
+}
+.goldList p{margin-left:10px;}
+.goldList p._name{
+	font-size:18px;
+	color:#000;
+	width:290px;
+	margin-top:15px;
+	float:left;
+}	
+.goldList p._addr{
+	font-size:14px;
+	width:210px;
+	line-height:20px;
+	color:#8d8d8d;
+	float:left;
+}	
+.goldList .oper{
+	margin-top:15px;
+}
+.goldList .oper div{
+	width:35px;
+	height:35px;
+	font-size:18px;
+	line-height:35px;
+	text-align:center;
+	display:inline-block;
+	color:#fff;
+}
+.goldList .deposit{
+	background-color:#ff9a19;
+		
+}
+.goldList .extract{
+	background-color:#fa4d1e;	
+	margin-left:25px;
+}
+.goldList .telephone{
+	margin-top:22px;
+	margin-left:43px;
+	float:left;
+}
+.goldList .telephone img{
+	display:block;
+	float:left;
+}
+.goldList .telephone span{
+	display:block;
+	float:left;
+	margin-top:5px;
+}
+.mapDiv{
+	float:right;
+}
+.mapDiv img{
+	display:block;
+}
+.goldList ul.hide{
+	display:none;
+}
+.goldList ul.show{
+	display:block;
+}
+.storeImg{
+	display:block;
+	float:left;
+}
+.page{
+	width:100%;
+	text-align:center;
+	margin:25px auto;
+}

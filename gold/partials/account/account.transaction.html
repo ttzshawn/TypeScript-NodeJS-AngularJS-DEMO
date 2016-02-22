@@ -1,0 +1,203 @@
+<div class="primary unit">
+    <div class="transaction-tab">
+        <div class="block">
+            <div class="header">
+                <div class="title active">
+                    <a href="javascript:void(0);" type="gold">黄金交易记录</a>
+                </div>
+                <div class="title title1">
+                    <a href="javascript:void(0);" type="cash">现金交易记录</a>
+                </div>
+                <div class="title title1">
+                    <a href="javascript:void(0);" type="expe">体验金交易记录</a>
+                </div>
+                <div class="title title1">
+                    <a href="javascript:void(0);" type="freezeGold">冻结黄金记录</a>
+                </div>
+                <div class="title title1">
+                    <a href="javascript:void(0);" type="freezeMoney" class="key">冻结现金记录</a>
+                </div>
+            </div>
+            <div class="content">
+                <div id="goldTab" class="tabs" style="display: block;">
+                    <div class="tab">
+                        <div class="option-key">交易类型</div>
+                        <div class="option-select" id="typeName">
+                            <div class="option-selected">全部</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list" id="optionType" style="display: none;">
+                            <div class="active" value="">全部</div>
+                            <div value="1">买入黄金</div>
+                            <div value="2">卖出黄金</div>
+                            <div value="3">提取黄金</div>
+                            <div value="4">黄金存管</div>
+                            <input type="hidden" name="type" value="0">
+                        </div>
+                        <div class="option-key option-key2">交易时间</div>
+                        <div class="option-select" id="timeName">
+                            <div class="option-selected">最近7天</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list time-list" id="timeSelect" style="display: none;">
+                            <div value="1">最近7天</div>
+                            <div value="2">近一个月</div>
+                            <div value="3">近三个月</div>
+                            <input type="hidden" name="type" value="1">
+                        </div>
+                        <div class="query" id="optionTime">
+                            <input type="text" name="form" id="fromDate1" readonly="readonly" class="hasDatepicker">
+                            <span> - </span>
+                            <input type="text" name="to" id="toDate1" readonly="readonly" class="hasDatepicker">
+                        </div>
+                    </div>
+                    <div class="content" style="margin-top: 30px">
+                        <table class="stripe">
+                            <thead>
+                                <tr>
+                                    <th>交易日期</th>
+                                    <th>类型</th>
+                                    <th>单价（元/克）</th>
+                                    <th class="rightth">克重（克）</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="page"></div>
+                    <div class="null">无交易记录</div>
+                </div>
+                <div id="cashTab" class="tabs" style="display: none;">
+                    <div class="tab">
+                        <div class="option-key">交易类型</div>
+                        <div class="option-select" id="typeName">
+                            <div class="option-selected">全部</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list" id="optionType" style="display: none;">
+                            <div class="active" value="">全部</div>
+                            <div value="1">买入黄金</div>
+                            <div value="2">卖出黄金</div>
+                            <div value="4">利息</div>
+                            <div value="5">充值</div>
+                            <div value="6">提现</div>
+                            <input type="hidden" name="type" value="0">
+                        </div>
+                        <div class="option-key option-key2">交易时间</div>
+                        <div class="option-select" id="timeName">
+                            <div class="option-selected">最近7天</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list time-list" id="timeSelect" style="display: none;">
+                            <div value="1">最近7天</div>
+                            <div value="2">近一个月</div>
+                            <div value="3">近三个月</div>
+                            <input type="hidden" name="type" value="1">
+                        </div>
+                        <div class="query" id="optionTime">
+                            <input type="text" id="fromDate2" readonly="readonly" class="hasDatepicker">
+                            <span>
+                                - </span>
+                            <input type="text" id="toDate2" readonly="readonly" class="hasDatepicker">
+                        </div>
+                    </div>
+                    <div class="content" style="margin-top: 30px">
+                        <table class="stripe">
+                            <thead>
+                                <tr>
+                                    <th>交易日期</th>
+                                    <th>类型</th>
+                                    <th class="rightth">金额（元）</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="page"></div>
+                    <div class="null">无交易记录</div>
+                </div>
+                <div id="expeTab" class="tabs" style="display: none;">
+                    <div class="tab">
+                        <div class="option-key">交易类型</div>
+                        <div class="option-select" id="typeName">
+                            <div class="option-selected">全部</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list" id="optionType" style="display: none;">
+                            <div class="active" value="">全部</div>
+                            <div value="1">买入黄金</div>
+                            <div value="2">卖出黄金</div>
+                            <div value="3">清算</div>
+                            <input type="hidden" name="type" value="0">
+                        </div>
+                        <div class="option-key option-key2">交易时间</div>
+                        <div class="option-select" id="timeName">
+                            <div class="option-selected">最近7天</div>
+                            <div class="select-logo"></div>
+                        </div>
+                        <div class="option-list time-list" id="timeSelect" style="display: none;">
+                            <div value="1">最近7天</div>
+                            <div value="2">近一个月</div>
+                            <div value="3">近三个月</div>
+                            <input type="hidden" name="type" value="1">
+                        </div>
+                        <div class="query" id="optionTime">
+                            <input type="text" name="form" id="fromDate3" readonly="readonly" class="hasDatepicker">
+                            <span> - </span>
+                            <input type="text" name="to" id="toDate3" readonly="readonly" class="hasDatepicker">
+                        </div>
+                    </div>
+                    <div class="content" style="margin-top: 30px">
+                        <table class="stripe">
+                            <thead>
+                                <tr>
+                                    <th>交易日期</th>
+                                    <th>类型</th>
+                                    <th>单价（元/克）</th>
+                                    <th class="rightth">克重（克）</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="page"></div>
+                    <div class="null">无交易记录</div>
+                </div>
+                <div id="freezeGoldTab" class="tabs" style="display: none;">
+                    <div class="content" style="margin-top: 30px">
+                        <table class="stripe">
+                            <thead>
+                                <tr>
+                                    <th>冻结原因</th>
+                                    <th>冻结时间</th>
+                                    <th>解冻时间</th>
+                                    <th class="rightth">金重（克）</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="page"></div>
+                    <div class="null">无冻结记录</div>
+                </div>
+                <div id="freezeMoneyTab" class="tabs" style="display: none;">
+                    <div class="content" style="margin-top: 30px">
+                        <table class="stripe">
+                            <thead>
+                                <tr>
+                                    <th>冻结原因</th>
+                                    <th>冻结时间</th>
+                                    <th>解冻时间</th>
+                                    <th class="rightth">金额（元）</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div class="page"></div>
+                    <div class="null">无冻结记录</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

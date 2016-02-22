@@ -1,0 +1,313 @@
+.gbanker-account-frame .deposit-tab {
+	padding-top: 31px;
+}
+
+.gbanker-account-frame .deposit-tab .header {
+	border-bottom: 2px solid #eeece6;
+	height: 32px;
+	margin-bottom: 25px;
+}
+
+.gbanker-account-frame .deposit-tab .header .title {
+	float: left;
+	padding-bottom: 16px;
+	padding-left: 28px;
+}
+
+.gbanker-account-frame .deposit-tab .header .title1 {
+	padding-left: 6px;
+}
+
+.gbanker-account-frame .deposit-tab .header .title a {
+	font-size: 14px;
+	color: #565656;
+	border-right: 1px solid #eeece6;
+	padding-right: 10px;
+}
+
+.gbanker-account-frame .deposit-tab .header .title .key {
+	border: 0;
+}
+
+.gbanker-account-frame .deposit-tab .header .active {
+	border-bottom: 2px solid #ffa800;
+	color: #ffa800;
+}
+
+.gbanker-account-frame .deposit-tab .header .active a {
+	color: #ffa800;
+}
+
+.gbanker-account-frame .deposit-tab .content .tab {
+	display: none;
+}
+
+.gbanker-account-frame .deposit-tab .content .info {
+	background: #fff0bc;
+	height: 36px;
+	margin-top: 25px;
+	margin-bottom: 22px;
+	padding: 24px 35px 24px 0px;
+}
+
+.gbanker-account-frame .deposit-tab .content .info .detail {
+	padding: 0px 54px;
+	border-right: 1px solid #ddcfa2;
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180, Color='#fff7dc')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180,
+		Color='#fff7dc');
+	-moz-box-shadow: 1px 0px #fff7dc;
+	-webkit-box-shadow: 1px 0px #fff7dc;
+	box-shadow: 1px 0px #fff7dc;
+	width: 90px;
+	float: left;
+}
+
+.gbanker-account-frame .deposit-tab .content .info .detail2 {
+	border-right: 0px;
+}
+
+.gbanker-account-frame .deposit-tab .content .info .detail .key {
+	font-size: 12px;
+	color: #b2a067;
+	width: 90px;
+}
+
+.gbanker-account-frame .deposit-tab .content .info .detail .number {
+	font-size: 16px;
+	color: #ae7300;
+	margin-top: 8px;
+	width: 90px;
+}
+
+.gbanker-account-frame .deposit-tab .content .info .trans-gold {
+	text-align: center;
+	float: right;
+	background: url(../../images/account_withdraw.png) no-repeat;
+	height: 28px;
+	display: inline-block;
+	line-height: 28px;
+	width: 81px;
+	color: #fff;
+}
+/* 箱底金详情 */
+.deposit_banner_bg {
+	background: url(/statics/images/deposit_banner_bg.png) repeat-x;
+}
+.deposit_banner_logo {
+	background: url(/statics/images/deposit_banner.png) no-repeat;
+	width: 1004px;
+	margin: 0 auto;
+	height: 340px;
+}
+.gbanker-deposit-frame {
+	border: 1px solid #dedede;
+	margin-bottom: 88px;
+	margin-top: 80px;
+	background: #f9f9f8;
+	width: 1002px;
+}
+.gbanker-deposit-frame .into-sidebar {
+	z-index: 5;
+	width: 370px;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type {
+	border-bottom: 1px solid #e8e8e8;
+	padding: 27px 0px 24px 29px;
+	height: 49px;
+	border-right: 1px solid #e8e8e8;
+	cursor: pointer;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type.active {
+	background: #fff;
+	border-right: 0;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type .left .logo {
+	background: url(/statics/images/account_deposit_uncheck.png) no-repeat;
+	height: 20px;
+	width: 20px;
+	margin-top: 16px;
+	float: left;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type.active .logo {
+	background: url(/statics/images/account_deposit_active.png) no-repeat;
+	height: 20px;
+	width: 20px;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type .left .deposit-name {
+	line-height: 51px;
+	font-size: 16px;
+	color: #A4A4A4;
+	float: left;
+	margin-left: 20px;
+	padding-right: 20px;
+	border-right: 1px solid #eeece6;
+	width: 125px;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type.active .left .deposit-name
+	{
+	color: #565656;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type .right {
+	margin-left: 51px;
+	float: left;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type .right .number {
+	font-size: 26px;
+	color: #FFA800;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type .right .key {
+	color: #A4A4A4;
+	margin-top: 14px;
+}
+.gbanker-deposit-frame .into-sidebar .nav .type.active .right .key {
+	color: #565656;
+}
+.gbanker-deposit-frame .content .info {
+	background: #fff;
+	padding: 26px 62px 0px 62px;
+	width: 507px;
+	display: none;
+}
+.gbanker-deposit-frame .content .info .title {
+	height: 20px;
+}
+.gbanker-deposit-frame .content .info .title .siderbtn {
+	line-height: 20px;
+	color: #fff;
+	border-radius: 20px;
+	background: #ffa800;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	float: left;
+}
+.gbanker-deposit-frame .content .info .title .key {
+	font-size: 14px;
+	color: #565656;
+	margin-left: 14px;
+	margin-top: 4px;
+	float: left;
+}
+.gbanker-deposit-frame .content .info .title .right {
+	float: right;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+.gbanker-deposit-frame .content .info .deposit-info {
+	text-align: center;
+	float: left;
+	padding-top: 44px;
+	width: 508px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .number2 {
+	color: #FFA800;
+	font-size: 34px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .key {
+	margin-top: 14px;
+	color: #565656;
+	margin-bottom: 42px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .group {
+	background: #fff;
+	border: 1px solid #dadada;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .group.focus {
+	border: 1px solid #ffa800;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .group input {
+	border: 0;
+	color: #cccccc;
+	padding: 10px 15px;
+	font-size: 14px;
+	width: 122px;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .group .input {
+	color: #565656;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .group span {
+	padding-right: 10px;
+	color: #565656;
+}
+.gbanker-deposit-frame .content .info .deposit-info .button-confirm {
+	background: url(/statics/images/account_deposit_confirm.png) no-repeat;
+	width: 182px;
+	height: 38px;
+	display: inline-block;
+	line-height: 38px;
+	font-size: 14px;
+	color: #fff;
+}
+.gbanker-deposit-frame .content .info .deposit-info .confirm-info {
+	width: 182px;
+	padding-top: 16px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #e8e8e8;
+	margin-left: 162px;
+	height: 14px;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .confirm-info .key2
+	{
+	margin-right: 36px;
+	text-align: right;
+	float: left;
+	width: 56px;
+	color: #cccccc;
+	margin-bottom: 0px;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .confirm-info .number3
+	{
+	text-align: left;
+	float: left;
+	color: #717171;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .button-confirm2 {
+	margin-top: 29px;
+}
+.gbanker-deposit-frame .content .info .before {
+	background: url(/statics/images/account_before.png) no-repeat;
+	width: 17px;
+	height: 32px;
+	position: absolute;
+	left: 62px;
+	top: 160px;
+	cursor: pointer;
+}
+.gbanker-deposit-frame .content .info .deposit-info .key2 {
+	color: #565656;
+	margin-bottom: 14px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .group2 {
+	background: #fff;
+	border: 1px solid #dadada;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .group2.focus {
+	border: 1px solid #ffa800;
+}
+
+.gbanker-deposit-frame .content .info .deposit-info .group2 input {
+	border: 0;
+	color: #565656;
+	padding: 10px 15px;
+	font-size: 14px;
+	width: 152px;
+}
+.gbanker-deposit-frame .content .info .deposit-info .key3 {
+	color: #FFA800;
+	font-size: 20px;
+	margin-bottom: 24px;
+}

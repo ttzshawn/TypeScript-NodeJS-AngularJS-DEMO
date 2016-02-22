@@ -1,0 +1,265 @@
+/* 公共部分 */
+.gbanker-account-frame {
+	border: 1px solid #dedede;
+	border-top: 0;
+	margin-bottom: 90px;
+	background: #f9f9f8;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 1002px;
+}
+.gbanker-account-frame .primary {
+	background: #fff;
+	border-left: 1px solid #e8e8e8;
+	min-height: 485px;
+	padding: 20px 20px 120px;
+	width: 783px
+}
+/* header金价框 */
+.gbanker-gold-price {
+	background: url(../../images/account_bar2.png?20151020.png) no-repeat;
+	height: 69px;
+	position: relative;
+	z-index: 1;
+	width: 1014px;
+	margin: 0 auto
+}
+
+.gbanker-gold-price .row {
+	position: relative
+}
+
+.gbanker-gold-price .price-update {
+	position: absolute;
+	right: 0;
+	top: 28px;
+	font-size: 18px;
+	color: rgb(115, 73, 0);
+	margin-right: 14px;
+}
+
+.gbanker-gold-price .price-update span {
+	letter-spacing: 21px;
+	font-family: Helvetica,"Microsoft YaHei";
+	float: left;
+}
+
+.gbanker-gold-price .price-update .integer {
+	margin-right: 11px;
+}
+
+.gbanker-gold-price .price-update .point {
+	margin-right: -7px;
+}
+
+.gbanker-gold-price .price-update .price-update-logo {
+	background: url(../../images/account_button_new.png) -16px -10px
+		no-repeat;
+	width: 19px;
+	height: 18px;
+	margin-top: 11px;
+	margin-right: 5px
+}
+
+.gbanker-gold-price .price-update .update-unit {
+	background: url(../../images/account_unit.png) no-repeat;
+	margin-top: 9px;
+	text-align: center;
+	padding: 2px 10px;
+	color: #fff;
+}
+
+.gbanker-gold-price .price-update .unit1 {
+	padding: 2px 18px;
+}
+
+.gbanker-gold-price .price-update dd, .gbanker-gold-price .price-update dl
+	{
+	margin: 0
+}
+
+.gbanker-gold-price .price-update .number {
+	color: #ffe851;
+	padding: 0 15px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: right;
+	width: 75px;
+}
+
+.gbanker-gold-price .price-update .spec {
+	color: #fff
+}
+/* 我的账户 左侧导航栏*/
+
+.gbanker-account-frame .sidebar { 
+	z-index: 5;
+	width: 176px
+}
+
+.gbanker-account-frame .sidebar .account-head {
+	text-align: center;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .sidebar .account-head .head {
+	background: url(../../images/account_head.png) no-repeat;
+	width: 55px;
+	height: 55px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.gbanker-account-frame .sidebar .account-head .account-name {
+	margin-top: 16px;
+	color: #959595;
+}
+
+.gbanker-account-frame .sidebar .account-head .pwd {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.gbanker-account-frame .sidebar .account-head .changePwd {
+	text-decoration: underline;
+	color: #959595;
+}
+
+.gbanker-account-frame .sidebar .cash-operation {
+	height: 86px;
+	width: 178px;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .cash {
+	width: 101px;
+	padding: 18px 0px 25px 0px;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .cash .key {
+	color: #959595;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .cash .number {
+	font-weight: bold;
+	font-size: 16px;
+	color: rgb(88, 88, 88);
+	margin-top: 12px;
+	height: 16px;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .freeze-money {
+	background: url(../../images/account_money_freeze.png) no-repeat;
+	width: 29px;
+	height: 33px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .operation {
+	float: left;
+	width: 75px;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .operation div {
+	text-align: center;
+	padding: 14px 0px;
+	color: #9c9c9c;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .operation div a {
+	padding: 12px 21px;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .operation div a:hover {
+	background: #fff;
+	color: #6f6f6f;
+}
+
+.gbanker-account-frame .sidebar .cash-operation .operation div.active {
+	color: #6f6f6f;
+	background: #fff;
+	border-left: 5px solid #ffa800;
+	width: 71px;
+}
+
+.gbanker-account-frame .sidebar .nav ul {
+	padding: 0;
+}
+
+.gbanker-account-frame .sidebar .nav ul li {
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .sidebar .nav ul li a {
+	display: block;
+	width: 99%;
+	text-indent: 16px;
+	line-height: 51px;
+	font-size: 14px;
+	color: #9c9c9c;
+}
+
+.gbanker-account-frame .sidebar .nav ul li a:before {
+	display: inline-block;
+	border: 2px solid transparent;
+	vertical-align: middle;
+	margin-left: -18px;
+	margin-right: 10px
+}
+.gbanker-account-frame .sidebar .nav ul li.active {
+	background: #fff;
+}
+.gbanker-account-frame .sidebar .nav ul li.active a {
+	color: #6f6f6f;
+	background: #fff;
+	border-left: 5px solid #ffa800;
+}
+.gbanker-account-frame .sidebar .nav ul li a:hover {
+	background: #fff;
+	color: #6f6f6f;
+}
+.gbanker-account-frame .sidebar .nav ul li div {
+	background: url(../../images/account_sidebar.png) no-repeat;
+	width: 14px;
+	height: 16px;
+	margin-left: 21px;
+	margin-top: 15px;
+	float: left;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .me {
+	background-position: 0px 0px;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .transaction {
+	background-position: 0px -50px;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .gold {
+	background-position: 0px -100px;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .reserve {
+	background-position: 0px -150px;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .card {
+	background-position: 0px -200px;
+}
+
+.gbanker-account-frame .sidebar .nav ul li .deposit {
+	background-position: 0px -250px;
+}
+.gbanker-account-frame .sidebar .nav ul li .coupons {
+	background-position: 0px -307px;
+	height:12px;
+	width:16px;
+	margin-top:20px;
+}

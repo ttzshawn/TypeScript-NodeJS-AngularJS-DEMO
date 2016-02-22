@@ -1,0 +1,447 @@
+.gbanker-account-frame .reserve-tab {
+	padding-top: 17px;
+}
+
+.gbanker-account-frame .reserve-tab .header .rule {
+	float: right;
+}
+
+.gbanker-account-frame .reserve-tab .block .header .title-logo {
+	background: url(../../images/account_title_logo.png) no-repeat;
+	width: 5px;
+	height: 17px;
+	margin-right: 16px;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .info {
+	width: 742px;
+	border: 1px solid #e3e3e3;
+	padding: 26px 20px 0px 20px;
+	height: 306px;
+	display: none;
+	position: relative;
+	margin-bottom: 37px;
+}
+
+.gbanker-account-frame .reserve-tab .content .name-info {
+	display: block;
+	margin-top: 50px;
+	margin-right: 291px;
+	float: right;
+	width: auto;
+	border: 0;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .title {
+	height: 20px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .title .right {
+	float: right;
+	filter: alpha(opacity = 50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .title .siderbtn {
+	line-height: 20px;
+	color: #fff;
+	border-radius: 20px;
+	background: #ffa800;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .title .key {
+	font-size: 14px;
+	color: #565656;
+	margin-left: 14px;
+	margin-top: 4px;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo {
+	margin-top: 18px;
+	float: right;
+	margin-right: 291px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info  label {
+	display: inline-block;
+	width: 90px;
+	text-align: right;
+	margin-right: 19px;
+	font-size: 14px;
+	color: #565656;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .info  input {
+	width: 203px;
+	border: 1px solid #cccccc;
+	margin-bottom: 18px;
+	font-size: 14px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info  .select-control {
+	width: 186px;
+	padding-left: 15px;
+	margin-bottom: 18px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info  .select-control .selected
+	{
+	font-size: 14px;
+	color: #cccccc;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .info  .select-control .input
+	{
+	color: #565656;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .select-control .select-logo
+	{
+	background: url(../../images/account_select.png) no-repeat;
+	width: 8px;
+	height: 4px;
+	float: right;
+	margin: 6px 10px 0px 0px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .store-list
+	{
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 109px;
+	z-index: 1;
+}
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .store-list .location
+	{
+	width: 186px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 15px;
+	background: #fff;
+	color: #565656;
+	cursor: pointer;
+}
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .store-list .store
+	{
+	width: 186px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 15px;
+	background: #fff;
+	color: #565656;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .store-list .check
+	{
+	color: #fff;
+	background: #ffa800;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .date-list
+	{
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 109px;
+	z-index: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 188px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .date-list .dateTime
+	{
+	width: 186px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 15px;
+	background: #fff;
+	color: #565656;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .storeInfo .date-list .check
+	{
+	color: #fff;
+	background: #ffa800;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .personInfo {
+	margin-top: 18px;
+	float: right;
+	margin-right: 291px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .personInfo span {
+	width: 205px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .personInfo input {
+	width: 203px;
+	border: 1px solid #cccccc;
+	margin-bottom: 18px;
+	font-size: 14px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .personInfo div {
+	line-height: 40px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .next-button {
+	background: url(../../images/account_card.png) no-repeat;
+	width: 203px;
+	height: 38px;
+	text-align: center;
+	display: inline-block;
+	line-height: 38px;
+	color: #fff;
+	margin-left: 109px;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .renzheng {
+	background: url(../../images/reserve_renzheng.png) no-repeat;
+	width: 128px;
+	height: 128px;
+	position: absolute;
+	left: 325px;
+	top: -27px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .left-part {
+	float: left;
+	margin-top: 25px;
+	margin-left: 90px;
+	position: relative;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .right-part {
+	margin-top: 25px;
+	float: left;
+	margin-left: 39px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .weight-list {
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 109px;
+	z-index: 1;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .weight-list .weight
+	{
+	width: 186px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 15px;
+	background: #fff;
+	color: #565656;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .weight-list .check {
+	color: #fff;
+	background: #ffa800;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .source-list {
+	display: none;
+	position: absolute;
+	top: 38px;
+	left: 109px;
+	z-index: 1;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .source-list .source
+	{
+	width: 186px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 15px;
+	background: #fff;
+	color: #565656;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .source-list .check {
+	color: #fff;
+	background: #ffa800;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .before {
+	background: url(../../images/account_before.png) no-repeat;
+	width: 17px;
+	height: 32px;
+	position: absolute;
+	left: 54px;
+	top: 146px;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .upload {
+	padding: 16px 24px;
+	width: 238px;
+	height: 158px;
+	border: 1px solid #d9d9d9;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .upload .invoice {
+	background: url(../../images/reserve_invoice.png) no-repeat;
+	height: 63px;
+	margin-left: 67px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .upload-file {
+	position: absolute;
+	top: 153px;
+	background: #c6c6c6;
+	opacity: 0.8;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .upload-file input {
+	padding: 6px 0px 10px 96px;
+	border: none;
+	margin: 0;
+	width: 288px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info p {
+	text-align: center;
+	font-size: 14px;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .upload a {
+	text-decoration: underline;
+	color: #ff8d28;
+}
+
+.gbanker-account-frame .reserve-tab .content .info .agreement {
+	text-align: center;
+	margin-left: 99px;
+	font-size: 12px;
+}
+
+.gbanker-account-frame .reserve-tab .content .stripe {
+	font-size: 14px;
+}
+
+.gbanker-account-frame .reserve-tab .content .stripe .finish {
+	color: #bcbcbc;
+}
+
+.gbanker-account-frame .reserve-tab .stripe dt {
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .content .loc {
+	background: url(../../images/reserve_loc.png) 0px 0px;
+	height: 16px;
+	width: 16px;
+	margin-left: 10px;
+	margin-top: 12px;
+}
+
+.gbanker-account-frame .reserve-tab .content .loc:hover {
+	background: url(../../images/reserve_loc.png) 0px -16px no-repeat;
+	height: 16px;
+	width: 16px;
+}
+
+.gbanker-account-frame .reserve-tab .content .tel {
+	background: url(../../images/reserve_loc.png) -16px 0px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: 10px;
+	margin-top: 12px;
+}
+
+.gbanker-account-frame .reserve-tab .content .tel:hover {
+	background: url(../../images/reserve_loc.png) -16px -16px no-repeat;
+	height: 16px;
+	width: 16px;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .loc-tips {
+	position: absolute;
+	display: none;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .loc-tips .loc-info
+	{
+	position: absolute;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+	background: #f9f9f9;
+	width: 140px;
+	color: #797979;
+	padding: 18px;
+	z-index: 10;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .loc-tips .loc-info p
+	{
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .loc-tips .up1 {
+	position: absolute;
+	border-width: 8px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #d1d1d1 transparent;
+	top: -16px;
+	left: 75px;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .loc-tips .up2 {
+	border-color: transparent transparent #f9f9f9 transparent;
+	top: -15px;
+	z-index: 11;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .explain {
+	height: 32px;
+	margin-top: 30px;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .explain .id-logo {
+	background: url(../../images/reserve_ID.png) no-repeat;
+	width: 44px;
+	height: 32px;
+	float: left;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .explain .explain-info
+	{
+	width: 468px;
+	line-height: 16px;
+	font-size: 14px;
+	float: left;
+	margin-left: 20px;
+}
+
+.gbanker-account-frame .reserve-tab .block .content .info .auth {
+	margin-top: 8px;
+	margin-left: 83px;
+}

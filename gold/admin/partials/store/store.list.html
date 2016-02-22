@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <legend>店铺列表</legend>
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>店铺名称</th>
+                    <th>店铺地址</th>
+                    <th>店铺电话</th>
+                    <th>服务</th>
+                    <th>所属省</th>
+                    <th>所属城市</th>
+                    <th>所属区县</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in stores">
+                    <td>{{item.storeid}}</td>
+                    <td>{{item.storename}}</td>
+                    <td>{{item.storeaddress}}</td>
+                    <td>{{item.storetel}}</td>
+                    <td>{{item.storeservice}}</td>
+                    <td>{{item.storeprovince}}</td>
+                    <td>{{item.storecity}}</td>
+                    <td>{{item.storedistrict}}</td>
+                    <td>
+                        <button class="btn btn-info">修改</button>
+                        <button class="btn btn-warning">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

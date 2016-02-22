@@ -1,0 +1,654 @@
+@charset "UTF-8";
+
+body {
+	font-size: 14px;
+	font-family: "Microsoft YaHei", Arial, SansSerif;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1;
+	background: #fff;
+	color: #676767;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+
+.row {
+	width: 1004px;
+	margin: 0 auto;
+	*zoom: 1
+}
+.row:after, .row:before {
+	content: " ";
+	display: table
+}
+
+.row:after {
+	clear: both
+}
+/* header部分 */
+
+.gbanker-ceil .light-ceil {
+	border-bottom: 1px solid #dbdada;
+	background-color:#fafafa;
+}
+.gbanker-ceil .row {
+	line-height: 50px;
+	position: relative;
+}
+
+.gbanker-ceil .contacts {
+	width: 570px
+}
+.gbanker-ceil .contacts dd, .gbanker-ceil .contacts dt {
+	margin: 0;
+	float: left;
+	border-left: 1px solid #e4e4e4;
+	padding: 0 14px;
+}
+.icon-weibo-border {
+	display: inline-block;
+	border-right: 1px solid #e4e4e4;
+}
+.icon-weibo {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../../images/home_footer_wbx1.png) 0 -40px no-repeat;
+}
+.gbanker-ceil .login li {
+	position: relative;
+	border-left: 1px solid #e4e4e4;
+	padding: 0 15px;
+}
+.gbanker-ceil .login li a {
+	display: inline-block
+}
+
+.gbanker-ceil .login li .tel {
+	text-decoration: underline;
+}
+.ceil_out {
+	margin-left: 25px;
+}
+.inline.clearfix .client_out_img {
+	border-left: 1px solid #e4e4e4;
+	border-color: transparent transparent transparent #e4e4e4;
+	display: inline-block;
+	padding-left: 4px;
+	position: absolute;
+	right: 48px;
+	top: 15px;
+}
+.download_client {
+	position: absolute;
+	border-color: transparent;
+	left: 15px;
+	top: 10px;
+}
+.icon-weixin {
+	width: 28px;
+    height: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../../images/home_footer_wbx1.png) 0 0px no-repeat;
+}
+
+/* 导航部分 */
+
+.gbanker-navbar {
+	background: #fff;
+	height: 59px;
+	box-shadow: 0 2px 2px #f3f3f3;
+}
+.gbanker-navbar .links h1 {
+	margin: 0;
+	margin-top: 10px;
+}
+.gbanker-navbar .links h1 a {
+	text-indent: -119988px;
+	overflow: hidden;
+	text-align: left;
+	text-transform: capitalize;
+	background-image: url(../../images/logo4a47.png?1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 114px;
+	display: block;
+	height: 38px
+}
+.gbanker-navbar .nav {
+	width: 600px
+}
+.gbanker-navbar .nav ul {
+	margin-top: 22px;
+	margin-left: 40px;
+	height: 16px;
+}
+.gbanker-navbar .nav li {
+	padding:0px 15px 0px 15px
+}
+.gbanker-navbar .nav a {
+	font-size: 16px;
+	display:inline-block;
+	padding-bottom: 6px;
+}
+.gbanker-navbar .nav li.active a {
+	color:#fe9711;
+	border-bottom: 2px solid #fe9711;
+}
+.gbanker-navbar .nav a:hover {
+	color:#fe9711;
+}
+.gbanker-navbar .actions {
+	padding:10px 23px;
+	border:1px solid #fa4d1e;
+	color:#fa4d1e;
+	margin-top:11px;
+}
+.gbanker-navbar .actions a{
+	font-size: 16px;
+	color:#fa4d1e;
+}
+/* .gbanker-navbar .actions ul {
+	margin-top: 8px
+}
+.gbanker-navbar .actions .button-gold {
+	background: url(../../images/gold_button.png) no-repeat;
+	height: 19px;
+	width: 67px;
+	padding: 12px;
+}
+.gbanker-navbar .actions .button-bullion {
+	background: url(../../images/bullion_button.png) no-repeat;
+	height: 19px;
+	width: 67px;
+	margin-left: 15px;
+	padding: 12px;
+} */
+
+/* footer部分 */
+
+.gbanker-footer {
+	border-top: 1px solid #ebeaea;
+	box-shadow: 0 -1px 2px #f1f1f1;
+	padding-top: 61px;
+	color: #b6b6b6;
+	font-size: 14px
+}
+
+.gbanker-footer .links {
+	width: 650px;
+	margin-bottom: 72px;
+	border-right: 1px solid #DFDFDF;
+	font-family:'Helvetica',"Microsoft YaHei";
+}
+
+.gbanker-footer .links ul.inline li{
+    border-right: 1px solid #d4d4d4;
+}
+
+.gbanker-footer .links ul.inline li:last-child{
+    border-right: transparent;
+}
+
+.gbanker-footer .links ul.inline a {
+	padding: 0 14px;
+	color: #686868;
+	font-size: 16px;
+	/*border-right: 1px solid #b6b6b6;*/
+}
+
+.gbanker-footer .links ul.inline {
+	height: 20px;
+}
+
+.gbanker-footer .links ul.inline a:hover{
+    color: #fe9711;
+}
+
+.gbanker-footer .links div.about-us {
+	clear: both;
+	line-height: 40px;
+	height: 40px;
+	margin-bottom: 52px;
+	font-size: 16px;
+}
+
+.gbanker-footer .links div.about-us a:last-child {
+	margin-right: 19px;
+}
+
+.gbanker-footer .links a:hover {
+	color: #303030;
+}
+
+.gbanker-footer .links li:first-child a {
+	padding-left: 0
+}
+
+.gbanker-footer .links li:last-child a {
+	border: 0
+}
+
+.gbanker-footer .links dl {
+	clear: both;
+	padding-top: 40px;
+	line-height: 26px
+}
+
+.gbanker-footer .links dl dt {
+	clear: left
+}
+
+.gbanker-footer .links dl dd {
+	margin: 0
+}
+
+.gbanker-footer .pagebottom {
+	padding: 20px 0 20px 0;
+}
+.gbanker-footer .pagebottom ul{
+	width:450px;float:left;
+}
+.gbanker-footer .pagebottom .copyright {
+	width: 420px;
+	float: right;
+}
+.gbanker-footer .pagebottom .copyright div{
+	margin-left:100px;
+	color:#777777;
+	font-size:12px;
+	line-height:20px;
+}
+.gbanker-footer .pagebottom .copyright .fico{
+	background: url(../../images/home_footer_fico.png) no-repeat 0px 0px;
+	height: 31px;
+	width: 88px;
+	float: left;
+}
+.gbanker-footer .pagebottom .copyright .fico:hover{
+	background: url(../../images/home_footer_fico.png) no-repeat 0px -31px;
+	height: 31px;
+	width: 88px;
+	float: left;
+}
+.gbanker-footer .pagebottom .copyright .inline {
+	float: right;
+	font-size: 12px;
+}
+
+.gbanker-footer .pagebottom .copyright .inline dt {
+	line-height: 20px;
+	float: right;
+}
+.gbanker-footer .pagebottom .copyright p{
+	color:#a4a4a4;
+	font-size:12px;
+	width:450px;
+	float:right;
+}
+.gbanker-footer .pagebottom .verify1, .gbanker-footer .pagebottom .verify2
+	{
+	width: 90px;
+	float: left;
+	margin-right: 30px
+}
+.gbanker-footer .pagebottom .verify2{
+	margin-top:-5px;
+}
+.gbanker-footer .pagebottom .verify1 a {
+	background: url(../../images/home_footer_kx.png) no-repeat 0px 0px;
+	height: 31px;
+	width: 86px;
+	float: left;
+}
+
+.gbanker-footer .pagebottom .verify1 a:hover {
+	background: url(../../images/home_footer_kx.png) no-repeat 0px -31px;
+	height: 31px;
+	width: 86px;
+	float: left;
+}
+
+.gbanker-footer .pagebottom .verify2 a {
+	background: url(../../images/home_footer_nte81e.png?20151010.png) no-repeat 0px 0px;
+	height: 40px;
+	width: 75px;
+	float: left;
+}
+
+.gbanker-footer .pagebottom .verify2 a:hover {
+	background: url(../../images/home_footer_nte81e.png?20151010.png) no-repeat 0px -40px;
+	height: 40px;
+	width: 75px;
+	float: left;
+}
+
+.gbanker-footer .pagebottom .verify3 a {
+	background: url(../../images/home_footer_goldAsse81e.png?20151010.png) no-repeat 0px 0px;
+	height: 32px;
+	width: 146px;
+	float: left;
+}
+
+.gbanker-footer .pagebottom .verify3 a:hover {
+	background: url(../../images/home_footer_goldAsse81e.png?20151010.png) no-repeat 0px -32px;
+	height: 32px;
+	width: 146px;
+	float: left;
+}
+
+.gbanker-footer .contactus {
+	text-align: center;
+	float: right;
+	padding-right: 46px;
+	font-family:'Helvetica',"Microsoft YaHei";
+}
+
+.gbanker-footer .contactus span {
+	font-family:"Microsoft YaHei";
+	/*color: #141000;*/
+}
+
+.gbanker-footer .contactus ul {
+	height: 31px;
+	margin-left: 20px;
+}
+
+.gbanker-footer .contactus .inline {
+	padding-top: 24px;
+	float: right;
+}
+
+.gbanker-footer .contactus .inline dt {
+	float: right;
+	line-height: 26px;
+}
+
+.gbanker-footer .contactus .telus {
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	color: #fe9711;
+	font-size: 30px;
+}
+
+.gbanker-footer .contactus .phone{
+    padding-top: 22px;
+}
+
+.gbanker-footer .contactus .qq {
+	padding-top: 32px;
+	font-size: 16px;
+	color: #141000;
+}
+
+.gbanker-footer .footer_kx {
+	background: url(../../images/home_footer_kx.png) 0 0 no-repeat;
+	height: 31px;
+	width: 86px;
+	float: right;
+}
+
+.gbanker-footer .footer_kx:hover {
+	background: url(../../images/ceil_follow.png) 0 -31px no-repeat;
+	height: 31px;
+	width: 86px;
+}
+
+.gbanker-footer .footer_wx {
+    background: url(../../images/home_footer_wx.png) 0 -36px no-repeat;
+    height: 36px;
+    width: 36px;
+    float: left;
+    margin-left: 26px;
+}
+
+.gbanker-footer .footer_wx:hover {
+	background-position: 0 0px;
+}
+
+.gbanker-footer .footer_wb {
+	background: url(../../images/home_footer_wb.png) 0 -36px no-repeat;
+	height: 36px;
+	width: 36px;
+	float: left;
+	margin-left: 34px;
+}
+
+.gbanker-footer .footer_wb:hover {
+	background-position: 0px 0px;
+}
+
+.gbanker-footer .footer_nt {
+	background: url(../../images/home_footer_nt.png) 0 0 no-repeat;
+	height: 32px;
+	width: 60px;
+	float: right;
+	margin-right: 10px;
+}
+
+.gbanker-footer .footer_nt:hover {
+	background: url(../../images/home_footer_nt.png) 0 -39px no-repeat;
+	height: 32px;
+	width: 60px;
+}
+.ceil-weixin-bottom {
+	background: url(../../images/shared/ceil_weixinf207.png?2015911.png) no-repeat;
+		width: 158px;
+		height: 198px;
+		position: absolute;
+		left: 44px;
+		top: 42px;
+		z-index: 11;
+		display: none;
+}
+/*金价浮动框*/
+
+.float{
+	z-index: 99999;
+	height: 137px;
+	width: 66px;
+	border: 1px solid #efefef;
+	background-color: #fff;
+	position: fixed;
+	right: 0px;
+	bottom: 140px;
+	border-radius: 5px;
+}
+.float .service{
+	width:41px;
+	height:41px;
+	border-bottom:1px solid #efefef;
+	padding: 13px;
+}
+.float .service .service-img{
+	background:url(../../images/icon/float_icons.png) no-repeat 0px 0px;
+	height:41px;
+	width:41px;
+	cursor:pointer;
+}
+.float .qr-code{
+	width:41px;
+	height:41px;
+	padding: 13px;
+	cursor:pointer;
+}
+.float .qr-code .qr-code-img{
+	background:url(../../images/icon/float_icons.png) no-repeat 0px -70px;
+	height:41px;
+	width:41px;
+	text-align:center;
+}
+/* 金价趋势图start */
+.graphs {
+	border: 1px solid #ff7a19;
+	height: 335px;
+	width:335px;
+	background-color:#fff;
+	margin-top:51px;
+	float:right;
+	/* position:fixed; */
+	z-index:998;
+}
+.graphs2 {
+	margin-top:0;
+}
+.floatPage{
+	position:relative;
+}
+.finan-graphs2{
+	position:fixed;
+	top:46px;
+}
+.finan-graphs3{
+	/*bottom: 34px;*/
+	right:51px;
+    position: absolute;
+}
+.headline-graphs2{
+	position:fixed;
+	top:46px;
+}
+.headline-graphs3{
+	bottom: 0;
+	right:51px;
+    position: absolute;
+}
+.gold-graphs2{
+	position:fixed;
+	top:110px;
+}
+.gold-graphs3{
+	bottom: 0;
+	right:51px;
+    position: absolute;
+}
+.graphs .graphs-tab {
+	height: 54px;
+}
+
+.graphs .graphs-tab-up1 {
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #e4e4e4 transparent;
+	top: 85px;
+	left: 63px;
+}
+.graphs .graphs-tab-up2 {
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #fff transparent;
+	top: 86px;
+	z-index: 11;
+}
+.graphs .price-update {
+	margin: 15px 0 0 12px;
+}
+.graphs .price-update span {
+	color: #b6b6b6
+}
+.graphs .price-update .number {
+	color: #ff9800;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.graphs #graph {
+	/* margin-left: 24px;
+	margin-right: 16px; */
+	width: 330px;
+	height: 225px;
+}
+.graphs .graphs-tab .graphs-tab-item {
+	width: 111px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-right:1px solid #ff7a19;
+	border-bottom:1px solid #ff7a19;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+
+}
+.graphs .graphs-tab .graphs-tab-item a{color:#ff7a19;}
+.graphs .graphs-tab .graphs-tab-item.active {
+	border-top:2px solid #ff7a19;
+	border-bottom:0px;
+	padding-top: 20px;
+	padding-bottom: 18px;
+}
+
+.graphs .graphs-tab .graphs-tab-item:last-child
+	{
+	border-right: 0;
+}
+.gbanker-gold-trade .gold-detail .gold-stats .price-graph .price-graph-logo
+	{
+	background: url(../../images/gold_price_graph.png) no-repeat;
+	height: 18px;
+	width: 18px;
+	float: left;
+}
+.gbanker-fixedbar{
+	background-color:#fff;
+	height:62px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:1000;
+	width: 100%;
+	border-bottom:1px solid #E4E4E4;
+	display:none;
+}
+.gbanker-fixedbar .links h1 {
+    margin: 0;
+    margin-top: 10px;
+}
+.gbanker-fixedbar .links h1 a {
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    text-transform: capitalize;
+    background-image: url(../../images/logo2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 140px;
+    display: block;
+    height: 46px;
+}
+.gbanker-fixedbar .price{
+	margin-left:40px;
+	margin-top:14px;
+	float:left;
+	line-height:30px;
+	height:30px;
+	width:239px;
+}
+.gbanker-fixedbar .price span{
+	font-size:16px;
+	line-height: 30px;
+   	display: inline-block;
+}
+.gbanker-fixedbar .price .number{
+	color:#fa4d1e;
+	font-size:30px;
+	margin-left:9px;
+	margin-right:9px;
+}
+.gbanker-fixedbar .login{
+	margin-top:20px;
+}
+.gbanker-fixedbar .login li{
+	padding:0px 15px;
+	border-left:1px solid #E4E4E4;
+}
+.gbanker-fixedbar .login li a{
+	font-size:18px;
+	color:#585858;
+}
+.gbanker-fixedbar .login li .tel {
+    text-decoration: underline;
+}

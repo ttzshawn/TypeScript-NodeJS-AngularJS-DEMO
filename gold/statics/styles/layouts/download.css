@@ -1,0 +1,196 @@
+.dload{
+	width:100%;
+}
+.dload .download_intro{
+	background: url(../../images/download/down_bg.png) no-repeat bottom;
+	width:1004px;
+	height:580px;
+	margin:0 auto;
+	position:relative;
+}
+.intro1 .bk1{
+	width:565px;
+	height:461px;
+}
+.intro1 .text_01{
+	background:url(../../images/download/text_01.png) no-repeat;
+	position:absolute;
+	height:80px;
+	width:388px;
+	top:155px;
+	left:600px;
+}
+.intro1 .img_bk1{
+	margin-top:119px;
+}
+.intro1 .code_img{
+	background:url(../../images/download/code_img.png) no-repeat;
+	height:171px;
+	width:171px;
+	position:absolute;
+	left:622px;
+	top:321px;
+}
+.intro1 .code_app{
+	background:url(../../images/download/app_down.png) no-repeat 0 0;
+	height:62px;
+	width:190px;
+	position:absolute;
+	left:830px;
+	top:331px;
+}
+.intro1 .code_app:hover{
+	background:url(../../images/download/app_down.png) no-repeat 0 -62px;
+	height:62px;
+	width:190px;
+	position:absolute;
+	left:830px;
+	top:331px;
+}
+.intro1 .code_android{
+	background:url(../../images/download/app_down.png) no-repeat 0 -124px;
+	height:62px;
+	width:190px;
+	position:absolute;
+	left:830px;
+	top:430px;
+}
+.intro1 .code_android:hover{
+	background:url(../../images/download/app_down.png) no-repeat 0 -186px;
+	height:62px;
+	width:190px;
+	position:absolute;
+	left:830px;
+	top:430px;
+}
+.intro2 .img_bk2{
+	float:right;
+	margin-right:-90px;
+	margin-top:-1px;
+}
+.intro2 .texts{
+	padding-top:115px;
+}
+.intro2 .texts .text_020{
+	background:url(../../images/download/text_020.png) no-repeat;
+	height:38px;
+	width:448px;
+}
+.intro2 .texts .text_021{
+	background:url(../../images/download/text_021.png) no-repeat;
+	height:174px;
+	width:464px;
+	margin-top:67px;
+}
+.intro2 .line_01{
+	background:url(../../images/download/line_01.png) no-repeat;
+	position:absolute;
+	top:178px;
+	right:165px;
+	height:17px;
+	width:292px;
+}
+.intro2 .interest_icon{
+	background:url(../../images/download/interest_icon.png) no-repeat;
+	position:absolute;
+	top:108px;
+	right:330px;
+	height:68px;
+	width:128px;
+}
+.intro2 .line_02{
+	background:url(../../images/download/line_02.png) no-repeat;
+	position:absolute;
+	top:532px;
+	right:230px;
+	height:16px;
+	width:222px;
+}
+.intro2 .percent_icon{
+	background:url(../../images/download/percent_icon.png) no-repeat;
+	position:absolute;
+	top:452px;
+	right:320px;
+	height:82px;
+	width:135px;
+}
+.intro3 .img_bk3{
+	float:left;
+	margin-top:86px;
+}
+.intro3 .texts_02{
+	position:absolute;
+	height:200px;
+	width:490px;
+	top:163px;
+	right:-60px;
+}
+.texts_02 .text_030{
+	background:url(../../images/download/text_030.png) no-repeat;
+	height:38px;
+	width:448px;
+}
+.texts_02 .text_031{
+	background:url(../../images/download/text_031.png) no-repeat;
+	height:88px;
+	width:490px;
+	margin-top:73px;
+}
+.intro4 .img_bk4{
+	float:right;
+	margin-right:-70px;
+}
+.intro4 .texts {
+	padding-top:145px;
+}
+.intro4 .texts .text_040{
+	background:url(../../images/download/text_040.png) no-repeat;
+	height:62px;
+	width:492px;
+}
+.intro4 .texts .text_041{
+	background:url(../../images/download/text_041.png) no-repeat;
+	height:84px;
+	width:392px;
+	margin-top:73px;
+}
+.intro5 .img_bk5{
+	margin-top:119px;
+	float:left;
+}
+.intro5 .texts {
+	padding-top:240px;
+	padding-left:650px;
+}
+.intro5 .texts .text_050{
+	background:url(../../images/download/text_050.png) no-repeat;
+	height:48px;
+	width:417px;
+}
+.intro5 .texts .text_051{
+	background:url(../../images/download/text_051.png) no-repeat;
+	height:79px;
+	width:417px;
+	margin-top:73px;
+}
+
+.download_way{
+	width:1004px;
+	height:580px;
+	margin:0 auto;
+	margin-bottom:60px;
+}
+._way{
+	padding-top:65px;
+	padding-left:200px;
+	
+}
+.text_06{
+	background:url(../../images/download/text_06.png) no-repeat;
+	height:60px;
+	width:632px;
+}
+.img_bk6{
+	margin-top:56px;
+	margin-left:120px;
+}

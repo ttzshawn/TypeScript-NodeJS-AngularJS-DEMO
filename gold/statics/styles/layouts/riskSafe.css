@@ -1,0 +1,143 @@
+.top_border{
+	border-top:1px solid #dbdada;
+ -webkit-box-shadow:inset  0 -10px 10px #f3f3f3;  
+  -moz-box-shadow:inset  0 -10px 10px #f3f3f3;  
+  box-shadow:inset  0 -10px 10px #f3f3f3; 
+}
+.riskSafe .line{
+	height:1px;
+	width:100%;
+	border-top:1px solid #a3a3a3;
+	margin-top:103px;
+	float:left;
+}
+.riskSafe ul{
+	list-style:none;
+	float:left;
+	border-bottom:1px solid #ebebeb;
+	width:100%;
+}
+.riskSafe ul li{
+	float:left;
+}
+.riskSafe ul li h1{
+	font-size:24px;
+	color:#555555;
+	font-weight: normal;
+}
+.riskSafe ul li h2{
+	font-size:16px;
+	color:#737373;
+	font-weight: normal;
+	line-height:25px;
+}
+.riskSafe .riskSafe_compare{
+	padding-bottom:20px;
+}
+.riskSafe .riskSafe_compare li.li1{
+	width:506px;
+	margin-left:42px;
+}
+.riskSafe .riskSafe_compare li.li2{
+	margin-left:84px;
+}
+.riskSafe .line_font{
+	width: 100%;
+    margin-top: -23px;
+    text-align: center;
+    float:left;
+    line-height:32px;
+    margin-bottom:68px;
+}
+.riskSafe .line_font span{
+	text-align: center;
+    background-color: #fff;
+    margin-top: 3px;
+    display: inline-block;
+    color:#ff7a19;
+    font-size:32px;
+    padding:0 10px;
+}
+.riskSafe_shop{
+	padding-top:48px;
+	padding-bottom:50px;
+}
+.riskSafe_shop li.li2{
+	margin-left:75px;
+}
+.riskSafe_shop li.li1{
+	width:500px;
+	margin-left:100px;
+}
+.riskSafe_flow{
+	padding-top:48px;
+	padding-bottom:50px;
+	
+}
+.riskSafe_flow li.li1{
+	width:403px;
+	margin-left:42px;
+}
+.riskSafe_flow li.li2{
+	margin-left:60px;
+}
+/* .riskSafe_sys{
+	padding-bottom:110px;
+} */
+.riskSafe_sys ul,.risk_contro ul{
+	border:0;
+	
+}
+.riskSafe_sys ul li{
+	margin-bottom:63px
+	
+}
+.riskSafe_sys li.li1{
+	float:left;
+	width:448px;
+	margin-left:48px;
+}
+.riskSafe_sys li.li2{
+	float:left;
+	margin-left:55px;
+}
+.risk_contro ul{
+	margin-bottom:73px;
+}
+.risk_contro ul .li1{
+	width:475px;
+	 margin-left: 48px;
+}
+.risk_contro ul .li2{
+	 float:left;
+	margin-left:55px;
+}
+.link_safe li.li2{
+	margin-left:140px;
+}
+.link_safe li.li1{
+	margin-left:123px;
+}
+.link_safe p{
+	color:#555555;
+	font-size:16px;
+}
+.link_safe li.li1  h2{
+	line-height:13px;
+}
+.riskSafe_safe ul{border:0}
+.riskSafe_safe li.li1{
+	width:488px;
+	margin-left:55px;
+}
+.riskSafe_safe li.li2{
+	margin-left:55px;
+	margin-top: 41px;
+}
+.ps{
+	margin-left:55px;
+	font-size:12px;
+	margin-top:70px;
+	margin-bottom:30px;
+	color:#c1c1c1;
+}

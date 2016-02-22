@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="mainApp">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="statics/images/favicon.ico">
+    <title>Example—买黄金超便宜，存黄金生利息</title>
+    <meta name="description" content="Example是软银中国投资的互联网黄金理财平台，可便捷实现低价买金、随时买卖、存金生息、提取实物金条/金饰等功能，为普通消费者和投资者提供黄金价值管理的一站式服务，做最专业的“黄金管家”">
+    <meta name="keywords" content="Example官网,黄金,金价,黄金价格,实物黄金,投资金条,黄金投资">
+    <meta name="baidu-site-verification" content="2ij5J0xCae" />
+
+    <link rel="stylesheet" href="statics/styles/shared/shared.css">
+    <link rel="stylesheet" href="statics/styles/vendor.css">
+    <link rel="stylesheet" href="statics/styles/layouts/basic.css">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="statics/js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="statics/css/one.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div class="gbanker-ceil">
+        <div class="light-ceil">
+            <div class="row">
+                <div class="unit contacts">
+                    <dl>
+                        <dt>
+                            <a href="javascript:void(0);" class="icon-weixin"></a>
+                            <div class="ceil-weixin"></div>
+                        </dt>
+                        <dt class="icon-weibo-border">
+                            <a class="icon-weibo" href="http://weibo.com/1111qianbao" target="_blank"></a>
+                        </dt>
+                    </dl>
+                </div>
+                <div class="gw-code-win2">
+                    <div class="gw-up1"></div>
+                    <div class="gw-up1 gw-up2"></div>
+                    <div class="gw-info">扫描二维码下载客户端</div>
+                    <div class="gw-code"></div>
+                </div>
+                <!-- 官网二维码图片2 -->
+
+                <div class="unit login pull-right ">
+                    <ul class="inline clearfix" ng-if="currentUser">
+                        <li>你好，
+                            <a href="#" class="tel number" ng-bind="currentUser" ng-sref=""></a>
+                            <a class="ceil_out" href="#" ng-click="logout()">退出</a>
+                        </li>
+                        <li style="border-right: 1px solid #e4e4e4" id="span1">
+                            <a href="/download">下载客户端</a>
+                        </li>
+                    </ul>
+                    <ul class="inline clearfix" ng-if="!currentUser">
+                        <li><a href="#" ui-sref="login">登录</a></li>
+                        <li><a href="#" ui-sref="register">注册</a></li>
+                        <li style="border-right: 1px solid #e4e4e4" id="span1">
+                            <a href="download.html">下载客户端</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar begin -->
+    <div class=" gbanker-navbar">
+        <div class="row">
+            <div class="unit links">
+                <h1 class="logo">
+                    <a href="index.html">Example</a>
+                </h1>
+            </div>
+
+            <div class="nav unit">
+                <ul class="inline">
+                    <li ui-sref-active="active"><a ui-sref="index" href="javascript:void(0)">首页</a></li>
+                    <li ui-sref-active="active"><a ui-sref="financing" href="javascript:void(0)">理财</a></li>
+                    <li ui-sref-active="active"><a ui-sref="login" href="javascript:void(0)">我的账户</a></li>
+                    <li ui-sref-active="active"><a ui-sref="headline" href="javascript:void(0)">金价资讯</a></li>
+                    <li ui-sref-active="active"><a ui-sref="about.intro" href="javascript:void(0)">关于我们</a></li>
+                </ul>
+            </div>
+
+
+            <div class="unit2 actions">
+                <a href="#" ui-sref="safe">Example安全吗？</a>
+            </div>
+        </div>
+    </div>
+    <!-- fixed navbar begin -->
+    <div class="gbanker-fixedbar">
+        <div class="row">
+            <div class="unit links">
+                <h1 class="logo2">
+                    <a href="index.html">Example</a>
+                </h1>
+            </div>
+            <div class="price">
+                <span>当前金价：</span>
+                <span class="number" id="fixedPrice" ng-bind="G_goldprice"></span>
+                <span>元/克</span>
+            </div>
+            <div class="unit login pull-right ">
+                <ul class="inline clearfix" ng-if="currentUser">
+                    <li style="border:0;">你好，<a href="#" class="tel number" ng-bind="currentUser"></a>
+                        <a class="ceil_out" href="#" ng-click="logout()">退出</a>
+                    </li>
+                    <li style="padding-right:0px" id="span2">
+                        <a href="#">下载客户端</a>
+                    </li>
+                </ul>
+                <ul class="inline clearfix" ng-if="!currentUser">
+                    <li><a href="#" ui-sref="login">登录</a></li>
+                    <li><a href="#" ui-sref="register">注册</a></li>
+                    <li style="padding-right:0px" id="span2">
+                        <a href="#">下载客户端</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="gw-code-win3">
+                <div class="gw-up1"></div>
+                <div class="gw-up1 gw-up2"></div>
+                <div class="gw-info">扫描二维码下载客户端</div>
+                <div class="gw-code"></div>
+            </div>
+            <!-- 官网二维码图片3 -->
+        </div>
+    </div>
+
+
+
+
+
+    <div class="float">
+        <div class="service">
+            <div class="service-img"></div>
+            <div class="gw-code-win">
+                <div class="gw-right1"></div>
+                <div class="gw-right1 gw-right2"></div>
+                <div class="">400-652-1111</div>
+            </div>
+        </div>
+
+        <div class="qr-code">
+            <div class="qr-code-img"></div>
+            <div class="gw-code-win">
+                <div class="gw-right3"></div>
+                <div class="gw-right3 gw-right2"></div>
+                <div class="gw-code"></div>
+            </div>
+            <!-- 官网二维码图片 -->
+        </div>
+    </div>
+
+
+
+    <div ui-view></div>
+
+
+
+
+    <div class="gbanker-footer">
+        <div class="footer-hd">
+            <div class="row">
+                <div class="links unit">
+                    <div class="about-us">
+                        <div style="float: left">关注我们：</div>
+                        <a class="footer_wx" href="javascript:void(0);"></a>
+                        <a class="footer_wb" href="http://weibo.com/1111qianbao?sudaref=localhost" id="kx_verify" target="_blank"></a>
+                        <div class="ceil-weixin-bottom"></div>
+
+
+                    </div>
+                    <ul class="inline">
+                        <li ui-sref-active="active"><a ui-sref="index" href="javascript:void(0)">首页</a></li>
+                        <li ui-sref-active="active"><a ui-sref="financing" href="javascript:void(0)">理财</a></li>
+                        <li ui-sref-active="active"><a ui-sref="login" href="javascript:void(0)">我的账户</a></li>
+                        <li ui-sref-active="active"><a ui-sref="headline" href="javascript:void(0)">金价资讯</a></li>
+                        <li ui-sref-active="active"><a ui-sref="about.intro" href="javascript:void(0)">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="contactus unit">
+                    <ul>
+                        <li class="telus">400-652-1111</li>
+                        <li class="phone">
+                            <span>(工作日 9:00-21:00 非工作日 10:00-15:00)
+                            </span>
+                        </li>
+                        <li class="qq">
+                            <span>QQ群：11115</span>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div style="background-color: #fafafa">
+            <div class="pagebottom row">
+                <ul>
+                    <li class="verify1">
+                        <a href="https://ss.knet.cn/verifyseal.dll?sn=e14112711010856466vg26000000&amp;ct=df&amp;a=1&amp;pa=0.7663032277487218" target="_blank"></a>
+                    </li>
+                    <li class="verify2">
+                        <a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.Example.com&amp;lang=zh_cn" target="_blank"></a>
+                    </li>
+                </ul>
+
+                <div class="copyright">
+                    <a class="fico"></a>
+                    <div>Example与世界最大的信用评分机构美国FICO(费埃哲)联合开发黄金出借评分决策云平台</div>
+                    <p>京ICP备11111号-1&nbsp;&nbsp;&nbsp;Copyright ©2015 Example.com, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 第三方库 -->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+    <script src="statics/js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script src="statics/js/lib/angular/angular.min.js "></script>
+    <script src="statics/js/lib/angular/angular-animate.min.js "></script>
+    <script src="statics/js/lib/angular-ui-router/angular-ui-router.min.js "></script>
+    <script src="statics/js/lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="statics/js/lib/swiper/js/swiper.min.js "></script>
+
+
+    <link rel="stylesheet" href="statics/js/lib/umeditor/themes/default/css/umeditor.css">
+    <script src="statics/js/lib/umeditor/umeditor.config.js"></script>
+    <script src="statics/js/lib/umeditor/umeditor.min.js"></script>
+    <script src="statics/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+
+    <!-- 自定义 -->
+    <script src="statics/js/one.js "></script>
+    <script src="statics/js/app.js "></script>
+    <script src="statics/js/controllers.js "></script>
+    <script src="statics/js/services.js "></script>
+    <script src="statics/js/filters.js "></script>
+    <script src="statics/js/directives.js "></script>
+
+
+    <script src="statics/scripts/highcharts-min.js"></script>
+    <script src="statics/scripts/index.js"></script>
+    <script src="statics/scripts/common.js"></script>
+    <script src="statics/scripts/shared/shared.js"></script>
+    <script>
+        var isClose = "false";
+    </script>
+    <script src="statics/scripts/layouts/basic.js"></script>
+
+</body>
+
+</html>

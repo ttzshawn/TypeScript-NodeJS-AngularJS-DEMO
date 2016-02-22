@@ -1,0 +1,140 @@
+.login-banner {
+	height: 620px;
+}
+
+.gbanker-login {
+	margin-top: 30px;
+	margin-bottom: 50px;
+	background: #fff;
+}
+
+.gbanker-login form {
+	border: 1px solid #dedede;
+	padding: 40px 70px 30px 60px;
+	width: 285px
+}
+
+.gbanker-login form .error {
+	position: absolute;
+	color: red;
+	display: none;
+}
+
+.gbanker-login form .input-icon-group input {
+	width: 195px
+}
+
+.gbanker-login form .input-icon-group label {
+	line-height: inherit
+}
+
+.gbanker-login form legend h2 {
+	font-size: 18px
+}
+
+.gbanker-login form .find-password {
+	margin-top: 40px;
+}
+
+.gbanker-login form .link-find-password {
+	text-align: right;
+	display: block;
+	font-size: 14px
+}
+
+.gbanker-login form .actions {
+	line-height: 40px
+}
+
+.gbanker-login form .actions .button, .gbanker-login form .actions button
+	{
+	padding: 0
+}
+
+.gbanker-login form .actions .button-alpha {
+	background: #fe9711;
+	width: 200px;
+	height: 40px;
+	font-family: "Microsoft YaHei", Arial, SansSerif;
+	border: 0;
+	display: block;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.gbanker-login form .actions .button-beta {
+	color: #ff4e00;
+	padding-left: 25px
+}
+
+.gbanker-login form .security-info {
+	margin-top: 50px;
+	clear: both;
+	background: url(../../images/user_shield.png) no-repeat 0 6px;
+	padding-left: 40px;
+	font-size: 14px;
+	line-height: 29px
+}
+.login-wrapper .intro {
+	width: 586px;
+	height: 372px;
+	margin-top: 106px;
+}
+
+.login-wrapper .intro .before {
+	background: url(../../images/login_before.png) no-repeat;
+	width: 21px;
+	height: 36px;
+	margin-top: 115px;
+	margin-left: 180px;
+	float: left;
+	cursor: pointer;
+}
+
+.login-wrapper .intro .image {
+	width: 220px;
+	height: 260px;
+	float: left;
+	margin-top: 64px;
+}
+
+.login-wrapper .intro .image .active {
+	z-index: 2;
+}
+
+.login-wrapper .intro .image1 {
+	background: url(../../images/login_1.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .image2 {
+	background: url(../../images/login_2.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .image3 {
+	background: url(../../images/login_3.png) no-repeat;
+	width: 220px;
+	height: 260px;
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+}
+
+.login-wrapper .intro .after {
+	background: url(../../images/login_after.png) no-repeat;
+	width: 21px;
+	height: 36px;
+	float: left;
+	margin-top: 115px;
+	cursor: pointer;
+}

@@ -1,0 +1,694 @@
+.row{
+	position:relative;
+}
+.about_circle {
+	color: #ffc881;
+	font-size: 20px;
+}
+
+.about_intro_icon {
+	background: url(../../images/aboutUs/about_intro_icon.png) no-repeat;
+	width: 8px;
+	height: 23px;
+	float: left;
+}
+
+.location_banner {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border: 8px solid transparent;
+	border-bottom-color: #fe9711;
+	border-top: 0;
+	position: absolute;
+	top: 54px;
+	left: 50px;
+}
+.about_bg{
+	background-color:#F5F5F5;
+	padding-top:51px;
+	padding-bottom:110px;
+}
+.about_us .row ul.about_banner {
+	width: 190px;
+	border: 1px solid #ebebeb;
+	box-shadow:0px 0px 5px #ebebeb;
+	-webkit-box-shadow:0px 0px 5px #ebebeb;
+	-moz-box-shadow:0px 0px 5px #ebebeb;
+	background-color:#fff;
+	float:left;
+}
+.about_us .row ul.about_banner1 {
+	position:fixed;
+	top:83px;
+}
+.about_us .row ul.about_banner2 {
+	position:absolute;
+	bottom:0;
+	left: 0;
+}
+.about_us .row ul.about_banner li {
+	height: 63x;
+	line-height: 63px;
+	padding-left: 30px;
+}
+.about_us .row ul.about_banner a {
+	height: 63x;
+	line-height: 63px;
+	width:190px;
+	display:inline-block;
+	border-bottom: 2px solid #f5f5f5;
+}
+.about_us .row ul.about_banner li.active {
+	border-left: 6px solid #fe9711;
+	padding-left: 24px;
+	color:#fe9711;
+}
+
+.about_us .row ul li.active a {
+	color: #fe9711;
+}
+
+.about_us .row .about_content {
+	width: 752px;
+	min-height: 200px;
+	float: right;
+	border: 1px solid #ebebeb;
+	box-shadow:0px 0px 5px #ebebeb;
+	-webkit-box-shadow:0px 0px 5px #ebebeb;
+	-moz-box-shadow:0px 0px 5px #ebebeb;
+	background-color:#fff;
+}
+
+.about_us .row .about_content .about_us_img {
+	background: url(../../images/aboutUs/about_us.png) no-repeat;
+	width: 752px;
+	height: 314px;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.about_us .row .about_content .about_us_text {
+	padding: 46px 20px 20px 20px;
+}
+
+.about_us .row .about_content .about_us_text p {
+	line-height: 35px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.about_us .row .about_content .team_img {
+	background: url(../../images/aboutUs/team_img.png) no-repeat;
+	width: 752px;
+	height: 314px;
+}
+
+.about_us .row .about_content .team_content .team_each {
+	min-height: 169px;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 25px 30px 0;
+}
+.about_us .row .about_content .team_content .partner_each {
+	min-height: 169px;
+	border-bottom: 1px solid #f5f5f5;
+	margin: 35px 25px 30px 30px;
+}
+.about_us .row .about_content .team_content .team_each .header1 {
+	background: url(../../images/aboutUs/leaders.png) 0 0 no-repeat;
+	height: 140px;
+	width: 120px;
+	float: left;
+}
+.about_us .row .about_content .team_content .partner_each .headers {
+	background: url(../../images/aboutUs/parter-img.png) no-repeat;
+	height: 94px;
+	width: 160px;
+	float: left;
+}
+.about_us .row .about_content .team_content .partner_each .header1 {
+	background-position:0 0;
+}
+.about_us .row .about_content .team_content .partner_each .header2 {
+	background-position:0 -123px;
+}
+.about_us .row .about_content .team_content .partner_each .header3 {
+	background-position:0 -243px;
+}
+.about_us .row .about_content .team_content .partner_each .header4 {
+	background-position:0 -359px;
+}
+.about_us .row .about_content .team_content .partner_each .header5 {
+	background-position:0 -477px;
+}
+.about_us .row .about_content .team_content .partner_each .header1 {
+	background: url(../../images/aboutUs/parter-img.png) 0 0 no-repeat;
+	height: 94px;
+	width: 159px;
+	float: left;
+}
+.about_us .row .about_content .team_content .team_each .header2 {
+	background: url(../../images/aboutUs/leaders.png) -120px 0 no-repeat;
+	height: 140px;
+	width: 120px;
+	float: left;
+}
+
+.about_us .row .about_content .team_content .team_each .header3 {
+	background: url(../../images/aboutUs/leaders.png) -240px 0 no-repeat;
+	height: 140px;
+	width: 120px;
+	float: left;
+}
+
+.about_us .row .about_content .team_content .team_each .header4 {
+	background: url(../../images/aboutUs/leaders.png) -360px 0 no-repeat;
+	height: 140px;
+	width: 120px;
+	float: left;
+}
+.about_us .row .about_content .team_content .team_each .header6 {
+	background: url(../../images/aboutUs/leaders2.png) 0 0 no-repeat;
+	height: 140px;
+	width: 120px;
+	float: left;
+}
+.about_us .row .about_content .team_content .team_each .header9 {
+	background: url(../../images/aboutUs/leaders2.png) -120px 0 no-repeat;
+	height: 140px;
+	width: 118px;
+	float: left;
+}
+.about_us .row .about_content .team_content .team_each .header10 {
+	background: url(../../images/aboutUs/leaders2.png) -238px 0 no-repeat;
+	height: 140px;
+	width: 118px;
+	float: left;
+}
+.about_us .row .about_content .team_content .team_each ul.header_intro {
+	width: 540px;
+	float: right;
+	margin-top: 12px;
+}
+.about_us .row .about_content .team_content .partner_each ul.header_intro {
+	width: 540px;
+	float: right;
+	margin-top: 12px;
+}
+.about_us .row .about_content .team_content .partner_each ul.partner_intro {
+	width: 514px;
+	float: right;
+}
+.about_us .row .about_content .team_content .team_each ul.header_intro li.name
+	{
+	font-size: 18px;
+	font-weight: bolder;
+	margin-top: 20px;
+}
+.about_us .row .about_content .team_content .partner_each ul.header_intro li.name
+	{
+	font-size: 18px;
+	font-weight: bolder;
+	margin-top: 20px;
+}
+.about_us .row .about_content .team_content .team_each ul.header_intro li.header_infor
+	{
+	margin-top: 12px;
+}
+.about_us .row .about_content .team_content .partner_each ul.partner_intro li.header_infor
+	{
+	margin:12px 0 30px;
+}
+.about_us .row .about_content .team_content  p {
+	line-height: 30px;
+	margin: 0px;
+}
+
+.about_us .row .about_content .team_content .team_each .team_intro .name span
+	{
+	font-size: 18px;
+	font-weight: bolder;
+	margin-left: 12px;
+}
+.about_us .row .about_content .team_content .partner_each .team_intro .name span
+	{
+	font-size: 18px;
+	font-weight: bolder;
+	margin-left: 12px;
+}
+.about_us .row .about_content .team_content .team_each .team_intro .team_infor
+	{
+	margin-top: 26px;
+}
+.about_us .row .about_content .team_content .partner_each .team_intro .team_infor
+	{
+	margin-top: 26px;
+}
+
+.about_us .row .about_content .join_img {
+	background: url(../../images/aboutUs/join_img.png) no-repeat;
+	width: 752px;
+	height: 314px;
+}
+
+.about_us .row .about_content .team_content .position_choice {
+	height: 62px;
+	border-bottom: 2px solid #e5e5e5;
+	position: relative;
+}
+
+.about_us .row .about_content .team_content .position_choice li {
+	width: 125px;
+	line-height: 62px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	float: left;
+}
+
+.about_us .row .about_content .team_content .position_choice li.active {
+	border-bottom: 2px solid #fe9711;
+}
+
+.about_us .row .about_content .team_content .position_intro {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.about_us .row .about_content .team_content .position_intro ul {
+	margin-top: 35px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #e2e2e2
+}
+
+.about_us .row .about_content ._head {
+	line-height: 23px;
+}
+
+.about_us .row .about_content ._headName {
+	line-height: 23px;
+	font-size: 18px;
+	color: #000;
+}
+
+.about_us .row .about_content ._head span {
+	font-size: 18px;
+	color: #000;
+	margin-left: 12px;
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_work
+	{
+	margin-top: 30px;
+	line-height: 28px;
+	font-size: 15px;
+	color: #000;
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_work span.duity
+	{
+	margin-left: 12px;
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_require
+	{
+	margin-top: 20px;
+	line-height: 28px;
+	font-size: 15px;
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_require div
+	{
+	width: 20px;
+	float: left
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_require p
+	{
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.about_us .row .about_content .team_content .position_intro ul li.position_require p div
+	{
+	float: left
+}
+
+.about_us .row .about_content .about_position {
+	background: url(../../images/aboutUs/about_position.png) no-repeat;
+	width: 752px;
+	height: 314px;
+}
+
+.about_us .row .about_content .call_content .call_class {
+	height: 169px;
+	border-bottom: 1px solid #e2e2e2;
+	padding: 48px 28px 25px 71px;
+}
+
+.about_us .row .about_content .call_content .call_icons {
+	width: 144px;
+	height: 126px;
+	margin-top: 20px;
+	float: left;
+}
+
+.about_us .row .about_content .call_content .icons1 {
+	background: url(../../images/aboutUs/callus_1.png) no-repeat;
+}
+
+.about_us .row .about_content .call_content .icons2 {
+	background: url(../../images/aboutUs/callus_2.png) no-repeat;
+}
+
+.about_us .row .about_content .call_content .icons3 {
+	background: url(../../images/aboutUs/callus_3.png) no-repeat;
+}
+
+.about_us .row .about_content .call_content .call_class ul.call_detail {
+	float: right;
+	padding-top: 35px;
+}
+.about_us .row .about_content .call_content .call_class ul.call_detail1 {
+	float: right;
+	padding-top: 35px;
+	margin-right:190px;
+}
+.about_us .row .about_content .call_content .call_class ul.call_detail li
+	{
+	margin-bottom: 16px;
+}
+
+.about_us .row .about_content .call_content .call_class ul.call_detail span.text
+	{
+	margin-left: 5px;
+	font-size: 16px;
+}
+
+.about_us .row .about_content .call_content .call_class ul.call_detail span.text font
+	{
+	font-family: "Helvetica";
+	font-size: 12px;
+	color: gray;
+}
+
+.about_us .row .about_content .call_content .call_class ul.call_detail3
+	{
+	margin-right: 225px;
+}
+
+.about_us .row .about_content .deal_content {
+	padding: 45px 30px 70px 30px;
+}
+
+.about_us .row .about_content .deal_content h2 {
+	font-size: 24px;
+	font-family: 微软雅黑;
+	color: #000;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 45px;
+}
+
+.about_us .row .about_content .deal_content p {
+	line-height: 30px;
+	margin-bottom: 25px;
+	margin-top: 0px;
+	padding-left: 10px;
+}
+
+.about_content .content .detail .down .code .android .androidcode {
+	background: url(../../images/about_anriod.png) no-repeat;
+	width: 128px;
+	height: 128px;
+	float: left;
+	margin-left: 62px;
+}
+
+.about_content .content .detail .down .code .android .name {
+	color: #5ebf00;
+	font-size: 24px;
+	font-family: Helvetica;
+	margin-left: 76px;
+	margin-top: 15px;
+	display: inline-block;
+}
+
+.about_content .content .detail .contact {
+	width: 398px;
+	float: left;
+}
+
+.about_content .content .detail .contact .info {
+	margin-top: 69px;
+	padding-left: 49px;
+}
+
+.about_content .content .detail .contact .info .weixin {
+	height: 136px;
+	padding-bottom: 55px;
+}
+
+.about_content .content .detail .contact .info .weixin .code {
+	background: url(../../images/about_weixin.jpg) no-repeat;
+	width: 136px;
+	height: 136px;
+	float: left;
+}
+
+.about_content .content .detail .contact .info span {
+	font-size: 16px;
+	color: #9b723e;
+	float: left;
+}
+
+.about_content .content .detail .contact .info a {
+	font-size: 16px;
+	color: #9b723e;
+	float: left;
+}
+
+.about_content .content .detail .contact .info .weixin .before {
+	font-weight: bold;
+	padding-top: 60px;
+}
+
+.about_content .content .detail .contact .info .weixin .after {
+	font-size: 16px;
+	color: #9b723e;
+	float: left;
+	padding-top: 60px;
+	padding-right: 45px;
+	font-family: Helvetica;
+}
+
+.about_content .content .detail .contact .info .other {
+	padding-bottom: 30px;
+	height: 16px;
+}
+
+.about_content .content .detail .contact .info .other .before {
+	font-weight: bold;
+}
+
+.about_content .content .detail .contact .info .other .after {
+	font-family: Helvetica;
+}
+
+.about_content .content .coop {
+	background: url(../../images/about_coopaa0b.png?2015-08-04.png) no-repeat;
+	height: 242px;
+	margin-left: 72px;
+	margin-bottom: 115px;
+}
+.about_us .row .about_content .deal_content h3 {
+	font-size: 18px;
+	font-family: 微软雅黑;
+	font-weight: normal;
+	color: #000;
+	background-color: #f7f7f7;
+	padding: 10px 0 10px 10px;
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+/*关于我们-----媒体报道*/
+.about_content ul.news{
+	padding:0 29px 40px 29px;
+}
+.about_content ul li.evel_news{
+	border-bottom:1px solid #e2e2e2;
+	padding:39px 0 30px 0;
+}
+.about_content ul li.evel_news div.title,.about_content ul li.evel_news div.content .lead{
+	width:531px;
+	float:left;
+}
+.about_content ul li.evel_news .title_news{
+	height:20px;
+	padding-bottom:25px;
+}
+.about_content ul li.evel_news .title_news .title{
+	color:#000;
+	font-size:16px;
+	float:left;
+}
+.about_content ul li.evel_news .title_news  div.infor{
+	float:right;
+	font-size:12px;
+	color:#9a9a9a;
+}
+.about_content ul li.evel_news .title_news  div.infor .name{
+	margin-right:10px;
+}
+.about_content ul li.evel_news div.content{
+	line-height:25px;
+	padding-bottom:21px;
+}
+.about_content ul li.evel_news div.content .logo{
+	background:url(../../images/news_logob9ed.png?20150916.png) no-repeat;
+	float: right;
+	height: 50px;
+	width: 100px;
+	margin-top:-8px;
+	overflow: hidden;
+}
+.about_content ul li.evel_news a{
+	color:#fe9711;
+}
+.right_banner{
+	border-color: #fff #fff #fff #fe9711;
+	border-style: solid; 
+	border-width: 5px 0px 5px 6px;
+	display:inline-block;
+	margin-left:10px;
+	height:0;
+	width:0;
+}
+.about_content ul li.evel_news a span{
+	display:inline-block;
+}
+.about_us .row .about_content .page {
+	margin-top: 30px;
+	font-size: 12px;
+	float: right;
+	margin:15px 29px 15px 0px;
+}
+.about_us .row .about_content .page span{
+	margin-left:10px;
+}
+.about_us .row .about_content .page a{
+	margin-left:10px;
+}
+/*各报刊logo*/
+.about_content ul li.evel_news div.content  .renmin {
+	background-position:-50px -38px;
+}
+
+.about_content ul li.evel_news div.content  .hexun {
+	background-position:-183px -38px;
+}
+
+.about_content ul li.evel_news div.content  .Kr {
+	background-position:-305px -38px;
+}
+
+.about_content ul li.evel_news div.content  .beichen {
+	background-position:-50px -116px;
+}
+
+.about_content ul li.evel_news div.content  .xinwen {
+	background-position:-183px -116px;
+}
+
+.about_content ul li.evel_news div.content  .caifu {
+	background-position:-305px -116px;
+}
+
+.about_content ul li.evel_news div.content  .jinghua {
+	background-position:-50px -196px;
+}
+
+.about_content ul li.evel_news div.content  .xinlang {
+	background-position:-183px -196px;
+}
+
+.about_content ul li.evel_news div.content  .jinrong {
+	background-position:-305px -196px;
+}
+
+.about_content ul li.evel_news div.content  .xinhua {
+	background-position:-50px -274px;
+}
+
+.about_content ul li.evel_news div.content .wangyi {
+	background-position:-183px -274px;
+}
+
+.about_content ul li.evel_news div.content  .tengxun {
+	background-position:-305px -274px;
+}
+
+.about_content ul li.evel_news div.content  .caixin {
+	background-position:-50px -362px;
+}
+
+.about_content ul li.evel_news div.content  .fenghuang {
+	background-position:-183px -362px;
+}
+
+.about_content ul li.evel_news div.content  .jiemian {
+	background-position:-305px -362px;
+}
+
+.about_content ul li.evel_news div.content  .chuangye {
+	background-position:-50px -442px;
+}
+
+.about_content ul li.evel_news div.content  .dicai {
+	background-position:-183px -442px;
+}
+
+.about_content ul li.evel_news div.content  .zhengquan {
+	background-position:-305px -442px;
+}
+
+.about_content ul li.evel_news div.content  .caijing {
+	background-position:-50px -522px;
+}
+
+.about_content ul li.evel_news div.content  .beiqing {
+	background-position:-183px -522px;
+}
+
+.about_content ul li.evel_news div.content  .zhongjin {
+	background-position:-305px -522px;
+}
+
+.about_content ul li.evel_news div.content .CN {
+	background-position:-50px -602px;
+}
+
+.about_content ul li.evel_news div.content  .guangming {
+	background-position:-183px -602px;
+}
+
+.about_content ul li.evel_news div.content  .mrcjw {
+		background-position:-305px -602px;
+}
+
+.about_content ul li.evel_news div.content  .zgqyw {
+	background-position:-50px -682px;
+}
+.about_content ul li.evel_news div.content  .fbs {
+	background-position:-183px -682px;
+}
+.about_content ul li.evel_news div.content  .zhonghua {
+	background-position:-305px -682px;
+}
+.about_content ul li.evel_news div.content  .huanqiu {
+	background-position:-50px -762px;
+}
+.about_content ul li.evel_news div.content  .iheima {
+	background-position:-183px -762px;
+}
+

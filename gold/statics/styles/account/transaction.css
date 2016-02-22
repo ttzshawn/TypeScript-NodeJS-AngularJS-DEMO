@@ -1,0 +1,111 @@
+.gbanker-account-frame .transaction-tab {
+	padding-top: 31px;
+}
+.gbanker-account-frame .transaction-tab .header {
+	border-bottom: 2px solid #eeece6;
+	height: 32px;
+	margin-bottom: 25px;
+}
+.gbanker-account-frame .transaction-tab .header .title {
+	float: left;
+	padding-bottom: 16px;
+	padding-left: 28px;
+}
+.gbanker-account-frame .transaction-tab .header .title1 {
+	padding-left: 33px;
+}
+.gbanker-account-frame .transaction-tab .header .active {
+	border-bottom: 2px solid #ffa800;
+	color: #ffa800;
+}
+.gbanker-account-frame .transaction-tab .header .title a {
+	font-size: 14px;
+	color: #565656;
+	border-right: 1px solid #eeece6;
+	padding-right: 32px;
+}
+.gbanker-account-frame .transaction-tab .header .title .key {
+	border: 0;
+}
+.gbanker-account-frame .transaction-tab .header .active a {
+	color: #ffa800;
+}
+.gbanker-account-frame .transaction-tab .content .tabs {
+	display: none;
+}
+.gbanker-account-frame .transaction-tab .content .query {
+	float: left;
+	margin-left: 25px;
+}
+.gbanker-account-frame .transaction-tab .content .tabs .tab {
+	height: 40px;
+	clear: both;
+}
+.gbanker-account-frame .transaction-tab .content .query input {
+	padding: 11px 8px;
+	width: 88px;
+	border: 1px solid #e0dfdc;
+	font-family: Helvetica;
+	color: #949494;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-key {
+	width: 88px;
+	padding: 11px 0px;
+	border: 1px solid #e0dfdc;
+	text-align: center;
+	color: #565656;
+	float: left;
+	background: #faf8f3;
+	margin-bottom: 25px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-key2 {
+	margin-left: 25px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .select-logo {
+	background: url(../../images/account_select.png) no-repeat;
+	width: 8px;
+	height: 4px;
+	float: right;
+	margin: 16px 14px 0px 0px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-select {
+	width: 105px;
+	border: 1px solid #e0dfdc;
+	border-left: 0;
+	float: left;
+	display: inline-block;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-list {
+	position: absolute;
+	top: 152px;
+	left: 109px;
+	display: none;
+}
+.gbanker-account-frame .transaction-tab .content .tab .time-list {
+	position: absolute;
+	top: 152px;
+	left: 330px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-list div {
+	width: 87px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	background: #fff;
+	color: #565656;
+	padding-top: 13px;
+	padding-left: 18px;
+	font-size: 12px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-selected {
+	padding: 10px 0;
+	height: 16px;
+	float: left;
+	color: #949494;
+	margin-left: 18px;
+}
+.gbanker-account-frame .transaction-tab .content .tab .option-list div.active
+	{
+	color: #fff;
+	background: #ffa800;
+}

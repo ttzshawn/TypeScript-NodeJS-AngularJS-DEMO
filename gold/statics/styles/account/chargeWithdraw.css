@@ -1,0 +1,351 @@
+.gbanker-account-frame .chargeWithdraw-tab {
+	padding-top: 17px
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .block .header .title-logo {
+	background: url(../../images/account_title_logo.png) no-repeat;
+	width: 5px;
+	height: 17px;
+	margin-right: 16px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options {
+	width: 784px;
+	height: 180px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .current-balances {
+	border-top: 1px solid #e5cd8d;
+	border-bottom: 1px solid #edd99b;
+	border-left: 1px solid #e5cd8d;
+	border-right: 1px solid #edd99b;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#ffefbf, endColorStr=#ffe7a1);
+	background: -ms-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -moz-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -o-linear-gradient(top, #ffefbf, #ffe7a1);
+	padding-top: 59px;
+	padding-bottom: 67px;
+	text-align: center;
+	width: 205px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options label {
+	font-size: 16px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .current-balances .number
+	{
+	color: #ffefbf;
+	font-size: 24px;
+	margin-bottom: 14px;
+	color: rgb(173, 114, 12);
+	text-shadow: 0px 2px 0px rgba(255, 255, 255, 1.0);
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .current-balances .key
+	{
+	font-size: 14px;
+	color: #b19f6a;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .group-control {
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	width: 576px;
+	float: left;
+	padding-top: 41px;
+	height: 137px;
+	text-align: center;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .group-control .button-charge
+	{
+	background: orange;
+	width: 204px;
+	height: 38px;
+	display: inline-block;
+	line-height: 38px;
+	font-size: 14px;
+	color: #fff;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .group-control .focus
+	{
+	border: 1px solid #ffa800;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .group-control .group .input
+	{
+	color: #565656;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .charge-options .group-control .key {
+	color: #717171;
+}
+.gbanker-account-frame .chargeWithdraw-tab .qa {
+	margin-top: 39px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .title-logo {
+	background: url(../../images/account_charge_qa.png) no-repeat;
+	width: 20px;
+	height: 16px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .title {
+	height: 16px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .title1 {
+	margin-left: 14px;
+	font-size: 14px;
+	color: #565656;
+	margin-top: 2px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .qa-info {
+	margin-top: 27px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .qa-info .title2 {
+	font-size: 14px;
+	color: #565656;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .qa-info .number {
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .qa .qa-info p {
+	font-size: 12px;
+	color: #929292;
+	line-height: 25px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options {
+	width: 784px;
+	height: 184px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .current-balances
+	{
+	border-top: 1px solid #e5cd8d;
+	border-bottom: 1px solid #edd99b;
+	border-left: 1px solid #e5cd8d;
+	border-right: 1px solid #edd99b;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#ffefbf, endColorStr=#ffe7a1);
+	background: -ms-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -moz-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -o-linear-gradient(top, #ffefbf, #ffe7a1);
+	padding-top: 59px;
+	padding-bottom: 67px;
+	text-align: center;
+	width: 205px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .current-balances .number
+	{
+	color: #ffefbf;
+	font-size: 24px;
+	margin-bottom: 14px;
+	color: rgb(173, 114, 12);
+	text-shadow: 0px 2px 0px rgba(255, 255, 255, 1.0);
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .current-balances .key
+	{
+	font-size: 14px;
+	color: #b19f6a;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control {
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	width: 267px;
+	float: left;
+	padding: 26px 0px 0px 20px;
+	height: 152px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .group
+	{
+	margin-top: 21px;
+	margin-bottom: 24px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .group input
+	{
+	width: 163px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .group .key
+	{
+	color: #717171;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .focus
+	{
+	border: 1px solid #ffa800;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .group .input
+	{
+	color: #565656;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .siderbtn
+	{
+	line-height: 20px;
+	color: #fff;
+	border-radius: 20px;
+	background: #ffa800;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .label
+	{
+	height: 20px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .label .key
+	{
+	font-size: 14px;
+	color: #565656;
+	margin-left: 14px;
+	margin-top: 4px;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .tips
+	{
+	font-size: 12px;
+	color: #929292;
+	padding-bottom: 37px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .button-withdraw
+	{
+	background: url(../../images/account_withdraw.png) no-repeat;
+	width: 81px;
+	height: 28px;
+	display: inline-block;
+	line-height: 28px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	margin-left: 24px;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .select-control
+	{
+	margin-top: 21px;
+	margin-bottom: 6px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .select-control .select-logo
+	{
+	background: url(../../images/account_select.png) no-repeat;
+	width: 8px;
+	height: 4px;
+	float: right;
+	margin: 6px 14px 0px 21px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab form .card-select .selected {
+	font-size: 14px;
+	color: #cccccc;
+	float: left;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank-list
+	{
+	display: none;
+	position: absolute;
+	top: 187px;
+	z-index: 1;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank
+	{
+	width: 201px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 23px;
+	padding-top: 13px;
+	padding-left: 44px;
+	background: #fff;
+	color: #565656;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank2
+	{
+	width: 201px;
+	border: 1px solid #dadada;
+	border-top: 0;
+	height: 24px;
+	padding-top: 12px;
+	padding-left: 44px;
+	background: #fff;
+	color: #565656;
+	cursor: pointer;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank2 .add-card-logo
+	{
+	background: url(../../images/account_add_card_logo.png) no-repeat 0;
+	height: 18px;
+	width: 18px;
+	float: left;
+	margin-top: -2px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank2 .add-card
+	{
+	float: left;
+	margin-left: 10px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .bank-check
+	{
+	color: #fff;
+	background: #ffa800;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab form .card-select {
+	width: 201px;
+	margin-left: 44px;
+}
+
+.gbanker-account-frame .chargeWithdraw-tab .withdraw-options .group-control .card-select .input
+	{
+	color: #565656;
+}
+.gbanker-account-frame .chargeWithdraw-tab .error{
+	line-height: 20px;
+    color: red;
+    top: 200px;
+}

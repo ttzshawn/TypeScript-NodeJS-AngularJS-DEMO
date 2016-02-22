@@ -1,0 +1,36 @@
+# Project.gitignore 仓库忽略同步的内容
+
+
+# Logs
+
+logs
+*.log
+
+# Eclipse
+
+/.settings
+/.buildpath
+/.classpath
+/.externalToolBuilders
+
+
+# Eclipse build automatically
+
+/bin
+
+
+# target folder
+
+/target
+/ROOT.zip
+
+
+# Dependency directory
+node_modules
+bower_components
+
+
+# Sass.gitignore
+
+.sass-cache
+*.css.map

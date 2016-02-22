@@ -1,0 +1,174 @@
+p.demandFont{
+	margin-top:22px;
+	margin-bottom:15px;
+}
+.fontEn{
+	font-family: "Helvetica";
+}
+.financing_bg{
+	background-color:#f4f4f4;
+}
+.financing{
+	width:643px;
+	float:left;
+}
+.financing ._bg{
+	background-color:#fff;
+	width:100%;
+	height:167px;
+	margin-bottom:34px;
+	position:relative;
+}
+.demandImg{
+	background: url(../../images/icon/financing_icons.png) no-repeat 0 0;
+	width: 34px;
+	height: 55px;
+	float: left;
+	position:absolute;
+	top:0;
+	left:10px;
+}
+.depositImg{
+	background: url(../../images/icon/financing_icons.png) no-repeat -34px 0;
+	width: 34px;
+	height: 55px;
+	float: left;
+	position:absolute;
+	top:0;
+	left:10px;
+}
+.newnerImg{
+	background: url(../../images/icon/financing_icons.png) no-repeat -68px 0;
+	width: 55px;
+	height: 57px;
+	float: left;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.demandInfor1{
+	width:259px;
+	padding-top:15px;
+	padding-bottom:23px;
+	border-right:1px solid #e3e3e3;
+	position:relative;
+	float:left;
+}
+
+.demandInfor2{
+	width:383px;
+	float:left;
+	
+}
+.demandInfor2 .df1{
+	width:190px;
+	float:left;
+	margin-top:10px;
+	
+}
+.demandInfor2 .df1 p{
+	width:100%;
+	text-align:center;
+}
+.demandInfor2 {
+	font-size:14px;
+	color:#555555;
+}
+.demandInfor2 .df1 .fontSpe,.demandInfor2 .df2 .fontSpe{
+	color:#ff7a19;
+	
+}
+.demandInfor2 .df2{
+	margin-top:10px;
+	width:193px;
+	float:left;
+}
+._weight{
+	width:117px;
+	text-align:center;
+}
+.demandInfor1 p{
+	text-align:center;
+	margin:0 0 16px 0;
+}
+p.FontP1{
+	text-align:center;
+	margin-top:0;
+	font-size:16px;
+}
+p.FontP2{
+	color:#ff7a19;
+	font-size:36px;
+	
+}
+p.FontP3{
+	color:#919191;
+}
+p.FontP4{
+	color:#d59a3d;
+	margin-bottom:0;
+}
+.buyNow{
+	height:80px;
+	line-height:80px;
+	width:383px;
+	float:left;
+	
+	
+}
+.buyNow a{
+	cursor:pointer;
+}
+.demmandGold .buyNow a{
+	background-color:#ff7a19;
+	height:40px;
+	color:#fff;
+	width:130px;
+	display:block;
+	line-height:40px;
+	text-align:center;
+	margin:20px auto;
+	border-radius:5px;
+	
+	
+}
+.depositGold .buyNow a.new{
+	background-color:#ff7a19;
+	height:40px;
+	color:#fff;
+	width:130px;
+	display:block;
+	line-height:40px;
+	text-align:center;
+	margin:20px auto;
+	border-radius:5px;
+	
+	
+}
+.depositGold .buyNow a.bt1{
+	background-color:#fff;
+	height:38px;
+	color:#ff7a19;
+	width:130px;
+	display:block;
+	line-height:38px;
+	text-align:center;
+	margin:20px auto;
+	border:1px solid #ff7a19;
+	float:left;
+	border-radius:5px;
+	margin-left:40px;
+}
+.depositGold .buyNow a.bt2{
+	background-color:#ff7a19;
+	height:40px;
+	color:#fff;
+	width:130px;
+	display:block;
+	line-height:40px;
+	text-align:center;
+	margin:20px auto;
+	float:left;
+	border-radius:5px;
+	margin-left:40px;
+}

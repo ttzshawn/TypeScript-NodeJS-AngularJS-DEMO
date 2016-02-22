@@ -1,0 +1,375 @@
+.gbanker-gold-trade .gold-detail {
+	padding-bottom: 108px;
+	padding-top: 79px;
+	background-color: #f4f4f4;
+}
+.gbanker-gold-trade .gold-detail2{
+	padding-top: 50px;
+}
+.gbanker-gold-trade .gold-detail .product-detail{
+	border:1px solid #efefef;
+	background: #fff;
+	float:left;
+	min-height: 725px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail{
+	border-bottom:1px solid #efefef;
+	padding:34px 24px;
+	width:596px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .title{
+	padding-left:10px;
+	border-left:4px solid #fa4d1e;
+	font-size:20px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content{
+	padding:52px 60px 52px 60px;
+	height:78px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .rate{
+	text-align: center;
+	float:left;
+	width:160px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .rate .number{
+	font-size:34px;
+	color:#ff7a19;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .rate .specs{
+	font-siez:16px;
+	color:#ff7a19;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .rate .name{
+	font-size:16px;
+	margin-top:19px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .manage{
+	font-size:16px;
+	float:right;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .manage .user{
+	margin-top:29px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .detail .content .manage span{
+	color:#000;
+	font-size:20px;
+	padding:0px 10px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .intro{
+	padding: 34px 24px;
+    width: 596px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .intro .title-logo{
+    width: 2px;
+    height: 15px;
+    margin-right: 12px;
+    border-radius: 2px;
+    background-color: #ff7a19;
+    float: left;
+    border: 1px solid #ff7a19;;
+}
+.gbanker-gold-trade .gold-detail .product-detail .intro .title{
+	padding-left:10px;
+	font-size:16px;
+	color:#000;
+	margin-bottom:20px;
+}
+.gbanker-gold-trade .gold-detail .product-detail .intro .content{
+	margin-bottom:30px;
+}
+.gbanker-gold-trade .gold-detail .trade-detail {
+	margin-left: 20px;
+}
+.gbanker-gold-trade .gold-detail .trade-detail .left-content {
+	border: 1px solid #efefef;
+	width: 336px;
+	height: 453px;
+	background:#fff;
+}
+.gbanker-gold-trade .gold-detail .left-tab {
+	height: 60px;
+}
+.prompt {
+    width: 336px;
+    border: 1px solid #efefef;
+    margin-top: 25px;
+    padding-bottom: 44px;
+    background:#fff;
+}
+.prompt .prompt_top {
+    width: 110px;
+    height: 35px;
+    margin: 0 auto;
+    color: #97671c;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    background: #ffedb7;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 34px;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item {
+	width: 167px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	border-bottom: 2px solid #efefef;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item.active{
+	border-bottom: 2px solid #ff7a19;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item.active a{
+	color:#ff7a19;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item a {
+	font-size:18px;
+	width: 167px;
+    display: block;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item a:first-child {
+	    border-right: 1px solid #efefef;	
+}
+.gbanker-gold-trade .gold-detail .trade-detail .left-content .left-tab-up1
+	{
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #e4e4e4 transparent;
+	top: 85px;
+	left: 100px;
+}
+.gbanker-gold-trade .gold-detail .trade-detail .left-content .left-tab-up2
+	{
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #fff transparent;
+	top: 86px;
+	z-index: 11;
+}
+.gbanker-gold-trade .gold-detail .left-tab-content {
+	padding: 25px 20px 25px 12px
+}
+.gbanker-gold-trade .gold-detail .input-group .price-group{
+	display: inline-block;
+    line-height: 40px;
+}
+.gbanker-gold-trade .gold-detail .input-group .price-group .price{
+	color: #ff7a19;
+}
+.trade-guide .input-group {
+	margin-bottom: 25px;
+}
+.trade-guide label {
+	text-align: right;
+	margin-right: 8px;
+	font-size: 16px;
+	color: #686868;
+	line-height: 40px;
+	display: inline-block;
+	float: left;
+}
+.trade-guide .dummy {
+	display: inline-block;
+	padding-left: 12px;
+	padding-top: 10px;
+	width: 191px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.spec {
+    margin-right: 8px;
+}
+.trade-guide .actions .trade-button {
+	background: url(../../images/gold_trade_buy.png) no-repeat;
+	width: 280px;
+	height: 50px;
+	text-align: center;
+	display: inline-block;
+	color: #fff;
+	font-size: 18px;
+	margin-left:16px;
+}
+.trade-guide .actions .demand-into{
+	color:#ff7a19;
+	text-align: center;
+    margin-top: 16px;
+    font-size: 16px;
+    display:none;
+}
+/* .gbanker-gold-trade .gold-detail .graphs-tab .graphs-tab-item a {
+	color: #97671C;
+}
+.gbanker-gold-trade .gold-stats {
+	margin-left: 55px;
+	width: 445px;
+}
+.gbanker-gold-trade .gold-detail .gold-stats .price-graph {
+	margin-bottom: 46px;
+}
+.gbanker-gold-trade .gold-detail .gold-stats .graphs {
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	height: 433px;
+}
+.gbanker-gold-trade .gold-detail .graphs .graphs-tab {
+	height: 60px;
+}
+.gbanker-gold-trade .gold-detail .graphs .graphs-tab-up1 {
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #e4e4e4 transparent;
+	top: 85px;
+	left: 63px;
+}
+.gbanker-gold-trade .gold-detail .graphs .graphs-tab-up2 {
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #fff transparent;
+	top: 86px;
+	z-index: 11;
+}
+.gbanker-gold-trade .gold-detail .graphs .price-update {
+	float: right;
+	margin: 30px 24px 15px 24px;
+}
+.gbanker-gold-trade .gold-detail .graphs .price-update span {
+	color: #b6b6b6
+}
+.gbanker-gold-trade .gold-detail .graphs .price-update .number {
+	color: #ff9800;
+	font-size: 12px;
+	font-weight: bolder;
+}
+.gbanker-gold-trade .gold-detail .graphs #graph {
+	margin-left: 24px;
+	margin-right: 16px;
+	width: 403px;
+	height: 283px;
+}
+.gbanker-gold-trade .gold-detail .graphs-tab .graphs-tab-item {
+	width: 147px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+	text-align: center;
+	float: left;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#fff9e5, endColorStr=#fff4d3);
+	background: -ms-linear-gradient(top, #fff9e5, #fff4d3);
+	background: -moz-linear-gradient(top, #fff9e5, #fff4d3);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff9e5),
+		to(#fff4d3));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff9e5),
+		to(#fff4d3));
+	background: -webkit-linear-gradient(top, #fff9e5, #fff4d3);
+	background: -o-linear-gradient(top, #fff9e5, #fff4d3);
+	cursor: pointer;
+	border-right: 1px solid #e5cd8d;
+}
+.gbanker-gold-trade .gold-detail .graphs-tab .graphs-tab-item.active {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#ffefbf, endColorStr=#ffe7a1);
+	background: -ms-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -moz-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -o-linear-gradient(top, #ffefbf, #ffe7a1);
+}
+
+.gbanker-gold-trade .gold-detail .graphs-tab .graphs-tab-item:last-child
+	{
+	border-right: 0;
+}
+.gbanker-gold-trade .gold-detail .gold-stats .price-graph .price-graph-logo
+	{
+	background: url(../../images/gold_price_graph.png) no-repeat;
+	height: 18px;
+	width: 18px;
+	float: left;
+}
+.trade-guide .group-control .group input {
+	width: 200px;
+	padding: 12px 15px;
+}
+.trade-guide .actions {
+	margin-left: 70px;
+}
+.gbanker-gold-trade .gold-detail .gold-stats .price-graph span {
+	float: left;
+	margin-left: 11px;
+	line-height: 18px;
+	color: #686868;
+	font-size: 16px;
+} */
+/* 买金使用优惠券 */
+.actions .deductible-message{
+	float: right;
+	margin-right: 8px;
+	margin-bottom: 10px;
+	background: #ffe7a1;
+	line-height: 30px;
+	padding: 0px 10px;
+	color: red;
+}
+/* 卖出黄金  && 体验币购买 && 体验金卖出*/
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item2 {
+	width: 336px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+	text-align: center;
+	float: left;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#ffefbf, endColorStr=#ffe7a1);
+	background: -ms-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -moz-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1));
+	background: -webkit-linear-gradient(top, #ffefbf, #ffe7a1);
+	background: -o-linear-gradient(top, #ffefbf, #ffe7a1);
+}
+
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item2 span {
+	color: #97671C;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item2 span:first-child
+	{
+	border-right: 1px solid #cebd8b;
+}
+.gbanker-gold-trade .gold-detail .left-tab .left-tab-item2 span:last-child
+	{
+	color: rgb(177, 159, 106)
+}
+.gbanker-gold-trade .gold-detail .gold-trade-account {
+	margin-bottom: 40px;
+	height: 20px;
+}
+.gbanker-gold-trade .gold-detail .gold-trade-weight-logo {
+	background: url(../../images/gold-trade-weight.png) no-repeat;
+	height: 20px;
+	width: 20px;
+	float: left;
+}
+.gbanker-gold-trade .gold-detail .gold-trade-weight-info {
+	margin-left: 8px;
+	line-height: 20px;
+	float: left;
+	font-size: 14px;
+}
+.trade-guide .gold-trade-weight-info .number {
+	color: #ff9800;
+}
+.gbanker-gold-trade .gold-transaction form  .listing .password .find-password
+	{
+	margin-top: 6px;
+	font-size: 12px;
+}

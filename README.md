@@ -13,8 +13,12 @@ Development Environment
 	Sass: 3.4.13
 
 	Compass: 1.0.3
-	
+
 	PM2: 0.12.13
 
 	Gulp
 	Bower
+
+
+# log
+## admin: store/add   add a file upload method

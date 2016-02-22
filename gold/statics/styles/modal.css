@@ -1,0 +1,54 @@
+.modal-nocard .float-div{
+	border-radius:5px;
+	z-index:21;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-217px;
+	margin-top:-200px;
+	background:#fff none repeat scroll 0 0;
+	/* display:none; */
+	height:262px;
+	width:437px;
+}
+.modal-nocard .float-div .float-font{
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:24px;
+	color:#3e3e3e;
+}
+.modal-nocard .float-div .title{
+	/* font-size:16px;
+	margin-bottom:15px;
+	text-align: center; */
+	background:url(../images/icon/warn_icons.png) no-repeat 0px -175px;
+	height:60px;
+	width:60px;
+	margin:0 auto;
+	margin-bottom:30px;
+}
+.modal-nocard .float-div .button{
+	background: url(../images/sell_confirm.png) no-repeat;
+  	width: 150px;
+	height: 46px;
+	text-align: center;
+	display: inline-block;
+	line-height: 46px;
+	color: #fff;
+}
+.modal-nocard .float-div p{
+	text-align:center;
+	color:#3e3e3e;
+	font-size:20px;
+}
+.close-img{
+	background:url(../images/coupons_close.png) no-repeat;
+	width:23px;
+    height:23px;
+    display:inline-block;
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+}

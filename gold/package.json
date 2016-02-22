@@ -1,0 +1,17 @@
+{
+  "name": "zc",
+  "version": "1.0.0",
+  "description": "zc",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-compass": "^2.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shawn",
+  "license": ""
+}

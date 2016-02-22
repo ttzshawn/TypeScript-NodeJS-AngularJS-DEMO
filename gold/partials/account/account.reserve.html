@@ -1,0 +1,258 @@
+<div class="primary unit">
+    <div class="reserve-tab">
+        <div class="block">
+            <div class="header">
+                <dl class="title-logo"></dl>
+                <div class="title">
+                    <span>存金预约</span> <a href="urlwaitforreplace/account/reserve/rule" target="_blank" class="rule">查看存金规则 &gt;&gt;</a>
+                </div>
+            </div>
+            <div class="content">
+                <form action="urlwaitforreplace/account/reserve/saveReserveInfo" id="reserveForm" method="post" enctype="multipart/form-data">
+                    <div class="info" style="display: block">
+                        <div class="title">
+                            <div class="siderbtn">1</div>
+                            <div class="key">选择金店</div>
+                            <div class="right">
+                                <div class="siderbtn">2</div>
+                                <div class="key">个人信息 &gt;&gt;</div>
+                            </div>
+                        </div>
+                        <div class="storeInfo">
+                            <div style="position: relative">
+                                <label>选择地区</label>
+                                <div class="select-control">
+                                    <div id="locationSelect" class="store-select">
+                                        <div class="selected">选择地区</div>
+                                        <div class="select-logo"></div>
+                                    </div>
+                                </div>
+                                <div class="store-list" id="location" style="display: none;">
+                                    <div class="location" value="北京地区">北京地区</div>
+                                    <div class="location" value="成都地区">成都地区</div>
+                                    <div class="location" value="天津地区">天津地区</div>
+                                    <div class="location" value="苏州地区">苏州地区</div>
+                                    <div class="location" value="唐山地区">唐山地区</div>
+                                </div>
+                            </div>
+                            <div style="position: relative">
+                                <label>选择门店</label>
+                                <div class="select-control">
+                                    <div id="storeSelect" class="store-select">
+                                        <div class="selected">选择门店</div>
+                                        <div class="select-logo"></div>
+                                        <input name="storeId" type="hidden">
+                                    </div>
+                                </div>
+                                <div class="store-list" id="store" style="display: none;"></div>
+                            </div>
+                            <div style="position: relative">
+                                <label>选择时间</label>
+                                <div class="select-control">
+                                    <div id="dateSelect" class="date-select">
+                                        <div class="selected"></div>
+                                        <div class="select-logo"></div>
+                                        <input name="bookDate" type="hidden">
+                                    </div>
+                                </div>
+                                <div class="date-list" id="dateTime" style="display: none;">
+                                    <div class="dateTime" value="2016/01/06 10:00">2016/01/06 10:00</div>
+                                    <div class="dateTime" value="2016/01/06 11:00">2016/01/06 11:00</div>
+                                    <div class="dateTime" value="2016/01/06 12:00">2016/01/06 12:00</div>
+                                    <div class="dateTime" value="2016/01/06 13:00">2016/01/06 13:00</div>
+                                    <div class="dateTime" value="2016/01/06 14:00">2016/01/06 14:00</div>
+                                    <div class="dateTime" value="2016/01/06 15:00">2016/01/06 15:00</div>
+                                    <div class="dateTime" value="2016/01/06 16:00">2016/01/06 16:00</div>
+                                    <div class="dateTime" value="2016/01/06 17:00">2016/01/06 17:00</div>
+                                    <div class="dateTime" value="2016/01/06 18:00">2016/01/06 18:00</div>
+                                    <div class="dateTime" value="2016/01/06 19:00">2016/01/06 19:00</div>
+                                    <div class="dateTime" value="2016/01/07 10:00">2016/01/07 10:00</div>
+                                    <div class="dateTime" value="2016/01/07 11:00">2016/01/07 11:00</div>
+                                    <div class="dateTime" value="2016/01/07 12:00">2016/01/07 12:00</div>
+                                    <div class="dateTime" value="2016/01/07 13:00">2016/01/07 13:00</div>
+                                    <div class="dateTime" value="2016/01/07 14:00">2016/01/07 14:00</div>
+                                    <div class="dateTime" value="2016/01/07 15:00">2016/01/07 15:00</div>
+                                    <div class="dateTime" value="2016/01/07 16:00">2016/01/07 16:00</div>
+                                    <div class="dateTime" value="2016/01/07 17:00">2016/01/07 17:00</div>
+                                    <div class="dateTime" value="2016/01/07 18:00">2016/01/07 18:00</div>
+                                    <div class="dateTime" value="2016/01/07 19:00">2016/01/07 19:00</div>
+                                    <div class="dateTime" value="2016/01/08 10:00">2016/01/08 10:00</div>
+                                    <div class="dateTime" value="2016/01/08 11:00">2016/01/08 11:00</div>
+                                    <div class="dateTime" value="2016/01/08 12:00">2016/01/08 12:00</div>
+                                    <div class="dateTime" value="2016/01/08 13:00">2016/01/08 13:00</div>
+                                    <div class="dateTime" value="2016/01/08 14:00">2016/01/08 14:00</div>
+                                    <div class="dateTime" value="2016/01/08 15:00">2016/01/08 15:00</div>
+                                    <div class="dateTime" value="2016/01/08 16:00">2016/01/08 16:00</div>
+                                    <div class="dateTime" value="2016/01/08 17:00">2016/01/08 17:00</div>
+                                    <div class="dateTime" value="2016/01/08 18:00">2016/01/08 18:00</div>
+                                    <div class="dateTime" value="2016/01/08 19:00">2016/01/08 19:00</div>
+                                    <div class="dateTime" value="2016/01/09 10:00">2016/01/09 10:00</div>
+                                    <div class="dateTime" value="2016/01/09 11:00">2016/01/09 11:00</div>
+                                    <div class="dateTime" value="2016/01/09 12:00">2016/01/09 12:00</div>
+                                    <div class="dateTime" value="2016/01/09 13:00">2016/01/09 13:00</div>
+                                    <div class="dateTime" value="2016/01/09 14:00">2016/01/09 14:00</div>
+                                    <div class="dateTime" value="2016/01/09 15:00">2016/01/09 15:00</div>
+                                    <div class="dateTime" value="2016/01/09 16:00">2016/01/09 16:00</div>
+                                    <div class="dateTime" value="2016/01/09 17:00">2016/01/09 17:00</div>
+                                    <div class="dateTime" value="2016/01/09 18:00">2016/01/09 18:00</div>
+                                    <div class="dateTime" value="2016/01/09 19:00">2016/01/09 19:00</div>
+                                    <div class="dateTime" value="2016/01/10 10:00">2016/01/10 10:00</div>
+                                    <div class="dateTime" value="2016/01/10 11:00">2016/01/10 11:00</div>
+                                    <div class="dateTime" value="2016/01/10 12:00">2016/01/10 12:00</div>
+                                    <div class="dateTime" value="2016/01/10 13:00">2016/01/10 13:00</div>
+                                    <div class="dateTime" value="2016/01/10 14:00">2016/01/10 14:00</div>
+                                    <div class="dateTime" value="2016/01/10 15:00">2016/01/10 15:00</div>
+                                    <div class="dateTime" value="2016/01/10 16:00">2016/01/10 16:00</div>
+                                    <div class="dateTime" value="2016/01/10 17:00">2016/01/10 17:00</div>
+                                    <div class="dateTime" value="2016/01/10 18:00">2016/01/10 18:00</div>
+                                    <div class="dateTime" value="2016/01/10 19:00">2016/01/10 19:00</div>
+                                    <div class="dateTime" value="2016/01/11 10:00">2016/01/11 10:00</div>
+                                    <div class="dateTime" value="2016/01/11 11:00">2016/01/11 11:00</div>
+                                    <div class="dateTime" value="2016/01/11 12:00">2016/01/11 12:00</div>
+                                    <div class="dateTime" value="2016/01/11 13:00">2016/01/11 13:00</div>
+                                    <div class="dateTime" value="2016/01/11 14:00">2016/01/11 14:00</div>
+                                    <div class="dateTime" value="2016/01/11 15:00">2016/01/11 15:00</div>
+                                    <div class="dateTime" value="2016/01/11 16:00">2016/01/11 16:00</div>
+                                    <div class="dateTime" value="2016/01/11 17:00">2016/01/11 17:00</div>
+                                    <div class="dateTime" value="2016/01/11 18:00">2016/01/11 18:00</div>
+                                    <div class="dateTime" value="2016/01/11 19:00">2016/01/11 19:00</div>
+                                    <div class="dateTime" value="2016/01/12 10:00">2016/01/12 10:00</div>
+                                    <div class="dateTime" value="2016/01/12 11:00">2016/01/12 11:00</div>
+                                    <div class="dateTime" value="2016/01/12 12:00">2016/01/12 12:00</div>
+                                    <div class="dateTime" value="2016/01/12 13:00">2016/01/12 13:00</div>
+                                    <div class="dateTime" value="2016/01/12 14:00">2016/01/12 14:00</div>
+                                    <div class="dateTime" value="2016/01/12 15:00">2016/01/12 15:00</div>
+                                    <div class="dateTime" value="2016/01/12 16:00">2016/01/12 16:00</div>
+                                    <div class="dateTime" value="2016/01/12 17:00">2016/01/12 17:00</div>
+                                    <div class="dateTime" value="2016/01/12 18:00">2016/01/12 18:00</div>
+                                    <div class="dateTime" value="2016/01/12 19:00">2016/01/12 19:00</div>
+                                </div>
+                            </div>
+                            <div class="error" style="color: red; display: none; margin-left: 10px; margin-top: 10px;"></div>
+                            <span id="nextBtn1" value="1" class="next-button">下一步</span>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <div class="siderbtn">2</div>
+                            <div class="key">个人信息</div>
+                            <div class="right">
+                                <div class="siderbtn">3</div>
+                                <div class="key">黄金信息 &gt;&gt;</div>
+                            </div>
+                        </div>
+                        <div class="personInfo">
+                            <div>
+                                <label>账户号码</label>
+                                <span id="accountTel">15975645141</span>
+                            </div>
+                            <div>
+                                <label>真实姓名</label>
+                                <span id="realName">郝＊＊</span>
+                            </div>
+                            <div>
+                                <label>身份证号</label>
+                                <span id="ID">4304261991********</span>
+                            </div>
+                            <div>
+                                <label>联系电话</label>
+                                <input name="contactMobile" id="contactTel" value="">
+                            </div>
+                            <span id="nextBtn2" value="2" class="next-button">下一步</span>
+                        </div>
+                        <div class="before" value="0"></div>
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <div class="siderbtn">3</div>
+                            <div class="key">黄金信息</div>
+                        </div>
+                        <div class="left-part">
+                            <div class="upload" id="preview">
+                                <div class="invoice"></div>
+                                <p>请将您的黄金产品及其销售凭证或发票</p>
+                                <p>合拍一张照片</p>
+                            </div>
+                            <div class="upload-file">
+                                <input name="file" type="file" onchange="previewImage(this)">
+                            </div>
+                        </div>
+                        <div class="right-part">
+                            <div style="position: relative">
+                                <label>黄金总重</label>
+                                <div class="select-control">
+                                    <div id="weightSelect" class="weight-select">
+                                        <div class="selected"></div>
+                                        <div class="select-logo"></div>
+                                        <input name="goldWeight" type="hidden">
+                                    </div>
+                                </div>
+                                <div class="weight-list" id="goldWeight" style="display: none;">
+                                    <div class="weight" value="0~10克">0~10克</div>
+                                    <div class="weight" value="10~50克">10~50克</div>
+                                    <div class="weight" value="50~100克">50~100克</div>
+                                    <div class="weight" value="100~200克">100~200克</div>
+                                    <div class="weight" value="大于200克">大于200克</div>
+                                </div>
+                            </div>
+                            <div style="position: relative">
+                                <label>黄金来源</label>
+                                <div class="select-control">
+                                    <div id="sourceSelect" class="source-select">
+                                        <div class="selected"></div>
+                                        <div class="select-logo"></div>
+                                        <input name="goldSource" type="hidden">
+                                    </div>
+                                </div>
+                                <div class="source-list" id="goldSource" style="display: none;">
+                                    <div class="source" value="品牌金店">品牌金店</div>
+                                    <div class="source" value="银行">银行</div>
+                                    <div class="source" value="亲友馈赠">亲友馈赠</div>
+                                    <div class="source" value="其它">其它</div>
+                                </div>
+                            </div>
+                            <div class="agreement">
+                                <input type="checkbox" id="agreeCheckbox" style="width: 25px;" checked="true">我已阅读并同意 <a href="urlwaitforreplace/account/reserve/rule" style="color: #c8b35f;" target="_blank">Example存金规则</a>
+                            </div>
+                            <span id="nextBtn3" class="next-button" value="3">提交预约</span>
+                        </div>
+                        <div class="before" value="1"></div>
+                    </div>
+                </form>
+            </div>
+            <a name="reserveList"></a>
+            <div class="block">
+                <div class="header">
+                    <dl class="title-logo"></dl>
+                    <div>存金预约记录</div>
+                </div>
+                <div class="content">
+                    <table class="stripe">
+                        <thead>
+                            <tr>
+                                <th>预约存金时间</th>
+                                <th>预约单号</th>
+                                <th>线下金店</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>2015-12-15 12:00:00</td>
+                                <td>CJYD00000000000000157015</td>
+                                <td>
+                                    <dt>中国黄金望京华彩店</dt>
+                                    <dt class="loc" info="北京市朝阳区广顺北大街16号一层"></dt>
+                                    <dt class="tel" info="010-59780527"></dt>
+                                </td>
+                                <td>已预约</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="loc-tips" id="locTips"></div>
+                    <div class="loc-tips" id="telTips"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

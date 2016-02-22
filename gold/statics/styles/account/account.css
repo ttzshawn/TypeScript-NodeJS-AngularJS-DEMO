@@ -1,0 +1,732 @@
+/* 我的账户 */
+.gbanker-account-frame .me-tab .summary {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-top: 1px solid #e5cd8d;
+	border-bottom: 1px solid #edd99b;
+	border-left: 1px solid #e5cd8d;
+	border-right: 1px solid #edd99b;
+	color: #535353;
+	font-size: 16px;
+	height: 178px;
+	text-align: center;
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#ffefbf, endColorStr=#ffe7a1); /*IE 6 7 8*/
+	background: -ms-linear-gradient(top, #ffefbf, #ffe7a1); /* IE 10 */
+	background: -moz-linear-gradient(top, #ffefbf, #ffe7a1); /*���*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1)); /*�ȸ�*/
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffefbf),
+		to(#ffe7a1)); /* Safari 4-5, Chrome 1-9*/
+	background: -webkit-linear-gradient(top, #ffefbf, #ffe7a1);
+	/*Safari5.1 Chrome 10+*/
+	background: -o-linear-gradient(top, #ffefbf, #ffe7a1); /*Opera 11.10+*/
+}
+
+.gbanker-account-frame .me-tab .summary .freeze {
+	background: url(../../images/account_freeze.png) no-repeat;
+	width: 68px;
+	height: 76px;
+	position: absolute;
+	right: 0px;
+}
+
+.gbanker-account-frame .me-tab .summary .total-weight-number {
+	font-size: 36px;
+	color: rgb(173, 114, 12);
+	margin-top: 33px;
+	text-shadow: 0px 2px 0px rgba(255, 255, 221, 1.0);
+}
+
+.gbanker-account-frame .me-tab .summary .total-weight {
+	margin-top: 13px;
+}
+
+.gbanker-account-frame .me-tab .summary .key {
+	font-size: 14px;
+	color: rgb(177, 159, 106);
+}
+
+.gbanker-account-frame .me-tab .summary .value {
+	font-size: 16px;
+	color: rgb(151, 103, 28);
+	border-right: 1px solid #cebd8b;
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180, Color='#fef4d6')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=180,
+		Color='#fef4d6');
+	-moz-box-shadow: 1px 0px #fef4d6;
+	-webkit-box-shadow: 1px 0px #fef4d6;
+	box-shadow: 1px 0px #fef4d6;
+	margin-right: 22px;
+	padding-right: 21px;
+	margin-left: 10px;
+}
+
+.gbanker-account-frame .me-tab .summary .value2 {
+	font-size: 16px;
+	color: rgb(151, 103, 28);
+	margin-left: 10px;
+}
+
+.gbanker-account-frame .me-tab .summary .total-info {
+	margin-top: 17px;
+}
+
+.gbanker-account-frame .me-tab .summary .total-info .help1 {
+	position: absolute;
+	margin-left: -20px;
+}
+
+.gbanker-account-frame .me-tab .help2 {
+	margin-left: 6px;
+}
+.gbanker-account-frame .me-tab .block {
+	border-radius: 5px;
+	position: relative;
+}
+
+.gbanker-account-frame .me-tab .block .header h2 .sum {
+	color: #535353;
+	font-weight: bolder;
+	padding-left: 1em
+}
+
+.gbanker-account-frame .me-tab .block .content {
+	border-left: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.gbanker-account-frame .me-tab .block .content table,
+	.gbanker-account-frame .me-tab .block .header h2 .spec {
+	font-size: 14px
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dl {
+	margin: 0
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dt {
+	font-size: 14px;
+	color: rgb(115, 115, 115);
+	width: 310px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dt .word {
+	padding-top: 5px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dt .spec {
+	margin-top: -10px;
+	margin-left: 7px;
+	font-size: 14px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dt .detail {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dt  .detail .help
+	{
+	width: 12px;
+	height: 12px;
+	margin-left: 7px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dd {
+	width: 390px;
+	margin: 0;
+	position: relative;
+	height: 83px;
+	padding-left: 10px;
+}
+
+.gbanker-account-frame .me-tab .block .content .gold ul {
+	position: absolute;
+	top: 13px;
+	right: 0
+}
+
+.gbanker-account-frame .me-tab .block .content .cash ul {
+	position: absolute;
+	top: 63px;
+	right: 0
+}
+
+.gbanker-account-frame .me-tab .block .content .balances dd .word {
+	font-size: 18px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt
+	{
+	float: left;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt:first-child{
+	border-right:1px solid #e8e8e8;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up
+	{
+	width: 330px;
+	height: 36px;
+	border-bottom: 1px solid #e8e8e8;
+	padding:28px 30px 5px 30px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .gold-logo
+	{
+	background: url(../../images/account_me_image.png) no-repeat;
+	width: 21px;
+	height: 14px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .word
+	{
+	margin-top: 5px;
+	float: left;
+	color: rgb(115, 115, 115);
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .number
+	{
+	font-size: 26px;
+	line-height: 28px;
+	text-align: center;
+	color: rgb(255, 156, 0);
+	float:right;
+	display:inline-block;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .deposit-gold-logo
+	{
+	background-position: -31px 0;
+	width: 19px;
+	height: 15px;
+	margin-top: 3px
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .year-rate
+	{
+	height: 12px;
+	float: right;
+	font-size: 12px;
+	color: rgb(157, 157, 157);
+	padding-top: 5px;
+	padding-right: 9px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .up .rate-number
+	{
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(255, 156, 0);
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down
+	{
+	width: 330px;
+	height: 40px;
+	margin:45px 30px 27px 30px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .up-deposit1
+	{
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #e8e8e8 transparent;
+	top: 284px;
+	left: 612px;
+	z-index: 21;
+	display: none;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .up-deposit2
+	{
+	position: absolute;
+	border-width: 11px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #f6f5f0 transparent;
+	top: 285px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .my-deposit
+	{
+	width: 752px;
+	border: 1px solid #e8e8e8;
+	position: absolute;
+	left: 0px;
+	top: 306px;
+	background: #f6f5f0;
+	z-index: 20;
+	padding: 15px;
+	padding-bottom: 0px;
+	display: none;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-init
+	{
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-init .number
+	{
+	font-size: 36px;
+	color: #ff9c00;
+	margin-bottom: 4px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-init .key1
+	{
+	font-size: 16px;
+	margin-bottom: 25px;
+	color: #ffbb50;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-init .key2
+	{
+	font-size: 24px;
+	margin-bottom: 11px;
+	color: #ff9c00;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-init .trans-button
+	{
+	text-align: center;
+	background: url(../../images/account_button3.png) no-repeat;
+	height: 33px;
+	display: inline-block;
+	line-height: 33px;
+	color: #fff;
+	width: 144px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail
+	{
+	padding: 12px 50px 13px 0px;
+	background: #fff;
+	height: 68px;
+	margin-bottom: 15px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail div
+	{
+	width: 162px;
+	padding-left: 50px;
+	margin-top: 6px;
+	margin-bottom: 12px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .name
+	{
+	border-right: 1px solid #d6d6d6;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .key
+	{
+	margin-bottom: 17px;
+	color: #828282;
+	display: block;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .number
+	{
+	color: #ffb21d;
+	font-size: 20px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .interest
+	{
+	border-right: 1px solid #d6d6d6;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .actions
+	{
+	width: 62px;
+	padding-left: 0px;
+	margin-top: 0px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .actions a
+	{
+	text-align: center;
+	background: url(../../images/account_button2.png) no-repeat;
+	height: 28px;
+	display: inline-block;
+	line-height: 28px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .actions .detail-button
+	{
+	color: rgb(255, 156, 0);
+	width: 62px;
+	background-position: -72px 0px;
+	display: block;
+	margin-bottom: 12px;
+}
+
+.gbanker-account-frame .me-tab .gold-detail-dt .down .my-deposit .deposit-detail .actions .trans-button
+	{
+	color: #fff;
+	width: 62px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .gold
+	{
+	text-align: center;
+	float: right;
+	width:132px;
+	height: 40px;
+	border-radius:4px;
+	display: inline-block;
+	line-height: 40px;
+	cursor:pointer;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .view-gold
+	{
+	color: #fff;
+	background-color:#ffb21d;
+	margin-right:99px;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .buy-gold
+	{
+	color: #fff;
+	float:right;
+	background-color:#ffb21d;
+	
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .sale-gold
+	{
+	color: #ffb21d;
+	float:left;
+	background-color:#fff;
+	border:1px solid #ffb21d;
+	width: 130px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .deposit-gold
+	{
+	color: rgb(255, 156, 0);
+	width: 102px;
+	margin-right: 16px;
+	background-position: -144px 0px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .down .trans-gold
+	{
+	color: #fff;
+	width: 62px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail
+	{
+	height: 75px;
+	border-bottom:1px solid #e8e8e8;
+	padding:40px;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail .info{
+	height:22px;
+	margin-bottom:34px;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail .info .number
+	{
+	margin-bottom: 12px;
+	font-size: 18px;
+	color: rgb(77, 73, 59);
+	float:right;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail .info .key
+	{
+	margin-bottom: 29px;
+	font-size: 14px;
+	color: rgb(190, 183, 166);
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail .info .left
+	{
+	width: 114px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .gold-detail-dt .gold-detail .info .right
+	{
+	margin-left: 20px;
+	width: 130px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe {
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	margin-top: 30px;
+	height: 169px;
+}
+
+.gbanker-account-frame .me-tab .expe-gold {
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-title {
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	width: 562px;
+	height: 16px;
+	padding: 16px 0px 16px 20px;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-title .expe-logo {
+	background: url(../../images/account_me_image.png) no-repeat;
+	float: left;
+	background-position: 0 -24px;
+	width: 18px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-title .title {
+	margin-top: 3px;
+	float: left;
+	margin-right: 14px;
+	color: rgb(115, 115, 115);
+}
+
+.gbanker-account-frame .me-tab .expe .expe-title .explain {
+	color: rgb(157, 157, 157);
+	font-size: 12px;
+	float: left;
+	margin-top: 5px;
+}
+
+.gbanker-account-frame .me-tab .expe .middle {
+	width: 582px;
+	height: 68px;
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .me-tab .expe .middle .value {
+	padding-top: 20px;
+	padding-bottom: 22px;
+	font-size: 26px;
+	color: rgb(255, 156, 0);
+	border-right: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	width: 177px;
+	text-align: center;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe .middle .info {
+	width: 404px;
+	float: left;
+	padding-top: 18px;
+	padding-bottom: 11px;
+}
+
+.gbanker-account-frame .me-tab .expe  .key {
+	font-size: 12px;
+	color: rgb(153, 153, 153);
+}
+
+.gbanker-account-frame .me-tab .expe .middle .info .number {
+	margin-top: 11px;
+	font-size: 16px;
+	color: rgb(97, 97, 97);
+}
+
+.gbanker-account-frame .me-tab .expe .info .expe-detail {
+	width: 109px;
+	float: left;
+	padding-left: 24px;
+}
+
+.gbanker-account-frame .me-tab .expe .info .expe-detail2 {
+	border-right: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom {
+	width: 583px;
+	height: 52px;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .operation {
+	padding: 9px 0px 12px 15px;
+	border-right: 1px solid #e8e8e8;
+	width: 162px;
+	text-align: center;
+	float: left;
+	height: 31px;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .operation .button {
+	text-align: center;
+	float: left;
+	background: url(../../images/account_button2.png) no-repeat;
+	height: 28px;
+	display: inline-block;
+	line-height: 28px;
+	width: 62px;
+	font-size: 14px;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .operation .buy-gold {
+	color: #fff;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .operation .sale-gold {
+	color: rgb(255, 156, 0);
+	background-position: -72px 0px;
+	margin-left: 22px;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .epex-total {
+	width: 152px;
+	border-right: 1px solid #e8e8e8;
+	padding: 15px 25px 17px 24px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .this-profit {
+	width: 153px;
+	border-right: 1px solid #e8e8e8;
+	padding: 15px 25px 17px 24px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe .bottom .number {
+	font-size: 20px;
+	float: right;
+	color: rgb(255, 156, 0);
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money {
+	width: 198px;
+	float: left;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-title {
+	height: 16px;
+	padding: 16px 10px 16px 20px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-title .money-logo
+	{
+	background: url(../../images/account_me_image.png) no-repeat;
+	float: left;
+	background-position: -31px -24px;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-title .title {
+	margin-top: 3px;
+	float: left;
+	margin-right: 14px;
+	color: rgb(115, 115, 115);
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-title .explain {
+	color: rgb(157, 157, 157);
+	font-size: 12px;
+	float: left;
+	margin-top: 5px;
+	text-decoration: underline;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-detail {
+	padding: 38px 0px 33px 0px;
+	text-align: center;
+}
+
+.gbanker-account-frame .me-tab .expe .expe-money .money-detail .number {
+	color: rgb(255, 156, 0);
+	font-size: 26px;
+	margin-bottom: 14px;
+}
+.gbanker-account-frame .me-tab .block .content .balances .gold ul .button-1
+	{
+	margin-left: 30px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .cash {
+	padding-top: 50px;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .cash .number {
+	color: #bcbcbc;
+	font-size: 36px;
+	font-weight: border;
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .cash .number strong
+	{
+	font-size: 30px
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .cash .spec {
+	font-size: 18px;
+	color: #535353
+}
+
+.gbanker-account-frame .me-tab .block .content .balances .cash ul .button-2
+	{
+	background: url(../../images/account_button_new.png) -143px -83px
+		no-repeat;
+	height: 44px;
+	width: 93px;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	color: #000;
+	margin-right: 246px;
+	padding: 0;
+	line-height: 44px;
+}
+
+.gbanker-account-frame .me-tab .block .help-tips {
+	position: absolute;
+	display: none;
+}
+
+.gbanker-account-frame .me-tab .block .help-tips .help-info {
+	position: absolute;
+	border: 1px solid #d1d1d1;
+	background: #f9f9f9;
+	width: 420px;
+	color: #797979;
+	padding: 18px;
+	z-index: 10;
+}
+
+.gbanker-account-frame .me-tab .block .help-tips .help-info p {
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+.gbanker-account-frame .me-tab .block .help-tips .up1 {
+	position: absolute;
+	border-width: 8px;
+	border-style: dashed dashed solid dashed;
+	border-color: transparent transparent #d1d1d1 transparent;
+	top: -16px;
+	left: 100px;
+}
+
+.gbanker-account-frame .me-tab .block .help-tips .up2 {
+	border-color: transparent transparent #f9f9f9 transparent;
+	top: -15px;
+	z-index: 11;
+}

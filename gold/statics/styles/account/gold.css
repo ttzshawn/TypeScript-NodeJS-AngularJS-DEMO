@@ -1,0 +1,148 @@
+.gbanker-account-frame .gold-tab {
+	padding-top: 31px;
+}
+
+.gbanker-account-frame .gold-tab .header {
+	border-bottom: 2px solid #eeece6;
+	height: 32px;
+	margin-bottom: 25px;
+}
+
+.gbanker-account-frame .gold-tab .header .title {
+	float: left;
+	padding-bottom: 16px;
+	padding-left: 28px;
+}
+
+.gbanker-account-frame .gold-tab .header .title1 {
+	padding-left: 33px;
+}
+
+.gbanker-account-frame .gold-tab .header .title a {
+	font-size: 14px;
+	color: #565656;
+	border-right: 1px solid #eeece6;
+	padding-right: 32px;
+}
+
+.gbanker-account-frame .gold-tab .header .title .key {
+	border: 0;
+}
+
+.gbanker-account-frame .gold-tab .header .active {
+	border-bottom: 2px solid #ffa800;
+	color: #ffa800;
+}
+
+.gbanker-account-frame .gold-tab .header .active a {
+	color: #ffa800;
+}
+
+.gbanker-account-frame .gold-tab .detail .unit {
+	border-right: 1px solid #d6d6d6
+}
+
+.gbanker-account-frame .gold-tab .gold-item {
+	border: 1px solid #d6d6d6;
+	margin-bottom: 25px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .date {
+	line-height: 30px;
+	background: #f3f3f3;
+	padding-left: 28px;
+	padding-right: 28px;
+	color: #9a9a9a;
+	font-size: 12px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .date .orderNum {
+	font-size: 12px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .date .number {
+	float: right;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .detail {
+
+}
+
+.gbanker-account-frame .gold-tab .gold-item .unit {
+	overflow: hidden;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 12px;
+}
+.gbanker-account-frame .gold-tab .gold-transaction-list {
+	clear: both;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .title {
+	width: 300px;
+	padding-left: 28px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .title .icon {
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin-right: 16px;
+	background-image: url("../../images/gold_icon.png");
+}
+
+.gbanker-account-frame .gold-tab .gold-item .title .word {
+	font-size: 14px;
+	display: block;
+	padding-bottom: 21px;
+	padding-top: 6px;
+	color: #565656;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .title .weight {
+	border-right: 1px solid #d6d6d6;
+	padding-right: 10px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .title .size {
+	padding-left: 10px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .actions {
+	padding-top: 52px;
+	padding-bottom: 37px;
+	width: 150px;
+	border: 0;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .actions a {
+	color: #ffa800;
+	display: block;
+	text-align: center;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .price {
+	text-align: center;
+	color: #565656;
+	padding-top: 33px;
+	padding-bottom: 40px;
+	width: 150px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .price .number {
+	font-size: 24px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.gbanker-account-frame .gold-tab .gold-item .status {
+	text-align: center;
+	width: 150px;
+	padding-top: 36px;
+	padding-bottom: 40px;
+}
+
+.gbanker-account-frame .gold-tab .gold-item  .status .payStatus {
+	display: block;
+	margin-bottom: 24px;
+}
