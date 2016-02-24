@@ -1,24 +1,21 @@
-# The Timeless Zone (TTZ)
-HTML5 CSS3 JQuery NodeJS  etc.
+# TypeScript Nodejs Angularjs Demo
 
-Development Environment
-	NodeJS: v0.12.2
+## Overview
 
-	Npm: 2.7.4
+This a demo modern web application. Built with various popular web techniques. It can be used for learning the basic features of these techniques.
 
-	Express: 4.12.2
+## Builtwith
 
-	Ejs: 2.3.1
+* Nodejs v5.0.0
+* Angularjs v1.5.0
+* TypeScript v1.7.5
+* BootStrap
+* SASS
+* Gulp
 
-	Sass: 3.4.13
-
-	Compass: 1.0.3
-
-	PM2: 0.12.13
-
-	Gulp
-	Bower
+## Change Log
 
 
-# log
-## admin: store/add   add a file upload method
+## License
+
+MIT
