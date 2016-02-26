@@ -13,6 +13,8 @@ This a demo modern web application. Built with various popular web techniques. I
 * SASS
 * Gulp
 
+* MongoDB v3.2.3
+
 ## Change Log
 
 
