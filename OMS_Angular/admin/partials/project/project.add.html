@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <form class="form-horizontal">
+            <fieldset>
+                <div id="legend" class="">
+                    <legend class="">添加项目</legend>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">项目名称</label>
+                    <div class="col-md-3">
+                        <input ng-model="proj.projectname" type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">项目简述</label>
+                    <div class="col-md-5">
+                        <textarea ng-model="proj.projectdesc" name="" class="form-control" id="" cols="30" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">项目详述</label>
+                    <div class="col-md-5">
+                        <textarea ng-model="proj.projectdetail" name="" class="form-control" id="" cols="30" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">项目期限</label>
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <input ng-model="proj.projectdays" type="text" class="form-control" id="" placeholder="0表示无固定期限">
+                            <span class="input-group-addon">天</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">利率</label>
+                    <div class="col-md-2">
+                        <div class="input-group">
+                            <input ng-model="proj.interestrate" type="text" class="form-control" id="">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">返点</label>
+                    <div class="col-md-3">
+                        <input ng-model="proj.investrebate" type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">到期处理方式</label>
+                    <div class="col-md-3">
+                        <select ng-model="proj.dueprocessmethod" class="form-control">
+                            <option value="0" ng-selected="selected">转活期</option>
+                            <option value="1">卖出</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">价格</label>
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <input ng-model="proj.price" type="text" class="form-control" id="" placeholder="0表示实时价格，其他表示固定价格">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">是否保本</label>
+                    <div class="col-md-3">
+                        <select ng-model="proj.priciplegrantee" class="form-control">
+                            <option value="0" ng-selected="selected">不保本</option>
+                            <option value="1">保本</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">开始时间</label>
+                    <div class="col-md-3">
+                        <input ng-model="proj.begintime" type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-2 control-label">结束时间</label>
+                    <div class="col-md-3">
+                        <input ng-model="proj.endtime" type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-5 col-md-offset-2">
+                        <button type="submit" class="btn btn-success" ng-click="addProject(proj)">提交</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

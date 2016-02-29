@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="../statics/styles/account/account.css">
+<link rel="stylesheet" href="../statics/styles/account/common.css">
+<link rel="stylesheet" href="../statics/styles/account/chargeWithdraw.css">
+<link rel="stylesheet" href="../statics/styles/account/transaction.css">
+<link rel="stylesheet" href="../statics/styles/account/gold.css">
+<link rel="stylesheet" href="../statics/styles/account/reserve.css">
+<link rel="stylesheet" href="../statics/styles/account/card.css">
+<link rel="stylesheet" href="../statics/styles/account/deposit.css">
+<link rel="stylesheet" href="../statics/styles/account/coupons.css">
+
+<div class="row gbanker-account-frame">
+    <div class="unit sidebar">
+        <div class="account-head">
+            <div class="head"></div>
+            <div class="account-name">
+                账户名：
+                <span class="number" ng-bind="currentUser"></span>
+            </div>
+            <div class="pwd">
+                <a class="changePwd" href="#">密码修改</a>
+            </div>
+        </div>
+        <div class="cash-operation">
+            <div class="cash">
+                <a href="urlwaitforreplace/account/transaction?type=freezeMoney" id="freezeLogo" style="display: none">
+                    <div class="freeze-money"></div>
+                </a>
+                <div class="key">现金余额</div>
+                <div class="number" id="accountMoney">0.00</div>
+            </div>
+            <div class="operation">
+                <div ui-sref-active="active">
+                    <a href="#" ui-sref="account.charge">充值</a>
+                </div>
+                <div ui-sref-active="active">
+                    <a href="#" ui-sref="account.withdraw">提现</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li ui-sref-active="active">
+                    <div class="me"></div> <a href="#" ui-sref="account.me">我的账户</a>
+                </li>
+                <li ui-sref-active="active">
+                    <div class="transaction"></div> <a href="#" ui-sref="account.transaction">交易记录</a>
+                </li>
+                <li ui-sref-active="active">
+                    <div class="gold"></div> <a href="#" ui-sref="account.gold">金条订单</a>
+                </li>
+
+                <li ui-sref-active="active">
+                    <div class="reserve"></div> <a href="#" ui-sref="account.reserve">存金预约</a>
+                </li>
+                <li ui-sref-active="active">
+                    <div class="card"></div> <a href="#" ui-sref="account.card">我的银行卡</a>
+                </li>
+
+                <li ui-sref-active="active">
+                    <div class="deposit"></div> <a href="#" ui-sref="account.deposit">箱底金详情</a>
+                </li>
+                <li ui-sref-active="active">
+                    <div class="coupons"></div> <a href="#" ui-sref="account.coupons">我的优惠券</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ui-view></div>
+
+</div>

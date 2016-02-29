@@ -1,0 +1,66 @@
+<div class="primary unit">
+    <div class="chargeWithdraw-tab">
+
+        <div class="block">
+            <div class="header">
+                <dl class="title-logo"></dl>
+                <div>账户充值</div>
+            </div>
+            <div class="content">
+                <form action="urlwaitforreplace/account/charge/payment" method="post" class="charge-options" id="chargeForm">
+                    <div class="current-balances">
+                        <div class="number">
+                            0.00
+                        </div>
+                        <div class="key">现金账户余额(元)</div>
+                    </div>
+                    <div class="group-control">
+                        <div class="group">
+                            <input type="text" id="sumInput" name="rechargeMoney" class="number" placeholder="输入充值金额" ng-model="req.model.rechargeamount">
+                            <input type="hidden" ng-model="req.model.rechargetype">
+                            <input type="hidden" ng-model="req.reqrechargeamount">
+                            <span class="key">元</span>
+                        </div>
+                        <div>
+                            <a href="#" id="charge" class="button-charge" ng-click="charge(req)">充值</a>
+                        </div>
+                    </div>
+                </form>
+                <div class="qa">
+                    <div class="title">
+                        <dl class="title-logo"></dl>
+                        <span class="title1">充值遇到问题：</span>
+                    </div>
+                    <div class="qa-info">
+                        <dl class="number">1
+                        </dl>
+                        <dl class="title2">、是否支持信用卡支付
+                        </dl>f
+                        <p>Example是一款为普通投资理财者和消费者提供实物流动性解决方案的互联网产品，因信用卡只能用于消费使用，而Example产品中涉及理财属性，所以无法支持信用卡支付</p>
+                    </div>
+                    <div class="qa-info">
+                        <dl class="number">2
+                        </dl>
+                        <dl class="title2">、网银充值有限额吗
+                        </dl>
+                        <p>Example网银充值是通过第三方支付公司跳转到网上银行支付，若有限额是您本人设置银行卡交易限额，或是发卡行设置交易限额，如有疑问您可以咨询您的发卡行</p>
+                    </div>
+                    <div class="qa-info">
+                        <dl class="number">3
+                        </dl>
+                        <dl class="title2">、网银充值需要手续费吗
+                        </dl>
+                        <p>通过Example充值不需要任何手续费</p>
+                    </div>
+                    <div class="qa-info">
+                        <dl class="number">4
+                        </dl>
+                        <dl class="title2">、网银充值多久时间到账
+                        </dl>
+                        <p>通过Example网银充值，充值成功后，会及时充到您Example现金账户中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

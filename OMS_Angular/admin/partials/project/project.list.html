@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <legend>项目列表</legend>
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>项目名称</th>
+                    <th>项目简述</th>
+                    <th>项目期限</th>
+                    <th>利率</th>
+                    <th>返点</th>
+                    <th>价格</th>
+                    <th>是否保本</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in projects">
+                    <td>{{item.projectid}}</td>
+                    <td>{{item.projectname}}</td>
+                    <td>{{item.projectdesc}}</td>
+                    <td>{{item.projectdays}}</td>
+                    <td>{{item.interestrate}}</td>
+                    <td>{{item.investrebate}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.principlegrantee}}</td>
+                    <td>
+                        <button class="btn btn-info">修改</button>
+                        <button class="btn btn-warning">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

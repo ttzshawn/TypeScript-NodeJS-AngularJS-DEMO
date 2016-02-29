@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="../statics/styles/users/login.css">
+<div class="login-banner">
+	<div class="row login-wrapper">
+		<div class="gbanker-login unit">
+			<form method="POST"  ng-submit="login(user)">
+				<h2>登录</h2>
+				<fieldset>
+					<div class="input-icon-group">
+						<label for="telInput"><i class="icon-contact icon"></i></label>
+						<input type="text" id="telInput" ng-model="user.accountname" placeholder="请输入用户名/手机号"/>
+					</div>
+					<div class="input-icon-group">
+						<label for="passwordInput"><i class="icon-lock icon"></i></label>
+						<input type="password" id="passwordInput" ng-model="user.password" placeholder="请输入密码"/>
+					</div>
+					<div class="error"></div>
+					<p class="find-password">
+						<a href="pwdRecovery.html" class="link-find-password">忘记登录密码？</a>
+					</p>
+					<div class="actions clearfix">
+						<ul class="inline">
+							<li>
+								<span class="button-alpha" id="submit" ng-click="login(user)">登录</span>
+							</li>
+							<li><a href="#" ui-sref="register" class="button-beta">免费注册</a></li>
+						</ul>
+					</div>
+
+					<div class="security-info">
+						<p>资金和安全由中华保险承保</p>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<div class="intro unit">
+			<div class="before"></div>
+			<ul class="image">
+				<li class="image1 active"></li>
+				<li class="image2"></li>
+				<li class="image3"></li>
+			</ul>
+			<div class="after"></div>
+		</div>
+	</div>
+</div>
+<input type="hidden" id="depositType" value="">
+
+<script src="../statics/scripts/users/login.js"></script>

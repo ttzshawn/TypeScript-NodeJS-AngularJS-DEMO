@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="statics/styles/layouts/about.css">
+
+<div class="about_bg">
+	<div class="about_us">
+		<div class="row">
+
+			<!doctype html>
+			<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+			<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+			<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+			<!--[if gt IE 8]><![endif]-->
+			<ul class="about_banner" id="abnner">
+				<a href="#">
+					<li ui-sref="about.intro" ui-sref-active="active">Example介绍</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.team" ui-sref-active="active">团队</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.expert" ui-sref-active="active">专家顾问</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.partner" ui-sref-active="active">战略合作伙伴</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.news" ui-sref-active="active">媒体报道</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.deal" ui-sref-active="active">用户协议</li>
+				</a>
+				<a href="#">
+					<li ui-sref="about.join" ui-sref-active="active">加入我们</li>
+				</a>
+				<a href="#" style="border:0px">
+					<li ui-sref="about.call" ui-sref-active="active" style="border-bottom: 0px;">联系我们</li>
+				</a>
+			</ul>
+
+
+			<div class="about_content">
+				<div ui-view></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script src="statics/scripts/about/about.js"></script>

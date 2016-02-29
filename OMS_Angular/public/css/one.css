@@ -1,0 +1,194 @@
+/* partials */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+
+.pr0 {
+  padding-right: 0;
+}
+
+.pt0 {
+  padding-top: 0;
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.pd0 {
+  padding: 0;
+}
+
+.ml0 {
+  margin-left: 0;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mg0 {
+  margin: 0;
+}
+
+/* use for angular animation begin */
+.ng-enter-stagger {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.ng-animate.animate-fade {
+  -webkit-transition: all linear 0.75s;
+  transition: all linear 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.ng-animate.animate-fade.ng-enter {
+  opacity: 0;
+}
+.ng-animate.animate-fade.ng-enter-active {
+  opacity: 1;
+}
+.ng-animate.animate-fade.ng-leave {
+  opacity: 1;
+}
+.ng-animate.animate-fade.ng-leave-active {
+  opacity: 0;
+}
+
+.ng-animate.animate-slide {
+  -webkit-transition: all linear 0.75s;
+  transition: all linear 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.ng-animate.animate-slide.ng-enter {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.ng-animate.animate-slide.ng-enter-active {
+  visibility: hidden;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+.ng-animate.animate-slide.ng-leave {
+  visibility: hidden;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+.ng-animate.animate-slide.ng-leave-active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* use for angular animation end */
+/* copy from animate.css animation begin*/
+.animated {
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+/* copy from animate.css animation end */
+/* main */
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+/* footer */
+footer.footer-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #009688;
+  color: white;
+}
+
+.slider-home-big {
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+
+/* login */
+.login-panel .logincode {
+  width: 140px;
+  height: 35px;
+}
+
+/* project */
+.projectlist-li-big .progress {
+  height: 18px;
+}
+
+/* detail */
+.detail-panel-info .progress {
+  height: 18px;
+}
+
+/* user */
+.list-table-center th {
+  text-align: center;
+}
+.list-table-centertable > tbody > tr > td {
+  vertical-align: middle;
+}

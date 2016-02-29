@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="../statics/styles/gold/goldDetail.css">
+
+<div class="gbanker-gold-trade">
+    <div class="gold-detail">
+        <div class="row">
+            <div class="product-detail">
+                <div class="detail">
+                    <div class="title">产品详情</div>
+                    <div class="content">
+                        <div class="rate">
+                            <span class="number" id="depositRate">2.59</span>
+                            <span class="specs">%</span>
+                            <div class="name">
+                                <span id="depositName">活期</span>年化收益</div>
+                        </div>
+                        <div class="manage">
+                            <div>已投资本产品用户
+                                <span id="depositUser">40367</span>位</div>
+                            <div class="user">用户累计投资
+                                <span id="depositWeight">1271536</span>克</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="intro">
+                    <div class="title-logo"></div>
+                    <div class="title">活期投资，随时买卖</div>
+                    <div class="content">灵活的投资方式，您可随时决定是否继续持有资产</div>
+                    <div class="title-logo"></div>
+                    <div class="title">超低门槛，毫克起买</div>
+                    <div class="content">1毫克起售，按金额购买不足1毫克的尾差将退还您的现金账户</div>
+                    <div class="title-logo"></div>
+                    <div class="title">价格透明，零手续费</div>
+                    <div class="content">买入价格全面同步上海交易所及国际金价，买入无手续费</div>
+                    <div class="title-logo"></div>
+                    <div class="title">稳定收息，年化2.0%-2.8%收益</div>
+                    <div class="content">目前Example流动金的年收益率保持在2.0%-2.8%之间，将根据市场情况调整</div>
+                </div>
+
+
+            </div>
+            <div class="trade-detail unit">
+
+                <div class="left-content">
+                    <ul class="left-tab">
+                        <li class="left-tab-item active"><a href="javascript:void(0);" type="gram">按克数购买</a></li>
+                        <li class="left-tab-item"><a href="javascript:void(0);" type="money">按金额数购买</a></li>
+                    </ul>
+                    <input type="hidden" id="detail_realtime_price" value="23226">
+
+                    <div class="left-tab-content left-tab-content1" id="buyGrams" style="display: block;">
+                        <form action="urlwaitforreplace/trade/gold/confirm" class="trade-guide" method="post">
+                            <fieldset>
+                                <div class="input-group">
+                                    <label>当前金价：</label>
+                                    <div class="price-group">
+                                        <span id="fixedPrice" class="price">
+                                            232.26
+                                        </span>
+                                        <span>元/克</span>
+                                    </div>
+                                </div>
+                                <div class="input-group group-control">
+                                    <label>购买克数</label>
+                                    <div class="group">
+                                        <input type="text" name="gramInput" id="gramInput" autofocus="" placeholder="">
+                                        <!-- <input type="hidden" id="weightMin" />
+											<input type="hidden" id="weightMax" /> -->
+                                        <span>克</span>
+                                    </div>
+                                    <div id="buyGrams_errorMsg" style="color: red; margin-top: 10px; display: none"></div>
+                                </div>
+                                <div class="input-group price-indicator">
+                                    <label>所需金额</label>
+                                    <div class="dummy">
+                                        <span class="number" id="buyGramsNumber" style="font-size: 18px;">0</span>
+                                        <span class="spec">元</span>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <input type="hidden" name="type" value="gram">
+                                    <input type="hidden" name="orderNo">
+                                    <input type="hidden" name="buyWeight">
+                                    <input type="hidden" name="currentPrice">
+                                    <input type="hidden" name="realMoney">
+                                    <input type="hidden" name="totalMoney">
+                                    <input type="hidden" name="createTime">
+                                    <input type="hidden" name="interestStart">
+                                    <input type="hidden" name="interestEnd">
+                                    <input type="hidden" name="depositType">
+                                    <div class="deductible-message"></div>
+                                    <button class="trade-button">确认购买</button>
+                                    <a href="" class="demand-into">从流动金转入</a>
+                                </div>
+                            </fieldset>
+
+                        </form>
+                    </div>
+                    <div class="left-tab-content left-tab-content1 hide" id="buyValue" style="display: none;">
+                        <form action="urlwaitforreplace/trade/gold/confirm" class="trade-guide" method="post">
+                            <fieldset>
+                                <div class="input-group">
+                                    <label>当前金价：</label>
+                                    <div class="price-group">
+                                        <span id="fixedPrice" class="price">
+                                            232.26
+                                        </span>
+                                        <span>元/克</span>
+                                    </div>
+                                </div>
+                                <div class="input-group group-control">
+                                    <label for="valueInput">购买金额</label>
+                                    <div class="group">
+                                        <input type="text" name="valueInput" id="valueInput" autofocus="" placeholder="">
+                                        <!-- <input type="hidden" id="moneyMin" />
+											<input type="hidden" id="moneyMax" /> -->
+                                        <span>元</span>
+                                    </div>
+                                    <div id="buyValue_errorMsg" style="color: red; margin-top: 10px; display: none;"></div>
+                                </div>
+                                <div class="input-group price-indicator">
+                                    <label for="">克重</label>
+                                    <div class="dummy">
+                                        <span class="number" id="buyMoneyNumber" style="font-size: 18px;">0</span>
+                                        <span class="spec">克</span>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <input type="hidden" name="type" value="money">
+                                    <input type="hidden" name="orderNo">
+                                    <input type="hidden" name="buyWeight">
+                                    <input type="hidden" name="currentPrice">
+                                    <input type="hidden" name="realMoney">
+                                    <input type="hidden" name="totalMoney">
+                                    <input type="hidden" name="createTime">
+                                    <input type="hidden" name="interestStart">
+                                    <input type="hidden" name="interestEnd">
+                                    <input type="hidden" name="depositType">
+                                    <div id="deductibleMessage" class="deductible-message"></div>
+                                    <button class="trade-button">确认购买</button>
+                                    <a href="" class="demand-into">从流动金转入</a>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="prompt">
+                    <div class="prompt_top">提示</div>
+                    <div style="width:288px;line-height:30px;margin-left:27px;">1. 预计计息日为买入后的第二天。 </div>
+                    <div style="width:288px;line-height:30px;margin-left:27px;">2. 每人每日累计可买入1000克， 卖出500克。 </div>
+                    <div style="width:288px;line-height:30px;margin-left:27px;">3. 买入无任何手续费， 卖出手续费1元/克。 </div>
+                    <div style="width:288px;line-height:30px;margin-left:27px;">4. 上海交易所开盘日09:00-24:00卖出手续费七折。 </div>
+                </div>
+                <!-- 小提示 -->
+                <input type="hidden" id="depositType" value="0">
+                <input type="hidden" id="useDeductible" value="1">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="../statics/scripts/trade/gold/detail.js"></script>

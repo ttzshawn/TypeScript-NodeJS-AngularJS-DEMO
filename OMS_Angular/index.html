@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+    <title>Example</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="A,B">
+
+    <link rel="stylesheet" type="text/css" href="public/js/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="public/js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="public/css/one.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <!-- navbar begin -->
+    <div class="">
+        <div class="row">
+            <div class="">
+                <h1 class="">
+                    <a href="index.html">Example</a>
+                </h1>
+            </div>
+
+            <div class="nav unit">
+                <ul class="inline">
+                    <li ui-sref-active="active"><a ui-sref="index" href="javascript:void(0)">HOME</a></li>
+                    <li ui-sref-active="active"><a ui-sref="financing" href="javascript:void(0)">FIRST</a></li>
+                    <li ui-sref-active="active"><a ui-sref="about.intro" href="javascript:void(0)">ABOUT</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div ui-view></div>
+
+
+
+    <!-- 3th libs -->
+    <script src="public/js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script src="public/js/lib/angular/angular.min.js "></script>
+    <script src="public/js/lib/angular/angular-animate.min.js "></script>
+    <script src="public/js/lib/angular-ui-router/angular-ui-router.min.js "></script>
+    <script src="public/js/lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="public/js/lib/swiper/js/swiper.min.js "></script>
+
+
+    <link rel="stylesheet" href="public/js/lib/umeditor/themes/default/css/umeditor.css">
+    <script src="public/js/lib/umeditor/umeditor.config.js"></script>
+    <script src="public/js/lib/umeditor/umeditor.min.js"></script>
+    <script src="public/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+
+    <!-- BY -->
+    <script src="public/js/one.js "></script>
+    <script src="public/js/app.js "></script>
+    <script src="public/js/controllers.js "></script>
+    <script src="public/js/services.js "></script>
+    <script src="public/js/filters.js "></script>
+    <script src="public/js/directives.js "></script>
+
+</body>
+
+</html>
