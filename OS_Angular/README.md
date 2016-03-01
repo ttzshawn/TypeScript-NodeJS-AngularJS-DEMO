@@ -1,4 +1,4 @@
-# OMS
+# DEMO
 
 ## Front-end intro
 
