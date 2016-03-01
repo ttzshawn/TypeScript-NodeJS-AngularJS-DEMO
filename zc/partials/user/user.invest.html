@@ -1,0 +1,74 @@
+<div class="row well">
+    <div class="col-md-12">
+        <legend>项目列表</legend>
+        <table class="table table-striped table-hover list-table-center">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>项目名称</th>
+                    <th>项目状态</th>
+                    <th>融资目标</th>
+                    <th>投资金额</th>
+                    <th>订金</th>
+                    <th>角色</th>
+                    <th>投资时间</th>
+                    <th>投资状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in projects">
+                    <td>{{item.id}}</td>
+                    <td>{{item.itemname}}</td>
+                    <td>{{item.projectstatus}}</td>
+                    <td>{{item.financingtarget}}</td>
+                    <td>{{item.investamount}}</td>
+                    <td>{{item.subscription}}</td>
+                    <td>{{item.role}}</td>
+                    <td>{{item.investstatus}}</td>
+                    <td>{{item.investtime}}</td>
+                    <td>
+                        <button class="btn btn-primary btn-xs">查看</button>
+                        <button class="btn btn-primary btn-xs" ng-click="goPay(11)">付款</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="pay-dialog" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">付款</h4>
+            </div>
+            <div class="modal-body">
+                <p>支付投资金额{{project.itemname}}{{investamount}}元</p>
+                <p>占股比例: 8 %</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-raised" ng-click="pay()">付款</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="success-dialog" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">付款成功</h4>
+            </div>
+            <div class="modal-body">
+                <p>恭喜, 投资申请成功!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-raised" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

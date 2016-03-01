@@ -1,0 +1,69 @@
+<!-- swiper begin -->
+<!-- Slider main container -->
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container', {
+		// Optional parameters
+		autoplay : 2000,
+		// direction: 'vertical',
+		loop : true,
+
+		// If we need pagination
+		pagination : '.swiper-pagination',
+
+		// Navigation arrows
+		nextButton : '.swiper-button-next',
+		prevButton : '.swiper-button-prev',
+
+	// And if we need scrollbar
+	// scrollbar: '.swiper-scrollbar',
+	})
+</script>
+<div class="container-fluid pd0 slider-home-big">
+	<div class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<img src="img/home/slide_01.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="img/home/slide_02.jpg" alt="">
+			</div>
+			<div class="swiper-slide">
+				<img src="img/home/slide_03.jpg" alt="">
+			</div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
+	<!-- swiper end -->
+</div>
+<div class="container">
+	<a href="#/detail/{{item.projectid}}" ng-repeat="item in projects">
+		<div class="row projectlist-li-big">
+			<div class="col-md-8">
+				<img class="img-responsive center-block" src="img/01.png" alt="" />
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-success ">
+					<div class="panel-heading">
+						<h3 class="panel-title">{{item.itemname}}</h3>
+					</div>
+					<div class="panel-body">
+						<p>{{item.introduce}}</p>
+						<div class="progress progress-striped active">
+							<div class="progress-bar progress-bar-success" style="width: {{item.collectratio}}%">{{item.collectratio}}</div>
+						</div>
+						<p>融资目标：{{item.financingtarget}}元</p>
+						<p>出让股份：{{item.sellshares}}</p>
+						<p>已融资: {{collectmoney}}元</p>
+						<p>剩余时间：{{surplustime}}天</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>

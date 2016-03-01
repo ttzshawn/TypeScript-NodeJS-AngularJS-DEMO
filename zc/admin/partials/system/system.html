@@ -1,0 +1,24 @@
+<div class="leftitems">
+    <div class="container" style="width:220px;">
+        <div class="row">
+            <ul class="nav nav-stacked">
+                <li class="active"><a ui-sref=".page" href="#">页面管理</a></li>
+                <li><a ui-sref=".project" href="#">管理</a></li>
+                <li><a ui-sref=".money" href="#">资金管理</a></li>
+                <li><a ui-sref=".user" href="#">用户管理</a></li>
+                <li><a ui-sref=".audit" href="#">认证管理</a></li>
+                <li><a ui-sref=".auth" href="#">权限管理</a></li>
+                <li><a ui-sref=".system" href="#">系统管理</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rightitems">
+    <div ui-view></div>
+</div>
+<script>
+    $(function() {
+        $.material.init();
+    });
+</script>

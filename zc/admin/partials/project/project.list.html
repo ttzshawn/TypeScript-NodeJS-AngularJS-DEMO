@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <legend>项目列表</legend>
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>项目名称</th>
+                    <th>项目类型</th>
+                    <th>融资目标</th>
+                    <th>出让股份</th>
+                    <th>项目图片</th>
+                    <th>预约金额</th>
+                    <th>募集金额</th>
+                    <th>项目进度</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in projects">
+                    <td>{{item.id}}</td>
+                    <td>{{item.itemname}}</td>
+                    <td>{{item.classification}}</td>
+                    <td>{{item.financingtarget}}</td>
+                    <td>{{item.sellshares}}</td>
+                    <td>{{item.itemimages}}</td>
+                    <td>{{item.ordermoney}}</td>
+                    <td>{{item.collectmoney}}</td>
+                    <td>{{item.collectratio}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

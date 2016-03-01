@@ -1,0 +1,71 @@
+
+<!-- swiper begin -->
+<!-- Slider main container -->
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        autoplay: 2000,
+        // direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: '.swiper-pagination',
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        // And if we need scrollbar
+        // scrollbar: '.swiper-scrollbar',
+    })
+</script>
+<div class="container-fluid pd0 slider-home-big">
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="img/home/slide_01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/home/slide_02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/home/slide_03.jpg" alt="">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <!-- swiper end -->
+</div>
+
+<div class="container">
+    <a href="#/detail/{{item.id}}"  ng-repeat="item in projects">
+        <div class="row projectlist-li-big">
+            <div class="col-md-8">
+                <img class="img-responsive center-block" src="img/01.png" alt="" />
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">大圣归来</h3>
+                  </div>
+                  <div class="panel-body">
+                      <p>作为糖果界的轻奢品，致力于承载潮流文化，提供个性化服务。目标成为中国手工甜物第一品牌。目前已拥有中央工厂，培训学校，全国53家门店，覆盖...</p>
+                  <div class="progress progress-striped active">
+                      <div class="progress-bar progress-bar-success" style="width: 45%">45%</div>
+                  </div>
+                  <p>融资目标：100万</p>
+                  <p>出让股份：10%</p>
+                  <p>已融资: 300万</p>
+                  <p>剩余时间：1天</p>
+                  </div>
+                </div>
+        </div>
+    </a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="leftitems">
+    <div class="container" style="width:220px;">
+        <div class="row">
+            <ul class="nav nav-stacked">
+                <li class="active"><a ui-sref="project.list" href="#">所有</a></li>
+                <li><a ui-sref="project.listwait" href="#">等待审核</a></li>
+                <li><a ui-sref="project.listsuccess" href="#">融资成功审核</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="rightitems">
+    <div ui-view></div>
+</div>
+<script>
+    $(function() {
+        $.material.init();
+    });
+</script>

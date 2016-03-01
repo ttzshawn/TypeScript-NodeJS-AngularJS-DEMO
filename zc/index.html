@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="mainApp">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <title></title>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/bmd/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/bmd/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/one.css">
+
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <div class="wrapper">
+        <!-- navbar begin -->
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- 响应式菜单按钮 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"></a>
+                </div>
+                <div class="navbar-collapse collapse navbar-responsive-collapse ">
+                    <ul class="nav navbar-nav ">
+                        <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">项目</a></li>
+                        <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">投资人</a></li>
+                        <li ui-sref-active="active"><a ui-sref="launchPro" href="javascript:void(0) ">发起项目</a></li>
+                        <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">帮助</a></li>
+                        <!-- <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">项目</a></li>
+                        <li ui-sref-active="active"><a ui-sref="investor" href="javascript:void(0) ">投资人</a></li>
+                        <li ui-sref-active="active"><a ui-sref="launchPro" href="javascript:void(0) ">发起项目</a></li>
+                        <li ui-sref-active="active"><a ui-sref="help" href="javascript:void(0) ">帮助</a></li> -->
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right ">
+
+                        <!-- {{msg}}
+                    <div ng-if="currentUser">Welcome, {{ currentUser.name }}</div>
+                    <div ng-if="isAuthorized(userRoles.admin)">You're admin.</div>
+                    <div ng-switch on="currentUser.role">
+                        <div ng-switch-when="userRoles.admin">You're admin.</div>
+                        <div ng-switch-when="userRoles.editor">You're editor.</div>
+                        <div ng-switch-default>You're something else.</div>
+                    </div> -->
+
+
+                        <li ng-if="!currentUser"><a ui-sref="login" href="#">登陆</a></li>
+                        <li ng-if="!currentUser"><a ui-sref="register" href="#">注册</a></li>
+                        <li class="dropdown" ng-if="currentUser">
+                            <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">欢迎, {{currentUser}}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a ui-sref="user.info" href="#">我的信息</a></li>
+                                <li><a ui-sref="user.invest" href="#">我的投资</a></li>
+                                <li><a ui-sref="user.concern" href="#">我的关注</a></li>
+                                <!-- <li class="divider "></li> -->
+                                <li><a ui-sref="user.launch" href="#">我发起的项目</a></li>
+                                <li><a href="#" ng-click="logout()">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+
+        <div ui-view></div>
+
+
+        <footer class="footer-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="btn-group btn-group-sm ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <div class="center-block ">&copy;2016 vtcomm.com, All rights reserved.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="btn-group btn-group-sm ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- 第三方库 -->
+    <script src="js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script src="js/lib/angular/angular.min.js "></script>
+    <script src="js/lib/angular/angular-animate.min.js "></script>
+    <script src="js/lib/angular-ui-router/angular-ui-router.min.js "></script>
+    <script src="js/lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="js/lib/bmd/js/material.min.js "></script>
+    <script src="js/lib/bmd/js/ripples.min.js "></script>
+    <script src="js/lib/swiper/js/swiper.min.js "></script>
+
+
+
+
+    <!-- blueimp Gallery styles -->
+    <!-- <link rel="stylesheet" href="js/lib/upload/other/blueimp-gallery.min.css"> -->
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <!-- <link rel="stylesheet" href="js/lib/upload/css/jquery.fileupload.css"> -->
+    <!-- <link rel="stylesheet" href="js/lib/upload/css/jquery.fileupload-ui.css"> -->
+    <!-- CSS adjustments for browsers with JavaScript disabled -->
+    <!-- <noscript><link rel="stylesheet" href="js/lib/upload/css/jquery.fileupload-noscript.css"></noscript> -->
+    <!-- <noscript><link rel="stylesheet" href="js/lib/upload/css/jquery.fileupload-ui-noscript.css"></noscript> -->
+
+
+
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+    <!-- <script src="js/lib/upload/js/vendor/jquery.ui.widget.js"></script> -->
+    <!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+    <!-- <script src="js/lib/upload/other/load-image.all.min.js"></script> -->
+    <!-- The Canvas to Blob plugin is included for image resizing functionality -->
+    <!-- <script src="js/lib/upload/other/canvas-to-blob.min.js"></script> -->
+    <!-- blueimp Gallery script -->
+    <!-- <script src="js/lib/upload/other/jquery.blueimp-gallery.min.js"></script> -->
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+    <!-- <script src="js/lib/upload/js/jquery.iframe-transport.js"></script> -->
+    <!-- The basic File Upload plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload.js"></script> -->
+    <!-- The File Upload processing plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-process.js"></script> -->
+    <!-- The File Upload image preview & resize plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-image.js"></script> -->
+    <!-- The File Upload audio preview plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-audio.js"></script> -->
+    <!-- The File Upload video preview plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-video.js"></script> -->
+    <!-- The File Upload validation plugin -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-validate.js"></script> -->
+    <!-- The File Upload Angular JS module -->
+    <!-- <script src="js/lib/upload/js/jquery.fileupload-angular.js"></script> -->
+    <!-- The main application script -->
+    <!-- <script src="js/lib/upload/js/app.js"></script> -->
+    
+    <link rel="stylesheet" href="js/lib/umeditor/themes/default/css/umeditor.css">
+    <script src="js/lib/umeditor/umeditor.config.js"></script>
+    <script src="js/lib/umeditor/umeditor.min.js"></script>
+    <script src="js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+
+
+    <!-- 自定义 -->
+    <script src="js/one.js "></script>
+    <script src="js/app.js "></script>
+    <script src="js/controllers.js "></script>
+    <script src="js/services.js "></script>
+    <script src="js/filters.js "></script>
+    <script src="js/directives.js "></script>
+
+    <script>
+        $.material.init();
+    </script>
+</body>
+
+</html>
