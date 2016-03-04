@@ -1,0 +1,25 @@
+{
+    "status": 1,
+    "msg": "login success",
+    "content": [{
+        "projectid":1,
+        "itemname": "hh",
+        "introduce":"info",
+        "collectratio":65,
+        "projectstatus": "10",
+        "financingtarget":10000,
+        "sellshares":100,
+        "collectmoney":980,
+        "surplustime":"2015"
+    },{
+        "projectid":2,
+        "itemname": "hand",
+        "introduce":"info",
+        "collectratio":65,
+        "projectstatus": "10",
+        "financingtarget":10000,
+        "sellshares":100,
+        "collectmoney":980,
+        "surplustime":"2015"
+    }]
+}

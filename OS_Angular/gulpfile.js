@@ -1,4 +1,4 @@
-// 引入 gulp,compass
+// Require gulp,compass
 const gulp = require('gulp');
 // const imagemin = require('gulp-imagemin');
 /*const pngquant = require('imagemin-pngquant');*/
@@ -18,7 +18,7 @@ var paths = {
     img: './img-bs/**/*'
 };
 
-// 创建 Compass 任务
+// Create Compass Task
 gulp.task('compass', () => {
     gulp.src(paths.bsass)
         .pipe(compass({
@@ -30,7 +30,7 @@ gulp.task('compass', () => {
         }));
 });
 
-// babel with sourcemaps
+// Babel with sourcemaps
 gulp.task("babel", function () {
   return gulp.src("src/**/*.js")
     .pipe(sourcemaps.init())
@@ -66,5 +66,5 @@ gulp.task('watch', () => {
 });
 
 
-// 默认任务
+// Default Task
 gulp.task('default', ['compass', 'watch']);
