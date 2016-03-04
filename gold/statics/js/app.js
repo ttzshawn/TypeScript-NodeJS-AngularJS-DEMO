@@ -20,7 +20,7 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'ser
     serverError: 'server-error'
 })
 
-// 路由改变的时候验证身份
+// Authenticated when state chage
 .run(function($rootScope, AUTH_EVENTS, AuthService, Session) {
     $rootScope.$on('$stateChangeStart', function(event, next) {
         if (!AuthService.isAuthenticated()) {
