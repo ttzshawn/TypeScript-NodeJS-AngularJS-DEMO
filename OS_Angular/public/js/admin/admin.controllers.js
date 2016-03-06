@@ -37,7 +37,7 @@ var ctrls = angular.module('ctrls', [])
     });
 })
 
-// 登陆控制器
+// login控制器
 .controller('loginCtrl', ['$scope', '$rootScope', '$location', '$http', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService',
     function($scope, $rootScope, $location, $http, AUTH_EVENTS, CommonService, Session, AuthService) {
         $scope.user = {};
@@ -48,7 +48,7 @@ var ctrls = angular.module('ctrls', [])
 
             AuthService.login(user).then(function(res) {
                 if (CommonService.isReqSuccess(res)) {
-                    console.log('登陆成功');
+                    console.log('login成功');
                     console.log(user.accountname);
                     // $rootScope.setCurrentUser(user.accountname);
                     Session.create(res.data.sessionid, user.accountname);

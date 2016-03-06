@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="shortcut icon" href="ico/favicon.ico">
-    <title>Example--后台管理</title>
+    <title>--后台管理</title>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -14,11 +14,11 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="../statics/js/lib/bootstrap/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/bootstrap-material-design.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/ripples.min.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../js/lib/swiper/css/swiper.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="../statics/css/admin/one.css">
+    <link rel="stylesheet" type="text/css" href="../js/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/lib/bmd/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/admin/one.css">
 
 </head>
 
@@ -26,8 +26,8 @@
 
     <div class="wrapper">
         <!-- navbar begin -->
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid" ng-if="!!currentUser">
+        <div class="navbar navbar-default navbar-fixed-top" ng-if="currentUser">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <!-- 响应式菜单按钮 -->
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -35,19 +35,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a ui-sref="project.list" class="navbar-brand">Example</a>
+                    <a ui-sref="project.list" class="navbar-brand"></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-responsive-collapse ">
                     <ul class="nav navbar-nav ">
                         <!-- <li ui-sref-active="active"><a ui-sref="page" href="#">页面管理</a></li> -->
-                        <li ui-sref-active="active"><a ui-sref="project.list" href="#">项目管理</a></li>
-                        <li ui-sref-active="active"><a ui-sref="store.list" href="#">店铺管理</a></li>
-                        <!-- <li ui-sref-active="active"><a ui-sref="user" href="#">用户管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="project.list" href="#">管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="money" href="#">资金管理</a></li>
+                        <li ui-sref-active="active"><a ui-sref="user" href="#">用户管理</a></li>
                         <li ui-sref-active="active"><a ui-sref="audit" href="#">认证管理</a></li>
                         <li ui-sref-active="active"><a ui-sref="auth" href="#">权限管理</a></li>
-                        <li ui-sref-active="active"><a ui-sref="system" href="#">系统管理</a></li> -->
+                        <li ui-sref-active="active"><a ui-sref="system" href="#">系统管理</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right ">
+                    <ul class="nav navbar-nav navbar-right " ng-if="currentUser">
 
                         <!-- {{msg}}
                         <div ng-if="currentUser">Welcome, {{ currentUser.name }}</div>
@@ -58,7 +58,7 @@
                             <div ng-switch-default>You're something else.</div>
                         </div> -->
                         <li><a href="javascript:void(0)">欢迎, {{currentUser}}</a></li>
-                        <li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+                        <li><a href="javascript:void(0)" ng-click="logout()">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <div class="center-block ">&copy;2016 epam.com, All rights reserved.</div>
+                        <div class="center-block ">&copy;2016 a.com, All rights reserved.</div>
                     </div>
                 </div>
                 <div class="row">
@@ -92,32 +92,30 @@
         </footer> -->
     </div>
     <!-- 第三方库 -->
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="../js/lib/jquery/jquery-1.11.3.min.js "></script>
+    <script src="../js/lib/angular/angular.min.js "></script>
+    <script src="../js/lib/angular-ui-router/angular-ui-router.min.js "></script>
+    <script src="../js/lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="../js/lib/bmd/js/material.min.js "></script>
+    <script src="../js/lib/bmd/js/ripples.min.js "></script>
+    <script src="../js/lib/swiper/js/swiper.min.js "></script>
 
-    <script src="../statics/js/lib/jquery/jquery-1.11.3.min.js "></script>
-    <script src="../statics/js/lib/angular/angular.min.js "></script>
-    <script src="../statics/js/lib/angular-ui-router/angular-ui-router.min.js "></script>
-    <script src="../statics/js/lib/bootstrap/js/bootstrap.min.js "></script>
-    <!-- <script src="../js/lib/bmd/js/material.min.js "></script> -->
-    <script src="../statics/js/lib/bmd/js/ripples.min.js "></script>
-    <script src="../statics/js/lib/swiper/js/swiper.min.js "></script>
-
-    <link rel="stylesheet" href="../statics/js/lib/umeditor/themes/default/css/umeditor.css">
-    <script src="../statics/js/lib/umeditor/umeditor.config.js"></script>
-    <script src="../statics/js/lib/umeditor/umeditor.min.js"></script>
-    <script src="../statics/js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
+    <link rel="stylesheet" href="../js/lib/umeditor/themes/default/css/umeditor.css">
+    <script src="../js/lib/umeditor/umeditor.config.js"></script>
+    <script src="../js/lib/umeditor/umeditor.min.js"></script>
+    <script src="../js/lib/umeditor/lang/zh-cn/zh-cn.js"></script>
 
     <!-- 自定义 -->
-    <script src="../statics/js/admin/one.js "></script>
-    <script src="../statics/js/admin/app.admin.js "></script>
-    <script src="../statics/js/admin/controllers.admin.js "></script>
-    <script src="../statics/js/admin/services.admin.js "></script>
-    <script src="../statics/js/admin/filters.admin.js "></script>
-    <script src="../statics/js/admin/directives.admin.js "></script>
+    <script src="../js/admin/one.js "></script>
+    <script src="../js/admin/app.admin.js "></script>
+    <script src="../js/admin/controllers.admin.js "></script>
+    <script src="../js/admin/services.admin.js "></script>
+    <script src="../js/admin/filters.admin.js "></script>
+    <script src="../js/admin/directives.admin.js "></script>
 
 
     <script>
-        // $.material.init();
+        $.material.init();
     </script>
 </body>
 

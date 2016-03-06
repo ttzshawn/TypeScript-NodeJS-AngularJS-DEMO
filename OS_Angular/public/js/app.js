@@ -3,7 +3,7 @@
  * @desc mainAPP
  */
 
-var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'services', 'filters', 'directives'])
+var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ctrls', 'services', 'filters', 'directives'])
 
 // 全局变量
 .constant('WEB_INFO', {
@@ -49,7 +49,7 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'ser
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/');
 
-    // 登陆注册
+    // login & register
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'partials/user/login.html',
@@ -65,8 +65,15 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'ser
     // 各个主页面
     .state('index', {
         url: '/',
-        templateUrl: 'partials/index.html',
+        templateUrl: 'partials/home.html',
         controller: 'indexCtrl'
+    })
+   
+    // for test
+    .state('test', {
+        url: '/test',
+        templateUrl: 'partials/test-angular-ui-bootstrap.html',
+        controller: 'testCtrl'
     })
 
     // 关于我们
@@ -246,9 +253,4 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'ser
     //     controller: 'userCtrl'
     // })
     //
-    .state('test', {
-        url: '/test',
-        templateUrl: 'partials/test.html',
-        controller: 'testCtrl'
-    })
 });

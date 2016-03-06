@@ -164,7 +164,7 @@ var services = angular.module('services', [])
     return authService;
 })
 
-// 注册
+// register
 .factory('registerService', function($http, $rootScope, CommonService) {
     // 设置默认Content-Type为后台可接收的form-data格式
     // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';

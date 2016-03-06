@@ -49,7 +49,7 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'ser
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/');
 
-    // 登陆注册
+    // loginregister
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'partials/user/login.html',

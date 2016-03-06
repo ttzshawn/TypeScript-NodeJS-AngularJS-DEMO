@@ -5,6 +5,60 @@
 
 var ctrls = angular.module('ctrls', [])
 
+
+.controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
+
+  $scope.items = ['item1', 'item2', 'item3'];
+
+  $scope.animationsEnabled = true;
+
+  $scope.open = function (size) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+  $scope.toggleAnimation = function () {
+    $scope.animationsEnabled = !$scope.animationsEnabled;
+  };
+
+})
+
+// Please note that $uibModalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+
+.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+
+  $scope.items = items;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.ok = function () {
+    $uibModalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+})
+
+
 // 主控制器，各个子view共用
 .controller('mainCtrl', ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session', 'goldService',
     function($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session, goldService) {
@@ -30,7 +84,7 @@ var ctrls = angular.module('ctrls', [])
 
         // 接收监听登录成功事件
         $scope.$on(AUTH_EVENTS.loginSuccess, function(event, data) {
-            console.log("登陆成功跳转");
+            console.log("login成功跳转");
             $location.path('/');
         });
 
@@ -43,24 +97,24 @@ var ctrls = angular.module('ctrls', [])
         });
 
         // 主查询价格函数
-        var checkGoldPrice = function() {
-            goldService.querygoldprice().then(function(res) {
-                if (CommonService.isReqSuccess(res)) {
-                    $scope.G_goldprice = res.data.goldprice;
-                } else {
-                    CommonService.handleResErr(res);
-                }
-            }, function(res) {
-                CommonService.handleHttpErr(res);
-            })
-        }
+        // var checkGoldPrice = function() {
+        //     goldService.querygoldprice().then(function(res) {
+        //         if (CommonService.isReqSuccess(res)) {
+        //             $scope.G_goldprice = res.data.goldprice;
+        //         } else {
+        //             CommonService.handleResErr(res);
+        //         }
+        //     }, function(res) {
+        //         CommonService.handleHttpErr(res);
+        //     })
+        // }
 
         // 每秒查询一次价格
-        setInterval(checkGoldPrice, 1000);
+        // setInterval(checkGoldPrice, 1000);
     }
 ])
 
-// 登陆控制器
+// login控制器
 .controller('loginCtrl', ['$scope', '$rootScope', '$location', '$http', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService',
     function($scope, $rootScope, $location, $http, $state, AUTH_EVENTS, CommonService, Session, AuthService) {
 
@@ -76,7 +130,7 @@ var ctrls = angular.module('ctrls', [])
 
             AuthService.login(user).then(function(res) {
                 if (CommonService.isReqSuccess(res)) {
-                    console.log('登陆成功');
+                    console.log('login成功');
                     Session.create(res.data.sessionid, user.accountname);
                     $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                     // $rootScope.setCurrentUser(user.accountname);
@@ -93,20 +147,20 @@ var ctrls = angular.module('ctrls', [])
     }
 ])
 
-// 注册控制器
+// register控制器
 .controller('registerCtrl', ['$scope', '$location', 'registerService', function($scope, $location, registerService) {
-    // 注册，成功跳到登陆页面
+    // register，成功跳到login页面
     $scope.register = function(user) {
         registerService.register(user).then(function(res) {
             if (CommonService.isReqSuccess(res)) {
                 console.log(res);
-                alert('注册成功');
+                alert('register成功');
                 $location.path("/login");
             } else {
                 CommonService.handleResErr(res);
             }
         }, function(res) {
-            alert('注册失败');
+            alert('register失败');
             CommonService.handleHttpErr(res);
         })
     }
