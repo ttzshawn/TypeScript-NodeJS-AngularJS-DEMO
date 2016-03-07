@@ -41,10 +41,10 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
         }
     ]);
 
-    // $locationProvider.html5Mode({
-    //     enabled: true,
-    //     requireBase: false
-    // });
+    $locationProvider.html5Mode({
+        enabled: true
+        // requireBase: false
+    });
 
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/');
@@ -52,11 +52,11 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
     // login & register
     $stateProvider.state('login', {
         url: '/login',
-        templateUrl: 'partials/user/login.html',
+        templateUrl: 'partials/login.html',
         controller: 'loginCtrl'
     }).state('register', {
         url: '/register',
-        templateUrl: 'partials/user/register.html'
+        templateUrl: 'partials/register.html'
     }).state('pwdRecovery', {
         url: '/pwdRecovery',
         templateUrl: 'partials/user/pwdRecovery.html'
@@ -68,7 +68,7 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
         templateUrl: 'partials/home.html',
         controller: 'indexCtrl'
     })
-   
+
     // for test
     .state('test', {
         url: '/test',
