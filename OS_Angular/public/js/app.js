@@ -3,9 +3,9 @@
  * @desc mainAPP
  */
 
-var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate', 'ctrls', 'services', 'filters', 'directives'])
+var mainApp = angular.module('mainApp', ['ui.router', 'ngAnimate', 'ctrls', 'services', 'filters', 'directives'])
 
-// 全局变量
+// Global
 .constant('WEB_INFO', {
     title: 'Example'
 })
@@ -42,14 +42,14 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
     ]);
 
     $locationProvider.html5Mode({
-        enabled: true
-        // requireBase: false
+        enabled: false,
+        requireBase: false
     });
 
     // For any unmatched url, redirect to /
     $urlRouterProvider.otherwise('/');
 
-    // login & register
+    // loginregister
     $stateProvider.state('login', {
         url: '/login',
         templateUrl: 'partials/login.html',
@@ -63,17 +63,10 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
     })
 
     // 各个主页面
-    .state('index', {
+    .state('home', {
         url: '/',
         templateUrl: 'partials/home.html',
         controller: 'indexCtrl'
-    })
-
-    // for test
-    .state('test', {
-        url: '/test',
-        templateUrl: 'partials/test-angular-ui-bootstrap.html',
-        controller: 'testCtrl'
     })
 
     // 关于我们
@@ -253,4 +246,9 @@ var mainApp = angular.module('mainApp', ['ui.router', 'ui.bootstrap', 'ngAnimate
     //     controller: 'userCtrl'
     // })
     //
+    .state('test', {
+        url: '/test',
+        templateUrl: 'partials/test.html',
+        controller: 'testCtrl'
+    })
 });

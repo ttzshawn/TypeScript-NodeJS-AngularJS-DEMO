@@ -6,8 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "angular-ui-bootstrap": "^1.2.4",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-compass": "^2.1.0"
   },
   "scripts": {

@@ -6,56 +6,56 @@
 var ctrls = angular.module('ctrls', [])
 
 
-.controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
+.controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
 
-  $scope.items = ['item1', 'item2', 'item3'];
+    $scope.items = ['item1', 'item2', 'item3'];
 
-  $scope.animationsEnabled = true;
+    $scope.animationsEnabled = true;
 
-  $scope.open = function (size) {
+    $scope.open = function(size) {
 
-    var modalInstance = $uibModal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'myModalContent.html',
-      controller: 'ModalInstanceCtrl',
-      size: size,
-      resolve: {
-        items: function () {
-          return $scope.items;
-        }
-      }
-    });
+        var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'myModalContent.html',
+            controller: 'ModalInstanceCtrl',
+            size: size,
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                }
+            }
+        });
 
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
+        modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+            $log.info('Modal dismissed at: ' + new Date());
+        });
+    };
 
-  $scope.toggleAnimation = function () {
-    $scope.animationsEnabled = !$scope.animationsEnabled;
-  };
+    $scope.toggleAnimation = function() {
+        $scope.animationsEnabled = !$scope.animationsEnabled;
+    };
 
 })
 
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
-.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+.controller('ModalInstanceCtrl', function($scope, $uibModalInstance, items) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+    $scope.items = items;
+    $scope.selected = {
+        item: $scope.items[0]
+    };
 
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
+    $scope.ok = function() {
+        $uibModalInstance.close($scope.selected.item);
+    };
 
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
+    $scope.cancel = function() {
+        $uibModalInstance.dismiss('cancel');
+    };
 })
 
 
@@ -84,33 +84,18 @@ var ctrls = angular.module('ctrls', [])
 
         // 接收监听登录成功事件
         $scope.$on(AUTH_EVENTS.loginSuccess, function(event, data) {
-            console.log("login成功跳转");
+            console.log("login success");
             $location.path('/');
         });
 
         $scope.$on(AUTH_EVENTS.pageNotFound, function(event, data) {
-            console.log('404没有此页面');
+            console.log('404 error');
         });
 
         $scope.$on(AUTH_EVENTS.serverError, function(event, data) {
-            console.log('500服务器出现了个问题');
+            console.log('500 error');
         });
 
-        // 主查询价格函数
-        // var checkGoldPrice = function() {
-        //     goldService.querygoldprice().then(function(res) {
-        //         if (CommonService.isReqSuccess(res)) {
-        //             $scope.G_goldprice = res.data.goldprice;
-        //         } else {
-        //             CommonService.handleResErr(res);
-        //         }
-        //     }, function(res) {
-        //         CommonService.handleHttpErr(res);
-        //     })
-        // }
-
-        // 每秒查询一次价格
-        // setInterval(checkGoldPrice, 1000);
     }
 ])
 

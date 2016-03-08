@@ -23,8 +23,7 @@
     "buildOnSave": false,
     "files": [
         "public/js/app.ts",
-        "public/js/lib/angular/angular.min.ts",
-        "public/js/typings/tsd.d.ts"
+        "public/js/lib/angular/angular.min.ts"
     ],
     "atom": {
         "rewriteTsconfig": true
