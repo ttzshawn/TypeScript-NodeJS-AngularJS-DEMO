@@ -2,7 +2,6 @@
  * @author Shawn
  * @desc mainAPP
  */
-
 const PROJECTSTATUS = {
     0: "科技",
     1: "艺术",

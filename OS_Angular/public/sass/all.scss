@@ -3,9 +3,14 @@
 @import "partials";
 @import "mixins";
 @import "animate";
+@import "boostrap.custom";
 
 /* main */
-html, body {height: 100%;}
+
+html,body {
+    height: 100%;
+}
+
 .wrapper{min-height: 100%; position: relative; padding-bottom: 60px;}
 
 /* footer */

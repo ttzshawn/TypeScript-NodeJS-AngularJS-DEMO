@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="shortcut icon" href="ico/favicon.ico">
-    <title>OMS</title>
+    <title>Order Management System</title>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -24,7 +24,7 @@
 
     <div class="wrapper">
         <!-- navbar begin -->
-        <div class="navbar navbar-default">
+        <div class="navbar navbar-default" ng-if="currentUser">
             <div class="container">
                 <div class="navbar-header">
                     <!-- 响应式菜单按钮 -->
@@ -55,14 +55,13 @@
                         <div ng-switch-default>You're something else.</div>
                     </div> -->
 
-
                         <li ng-if="!currentUser"><a ui-sref="login" href="#">login</a></li>
                         <li ng-if="!currentUser"><a ui-sref="register" href="#">register</a></li>
                         <li class="dropdown" ng-if="currentUser">
                             <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, {{currentUser}}<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a ui-sref="user.info" href="#">My info</a></li>
-                                <li><a ui-sref="user.invest" href="#">My Invest</a></li>
+                                <li><a ui-sref="user.info" href="#">My Profile</a></li>
+                                <li><a ui-sref="user.invest" href="#">My Orders</a></li>
                                 <li><a ui-sref="user.concern" href="#">My Concern</a></li>
                                 <!-- <li class="divider "></li> -->
                                 <li><a ui-sref="user.launch" href="#">My Projects</a></li>
@@ -77,7 +76,7 @@
 
 
         <div ui-view></div>
-
+        <login></login>
 
         <footer class="footer-wrap">
             <div class="container">
@@ -89,7 +88,8 @@
                 </div>
                 <div class="row ">
                     <div class="col-md-12 ">
-                        <div class="center-block ">&copy;2016 epam.com, All rights reserved.</div>
+                        <div class="center-block "></div>
+                        <div class="center-block ">Version 0.0.1 &copy;2016 epam.com, All rights reserved.</div>
                     </div>
                 </div>
                 <div class="row">

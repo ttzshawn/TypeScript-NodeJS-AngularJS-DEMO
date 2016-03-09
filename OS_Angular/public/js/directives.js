@@ -1,21 +1,29 @@
-var directives = angular.module('directives', []);
+(function() {
+    'use strict';
 
-directives.directive('tplauditselect', function ($compile) {
-    return {
-        restrict: 'E',
-        scope: '@',
-        templateUrl: _ctx + '/manage/system/tpl/tpl_audit_select.action',
-        link: function() {
-        }
-    };
-});
+    angular.module('directives', [])
 
-/*directives.directive('hello', function ($compile) {
-    return {
-        restrict: 'E',
-        scope: {
-            sampleData: '=sampleData'
-        },
-        template: "<h1>我了个擦</h1>"
-    };
-});*/
+        .directive('login', function($compile) {
+            return {
+                restrict: 'E',
+                scope: '@',
+                templateUrl: '/partials/login.html',
+                link: function(scope) {
+                    // scope.name = "hel"
+                }
+            };
+        })
+
+        .directive('tplauditselect', function($compile) {
+            return {
+                restrict: 'E',
+                scope: '@',
+                templateUrl: '/manage/system/tpl/tpl_audit_select.action',
+                link: function() {
+                }
+            };
+        })
+
+
+
+})();

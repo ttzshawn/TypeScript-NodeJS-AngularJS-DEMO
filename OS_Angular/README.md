@@ -12,5 +12,6 @@
 	* jQuery					1.11.3
 	* Angularjs					1.4.8
 		* ui-router
-	* bootstrap					3.3.6
+	* Bootstrap					3.3.6
+    * Angular-ui-bootstrap       1.2.4
 	<!-- * bootstrap-material-design -->
