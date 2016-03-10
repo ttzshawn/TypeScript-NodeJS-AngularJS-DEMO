@@ -1,0 +1,45 @@
+<div class="well login-panel animated slideInUp">
+    <form class="form-horizontal" name="form">
+        <fieldset>
+            <legend>LOGIN</legend>
+
+            <div class="form-group">
+                <label for="inputUsername" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Username" required ng-model="user.accountname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required ng-model="user.password">
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <div class="col-md-5 col-md-offset-2">
+                    <input type="text" class="form-control" id="inputCode" placeholder="Verification Code" required ng-model="user.code">
+                </div>
+                <div class="col-md-5">
+                    <img name="random" id="checkcode" class="logincode" src="random/r.do" onclick="changeValidateCode(this)" title="点击图片刷新验证码" class="code" />
+                </div>
+            </div> -->
+            <div class="form-group">
+                <!-- inline style is just to demo custom css to put checkbox below input above -->
+                <div class="col-md-offset-2 col-md-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">Remember me
+                        </label>
+                        <a class="fr" href="">Forgot Password? </a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 col-md-offset-2">
+                    <button class="btn btn-raised btn-primary" type="submit" ng-disabled="form.$invalid" ng-click="login(user)">login</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>

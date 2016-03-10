@@ -102,30 +102,28 @@
         .controller('loginCtrl', ['$scope', '$rootScope', '$location', '$http', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService',
             function($scope, $rootScope, $location, $http, $state, AUTH_EVENTS, CommonService, Session, AuthService) {
 
-                if (!!$rootScope.currentUser) {
-                    $state.go('account.me');
-                }
+                // if (!!$rootScope.currentUser) {
+                //     $state.go('home');
+                // }
 
                 $scope.user = {};
                 $scope.login = function(user) {
 
-                    user.ipaddr = returnCitySN["cip"];
-                    user.password = SHA1(user.password);
-
-                    AuthService.login(user).then(function(res) {
-                        if (CommonService.isReqSuccess(res)) {
-                            console.log('login success');
-                            Session.create(res.data.sessionid, user.accountname);
-                            $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-                            // $rootScope.setCurrentUser(user.accountname);
-                        } else {
-                            CommonService.handleResErr(res);
-                            $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
-                        }
-                    }, function(res) {
-                        CommonService.handleHttpErr(res);
-                        $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
-                    });
+                    $state.go('home');
+                    // AuthService.login(user).then(function(res) {
+                    //     if (CommonService.isReqSuccess(res)) {
+                    //         console.log('login success');
+                    //         Session.create(res.data.sessionid, user.accountname);
+                    //         $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+                    //         // $rootScope.setCurrentUser(user.accountname);
+                    //     } else {
+                    //         CommonService.handleResErr(res);
+                    //         $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+                    //     }
+                    // }, function(res) {
+                    //     CommonService.handleHttpErr(res);
+                    //     $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+                    // });
                     console.log(user);
                 }
             }

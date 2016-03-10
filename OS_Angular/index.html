@@ -23,83 +23,13 @@
 <body ng-controller="mainCtrl">
 
     <div class="wrapper">
-        <!-- navbar begin -->
-        <div class="navbar navbar-default" ng-if="currentUser">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- 响应式菜单按钮 -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand"></a>
-                </div>
-                <div class="navbar-collapse collapse navbar-responsive-collapse ">
-                    <ul class="nav navbar-nav ">
-                        <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">Projects</a></li>
-                        <li ui-sref-active="active"><a ui-sref="project" href="javascript:void(0) ">Investors</a></li>
-                        <li ui-sref-active="active"><a ui-sref="launchPro" href="javascript:void(0) ">Launch</a></li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="project" href="javascript:void(0) "></a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right ">
 
-                        <!-- {{msg}}
-                    <div ng-if="currentUser">Welcome, {{ currentUser.name }}</div>
-                    <div ng-if="isAuthorized(userRoles.admin)">You're admin.</div>
-                    <div ng-switch on="currentUser.role">
-                        <div ng-switch-when="userRoles.admin">You're admin.</div>
-                        <div ng-switch-when="userRoles.editor">You're editor.</div>
-                        <div ng-switch-default>You're something else.</div>
-                    </div> -->
-
-                        <li ng-if="!currentUser"><a ui-sref="login" href="#">login</a></li>
-                        <li ng-if="!currentUser"><a ui-sref="register" href="#">register</a></li>
-                        <li class="dropdown" ng-if="currentUser">
-                            <a href="javascript:void(0)" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, {{currentUser}}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a ui-sref="user.info" href="#">My Profile</a></li>
-                                <li><a ui-sref="user.invest" href="#">My Orders</a></li>
-                                <li><a ui-sref="user.concern" href="#">My Concern</a></li>
-                                <!-- <li class="divider "></li> -->
-                                <li><a ui-sref="user.launch" href="#">My Projects</a></li>
-                                <li><a href="#" ng-click="logout()">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- navbar end -->
-
+        <head></head>
 
         <div ui-view></div>
-        <login></login>
 
-        <footer class="footer-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="btn-group btn-group-sm ">
-                        </div>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-md-12 ">
-                        <div class="center-block "></div>
-                        <div class="center-block ">Version 0.0.1 &copy;2016 epam.com, All rights reserved.</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="btn-group btn-group-sm ">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <foot></foot>
+
     </div>
     <!-- 3th party libs -->
     <script src="public/js/lib/jquery/jquery-1.11.3.min.js "></script>
@@ -107,7 +37,7 @@
     <script src="public/js/lib/angular/angular-animate.min.js "></script>
     <script src="public/js/lib/angular-ui-router/angular-ui-router.min.js "></script>
 
-    <!--<script src="public/js/lib/bootstrap/js/bootstrap.min.js "></script>-->
+    <script src="public/js/lib/bootstrap/js/bootstrap.min.js "></script>
     <!--<script src="public/js/lib/swiper/js/swiper.min.js "></script>-->
 
     <link rel="stylesheet" href="public/js/lib/angular-ui-bootstrap/ui-bootstrap-csp.css">

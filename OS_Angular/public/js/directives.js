@@ -7,7 +7,7 @@
             return {
                 restrict: 'E',
                 scope: '@',
-                templateUrl: '/partials/login.html',
+                templateUrl: '/partials/components/login.html',
                 link: function(scope) {
                     // scope.name = "hel"
                 }
@@ -23,7 +23,5 @@
                 }
             };
         })
-
-
 
 })();
