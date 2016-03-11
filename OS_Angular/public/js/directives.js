@@ -7,7 +7,7 @@
             return {
                 restrict: 'E',
                 scope: '@',
-                templateUrl: '/partials/components/login.html',
+                templateUrl: '/components/login.html',
                 link: function(scope) {
                     // scope.name = "hel"
                 }

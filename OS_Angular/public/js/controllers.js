@@ -8,6 +8,38 @@
 
     angular.module('ctrls', [])
 
+
+    .controller("AlertsCtrl", ["$scope", function(e) {
+        e.alerts = [{
+            type: "success",
+            msg: "Thanks for visiting! Feel free to create pull requests to improve the dashboard!"
+        }, {
+            type: "danger",
+            msg: "Found a bug? Create an issue with as many details as you can."
+        }], e.addAlert = function() {
+            e.alerts.push({
+                msg: "Another alert!"
+            })
+        }, e.closeAlert = function(t) {
+            e.alerts.splice(t, 1)
+        }
+    }])
+
+    .controller("MasterCtrl", ["$scope", "$cookieStore", function(t, e) {
+        alert(1)
+         var o = 992;
+        t.getWidth = function() {
+            return window.innerWidth
+        }, t.$watch(t.getWidth, function(g) {
+            t.toggle = g >= o ? angular.isDefined(e.get("toggle")) ? e.get("toggle") ? !0 : !1 : !0 : !1
+        }), t.toggleSidebar = function() {
+            t.toggle = !t.toggle, e.put("toggle", t.toggle)
+        }, window.onresize = function() {
+            t.$apply()
+        }
+    }])
+    
+    
         .controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
 
             $scope.items = ['item1', 'item2', 'item3'];
