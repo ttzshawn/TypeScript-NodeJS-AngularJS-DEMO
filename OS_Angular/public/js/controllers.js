@@ -2,12 +2,10 @@
  * @author Shawn
  * @desc Controllers of the mainAPP
  */
-
 (function() {
     'use strict';
 
     angular.module('ctrls', [])
-
 
     .controller("AlertsCtrl", ["$scope", function(e) {
         e.alerts = [{
@@ -38,8 +36,8 @@
             t.$apply()
         }
     }])
-    
-    
+
+
         .controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
 
             $scope.items = ['item1', 'item2', 'item3'];
@@ -141,7 +139,7 @@
                 $scope.user = {};
                 $scope.login = function(user) {
 
-                    $state.go('home');
+                    $state.go('home.dash1');
                     // AuthService.login(user).then(function(res) {
                     //     if (CommonService.isReqSuccess(res)) {
                     //         console.log('login success');
