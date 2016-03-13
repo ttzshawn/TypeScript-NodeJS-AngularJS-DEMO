@@ -7,39 +7,53 @@
 
     angular.module('ctrls', [])
 
-    .controller("AlertsCtrl", ["$scope", function(e) {
-        e.alerts = [{
-            type: "success",
-            msg: "Thanks for visiting! Feel free to create pull requests to improve the dashboard!"
-        }, {
-            type: "danger",
-            msg: "Found a bug? Create an issue with as many details as you can."
-        }], e.addAlert = function() {
-            e.alerts.push({
-                msg: "Another alert!"
-            })
-        }, e.closeAlert = function(t) {
-            e.alerts.splice(t, 1)
-        }
-    }])
+        .controller("AlertsCtrl", ["$scope", function(e) {
+            e.alerts = [{
+                type: "success",
+                msg: "Thanks for visiting! Feel free to create pull requests to improve the dashboard!"
+            }, {
+                    type: "danger",
+                    msg: "Found a bug? Create an issue with as many details as you can."
+                }], e.addAlert = function() {
+                    e.alerts.push({
+                        msg: "Another alert!"
+                    })
+                }, e.closeAlert = function(t) {
+                    e.alerts.splice(t, 1)
+                }
+        }])
 
-    .controller("MasterCtrl", ["$scope", "$cookieStore", function(t, e) {
-        alert(1)
-         var o = 992;
-        t.getWidth = function() {
-            return window.innerWidth
-        }, t.$watch(t.getWidth, function(g) {
-            t.toggle = g >= o ? angular.isDefined(e.get("toggle")) ? e.get("toggle") ? !0 : !1 : !0 : !1
-        }), t.toggleSidebar = function() {
-            t.toggle = !t.toggle, e.put("toggle", t.toggle)
-        }, window.onresize = function() {
-            t.$apply()
-        }
-    }])
+        // dashboard Sidebar
+        .controller("MasterCtrl", ["$scope", "$cookies", function($scope, $cookies) {
+            /**
+             * Sidebar Toggle & Cookies Control
+             */
+            var mobileView = 992;
+            $scope.getWidth = function() {
+                return window.innerWidth;
+            };
+            $scope.$watch($scope.getWidth, function(newValue, oldValue) {
+                if (newValue >= mobileView) {
+                    if (angular.isDefined($cookies.get('toggle'))) {
+                        $scope.toggle = !$cookies.get('toggle') ? false : true;
+                    } else {
+                        $scope.toggle = true;
+                    }
+                } else {
+                    $scope.toggle = false;
+                }
+            });
+            $scope.toggleSidebar = function() {
+                $scope.toggle = !$scope.toggle;
+                $cookies.put('toggle', $scope.toggle);
+            };
+            window.onresize = function() {
+                $scope.$apply();
+            };
+        }])
 
-
+        // angular-ui Modal
         .controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
-
             $scope.items = ['item1', 'item2', 'item3'];
             $scope.animationsEnabled = true;
             $scope.open = function(size) {
@@ -61,7 +75,6 @@
                     $log.info('Modal dismissed at: ' + new Date());
                 });
             };
-
             $scope.toggleAnimation = function() {
                 $scope.animationsEnabled = !$scope.animationsEnabled;
             };
@@ -70,9 +83,8 @@
 
         // Please note that $uibModalInstance represents a modal window (instance) dependency.
         // It is not the same as the $uibModal service used above.
-
+        // angular-ui Modal
         .controller('ModalInstanceCtrl', function($scope, $uibModalInstance, items) {
-
             $scope.items = items;
             $scope.selected = {
                 item: $scope.items[0]
@@ -91,6 +103,11 @@
         // Parent/Main Controller
         .controller('mainCtrl', ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session', 'goldService',
             function($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session, goldService) {
+                
+                $scope.toggleMO = function() {
+                    $('.mo-list').animate({width:'toggle'},350);
+                }
+                
                 $rootScope.setCurrentUser = function(user) {
                     $rootScope.currentUser = user;
                 };
@@ -139,7 +156,7 @@
                 $scope.user = {};
                 $scope.login = function(user) {
 
-                    $state.go('home.dash1');
+                    $state.go('home.order');
                     // AuthService.login(user).then(function(res) {
                     //     if (CommonService.isReqSuccess(res)) {
                     //         console.log('login success');

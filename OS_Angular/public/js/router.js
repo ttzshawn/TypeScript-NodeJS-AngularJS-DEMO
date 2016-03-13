@@ -23,7 +23,7 @@
         });
 
         // For any unmatched url, redirect to /
-        $urlRouterProvider.otherwise('/dash1');
+        $urlRouterProvider.otherwise('order');
 
 
         // loginregister
