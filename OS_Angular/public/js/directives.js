@@ -82,8 +82,7 @@
         .directive('marketorderlist', function() {
             return {
                 scope: {
-                    icon: "@"
-                },
+                    icon: "@"                },
                 templateUrl: '/components/marketorderlist.html',
                 restrict: "E"
             };

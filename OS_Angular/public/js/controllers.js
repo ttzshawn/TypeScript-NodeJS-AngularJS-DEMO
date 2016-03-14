@@ -35,12 +35,12 @@
             $scope.$watch($scope.getWidth, function(newValue, oldValue) {
                 if (newValue >= mobileView) {
                     if (angular.isDefined($cookies.get('toggle'))) {
-                        $scope.toggle = !$cookies.get('toggle') ? false : true;
+                        $scope.toggle = !$cookies.get('toggle') ? true : false;
                     } else {
-                        $scope.toggle = true;
+                        $scope.toggle = false;
                     }
                 } else {
-                    $scope.toggle = false;
+                    $scope.toggle = true;
                 }
             });
             $scope.toggleSidebar = function() {
@@ -51,6 +51,49 @@
                 $scope.$apply();
             };
         }])
+
+        // angular-ui progressBar
+        .controller('ProgressDemoCtrl', function($scope) {
+            $scope.max = 200;
+
+            $scope.random = function() {
+                var value = Math.floor(Math.random() * 100 + 1);
+                var type;
+
+                if (value < 25) {
+                    type = 'success';
+                } else if (value < 50) {
+                    type = 'info';
+                } else if (value < 75) {
+                    type = 'warning';
+                } else {
+                    type = 'danger';
+                }
+
+                $scope.showWarning = type === 'danger' || type === 'warning';
+
+                $scope.dynamic = value;
+                $scope.type = type;
+            };
+
+            $scope.random();
+
+            $scope.randomStacked = function() {
+                $scope.stacked = [];
+                var types = ['success', 'info', 'warning', 'danger'];
+
+                for (var i = 0, n = Math.floor(Math.random() * 4 + 1); i < n; i++) {
+                    var index = Math.floor(Math.random() * 4);
+                    $scope.stacked.push({
+                        value: Math.floor(Math.random() * 30 + 1),
+                        type: types[index]
+                    });
+                }
+            };
+
+            $scope.randomStacked();
+        })
+
 
         // angular-ui Modal
         .controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
@@ -103,11 +146,16 @@
         // Parent/Main Controller
         .controller('mainCtrl', ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session', 'goldService',
             function($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session, goldService) {
-                
+
+                // for test
                 $scope.toggleMO = function() {
-                    $('.mo-list').animate({width:'toggle'},350);
+                    $('.mo-list').animate({ width: 'toggle' }, 350);
                 }
-                
+                $scope.orderItems = [];
+                for (var i = 0; i < 30; i++) {
+                    $scope.orderItems[i] = i;
+                }
+
                 $rootScope.setCurrentUser = function(user) {
                     $rootScope.currentUser = user;
                 };

@@ -9,64 +9,34 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th>ID</th>
-                                <th>Order</th>
-                                <th>Status</th>
+                                <th>Client Order</th>
+                                <th>Stock ID</th>
+                                <th>Stock Name</th>
+                                <th>Shares</th>
+                                <th>Amount($)</th>
+                                <th>Operation</th>
+                                <th>Filled</th>
+                                <th>Type</th>
+                                <th>Strategy</th>
+                                <th>Datetime</th>
+                                <th></th>
                             </tr>
-                            <tr ng-click="toggleMO()">
+                            <tr ng-click="toggleMO()" ng-repeat="item in orderItems">
                                 <td>RDVMPC001</td>
-                                <td>238.103.133.37</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDVMPC002</td>
-                                <td>68.66.63.170</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDVMPC003</td>
-                                <td>76.117.212.33</td>
-                                <td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDPHPC001</td>
-                                <td>91.88.224.5</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDESX001</td>
-                                <td>197.188.15.93</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDESX002</td>
-                                <td>168.85.154.251</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDESX003</td>
-                                <td>209.25.191.61</td>
-                                <td><span tooltip="Server Down!" class="text-danger"><i class="fa fa-warning"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDESX004</td>
-                                <td>252.37.192.235</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDTerminal01</td>
-                                <td>139.71.18.207</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDTerminal02</td>
-                                <td>136.80.122.212</td>
-                                <td><span tooltip="Could not connect!" class="text-warning"><i class="fa fa-flash"></i></span></td>
-                            </tr>
-                            <tr>
-                                <td>RDDomainCont01</td>
-                                <td>196.80.245.33</td>
-                                <td><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <td>BABA</td>
+                                <td>Alibaba</td>
+                                <td>1,000</td>
+                                <td>10,000</td>
+                                <td>BUY</td>
+                                <td ng-controller="ProgressDemoCtrl">
+                                    <uib-progressbar class="progress-striped active" value="dynamic" type="success"><b>{{dynamic}}%</b></uib-progressbar>
+                                </td>
+                                <td>Day</td>
+                                <td>TWAP+POV</td>
+                                <td>2016-3-15 2:50:57</td>
+                                <td>
+                                    <button class="btn btn-xs btn-info">CANCLE</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
