@@ -3,7 +3,9 @@
 @import "partials";
 @import "mixins";
 @import "animate";
-@import "boostrap.custom";
+@import "bootstrap.custom";
+
+@import "components/sidebar";
 
 /* main */
 
@@ -15,6 +17,7 @@ html,body {
 
 /* footer */
 footer.footer-wrap {position: absolute; bottom: 0; width: 100%; background: $color-primary; color: white;}
+
 
 .slider-home-big{margin-top:-20px; margin-bottom: 25px;}
 

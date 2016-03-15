@@ -61,13 +61,13 @@
                 var type;
 
                 if (value < 25) {
-                    type = 'success';
+                    type = 'warning';
                 } else if (value < 50) {
                     type = 'info';
                 } else if (value < 75) {
-                    type = 'warning';
+                    type = 'success';
                 } else {
-                    type = 'danger';
+                    type = 'success';
                 }
 
                 $scope.showWarning = type === 'danger' || type === 'warning';

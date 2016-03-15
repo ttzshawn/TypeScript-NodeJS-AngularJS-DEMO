@@ -9,17 +9,17 @@
                     <table class="table">
                         <tbody>
                             <tr>
-                                <th>Client Order</th>
+                                <th>Client Order #</th>
                                 <th>Stock ID</th>
                                 <th>Stock Name</th>
-                                <th>Shares</th>
-                                <th>Amount($)</th>
-                                <th>Operation</th>
-                                <th>Filled</th>
-                                <th>Type</th>
+                                <th>Share Amount</th>
+                                <th>Money Amount (USD$)</th>
+                                <th>Buy or Sell</th>
+                                <th>Filled (%)</th>
+                                <!-- <th>Type</th> -->
                                 <th>Strategy</th>
-                                <th>Datetime</th>
-                                <th></th>
+                                <th>Registered On</th>
+                                <th>Status</th>
                             </tr>
                             <tr ng-click="toggleMO()" ng-repeat="item in orderItems">
                                 <td>RDVMPC001</td>
@@ -29,13 +29,13 @@
                                 <td>10,000</td>
                                 <td>BUY</td>
                                 <td ng-controller="ProgressDemoCtrl">
-                                    <uib-progressbar class="progress-striped active" value="dynamic" type="success"><b>{{dynamic}}%</b></uib-progressbar>
+                                    <uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}"><b>{{dynamic}}%</b></uib-progressbar>
                                 </td>
-                                <td>Day</td>
-                                <td>TWAP+POV</td>
+                                <td>Volume of Percentage</td>
+                                <!-- <td>TWAP+POV</td> -->
                                 <td>2016-3-15 2:50:57</td>
                                 <td>
-                                    <button class="btn btn-xs btn-info">CANCLE</button>
+                                    <button class="btn btn-xs btn-danger">CANCEL</button>
                                 </td>
                             </tr>
                         </tbody>
