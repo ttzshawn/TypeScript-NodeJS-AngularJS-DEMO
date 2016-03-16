@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const compass = require('gulp-compass');
 const concat = require("gulp-concat");
-const connect = require('gulp-connect');
+const connect = require("gulp-connect");
 
 const paths = {
     base: './',
@@ -12,10 +12,12 @@ const paths = {
     img: './public/img/**/*'
 };
 
-// Server the Web App
-gulp.task('server', () => {
+gulp.task('connect', function() {
     connect.server({
-        port: 8080
+        port: 8080,
+        middleware: function(connect, opt) {
+          return [ historyApiFallback ];
+        }
     });
 });
 
@@ -32,18 +34,17 @@ gulp.task('compass', () => {
         .pipe(compass({
             comments: false,
             config_file: './config.rb',
-            css: 'public/css',
-            sass: 'public/sass'
+            css: './public/css',
+            sass: './public/sass'
         }))
-        .pipe(gulp.dest('public/css/'));
+        .pipe(gulp.dest('./public/css/'));
 });
 
 // Watching files change
 gulp.task('watch', () => {
     gulp.watch(paths.sass, ['compass']);
     // gulp.watch(paths.js, ['scripts']);
-    // gulp.watch(paths.img, ['min-png', 'min-jpeg']);
 });
 
 // Default Task
-gulp.task('default', ['compass', 'watch', 'server']);
+gulp.task('default', ['connect', 'watch']);
