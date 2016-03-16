@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const compass = require('gulp-compass');
 const concat = require("gulp-concat");
+const connect = require('gulp-connect');
 
 const paths = {
     base: './',
@@ -10,6 +11,13 @@ const paths = {
     css: './public/css/**/*.css',
     img: './public/img/**/*'
 };
+
+// Server the Web App
+gulp.task('server', () => {
+    connect.server({
+        port: 8080
+    });
+});
 
 // Concat JS files
 gulp.task('scripts', () => {
@@ -38,4 +46,4 @@ gulp.task('watch', () => {
 });
 
 // Default Task
-gulp.task('default', ['compass', 'watch', 'scripts']);
+gulp.task('default', ['compass', 'watch', 'server']);

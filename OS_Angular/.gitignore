@@ -17,3 +17,8 @@ bower_components
 # ############################### Sass
 .sass-cache
 *.css.map
+
+
+
+# ############################### vscode
+.vscode

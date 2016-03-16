@@ -149,6 +149,8 @@
 
                 // for test
                 $scope.toggleMO = function() {
+                    $(this).addClass("al")
+                    console.log(this)
                     $('.mo-list').animate({ width: 'toggle' }, 350);
                 }
                 $scope.orderItems = [];

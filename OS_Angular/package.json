@@ -1,24 +1,25 @@
 {
-    "name": "OMS_",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "dependencies": {},
-    "devDependencies": {
-        "angular": "^1.5.0",
-        "angular-animate": "^1.5.0",
-        "angular-cookies": "^1.5.0",
-        "angular-ui-bootstrap": "^1.2.4",
-        "angular-ui-router": "^0.2.18",
-        "font-awesome": "^4.5.0",
-        "gulp": "^3.9.1",
-        "gulp-compass": "^2.1.0",
-        "gulp-concat": "^2.6.0",
-        "swiper": "^3.3.1"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Shawn",
-    "license": ""
+  "name": "OMS_",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-cookies": "^1.5.0",
+    "angular-ui-bootstrap": "^1.2.4",
+    "angular-ui-router": "^0.2.18",
+    "font-awesome": "^4.5.0",
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.1.0",
+    "swiper": "^3.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shawn",
+  "license": ""
 }

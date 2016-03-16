@@ -10,30 +10,37 @@
 </style>
 
 <div class="mo-list col-lg-6 table-responsive">
-    <table class="table well">
-        <tbody>
-            <tr>
-                <th>Market Order #</th>
-                <th>Stock Code</th>
-                <th>Stock Exchange</th>
-                <th>Share Amount</th>
-                <th>Money Amount (USD$)<th>
-                <!-- <th></th> -->
-                <!-- <th>Filled</th> -->
-                <th>Status</th>
-            </tr>
-            <tr ng-repeat="item in [1,2,3,4,5,6,7,8,9,0,11,12,13,14,15,16,17,18,19,20,21,22,23]">
-                <td>RD</td>
-                <td>RD01</td>
-                <td>NYSE</td>
-                <td>5,990</td>
-                <td>2,343</td>
-                <!-- <td>To Sell</td> -->
-                <!-- <td ng-controller="ProgressDemoCtrl">
-                    <uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}"><b>{{dynamic}}%</b></uib-progressbar>
-                </td> -->
-                <td>Filled</td>
-            </tr>
-        </tbody>
-    </table>
+    <rd-widget-header icon="fa-tasks" title="Client Orders">
+        <!--<a href="#">Manage</a>-->
+    </rd-widget-header>
+    <rd-widget-body classes="">
+        <table class="table well table-striped">
+            <tbody>
+                <tr>
+                    <th>Market Order #</th>
+                    <th>Stock Code</th>
+                    <th>Stock Exchange</th>
+                    <th>Share Amount</th>
+                    <th>Money Amount (USD$) </th>
+                    <th>Filled (%)</th>
+                    <th>Trade Amount (USD$)</th>
+                    <!-- <th>Filled</th> -->
+                    <th>Status</th>
+                </tr>
+                <tr ng-repeat="item in [1,2,3,4,5,6,7,8,9,0,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]">
+                    <td>RD</td>
+                    <td>RD01</td>
+                    <td>NYSE</td>
+                    <td>5,990</td>
+                    <td>2,343</td>
+                    <!-- <td>To Sell</td> -->
+                    <td ng-controller="ProgressDemoCtrl">
+                        <uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}"><b>{{dynamic}}%</b></uib-progressbar>
+                    </td>
+                    <td>12,343</td>
+                    <td>Filled</td>
+                </tr>
+            </tbody>
+        </table>
+    </rd-widget-body>
 </div>
