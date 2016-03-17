@@ -41,7 +41,7 @@
             templateUrl: "partials/rdash/dashboard.html"
         }).state("home.order", {
             url: "order",
-            templateUrl: "partials/rdash/orderlist.html"
+            templateUrl: "partials/rdash/order-list.html"
         }).state("home.dash2", {
             url: "dash2",
             templateUrl: "partials/rdash/tables.html"
