@@ -4,7 +4,7 @@
  */
 
 // For test
-var commonTest = false;
+var commonTest = true;
 
 
 (function() {
@@ -31,15 +31,19 @@ var commonTest = false;
         })
 
         // Session manipulate
-        .factory('Session', function() {
+        .factory('Session', function($cookies) {
             var aName = "USERID";
             var bName = "SID";
             this.create = function(sessionId, userId) {
-                document.cookie = aName + '=' + userId;
-                document.cookie = bName + '=' + sessionId;
-                this.id = sessionId;
-                this.userId = userId;
-            };
+              $cookies.put(aName, userId);
+              $cookies.put(bName, sessionId);
+            }
+            // this.create = function(sessionId, userId) {
+            //     document.cookie = aName + '=' + userId;
+            //     document.cookie = bName + '=' + sessionId;
+            //     this.id = sessionId;
+            //     this.userId = userId;
+            // };
             this.get = function(name) {
                 if (document.cookie.length > 0) {
                     var start = document.cookie.indexOf(name + "=");
@@ -78,13 +82,14 @@ var commonTest = false;
             // Set Content-Type to form-data which back-end can accept
             $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-            var urlBackEnd = 'https://ExampleURL.92/client/client!post.action';
+            var urlBackEnd = 'http://localhost:8080/test-data/';
             var urlMiddleEnd = 'https://ExampleURL.92/';
 
             // requests status handle
             this.isReqSuccess = function(res) {
+              console.log(111);
                 console.log(res);
-                return res.data.errcode == 0 ? true : false;
+                  return res.data.errCode == 0 ? true : false;
             };
 
             // handle Http error
@@ -95,11 +100,11 @@ var commonTest = false;
             // handle response error (base on API)
             this.handleResErr = function(res) {
                 console.log(res);
-                if (res.data.errdesc == undefined) {
+                if (res.data.errDesc == undefined) {
                     console.log('Error without discription');
-                    console.log('msg: ' + res.errdesc);
+                    console.log('msg: ' + res.errDesc);
                 } else {
-                    alert(res.data.errdesc);
+                    alert(res.data.errDesc);
                     console.log(res.data);
                 }
             };
@@ -107,17 +112,16 @@ var commonTest = false;
             // post single command to back-end server
             this.post = function(command, req) {
                 // Request parameters structure
-                var data = {
-                    "1": $.extend({
+                var data = $.extend({
                         "command": command
-                    }, Session.getObj(), req)
-                };
+                    }, Session.getObj(), req);
+
                 // console.log(angular.toJson(data));
                 return commonTest ? $http({
-                    url: 'data/' + command,
+                    url: 'test-data/' + command,
                     method: 'GET'
                 }) : $http({
-                    url: urlBackEnd,
+                    url: urlBackEnd + command,
                     method: 'POST',
                     data: "JsonStr=" + angular.toJson(data)
                 })

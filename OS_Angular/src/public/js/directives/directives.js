@@ -62,22 +62,17 @@
 
     angular.module('directives', [])
 
-
     .directive("rdLoading", rdLoading)
-
 
     .directive("rdWidgetBody", rdWidgetBody)
 
     .directive("rdWidgetFooter", rdWidgetFooter)
 
-
     .directive("rdWidgetHeader", rdWidgetTitle)
-
 
     .directive("rdWidget", rdWidget)
 
-
-    .directive('marketorderlist', function() {
+    .directive('marketOrderList', function() {
         return {
             scope: {
                 icon: "@"

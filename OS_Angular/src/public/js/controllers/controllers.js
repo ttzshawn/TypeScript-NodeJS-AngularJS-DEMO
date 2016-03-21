@@ -196,8 +196,8 @@
         ])
 
         // Login Controller
-        .controller('loginCtrl', ['$scope', '$rootScope', '$location', '$http', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService',
-            function($scope, $rootScope, $location, $http, $state, AUTH_EVENTS, CommonService, Session, AuthService) {
+        .controller('LoginCtrl', ['$scope', '$rootScope', '$location', '$http', '$cookies', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService',
+            function($scope, $rootScope, $location, $http, $cookies, $state, AUTH_EVENTS, CommonService, Session, AuthService) {
 
                 // if (!!$rootScope.currentUser) {
                 //     $state.go('home');
@@ -206,13 +206,16 @@
                 $scope.user = {};
                 $scope.login = function(user) {
 
-                    $state.go('home.order');
                     AuthService.login(user).then(function(res) {
+
+                      console.log(res);
                         if (CommonService.isReqSuccess(res)) {
                             console.log('login success');
+                            // $cookies.put(res.data.sessionid, user.accountname);
                             Session.create(res.data.sessionid, user.accountname);
                             $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-                            // $rootScope.setCurrentUser(user.accountname);
+                            $state.go('home.order');
+                            $rootScope.setCurrentUser(user.accountname);
                         } else {
                             CommonService.handleResErr(res);
                             $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
