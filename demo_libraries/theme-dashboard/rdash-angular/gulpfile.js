@@ -26,7 +26,9 @@ gulp.task('usemin', function() {
     return gulp.src(paths.index)
         .pipe(usemin({
             js: [minifyJs(), 'concat'],
-            css: [minifyCss({keepSpecialComments: 0}), 'concat'],
+            css: [minifyCss({
+                keepSpecialComments: 0
+            }), 'concat'],
         }))
         .pipe(gulp.dest('dist/'));
 });
@@ -104,5 +106,8 @@ gulp.task('livereload', function() {
 /**
  * Gulp tasks
  */
+gulp.task('build1', ['usemin']);
+gulp.task('build2', ['build-assets']);
+gulp.task('build2', ['build-custom']);
 gulp.task('build', ['usemin', 'build-assets', 'build-custom']);
 gulp.task('default', ['build', 'webserver', 'livereload', 'watch']);

@@ -6,18 +6,16 @@ const connect = require("gulp-connect");
 
 const paths = {
     base: './',
-    js: './public/js/**/*.js',
-    sass: './public/sass/**/*.scss',
-    css: './public/css/**/*.css',
-    img: './public/img/**/*'
+    js: './src/public/js/**/*.js',
+    sass: './src/public/sass/**/*.scss',
+    css: './src/public/css/**/*.css',
+    img: './src/public/img/**/*'
 };
 
 gulp.task('connect', function() {
     connect.server({
         port: 8080,
-        middleware: function(connect, opt) {
-          return [ historyApiFallback ];
-        }
+        fallback: 'index.html'
     });
 });
 
@@ -33,11 +31,12 @@ gulp.task('compass', () => {
     gulp.src(paths.sass)
         .pipe(compass({
             comments: false,
-            config_file: './config.rb',
-            css: './public/css',
-            sass: './public/sass'
+            style: 'expanded',
+            require: ['compass/import-once/activate'],
+            css: './src/public/css',
+            sass: './src/public/sass'
         }))
-        .pipe(gulp.dest('./public/css/'));
+        .pipe(gulp.dest('./src/public/css/'));
 });
 
 // Watching files change

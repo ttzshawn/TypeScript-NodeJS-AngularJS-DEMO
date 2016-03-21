@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import "variables";
+@import "partials";
+@import "mixins";
+@import "animate";
+@import "bootstrap.custom";
+
+@import "components/rdash-ui";
+
+/* main */
+
+html,body {
+    height: 100%;
+}
+
+.wrapper{min-height: 100%; position: relative; padding-bottom: 60px;}
+
+/* footer */
+footer.footer-wrap {position: absolute; bottom: 0; width: 100%; background: $color-primary; color: white;}
+
+
+.slider-home-big{margin-top:-20px; margin-bottom: 25px;}
+
+/* login */
+.login-panel {
+    .logincode {
+        width: 140px;
+        height: 35px;
+    }
+}
+
+/* project */
+.projectlist-li-big {
+    .progress {height: 18px;}
+}
+
+/* detail */
+.detail-panel-info {
+    .progress {height: 18px;}
+}
+
+/* user */
+.list-table-center {
+    th {
+        text-align: center;
+    }
+    &table>tbody>tr>td {
+        vertical-align: middle;
+    }
+}
