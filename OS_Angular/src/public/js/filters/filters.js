@@ -45,7 +45,7 @@ const CATEGORY = {
     6: "其他"
 };
 
-/* 过滤器 */
+/* filters */
 var filters = angular.module('filters', [])
 
 // 开关过滤器，0则显示关闭，1则显示开启

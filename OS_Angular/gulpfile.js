@@ -3,6 +3,8 @@ const gulp = require('gulp');
 const compass = require('gulp-compass');
 const concat = require("gulp-concat");
 const connect = require("gulp-connect");
+const minifyJs = require("gulp-uglify");
+const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
     base: './',
@@ -14,16 +16,19 @@ const paths = {
 
 gulp.task('connect', function() {
     connect.server({
-        port: 8080,
-        fallback: 'index.html'
+        root: './src/',
+        port: 8080
     });
 });
 
-// Concat JS files
+// Concat JS files with sourcemaps
 gulp.task('scripts', () => {
-    return gulp.src(paths.js)
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('./public/js/'));
+    return gulp.src([paths.js, '!./src/public/js/**/all.min.js'])
+        .pipe(sourcemaps.init())
+        .pipe(concat('all.min.js'))
+        // .pipe(minifyJs())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./src/public/js/'));
 });
 
 // Compile SASS
@@ -42,8 +47,8 @@ gulp.task('compass', () => {
 // Watching files change
 gulp.task('watch', () => {
     gulp.watch(paths.sass, ['compass']);
-    // gulp.watch(paths.js, ['scripts']);
+    gulp.watch(paths.js, ['scripts']);
 });
 
 // Default Task
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'scripts', 'watch']);
