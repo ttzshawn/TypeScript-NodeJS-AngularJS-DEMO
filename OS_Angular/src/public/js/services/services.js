@@ -34,6 +34,7 @@ var commonTest = true;
         .factory('Session', function($cookies) {
             var aName = "USERID";
             var bName = "SID";
+
             this.create = function(sessionId, userId) {
               $cookies.put(aName, userId);
               $cookies.put(bName, sessionId);
@@ -44,17 +45,19 @@ var commonTest = true;
             //     this.id = sessionId;
             //     this.userId = userId;
             // };
+
             this.get = function(name) {
-                if (document.cookie.length > 0) {
-                    var start = document.cookie.indexOf(name + "=");
-                    if (start != -1) {
-                        start = start + name.length + 1;
-                        var end = document.cookie.indexOf(";", start);
-                        if (end == -1) end = document.cookie.length;
-                        return unescape(document.cookie.substring(start, end));
-                    }
-                }
-                return "";
+                return $cookies.getObject(name);
+                // if (document.cookie.length > 0) {
+                //     var start = document.cookie.indexOf(name + "=");
+                //     if (start != -1) {
+                //         start = start + name.length + 1;
+                //         var end = document.cookie.indexOf(";", start);
+                //         if (end == -1) end = document.cookie.length;
+                //         return unescape(document.cookie.substring(start, end));
+                //     }
+                // }
+                // return "";
             };
             this.getUserName = function() {
                 return this.get(aName);

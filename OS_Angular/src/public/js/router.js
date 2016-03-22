@@ -23,7 +23,7 @@
         });
 
         // For any unmatched url, redirect to /
-        $urlRouterProvider.otherwise('order');
+        $urlRouterProvider.otherwise('login');
 
 
         // loginregister

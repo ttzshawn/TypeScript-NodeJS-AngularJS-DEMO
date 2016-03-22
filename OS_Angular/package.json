@@ -8,6 +8,7 @@
     "angular": "^1.5.0",
     "angular-animate": "^1.5.0",
     "angular-cookies": "^1.5.0",
+    "angular-mocks": "^1.5.2",
     "angular-ui-bootstrap": "^1.2.4",
     "angular-ui-router": "^0.2.18",
     "bootstrap": "^3.3.6",
@@ -16,10 +17,14 @@
     "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^3.1.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.8",
     "swiper": "^3.3.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/karma start karma.conf.js"
   },
   "author": "Shawn",
   "license": ""
