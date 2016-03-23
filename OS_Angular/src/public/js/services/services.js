@@ -4,7 +4,7 @@
  */
 
 // For test
-var commonTest = true;
+var commonTest = false;
 
 
 (function() {
