@@ -36,8 +36,8 @@ var commonTest = false;
             var bName = "SID";
 
             this.create = function(sessionId, userId) {
-              $cookies.put(aName, userId);
-              $cookies.put(bName, sessionId);
+                $cookies.put(aName, userId);
+                $cookies.put(bName, sessionId);
             }
             // this.create = function(sessionId, userId) {
             //     document.cookie = aName + '=' + userId;
@@ -90,9 +90,8 @@ var commonTest = false;
 
             // requests status handle
             this.isReqSuccess = function(res) {
-              console.log(111);
                 console.log(res);
-                  return res.data.errCode == 0 ? true : false;
+                return res.data.errCode == 0 ? true : false;
             };
 
             // handle Http error
@@ -116,8 +115,8 @@ var commonTest = false;
             this.post = function(command, req) {
                 // Request parameters structure
                 var data = $.extend({
-                        "command": command
-                    }, Session.getObj(), req);
+                    "command": command
+                }, Session.getObj(), req);
 
                 // console.log(angular.toJson(data));
                 return commonTest ? $http({
