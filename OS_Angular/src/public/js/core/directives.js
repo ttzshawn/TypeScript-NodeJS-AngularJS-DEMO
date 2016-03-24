@@ -72,25 +72,6 @@
 
     .directive("rdWidget", rdWidget)
 
-    .directive('marketOrderList', function() {
-        return {
-            scope: {
-                icon: "@"
-            },
-            templateUrl: '/components/market-order-list.html',
-            restrict: "E"
-        };
-    })
 
-    .directive('login', function($compile) {
-        return {
-            restrict: 'E',
-            scope: '@',
-            templateUrl: '/components/login-panel.html',
-            link: function(scope) {
-                // scope.name = "hel"
-            }
-        };
-    })
 
 })();

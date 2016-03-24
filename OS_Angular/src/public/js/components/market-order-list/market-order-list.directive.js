@@ -1,0 +1,18 @@
+(function() {
+    'use strict';
+
+
+    angular.module('directives')
+        .directive('marketOrderList', marketOrderList);
+    function marketOrderList() {
+        return {
+            scope: {
+                icon: "@"
+            },
+            templateUrl: 'public/js/components/market-order-list/market-order-list.html',
+            restrict: "E"
+        };
+    }
+
+
+})();

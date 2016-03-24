@@ -16,7 +16,7 @@ const paths = {
 
 gulp.task('connect', function() {
     connect.server({
-        root: './src/',
+        root: './src',
         port: 8080
     });
 });

@@ -6,7 +6,6 @@
 // For test
 var commonTest = false;
 
-
 (function() {
     'use strict';
 
