@@ -1,3 +1,4 @@
+
 // 序列化对象
 // 示例: {addr.location:a,addr.number:b} ==> addr%5Blocation%5D=a&addr%5Bnumber%5D=b
 serializeData = function(obj, prefix) {

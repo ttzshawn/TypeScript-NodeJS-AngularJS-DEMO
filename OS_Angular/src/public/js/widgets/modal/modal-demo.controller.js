@@ -1,10 +1,12 @@
 (function() {
     'use strict';
 
-    angular.module('ctrls')
+    angular
+        .module('app.widgets')
         // angular-ui Modal
         .controller('ModalDemoCtrl', ModalDemoCtrl);
 
+    ModalDemoCtrl.$inject = ['$scope', '$uibModal', '$log'];
     function ModalDemoCtrl($scope, $uibModal, $log) {
         $scope.items = ['item1', 'item2', 'item3'];
         $scope.animationsEnabled = true;

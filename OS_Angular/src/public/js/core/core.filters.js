@@ -2,6 +2,8 @@
  * @author Shawn
  * @desc mainAPP
  */
+(function() {
+    'use strict';
 const PROJECTSTATUS = {
     0: "科技",
     1: "艺术",
@@ -46,7 +48,7 @@ const CATEGORY = {
 };
 
 /* filters */
-var filters = angular.module('filters', [])
+var filters = angular.module('app.core')
 
 // 开关过滤器，0则显示关闭，1则显示开启
 .filter('switch', function() {
@@ -104,3 +106,4 @@ var filters = angular.module('filters', [])
         return obj[param] != undefined ? obj[param] : "";
     }
 })
+})();

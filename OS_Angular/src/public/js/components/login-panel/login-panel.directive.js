@@ -2,10 +2,13 @@
     'use strict';
 
 
-    angular.module('directives')
-        .directive('login', login);
+    angular
+        .module('app.components')
+        .directive('loginPanel', loginPanel);
 
-    function login($compile) {
+    loginPanel.$inject = ['$compile'];
+    /* @ngInject */
+    function loginPanel($compile) {
         return {
             restrict: 'E',
             scope: '@',

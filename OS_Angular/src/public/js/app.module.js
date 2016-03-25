@@ -1,12 +1,22 @@
 (function() {
     'use strict';
 
-    angular.module('app', [
+    angular.module('mainApp', [
         'app.core',
-        'app.widgets',
-        'app.admin',
-        'app.dashboard',
-        'app.layout'
+        'app.layout',
+        'app.components',
+        'app.widgets'
     ]);
 
+    angular.module('app.core', [
+        'ui.router',
+        'ui.bootstrap',
+        'ngCookies',
+        'ngAnimate'
+    ]);
+
+    angular.module('app.components', [
+        'app.core'
+    ]);
+    
 })();

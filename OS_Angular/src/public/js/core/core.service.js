@@ -9,7 +9,7 @@ var commonTest = false;
 (function() {
     'use strict';
 
-    angular.module('services', [])
+    angular.module('app.core')
 
         // Broadcast the result of User status
         .factory('AuthInterceptor', function($rootScope, $q, AUTH_EVENTS) {

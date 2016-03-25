@@ -1,9 +1,10 @@
 (function() {
     'use strict';
 
-
-    angular.module('directives')
+    angular
+        .module('app.components')
         .directive('marketOrderList', marketOrderList);
+
     function marketOrderList() {
         return {
             scope: {

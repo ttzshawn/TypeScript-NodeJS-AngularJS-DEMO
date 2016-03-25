@@ -1,11 +1,11 @@
 /**
  * @author Shawn
- * @desc mainAPP
+ * @desc router of app.core
  */
 (function() {
     'use strict';
 
-    angular.module('router', [])
+    angular.module('app.core')
 
     .config(function($stateProvider, $httpProvider, $urlRouterProvider, $locationProvider) {
 

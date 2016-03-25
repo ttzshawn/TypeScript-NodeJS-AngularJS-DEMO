@@ -5,8 +5,8 @@
 (function() {
     'use strict';
 
-    angular.module('mainApp', ['ui.router', 'ui.bootstrap','ngCookies', 'ngAnimate', 'router', 'ctrls', 'services', 'filters', 'directives'])
-
+    angular
+        .module('app.core')
         // Global
         .constant('WEB_INFO', {
             title: 'Order Management System'
