@@ -18,5 +18,5 @@
     angular.module('app.components', [
         'app.core'
     ]);
-    
+
 })();
