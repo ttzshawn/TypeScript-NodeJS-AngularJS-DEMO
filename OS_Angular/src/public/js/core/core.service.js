@@ -4,7 +4,7 @@
  */
 
 // For test
-var commonTest = false;
+var commonTest = true;
 
 (function() {
     'use strict';

@@ -8,6 +8,7 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
     base: './',
+    jsModule: './src/public/js/**/*.module.js',
     js: './src/public/js/**/*.js',
     sass: './src/public/sass/**/*.scss',
     css: './src/public/css/**/*.css',
