@@ -9,9 +9,9 @@
         .module('app.core')
         .controller('mainCtrl', mainCtrl);
         
-    mainCtrl.$inject = ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session', 'goldService'];
+    mainCtrl.$inject = ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session'];
 
-    function mainCtrl($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session, goldService) {
+    function mainCtrl($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session) {
         // for test
         $scope.toggleMO = function() {
             $(this).addClass("al")

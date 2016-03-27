@@ -15,8 +15,13 @@
         'ngAnimate'
     ]);
 
-    angular.module('app.components', [
+    angular.module('app.widgets', [
         'app.core'
+    ]);
+
+    angular.module('app.components', [
+        'app.core',
+        'app.widgets'
     ]);
 
 })();

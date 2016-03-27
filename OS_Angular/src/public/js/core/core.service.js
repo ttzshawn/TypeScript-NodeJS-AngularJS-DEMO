@@ -82,9 +82,9 @@ var commonTest = true;
         // Global Services
         .factory('CommonService', function($http, Session) {
             // Set Content-Type to form-data which back-end can accept
-            $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+            // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-            var urlBackEnd = 'http://localhost:8080/test-data/';
+            var urlBackEnd = 'http://localhost:8080/';
             var urlMiddleEnd = 'https://ExampleURL.92/';
 
             // requests status handle
@@ -127,20 +127,6 @@ var commonTest = true;
                     data: "JsonStr=" + angular.toJson(data)
                 })
             };
-
-            // post single command to back-end server
-            // namespace: user/golduserrecharge.action
-            this.postMiddleEnd = function(namespace, command, req) {
-                var data = $.extend({
-                    "command": command
-                }, req);
-
-                return $http({
-                    url: urlMiddleEnd + namespace,
-                    method: 'POST',
-                    data: "JsonStr=" + angular.toJson(data)
-                })
-            }
 
             // post multi commands to server
             this.postMulti = function() {
@@ -186,45 +172,6 @@ var commonTest = true;
         // User
         .factory('userService', function($http, $rootScope, Session, CommonService) {
             var service = {};
-
-            return service;
-        })
-
-        // Example
-        .factory('goldService', function($http, $rootScope, Session, CommonService) {
-
-            var service = {};
-
-            // 1
-            service.querygoldprice = function() {
-                return CommonService.post("gold/querygoldprice");
-            };
-            // 3
-            service.queryprojectdetail = function(req) {
-                return CommonService.post("gold/queryprojectdetail", req);
-            };
-
-
-            return service;
-        })
-
-        // Example
-        .factory('middleEndService', function($http, $rootScope, Session, CommonService) {
-
-            var service = {};
-
-            // 1
-            service.charge = function(req) {
-                return CommonService.postMiddleEnd('user/golduserrecharge.action', 'postdata', req);
-            };
-            // 2
-            service.queryprojectlist = function() {
-                return CommonService.post("gold/queryprojectlist");
-            };
-
-            service.querymyfixedgoldinterestdetail = function(req) {
-                return CommonService.post("gold/myaccount/querymyfixedgoldinterestdetail", req);
-            };
 
             return service;
         })

@@ -23,7 +23,7 @@
         });
 
         // For any unmatched url, redirect to /
-        $urlRouterProvider.otherwise('login');
+        $urlRouterProvider.otherwise('order');
 
 
         // loginregister
@@ -32,8 +32,7 @@
         // main page
         .state('home', {
             url: '/',
-            templateUrl: 'views/home.html',
-            controller: 'indexCtrl'
+            templateUrl: 'views/home.html'
         })
 
         .state("home.dash1", {
