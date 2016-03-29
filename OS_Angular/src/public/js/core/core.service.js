@@ -99,7 +99,7 @@ var commonTest = true;
         // Set Content-Type to form-data which back-end can accept
         // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-        var urlBackEnd = 'http://localhost:8080/oms/ws/';
+        var urlBackEnd = 'http://lofewfcalhost:8080/oms/ws/';
         // var urlBackEnd = 'http://10.22.16.124:8088/oms/ws/marketorder/getByClientOrderId/';
         var urlMiddleEnd = 'https://ExampleURL.92/';
 
