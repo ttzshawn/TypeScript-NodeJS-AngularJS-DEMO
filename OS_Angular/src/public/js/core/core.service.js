@@ -27,20 +27,40 @@ var commonTest = true;
 
 
     function AuthInterceptor($rootScope, $q, AUTH_EVENTS) {
-        return {
-            responseError: function(response) {
-                // console.log(response);
-                $rootScope.$broadcast({
-                    401: AUTH_EVENTS.notAuthenticated,
-                    403: AUTH_EVENTS.notAuthorized,
-                    419: AUTH_EVENTS.sessionTimeout,
-                    440: AUTH_EVENTS.sessionTimeout,
-                    404: AUTH_EVENTS.pageNotFound,
-                    500: AUTH_EVENTS.serverError
-                }[response.status], response);
-                return $q.reject(response);
-            }
+        var service = {
+            request: requestHandler,
+            response: responseHandler,
+            responseError: responseErrorHandler
         };
+        return service;
+
+        function requestHandler(config) {
+            config.headers = config.headers || {};
+            if ($window.sessionStorage.token) {
+                config.headers.Authorization = $window.sessionStorage.token;
+            }
+            return config;
+        }
+
+        function responseHandler(response) {
+            if (response.status === 401) {
+                // handle the case where the user is not authenticated
+            }
+            return response || $q.when(response);
+        }
+
+        function responseErrorHandler(response) {
+            // console.log(response);
+            $rootScope.$broadcast({
+                401: AUTH_EVENTS.notAuthenticated,
+                403: AUTH_EVENTS.notAuthorized,
+                419: AUTH_EVENTS.sessionTimeout,
+                440: AUTH_EVENTS.sessionTimeout,
+                404: AUTH_EVENTS.pageNotFound,
+                500: AUTH_EVENTS.serverError
+            }[response.status], response);
+            return $q.reject(response);
+        }
     }
 
 
