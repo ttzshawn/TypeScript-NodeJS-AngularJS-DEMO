@@ -8,7 +8,7 @@
     angular
         .module('app.core')
         .controller('mainCtrl', mainCtrl);
-        
+
     mainCtrl.$inject = ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session'];
 
     function mainCtrl($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session) {
@@ -17,7 +17,7 @@
             $(this).addClass("al")
             console.log(this)
             $('.mo-list').animate({
-                width: 'toggle'
+                height: 'toggle'
             }, 350);
         }
         $scope.orderItems = [];
@@ -48,6 +48,16 @@
         // Listening
         $scope.$on(AUTH_EVENTS.loginSuccess, function(event, data) {
             console.log("login success");
+            $location.path('/');
+        });
+
+        $scope.$on(AUTH_EVENTS.loginFailed, function(event, data) {
+            console.log("login failed");
+            $location.path('/');
+        });
+
+        $scope.$on('method-not-allow', function(event, data) {
+            console.log("method not allow");
             $location.path('/');
         });
 

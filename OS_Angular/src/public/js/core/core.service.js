@@ -19,14 +19,14 @@ var commonTest = true;
         .factory('userService', userService);
 
     Session.$inject = ['$cookies'];
-    AuthInterceptor.$inject = ['$rootScope', '$q', 'AUTH_EVENTS'];
+    AuthInterceptor.$inject = ['$rootScope', '$q', '$window', 'AUTH_EVENTS'];
     AuthService.$inject = ['$http', '$rootScope', 'AUTH_EVENTS', 'Session', 'CommonService'];
     CommonService.$inject = ['$http', 'Session'];
     registerService.$inject = ['$http', '$rootScope', 'CommonService'];
     userService.$inject = ['$http', '$rootScope', 'Session', 'CommonService'];
 
 
-    function AuthInterceptor($rootScope, $q, AUTH_EVENTS) {
+    function AuthInterceptor($rootScope, $q, $window, AUTH_EVENTS) {
         var service = {
             request: requestHandler,
             response: responseHandler,
@@ -43,6 +43,7 @@ var commonTest = true;
         }
 
         function responseHandler(response) {
+            // console.log(response)
             if (response.status === 401) {
                 // handle the case where the user is not authenticated
             }
@@ -54,6 +55,7 @@ var commonTest = true;
             $rootScope.$broadcast({
                 401: AUTH_EVENTS.notAuthenticated,
                 403: AUTH_EVENTS.notAuthorized,
+                405: 'method-not-allow',
                 419: AUTH_EVENTS.sessionTimeout,
                 440: AUTH_EVENTS.sessionTimeout,
                 404: AUTH_EVENTS.pageNotFound,
@@ -69,15 +71,15 @@ var commonTest = true;
         var bName = "SID";
 
         this.create = function(sessionId, userId) {
-                $cookies.put(aName, userId);
-                $cookies.put(bName, sessionId);
-            }
-            // this.create = function(sessionId, userId) {
-            //     document.cookie = aName + '=' + userId;
-            //     document.cookie = bName + '=' + sessionId;
-            //     this.id = sessionId;
-            //     this.userId = userId;
-            // };
+            $cookies.put(aName, userId);
+            $cookies.put(bName, sessionId);
+        }
+        // this.create = function(sessionId, userId) {
+        //     document.cookie = aName + '=' + userId;
+        //     document.cookie = bName + '=' + sessionId;
+        //     this.id = sessionId;
+        //     this.userId = userId;
+        // };
 
         this.get = function(name) {
             return $cookies.getObject(name);

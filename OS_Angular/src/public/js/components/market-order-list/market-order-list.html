@@ -3,13 +3,17 @@
         background: #eee;
         display: none;
         position: fixed;
+        height: 400px;
         right: 0;
-        top: 0;
+        left: 0;
         bottom: 0;
     }
 </style>
 
-<div class="mo-list col-lg-6 table-responsive">
+<!--<div class="mo-list col-lg-12 table-responsive" ng-controller="MoListCtrl">-->
+    <div class="row">
+    <div class="col-lg-12">
+    <rd-widget class="mo-list">
     <rd-widget-header icon="fa-tasks" title="Marke Orders">
         <!--<a href="#">Manage</a>-->
     </rd-widget-header>
@@ -42,5 +46,6 @@
                 </tr>
             </tbody>
         </table>
-    </rd-widget-body>
-</div>
+    </rd-widget-body> </rd-widget>
+<!--</div>-->
+</div></div>

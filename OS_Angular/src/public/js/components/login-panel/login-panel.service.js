@@ -12,10 +12,8 @@
     function Login($resource) {
         return $resource('test-data/oms/ws/login', {}, {
             check: {
-                method: 'GET',
-                params: {
-                    // phoneId: 'phones'
-                },
+                method: 'POST',
+                params: {},
                 isArray: false
             }
         });
