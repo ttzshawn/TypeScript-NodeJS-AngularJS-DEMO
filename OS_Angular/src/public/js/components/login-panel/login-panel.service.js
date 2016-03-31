@@ -1,7 +1,6 @@
 (function() {
     'use strict';
 
-
     angular
         .module('app.components')
         .factory('Login', Login);
@@ -10,8 +9,8 @@
     Login.$inject = ['$resource'];
 
     function Login($resource) {
-        return $resource('test-data/oms/ws/login', {}, {
-            check: {
+        return $resource('oms/ws/login', {}, {
+            login: {
                 method: 'POST',
                 params: {},
                 isArray: false
