@@ -10,18 +10,49 @@
 
     mocks.run(function($httpBackend, ServerDataModel) {
 
-        $httpBackend.whenGET('/oms/ws/logidn').respond(function(method, url, data) {
-            var games = ServerDataModel.findAll();
+        $httpBackend.whenGET('/oms/ws/clientOrderList').respond(function(method, url, data) {
+            var games = [{
+                "client_order_id": "03182016021500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Filled"
+            }, {
+                    "client_order_id": "03182016021500000001",
+                    "brokerId": "0000000010",
+                    "uuId": "_DDD",
+                    "ric": "DDD",
+                    "name": "3D Systems Corporation",
+                    "shares": 500,
+                    "amount": 10000,
+                    "type": "Buy",
+                    "strategy": "VWAP",
+                    "fills": 100,
+                    "totalShares": 5000,
+                    "totalAmount": 235000,
+                    "bookedOn": 1458281700000,
+                    "tradedOn": 1458281700000,
+                    "status": "Filled"
+                }];
+
+
+
             return [200, games, {}];
         });
 
-        $httpBackend.whenGET(/\/games\/\d+/).respond(function(method, url, data) {
-            // parse the matching URL to pull out the id (/games/:id)
-            var gameid = url.split('/')[2];
-
-            var game = ServerDataModel.findOne(gameid);
-
-            return [200, game, {}];
+        $httpBackend.whenGET('/oms/ws/marketOrderList').respond(function(method, url, data) {
+            var games = ServerDataModel.findAll();
+            return [200, games, {}];
         });
 
         // this is the creation of a new resource

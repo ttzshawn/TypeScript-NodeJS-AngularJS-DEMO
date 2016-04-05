@@ -1,0 +1,350 @@
+<div class="container">
+    <div class="row well">
+        <div class="col-md-10 col-md-offset-1">
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>基本信息</legend>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">项目名称</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.itemname" type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">简要介绍</label>
+                        <div class="col-md-10">
+                            <textarea ng-model="proj.introduce" name="" class="form-control" id="" cols="30" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">项目阶段</label>
+                        <div class="col-md-10">
+                            <select ng-model="proj.phase" class="form-control">
+                                <option value="0" ng-selected="selected">研发中</option>
+                                <option value="1">已正式发布</option>
+                                <option value="2">已有收入</option>
+                                <option value="3">已盈利</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">团队人数</label>
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <input ng-model="proj.teamnumber" type="text" class="form-control" id="">
+                                <span class="input-group-addon">人</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">所在城市</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.city" type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">选择分类</label>
+                        <div class="col-md-5">
+                            <select ng-model="proj.classification" class="form-control">
+                                <option value="0" ng-selected="selected">科技</option>
+                                <option value="1">艺术</option>
+                                <option value="2">娱乐</option>
+                                <option value="3">农业</option>
+                                <option value="4">地产</option>
+                                <option value="5">工艺</option>
+                                <option value="6">其他</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">项目标签</label>
+                        <div class="col-md-10">
+                            <input ng-model="proj.itemtags" type="text" class="form-control" id="" placeholder="使用半角逗号分隔">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">项目图片</label>
+                        <div class="col-md-10">
+                            <input id="" type="file" name="files" data-file-u="single" multiple="multiple">
+                            <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                            <input ng-model="proj.itemimages" type="text" class="form-control hidden">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">项目海报</label>
+                        <div class="col-md-10">
+                            <input id="" type="file" name="files" data-file-u="single" multiple="multiple">
+                            <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                            <input ng-model="proj.itemposter" type="text" class="form-control hidden">
+                        </div>
+                    </div>
+                    <legend>融资需求</legend>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">融资目标</label>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <input ng-model="proj.financingtarget" type="text" class="form-control" id="">
+                                <span class="input-group-addon">元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">出让股份</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.sellshares" type="text" class="form-control" id="" ng-model="proj.sellshares">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">是否允许超募</label>
+                        <div class="col-md-5">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input ng-model="proj.overraised" type="radio" name="" id="" value="0" checked="checked"> 是
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input ng-model="proj.overraised" type="radio" name="" id="" value="1"> 否
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group animate-fade" ng-if="proj.overraised == 0">
+                        <label for="" class="col-md-2 control-label">最高募集金额</label>
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <input ng-model="proj.maxraise" type="text" class="form-control" id="">
+                                <span class="input-group-addon">元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">是否需要领投</label>
+                        <div class="col-md-5">
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input ng-model="proj.leaderstatus" type="radio" name="" id="" value="1" checked="checked"> 是
+                                </label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <label>
+                                    <input ng-model="proj.leaderstatus" type="radio" name="" id="" value="0"> 否
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group animate-fade" ng-if="proj.leaderstatus == 1">
+                        <label for="" class="col-md-2 control-label">最低领投金额</label>
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <input ng-model="proj.minleader" type="text" class="form-control" id="">
+                                <span class="input-group-addon">元</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">最低募集金额</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.minraise" type="text" class="form-control" id="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">单人投资最低金额</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.mininvestor" type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">融资时间</label>
+                        <div class="col-md-5">
+                            <input ng-model="proj.financingtime" type="datetime" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">融资用途</label>
+                        <div class="col-md-10">
+                            <input ng-model="proj.financinguse" type="text" class="form-control" id="">
+                        </div>
+                    </div>
+                    <legend>团队信息</legend>
+                    <fieldset>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-4 control-label">团队联系人</label>
+                            <div class="col-md-8">
+                                <input ng-model="proj.teamcontactperson" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-4 control-label">联系电话</label>
+                            <div class="col-md-8">
+                                <input ng-model="proj.contacttel" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-4 control-label">Email</label>
+                            <div class="col-md-8">
+                                <input ng-model="proj.email" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="" class="col-md-4 control-label">是否已成立公司</label>
+                            <div class="col-md-8">
+                                <div class="radio radio-primary col-md-6">
+                                    <label>
+                                        <input ng-model="proj.buildcompany" type="radio" name="" id="" value="1" checked="checked"> 已成立
+                                    </label>
+                                </div>
+                                <div class="radio radio-primary col-md-6">
+                                    <label>
+                                        <input ng-model="proj.buildcompany" type="radio" name="" id="" value="0"> 未成立
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset ng-repeat="i in proj.teaminfo" class="well col-md-10 col-md-offset-2">
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">头像</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.teaminfo[$index].image" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">姓名</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.teaminfo[$index].name" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">职位</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.teaminfo[$index].position" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">持股比例</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.teaminfo[$index].sharehold" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">个人简介</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.teaminfo[$index].introduce" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="col-md-8 col-md-offset-2">
+                        <button class="btn btn-primary btn-raised" ng-click="addTeamMember()">添加团队成员</button>
+                    </div>
+
+                    <legend ng-if="proj.buildcompany == 1" class="animate-fade">公司信息</legend>
+                    <fieldset ng-if="proj.buildcompany == 1" class="animate-fade">
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">公司名称</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.companyname" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">公司地址</label>
+                            <div class="col-md-10">
+                                <input ng-model="proj.companyaddress" type="text" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">法人代表身份证</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.legalcard" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">法人代表个人信用报告</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.legalcreditreport" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">营业执照</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.businesslicense" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">组织机构代码证</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.organizationcode" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-2 control-label">公司照片</label>
+                            <div class="col-md-10">
+                                <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                                <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                                <input ng-model="proj.companyimage" type="hidden" class="form-control" id="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <legend>项目详情</legend>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control hidden" id="" ng-model="proj.itemdetails">
+                            <script id="umcontainer" name="content" type="text/plain" style="width:100%;height:200px"></script>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-md-2 control-label">商业计划书</label>
+                        <div class="col-md-10">
+                            <input id="" type="file" class="" name="files" data-file-u="single" data-url="upload.do" multiple="multiple">
+                            <input type="text" readonly="readonly" class="form-control" placeholder="添加文件...">
+                            <input ng-model="proj.businessplan" type="hidden" class="form-control" id="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 我已阅读并同意《网站服务协议》
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+                            <button type="submit" class="btn btn-raised" ng-click="launchSave(proj)">保存</button>
+                            <button type="submit" class="btn btn-raised btn-primary" ng-click="launch(proj)">提交申请</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 实例化编辑器代码 -->
+<script type="text/javascript">
+    // register文件上传事件
+    $('[data-file-u=single]').on('change', prepareUpload);
+
+    $(function() {
+        window.um = UM.getEditor('umcontainer');
+    });
+
+    $(function() {
+        $.material.init();
+    });
+</script>

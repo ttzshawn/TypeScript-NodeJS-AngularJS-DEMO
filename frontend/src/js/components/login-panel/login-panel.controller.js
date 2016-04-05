@@ -23,7 +23,7 @@
                 $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                 $state.go('home.order');
             }, function(res) {
-                alert('login failed.');
+                alert('Invalid username or password. Please login again.');
             });
             // console.log(aaa);
             // console.log(aaa.token);

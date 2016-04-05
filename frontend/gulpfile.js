@@ -14,6 +14,8 @@ const paths = {
     index: './src/index.html',
     html: './src/html/**/*.html',
     htmlTemplates: './src/js/**/*.html',
+    fontsAwesome: './src/lib/font-awesome-4.5.0/fonts/*',
+    fontsBootstrap: './src/lib/bootstrap/fonts/*',
     js: './src/js/**/*.js',
     jsModule: './src/js/**/*.module.js',
     sass: './src/sass/**/*.scss',
@@ -59,6 +61,11 @@ gulp.task('build-htmlTemplates', function() {
         .pipe(minifyHTML())
         .pipe(gulp.dest('../webapp/static/js'));
 });
+gulp.task('build-fonts', function() {
+    return gulp.src([paths.fontsAwesome, paths.fontsBootstrap])
+        .pipe(gulp.dest('../webapp/static/fonts'));
+});
+
 gulp.task('build-img', function() {
     return gulp.src(paths.img)
         .pipe(gulp.dest('../webapp/static/img'));
@@ -84,4 +91,4 @@ gulp.task('watch', () => {
 
 // Default Task
 gulp.task('default', ['connect', 'scripts', 'watch']);
-gulp.task('build', ['build-usemin', 'build-html', 'build-htmlTemplates', 'build-img']);
+gulp.task('build', ['build-usemin', 'build-html', 'build-htmlTemplates', 'build-fonts', 'build-img']);

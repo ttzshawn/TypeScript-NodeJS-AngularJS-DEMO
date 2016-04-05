@@ -1,4 +1,4 @@
-<div class="row" ng-controller="CoListCtrl">
+<div class="row">
     <div class="col-lg-12">
         <rd-widget>
             <rd-widget-header icon="fa-tasks" title="Client Orders">
@@ -23,7 +23,7 @@
                                 <th>Status</th>
                                 <th></th>
                             </tr>
-                            <tr ng-click="toggleMO()" ng-repeat="item in clientOrderItems">
+                            <tr ng-click="toggleMO()" ng-repeat="item in orderItems">
                                 <td>RDVMPC001</td>
                                 <td>BABA</td>
                                 <td>Alibaba</td>
