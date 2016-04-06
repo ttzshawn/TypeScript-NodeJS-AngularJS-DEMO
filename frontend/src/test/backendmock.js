@@ -6,54 +6,64 @@
     // Inject mocks module into mainApp (Only dev environment)
     angular.module('mainApp').requires.push('mocks');
 
-    mocks.run(function($httpBackend, ServerDataModel) {
+    mocks.run(function($httpBackend, coModel) {
 
         // this is the creation(201) of a new resource
         $httpBackend.whenPOST('ws/login').respond(function(method, url, data) {
             // var params = angular.fromJson(data);
 
-            // var game = ServerDataModel.addOne(params);
+            // var game = coModel.addOne(params);
 
             // get the id of the new resource to populate the Location field
             // var gameid = game.gameid;
 
             console.log('post login')
-            return [200, { token: '2323' }, {}];
+            return [200, { token: '23fefe23' }, {}];
             // return [200, game, { Location: '/games/' + gameid }];
         });
 
 
-        $httpBackend.whenGET('/ws/clientOrderList').respond(function(method, url, data) {
-            var serverData = ServerDataModel.getData();
+        $httpBackend.whenGET('ws/clientorder/list').respond(coModel.getData());
 
-            return [200, serverData, {}];
-        });
-
-        $httpBackend.whenGET('/ws/marketOrderList').respond(function(method, url, data) {
-            var games = ServerDataModel.findAll();
+        $httpBackend.whenGET('ws/marketorder').respond(function(method, url, data) {
+            var games = coModel.findAll();
             return [200, games, {}];
         });
 
+        // this is the update of an existing resource (ngResource does not send PUT for update)
+        $httpBackend.whenGET(/\/marketorder\/\d+/).respond(function(method, url, data) {
+            // var params = angular.fromJson(data);
 
+            // parse the matching URL to pull out the id (/games/:id)
+            var gameid = url.split('/')[2];
+
+            var serverData = coModel.getData();
+
+            return [200, serverData[0], {}];
+
+            // var game = coModel.updateOne(gameid, params);
+
+            // return [200, game, { Location: '/games/' + gameid }];
+        });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenPOST(/\/games\/\d+/).respond(function(method, url, data) {
+        $httpBackend.whenPOST(/\/marketorder\/\d+/).respond(function(method, url, data) {
             var params = angular.fromJson(data);
 
             // parse the matching URL to pull out the id (/games/:id)
             var gameid = url.split('/')[2];
 
-            var game = ServerDataModel.updateOne(gameid, params);
+            var game = coModel.updateOne(gameid, params);
 
-            return [201, game, { Location: '/games/' + gameid }];
+            return [400, game, { Location: '/games/' + gameid }];
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenDELETE(/\/games\/\d+/).respond(function(method, url, data) {
+        $httpBackend.whenDELETE(/\/marketorder\/\d+/).respond(function(method, url, data) {
             // parse the matching URL to pull out the id (/games/:id)
             var gameid = url.split('/')[2];
 
-            ServerDataModel.deleteOne(gameid);
+            coModel.deleteOne(gameid);
 
             return [204, {}, {}];
         });
@@ -66,7 +76,7 @@
 
 
 
-    mocks.service('ServerDataModel', function ServerDataModel() {
+    mocks.service('coModel', function coModel() {
         this.data = [{
             "client_order_id": "03182016021500000001",
             "brokerId": "0000000010",

@@ -9,11 +9,11 @@
     clientOrder.$inject = ['$resource'];
 
     function clientOrder($resource) {
-        return $resource('ws/clientOrder', {}, {
-            clientOrder: {
-                method: 'POST',
+        return $resource('ws/clientorder/list', {}, {
+            query: {
+                method: 'GET',
                 params: {},
-                isArray: false
+                isArray: true
             }
         });
     }

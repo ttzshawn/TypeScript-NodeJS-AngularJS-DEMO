@@ -98,5 +98,6 @@ gulp.task('build-img', function() {
 
 
 // Default Task
-gulp.task('default', ['connect', 'scripts', 'watch']);
+
+gulp.task('default', ['scripts','compass', 'watch']);
 gulp.task('build', ['build-usemin', 'build-html', 'build-htmlTemplates', 'build-fonts', 'build-img']);

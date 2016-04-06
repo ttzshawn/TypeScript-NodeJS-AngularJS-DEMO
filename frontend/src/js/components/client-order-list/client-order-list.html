@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-controller="CoListCtrl">
     <div class="col-lg-12">
         <rd-widget>
             <rd-widget-header icon="fa-tasks" title="Client Orders">
@@ -10,35 +10,42 @@
                         <tbody>
                             <tr>
                                 <th>Client Order #</th>
-                                <th>ID</th>
+                                <th>broker ID</th>
+                                <th>UUID</th>
+                                <th>Ric</th>
                                 <th>Name</th>
                                 <th>Share</th>
                                 <th>Amount (USD$)</th>
                                 <th>Type</th>
                                 <th>Strategy</th>
                                 <th>Fills (%)</th>
+                                <th>Total Shares</th>
                                 <th>Total Amount</th>
                                 <th>Booked On</th>
                                 <th>Trade On</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
-                            <tr ng-click="toggleMO()" ng-repeat="item in orderItems">
-                                <td>RDVMPC001</td>
-                                <td>BABA</td>
-                                <td>Alibaba</td>
-                                <td>BUY</td>
-                                <td>1,000</td>
-                                <td>10,000</td>
-                                <td>10,0000</td>
+                            <tr ng-click="toggleMO(item.client_order_id)" ng-repeat="item in clientOrderItems">
+                                <td>{{item.client_order_id}}</td>
+                                <td>{{item.brokerId}}</td>
+                                <td>{{item.uuId}}</td>
+                                <td>{{item.ric}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.shares}}</td>
+
+                                <td>{{item.amount}}</td>
+                                <td>{{item.type}}</td>
+                                <td>{{item.strategy}}</td>
                                 <td ng-controller="ProgressDemoCtrl">
-                                    <uib-progressbar class="progress-striped active" value="dynamic" type="{{type}}"><b>{{dynamic}}%</b></uib-progressbar>
+                                    <uib-progressbar class="progress-striped active" value="item.fills" type="{{type}}"><b>{{item.fills}}%</b></uib-progressbar>
                                 </td>
-                                <td>Volume of Percentage</td>
-                                <!-- <td>TWAP+POV</td> -->
-                                <td>2016-3-15 2:50:57</td>
-                                <td>2016-3-15 2:50:57</td>
-                                <td>Processing</td>
+                                <td>{{item.totalShares}}</td>
+                                <td>{{item.totalAmount}}</td>
+                                <td>{{item.bookedOn}}</td>
+                                <td>{{item.tradeOn}}</td>
+                                <td>{{item.status}}</td>
+
                                 <td>
                                     <button class="btn btn-xs btn-danger">CANCEL</button>
                                 </td>

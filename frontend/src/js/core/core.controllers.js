@@ -19,13 +19,7 @@
         // }
 
         // for test
-        $scope.toggleMO = function() {
-            $(this).addClass("al")
-            console.log(this)
-            $('.mo-list').animate({
-                height: 'toggle'
-            }, 350);
-        }
+
         $scope.orderItems = [];
         for (var i = 0; i < 30; i++) {
             $scope.orderItems[i] = i;
@@ -37,29 +31,38 @@
 
         // Log out
         $scope.logout = function() {
-            $window.sessionStorage.token = '';
+            // $window.sessionStorage.token = '';
             // Session.destroy();
             $rootScope.currentUser = null;
-            AuthService.logout().then(function(res) {
-                if (CommonService.isReqSuccess(res)) {
-                    $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
-                    console.log('Log out success');
-                } else {
-                    CommonService.handleResErr(res);
-                }
-            }, function(res) {
-                CommonService.handleHttpErr(res);
-            });
+            $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
+            console.log('logout success');
+            // AuthService.logout().then(function(res) {
+            //     if (CommonService.isReqSuccess(res)) {
+            //         $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
+            //         console.log('Log out success');
+            //     } else {
+            //         CommonService.handleResErr(res);
+            //     }
+            // }, function(res) {
+            //     CommonService.handleHttpErr(res);
+            // });
         }
 
         // Listening
         $scope.$on(AUTH_EVENTS.loginSuccess, function(event, data) {
             console.log("login success");
-            $location.path('/order');
+            $state.go('home.order');
         });
 
         $scope.$on(AUTH_EVENTS.loginFailed, function(event, data) {
             $window.sessionStorage.token = '';
+            console.log("login failed");
+            // $location.path('/');
+        });
+
+        $scope.$on(AUTH_EVENTS.logoutSuccess, function(event, data) {
+            console.log('remove token');
+            $window.sessionStorage.removeItem('token');
             console.log("login failed");
             // $location.path('/');
         });

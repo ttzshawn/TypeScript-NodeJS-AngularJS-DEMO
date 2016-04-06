@@ -9,6 +9,11 @@
 
     /* @ngInject */
     function LoginCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, AUTH_EVENTS, CommonService, Session, AuthService, Login) {
+        
+        // TODO check if user is Login
+        if ($window.sessionStorage.token != undefined && $window.sessionStorage.token != '') {
+            $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+        }
 
         $scope.user = {};
         $scope.login = function(user) {

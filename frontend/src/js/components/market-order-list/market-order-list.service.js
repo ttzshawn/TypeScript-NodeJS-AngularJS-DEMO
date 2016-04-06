@@ -9,7 +9,7 @@
     marketOrder.$inject = ['$resource'];
 
     function marketOrder($resource) {
-        return $resource('ws/marketOrder', {}, {});
+        return $resource('ws/marketorder', {}, {});
     }
 
 })();

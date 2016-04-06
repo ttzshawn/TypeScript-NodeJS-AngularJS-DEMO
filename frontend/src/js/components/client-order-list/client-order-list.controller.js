@@ -9,17 +9,23 @@
 
     /* @ngInject */
     function CoListCtrl($scope, clientOrder) {
-            
-        clientOrder.get(clientOrder, function(res) {
-            console.log(res)
-        }, function(res) {
-            console.log('Can not load data.');
-        });
-        $scope.clientOrderItems = []; 
-        for (var i = 0; i < 30; i++) {
-            $scope.clientOrderItems[i] = i;
+
+        $scope.toggleMO = function(moid) {
+            // $(this).addClass("al")
+            console.log(this)
+            $('.mo-list').animate({
+                height: 'toggle'
+            }, 350);
         }
-       
+
+        clientOrder.query({}, function(res) {
+            $scope.clientOrderItems = res;
+        });
+        // $scope.clientOrderItems = []; 
+        // for (var i = 0; i < 30; i++) {
+        //     $scope.clientOrderItems[i] = i;
+        // }
+
     }
 
 })();
