@@ -18,7 +18,7 @@ var commonTest = true;
         .factory('registerService', registerService)
         .factory('userService', userService);
 
-    Session.$inject = ['$cookies'];
+    Session.$inject = ['$cookies', '$window'];
     AuthInterceptor.$inject = ['$rootScope', '$q', '$window', 'AUTH_EVENTS'];
     AuthService.$inject = ['$http', '$rootScope', 'AUTH_EVENTS', 'Session', 'CommonService'];
     CommonService.$inject = ['$http', 'Session'];
@@ -66,7 +66,7 @@ var commonTest = true;
     }
 
 
-    function Session($cookies) {
+    function Session($cookies, $window) {
         var aName = "USERID";
         var bName = "SID";
 
@@ -107,10 +107,11 @@ var commonTest = true;
             }
         };
         this.destroy = function() {
-            document.cookie = aName + '=';
-            document.cookie = bName + '=';
-            this.id = null;
-            this.userId = null;
+            $window.sessionStorage.removeItem('token');
+            // document.cookie = aName + '=';
+            // document.cookie = bName + '=';
+            // this.id = null;
+            // this.userId = null;
         };
         return this;
     }
@@ -121,8 +122,8 @@ var commonTest = true;
         // Set Content-Type to form-data which back-end can accept
         // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-        var urlBackEnd = 'http://lofewfcalhost:8080/oms/ws/';
-        // var urlBackEnd = 'http://10.22.16.124:8088/oms/ws/marketorder/getByClientOrderId/';
+        var urlBackEnd = 'http://lofewfcalhost:8080/ws/';
+        // var urlBackEnd = 'http://10.22.16.124:8088/ws/marketorder/getByClientOrderId/';
         var urlMiddleEnd = 'https://ExampleURL.92/';
 
         // requests status handle
@@ -157,7 +158,7 @@ var commonTest = true;
 
             // console.log(angular.toJson(data));
             return commonTest ? $http({
-                url: 'test-data/oms/ws/' + command,
+                url: 'test-data/ws/' + command,
                 method: 'GET'
             }) : $http({
                 url: urlBackEnd + command,
@@ -201,7 +202,7 @@ var commonTest = true;
         var service = {};
 
         service.register = function(user) {
-            return CommonService.post("user/register.do", user);
+            return CommonService.post("register", user);
         };
 
         return service;

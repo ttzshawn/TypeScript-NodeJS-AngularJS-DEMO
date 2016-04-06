@@ -23,7 +23,7 @@
         });
 
         // For any unmatched url, redirect to /
-        $urlRouterProvider.otherwise('login');
+        $urlRouterProvider.otherwise('/order');
 
 
         // loginregister
@@ -31,18 +31,18 @@
 
         // main page
         .state('home', {
-            url: '/',
+            url: '',
             templateUrl: 'html/dashboard.html'
         })
 
         .state("home.dash1", {
-            url: "dash1",
+            url: "/dash1",
             templateUrl: "html/rdash/dashboard.html"
         }).state("home.order", {
-            url: "order",
+            url: "/order",
             templateUrl: "html/rdash/order-list.html"
         }).state("home.dash2", {
-            url: "dash2",
+            url: "/dash2",
             templateUrl: "html/rdash/tables.html"
         })
 
@@ -61,31 +61,6 @@
         }).state('account.me', {
             url: '/me',
             templateUrl: 'html/account/account.me.html'
-        }).state('account.charge', {
-            url: '/charge',
-            templateUrl: 'html/account/account.charge.html',
-            controller: 'chargeCtrl'
-        }).state('account.card', {
-            url: '/card',
-            templateUrl: 'html/account/account.card.html'
-        }).state('account.coupons', {
-            url: '/coupons',
-            templateUrl: 'html/account/account.coupons.html'
-        }).state('account.deposit', {
-            url: '/deposit',
-            templateUrl: 'html/account/account.deposit.html'
-        }).state('account.gold', {
-            url: '/gold',
-            templateUrl: 'html/account/account.gold.html'
-        }).state('account.reserve', {
-            url: '/reserve',
-            templateUrl: 'html/account/account.reserve.html'
-        }).state('account.transaction', {
-            url: '/transaction',
-            templateUrl: 'html/account/account.transaction.html'
-        }).state('account.withdraw', {
-            url: '/withdraw',
-            templateUrl: 'html/account/account.withdraw.html'
         })
 
         // for test

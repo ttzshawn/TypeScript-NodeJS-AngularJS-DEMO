@@ -9,7 +9,7 @@
     clientOrder.$inject = ['$resource'];
 
     function clientOrder($resource) {
-        return $resource('oms/ws/clientOrder', {}, {
+        return $resource('ws/clientOrder', {}, {
             clientOrder: {
                 method: 'POST',
                 params: {},

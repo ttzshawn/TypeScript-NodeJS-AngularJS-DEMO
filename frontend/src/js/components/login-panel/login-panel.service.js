@@ -9,7 +9,7 @@
     Login.$inject = ['$resource'];
 
     function Login($resource) {
-        return $resource('oms/ws/login', {}, {
+        return $resource('ws/login', {}, {
             login: {
                 method: 'POST',
                 params: {},

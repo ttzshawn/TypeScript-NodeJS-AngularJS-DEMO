@@ -3,70 +3,38 @@
 
     var mocks = angular.module('mocks', ['ngMockE2E']);
 
+    // Inject mocks module into mainApp (Only dev environment)
     angular.module('mainApp').requires.push('mocks');
-
-
-
 
     mocks.run(function($httpBackend, ServerDataModel) {
 
-        $httpBackend.whenGET('/oms/ws/clientOrderList').respond(function(method, url, data) {
-            var games = [{
-                "client_order_id": "03182016021500000001",
-                "brokerId": "0000000010",
-                "uuId": "_DDD",
-                "ric": "DDD",
-                "name": "3D Systems Corporation",
-                "shares": 500,
-                "amount": 10000,
-                "type": "Buy",
-                "strategy": "VWAP",
-                "fills": 100,
-                "totalShares": 5000,
-                "totalAmount": 235000,
-                "bookedOn": 1458281700000,
-                "tradedOn": 1458281700000,
-                "status": "Filled"
-            }, {
-                    "client_order_id": "03182016021500000001",
-                    "brokerId": "0000000010",
-                    "uuId": "_DDD",
-                    "ric": "DDD",
-                    "name": "3D Systems Corporation",
-                    "shares": 500,
-                    "amount": 10000,
-                    "type": "Buy",
-                    "strategy": "VWAP",
-                    "fills": 100,
-                    "totalShares": 5000,
-                    "totalAmount": 235000,
-                    "bookedOn": 1458281700000,
-                    "tradedOn": 1458281700000,
-                    "status": "Filled"
-                }];
+        // this is the creation(201) of a new resource
+        $httpBackend.whenPOST('ws/login').respond(function(method, url, data) {
+            // var params = angular.fromJson(data);
 
+            // var game = ServerDataModel.addOne(params);
 
+            // get the id of the new resource to populate the Location field
+            // var gameid = game.gameid;
 
-            return [200, games, {}];
+            console.log('post login')
+            return [200, { token: '2323' }, {}];
+            // return [200, game, { Location: '/games/' + gameid }];
         });
 
-        $httpBackend.whenGET('/oms/ws/marketOrderList').respond(function(method, url, data) {
+
+        $httpBackend.whenGET('/ws/clientOrderList').respond(function(method, url, data) {
+            var serverData = ServerDataModel.getData();
+
+            return [200, serverData, {}];
+        });
+
+        $httpBackend.whenGET('/ws/marketOrderList').respond(function(method, url, data) {
             var games = ServerDataModel.findAll();
             return [200, games, {}];
         });
 
-        // this is the creation of a new resource
-        $httpBackend.whenPOST('oms/ws/login').respond(function(method, url, data) {
-            var params = angular.fromJson(data);
 
-            var game = ServerDataModel.addOne(params);
-
-            // get the id of the new resource to populate the Location field
-            var gameid = game.gameid;
-
-            // console.log(1)
-            return [201, game, { Location: '/games/' + gameid }];
-        });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
         $httpBackend.whenPOST(/\/games\/\d+/).respond(function(method, url, data) {
@@ -99,26 +67,39 @@
 
 
     mocks.service('ServerDataModel', function ServerDataModel() {
-        this.data = [
-            {
-                gameid: 1,
-                opponent: "Tech",
-                date: new Date(2014, 4, 7),
-                attendance: 2038
-            },
-            {
-                gameid: 2,
-                opponent: "State",
-                date: new Date(2014, 4, 13),
-                attendance: 1655
-            },
-            {
-                gameid: 3,
-                opponent: "College",
-                date: new Date(2014, 4, 20),
-                attendance: 1897
-            }
-        ];
+        this.data = [{
+            "client_order_id": "03182016021500000001",
+            "brokerId": "0000000010",
+            "uuId": "_DDD",
+            "ric": "DDD",
+            "name": "3D Systems Corporation",
+            "shares": 500,
+            "amount": 10000,
+            "type": "Buy",
+            "strategy": "VWAP",
+            "fills": 100,
+            "totalShares": 5000,
+            "totalAmount": 235000,
+            "bookedOn": 1458281700000,
+            "tradedOn": 1458281700000,
+            "status": "Filled"
+        }, {
+                "client_order_id": "03182016021500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Filled"
+            }];
 
         this.getData = function() {
             return this.data;

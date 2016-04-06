@@ -9,9 +9,15 @@
         .module('app.core')
         .controller('mainCtrl', mainCtrl);
 
-    mainCtrl.$inject = ['$rootScope', '$scope', '$location', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session'];
+    mainCtrl.$inject = ['$rootScope', '$scope', '$location', '$state', '$window', 'AuthService', 'AUTH_EVENTS', 'CommonService', 'Session'];
 
-    function mainCtrl($rootScope, $scope, $location, AuthService, AUTH_EVENTS, CommonService, Session) {
+    function mainCtrl($rootScope, $scope, $location, $state, $window, AuthService, AUTH_EVENTS, CommonService, Session) {
+
+        // if (!$window.sessionStorage.token) {
+        //     $location.path('/login');
+        //     console.log(1);
+        // }
+
         // for test
         $scope.toggleMO = function() {
             $(this).addClass("al")
@@ -31,7 +37,8 @@
 
         // Log out
         $scope.logout = function() {
-            Session.destroy();
+            $window.sessionStorage.token = '';
+            // Session.destroy();
             $rootScope.currentUser = null;
             AuthService.logout().then(function(res) {
                 if (CommonService.isReqSuccess(res)) {
@@ -48,17 +55,18 @@
         // Listening
         $scope.$on(AUTH_EVENTS.loginSuccess, function(event, data) {
             console.log("login success");
-            $location.path('/');
+            $location.path('/order');
         });
 
         $scope.$on(AUTH_EVENTS.loginFailed, function(event, data) {
+            $window.sessionStorage.token = '';
             console.log("login failed");
-            $location.path('/');
+            // $location.path('/');
         });
 
         $scope.$on('method-not-allow', function(event, data) {
             console.log("method not allow");
-            $location.path('/');
+            // $location.path('/');
         });
 
         $scope.$on(AUTH_EVENTS.pageNotFound, function(event, data) {

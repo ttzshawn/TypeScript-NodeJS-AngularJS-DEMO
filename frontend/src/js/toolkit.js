@@ -1,6 +1,5 @@
 
-// 序列化对象
-// 示例: {addr.location:a,addr.number:b} ==> addr%5Blocation%5D=a&addr%5Bnumber%5D=b
+// Sample: {addr.location:a,addr.number:b} ==> addr%5Blocation%5D=a&addr%5Bnumber%5D=b
 serializeData = function(obj, prefix) {
     var str = [];
     for (var p in obj) {
@@ -23,8 +22,7 @@ serializeData = function(obj, prefix) {
     return str.join("&");
 }
 
-// 转化百分数(或不带百分号)至小数
-// 示例: 35% ==> 0.35
+// Sample: 35% ==> 0.35
 percentToNum = function(param) {
     param = param.toString().replace('%', '');
     if (param != undefined && isNaN(param) == false) {
