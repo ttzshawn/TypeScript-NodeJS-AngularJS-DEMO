@@ -10,7 +10,7 @@
                         <tbody>
                             <tr>
                                 <th>Client Order #</th>
-                                <th>broker ID</th>
+                                <!--<th>broker ID</th>-->
                                 <th>UUID</th>
                                 <th>Ric</th>
                                 <th>Name</th>
@@ -22,13 +22,13 @@
                                 <th>Total Shares</th>
                                 <th>Total Amount</th>
                                 <th>Booked On</th>
-                                <th>Trade On</th>
+                                <th>Traded On</th>
                                 <th>Status</th>
                                 <th></th>
                             </tr>
-                            <tr ng-click="toggleMO(item.client_order_id)" ng-repeat="item in clientOrderItems">
-                                <td>{{item.client_order_id}}</td>
-                                <td>{{item.brokerId}}</td>
+                            <tr ng-click="toggleMO(item.id)" ng-repeat="item in clientOrderItems">
+                                <td>{{item.id}}</td>
+                                <!--<td>{{item.brokerId}}</td>-->
                                 <td>{{item.uuId}}</td>
                                 <td>{{item.ric}}</td>
                                 <td>{{item.name}}</td>
@@ -47,7 +47,7 @@
                                 <td>{{item.status}}</td>
 
                                 <td>
-                                    <button class="btn btn-xs btn-danger">CANCEL</button>
+                                    <button class="btn btn-xs btn-danger" ng-if="item.status=='Processing'">CANCEL</button>
                                 </td>
                             </tr>
                         </tbody>

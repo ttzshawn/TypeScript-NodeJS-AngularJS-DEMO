@@ -6,7 +6,7 @@
     // Inject mocks module into mainApp (Only dev environment)
     angular.module('mainApp').requires.push('mocks');
 
-    mocks.run(function($httpBackend, coModel) {
+    mocks.run(function($httpBackend, coModel, moModel) {
 
         // this is the creation(201) of a new resource
         $httpBackend.whenPOST('ws/login').respond(function(method, url, data) {
@@ -31,15 +31,15 @@
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenGET(/\/marketorder\/\d+/).respond(function(method, url, data) {
+        $httpBackend.whenGET(/\/marketorder\/list\/\d+/).respond(function(method, url, data) {
             // var params = angular.fromJson(data);
 
             // parse the matching URL to pull out the id (/games/:id)
-            var gameid = url.split('/')[2];
+            var moid = url.split('/')[2];
 
-            var serverData = coModel.getData();
+            var serverData = moModel.getData();
 
-            return [200, serverData[0], {}];
+            return [200, serverData, {}];
 
             // var game = coModel.updateOne(gameid, params);
 
@@ -73,12 +73,9 @@
     })
 
 
-
-
-
     mocks.service('coModel', function coModel() {
         this.data = [{
-            "client_order_id": "03182016021500000001",
+            "id": "03182016021500000001",
             "brokerId": "0000000010",
             "uuId": "_DDD",
             "ric": "DDD",
@@ -93,8 +90,24 @@
             "bookedOn": 1458281700000,
             "tradedOn": 1458281700000,
             "status": "Filled"
+        },{
+            "id": "03182016021500000001",
+            "brokerId": "0000000010",
+            "uuId": "_DDD",
+            "ric": "DDD",
+            "name": "3D Systems Corporation",
+            "shares": 500,
+            "amount": 10000,
+            "type": "Buy",
+            "strategy": "VWAP",
+            "fills": 100,
+            "totalShares": 5000,
+            "totalAmount": 235000,
+            "bookedOn": 1458281700000,
+            "tradedOn": 1458281700000,
+            "status": "Processing"
         }, {
-                "client_order_id": "03182016021500000001",
+                "id": "03182016021500000001",
                 "brokerId": "0000000010",
                 "uuId": "_DDD",
                 "ric": "DDD",
@@ -205,7 +218,34 @@
     });
 
 
+    mocks.service('moModel', function moModel() {
+        this.data = [{
+            "market_order_id": "0318201",
+            "client_order_id": "03182016021500000001",
+            "exchange": "NYSE",
+            "shares": 500,
+            "amount": 10000,
+            "fills": 100,
+            "totalShares": 5000,
+            "totalAmount": 235000,
+            "status": "Filled"
+        }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Filled"
+            }];
 
+        this.getData = function() {
+            return this.data;
+        };
+
+    });
 
 
 

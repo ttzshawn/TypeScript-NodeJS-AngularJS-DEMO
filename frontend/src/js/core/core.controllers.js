@@ -20,10 +20,12 @@
 
         // for test
 
-        $scope.orderItems = [];
-        for (var i = 0; i < 30; i++) {
-            $scope.orderItems[i] = i;
-        }
+        // $rootScope.moList = [];
+
+        // $scope.orderItems = [];
+        // for (var i = 0; i < 30; i++) {
+        //     $scope.orderItems[i] = i;
+        // }
 
         $rootScope.setCurrentUser = function(user) {
             $rootScope.currentUser = user;

@@ -5,13 +5,21 @@
         .module('app.components')
         .controller('CoListCtrl', CoListCtrl);
 
-    CoListCtrl.$inject = ['$scope', 'clientOrder'];
+    CoListCtrl.$inject = ['$scope', '$rootScope', 'clientOrder', 'marketOrder'];
 
     /* @ngInject */
-    function CoListCtrl($scope, clientOrder) {
+    function CoListCtrl($scope, $rootScope, clientOrder, marketOrder) {
+        
+        $scope.toggleMO = function(coId) {
 
-        $scope.toggleMO = function(moid) {
             // $(this).addClass("al")
+            // $rootScope.coId = moid;
+            $rootScope.selectedClientOrderId = coId;
+            marketOrder.query({ coId: coId }, function(res) {
+                // $rootScope.moList = res;
+                console.log(res)
+            });
+
             console.log(this)
             $('.mo-list').animate({
                 height: 'toggle'

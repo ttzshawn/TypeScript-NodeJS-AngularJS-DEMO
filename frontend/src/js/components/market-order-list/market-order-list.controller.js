@@ -5,30 +5,23 @@
         .module('app.components')
         .controller('MoListCtrl', MoListCtrl);
 
-    MoListCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService', 'Login'];
+    MoListCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', '$interval', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService', 'marketOrder'];
 
     /* @ngInject */
-    function MoListCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, AUTH_EVENTS, CommonService, Session, AuthService, Login) {
+    function MoListCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, $interval, AUTH_EVENTS, CommonService, Session, AuthService, marketOrder) {
 
-        // if (!!$rootScope.currentUser) {
-        //     $state.go('home');
-        // }
+        // console.log($rootScope.moList)
+        // $scope.moList = [];
+        $interval(function() {
+            if ($rootScope.selectedClientOrderId != '' && $rootScope.selectedClientOrderId != undefined && isAuth) {
+                marketOrder.query({ coId: $rootScope.selectedClientOrderId }, function(res) {
+                    $scope.moList = res;
+                    console.log(res)
+                });
+            }
 
+        }, 1000);
 
-        $scope.user = {};
-        $scope.login = function(user) {
-
-            Login.get({}, function(res) {
-                console.log(res)
-                $window.sessionStorage.token = res.token || '';
-                $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-                $state.go('home.order');
-            }, function(res) {
-                alert('login failed.');
-            });
-
-            console.log(user);
-        }
     }
 
 })();

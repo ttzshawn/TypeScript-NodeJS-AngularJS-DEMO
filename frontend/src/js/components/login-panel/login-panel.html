@@ -2,7 +2,13 @@
     <form class="form-horizontal" name="form">
         <fieldset>
             <legend>LOGIN</legend>
-
+            <div class="form-group" ng-if="errMsg">
+                <div class="col-md-10 col-md-offset-2">
+                    <div>
+                        <uib-alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <label for="inputUsername" class="col-md-2 control-label"></label>
                 <div class="col-md-10">
@@ -35,10 +41,11 @@
             </div> -->
             <div class="form-group">
                 <div class="col-md-10 col-md-offset-2">
-                    <button class="btn btn-raised btn-primary" type="submit" ng-disabled="form.$invalid" ng-click="login(user)">login</button>
+                    <button class="btn btn-raised btn-primary" type="submit" ng-disabled="form.$invalid" ng-click="test(user)">login</button>
                 </div>
             </div>
 
         </fieldset>
     </form>
+
 </div>

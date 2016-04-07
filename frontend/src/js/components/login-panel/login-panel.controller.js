@@ -9,13 +9,33 @@
 
     /* @ngInject */
     function LoginCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, AUTH_EVENTS, CommonService, Session, AuthService, Login) {
-        
+
         // TODO check if user is Login
         if ($window.sessionStorage.token != undefined && $window.sessionStorage.token != '') {
             $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
         }
 
+
         $scope.user = {};
+
+
+
+
+        function Alert() {
+            this.add = function(msg) {
+                $scope.errMsg = true;
+                $scope.alerts.push();
+            }
+        }
+        $scope.alerts = [];
+        $scope.closeAlert = function(index) {
+            $scope.alerts.splice(index, 1);
+            $scope.errMsg = "";
+        };
+        $scope.addAlert = function(msg) {
+
+        };
+
         $scope.login = function(user) {
 
             Login.login(user, function(res) {
@@ -24,14 +44,14 @@
                     $rootScope.currentUser = user.username;
                     $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                 } else {
-                    alert('Login failed. Please try again.');
+                    $scope.addAlert({ type: "danger", msg: 'Login failed. Please try again.' });
                 }
             }, function(res) {
-                alert('Invalid username or password. Please login again.');
+                $scope.addAlert({ type: "danger", msg: 'Invalid username or password. Please login again.' });
             });
 
             console.log(user);
-        }
+        };
     }
 
 })();

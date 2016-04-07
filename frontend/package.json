@@ -11,6 +11,7 @@
     "angular-mocks": "^1.5.3",
     "angular-resource": "^1.5.3",
     "angular-ui-bootstrap": "^1.2.4",
+    "angular-ui-layout": "^1.4.2",
     "angular-ui-router": "^0.2.18",
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.5.0",
