@@ -9,30 +9,15 @@
 
     /* @ngInject */
     function CoListCtrl($scope, $rootScope, clientOrder, marketOrder) {
-        
-        $scope.toggleMO = function(coId) {
 
-            // $(this).addClass("al")
-            // $rootScope.coId = moid;
-            $rootScope.selectedClientOrderId = coId;
-            marketOrder.query({ coId: coId }, function(res) {
-                // $rootScope.moList = res;
-                console.log(res)
-            });
-
-            console.log(this)
-            $('.mo-list').animate({
-                height: 'toggle'
-            }, 350);
+        $scope.selectCo = function(coId) {
+             $rootScope.selectedClientOrderId = $rootScope.selectedClientOrderId == coId ? "" : coId;
         }
 
+        // init
         clientOrder.query({}, function(res) {
             $scope.clientOrderItems = res;
         });
-        // $scope.clientOrderItems = []; 
-        // for (var i = 0; i < 30; i++) {
-        //     $scope.clientOrderItems[i] = i;
-        // }
 
     }
 

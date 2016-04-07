@@ -17,9 +17,11 @@
             // get the id of the new resource to populate the Location field
             // var gameid = game.gameid;
 
-            console.log('post login')
-            return [200, { token: '23fefe23' }, {}];
-            // return [200, game, { Location: '/games/' + gameid }];
+            if (JSON.parse(data).username == 'qq') {
+                return [200, { token: '23fefe23' }, {}];
+            } else {
+                return [401, { "code": 401, "reason": "Invalid username or password" }, {}];
+            }
         });
 
 
@@ -75,7 +77,7 @@
 
     mocks.service('coModel', function coModel() {
         this.data = [{
-            "id": "03182016021500000001",
+            "id": "031820160212500000001",
             "brokerId": "0000000010",
             "uuId": "_DDD",
             "ric": "DDD",
@@ -90,24 +92,24 @@
             "bookedOn": 1458281700000,
             "tradedOn": 1458281700000,
             "status": "Filled"
-        },{
-            "id": "03182016021500000001",
-            "brokerId": "0000000010",
-            "uuId": "_DDD",
-            "ric": "DDD",
-            "name": "3D Systems Corporation",
-            "shares": 500,
-            "amount": 10000,
-            "type": "Buy",
-            "strategy": "VWAP",
-            "fills": 100,
-            "totalShares": 5000,
-            "totalAmount": 235000,
-            "bookedOn": 1458281700000,
-            "tradedOn": 1458281700000,
-            "status": "Processing"
         }, {
-                "id": "03182016021500000001",
+                "id": "03182016021502130000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Processing"
+            }, {
+                "id": "031822221500000001",
                 "brokerId": "0000000010",
                 "uuId": "_DDD",
                 "ric": "DDD",

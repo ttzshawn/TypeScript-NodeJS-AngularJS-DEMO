@@ -18,23 +18,21 @@
 
         $scope.user = {};
 
-
-
-
-        function Alert() {
-            this.add = function(msg) {
-                $scope.errMsg = true;
-                $scope.alerts.push();
+        // $scope.alerts = []
+        $scope.Alerts = {
+            isShow: false,
+            alerts: [],
+            add: function(msg) {
+                this.isShow = true;
+                this.alerts = [];
+                this.alerts.push(msg);
+            },
+            close: function(index) {
+                this.isShow = false;
+                this.alerts.splice(index, 1);
             }
-        }
-        $scope.alerts = [];
-        $scope.closeAlert = function(index) {
-            $scope.alerts.splice(index, 1);
-            $scope.errMsg = "";
         };
-        $scope.addAlert = function(msg) {
 
-        };
 
         $scope.login = function(user) {
 
@@ -43,11 +41,13 @@
                     $window.sessionStorage.token = res.token;
                     $rootScope.currentUser = user.username;
                     $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+                    $scope.Alerts.close();
                 } else {
-                    $scope.addAlert({ type: "danger", msg: 'Login failed. Please try again.' });
+                    $scope.Alerts.add({ type: "danger", msg: 'Login failed. Please try again.' });
                 }
             }, function(res) {
-                $scope.addAlert({ type: "danger", msg: 'Invalid username or password. Please login again.' });
+                console.log(res)
+                $scope.Alerts.add({ type: "danger", msg: res.data.reason });
             });
 
             console.log(user);

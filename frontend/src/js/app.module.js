@@ -11,6 +11,7 @@
     angular.module('app.core', [
         'ui.router',
         'ui.bootstrap',
+        'ui.layout',
         'ngResource',
         'ngCookies',
         'ngAnimate'

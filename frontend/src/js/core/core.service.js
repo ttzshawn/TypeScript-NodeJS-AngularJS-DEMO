@@ -20,7 +20,7 @@ var commonTest = true;
 
     Session.$inject = ['$cookies', '$window'];
     AuthInterceptor.$inject = ['$rootScope', '$q', '$window', 'AUTH_EVENTS'];
-    AuthService.$inject = ['$http', '$rootScope', 'AUTH_EVENTS', 'Session', 'CommonService'];
+    AuthService.$inject = ['$http', '$rootScope', 'AUTH_EVENTS', '$window', 'CommonService'];
     CommonService.$inject = ['$http', 'Session'];
     registerService.$inject = ['$http', '$rootScope', 'CommonService'];
     userService.$inject = ['$http', '$rootScope', 'Session', 'CommonService'];
@@ -176,7 +176,7 @@ var commonTest = true;
     }
 
 
-    function AuthService($http, $rootScope, AUTH_EVENTS, Session, CommonService) {
+    function AuthService($http, $rootScope, AUTH_EVENTS, $window, CommonService) {
 
         var authService = {};
 
@@ -190,8 +190,8 @@ var commonTest = true;
 
         // is session avalid
         authService.isAuthenticated = function() {
-            console.log('isAuthenticated: ' + !!Session.get('USERID'));
-            return !!Session.get('USERID');
+            console.log('isAuthenticated: ' + !!$window.sessionStorage.token);
+            return !!$window.sessionStorage.token;
         };
 
         return authService;
