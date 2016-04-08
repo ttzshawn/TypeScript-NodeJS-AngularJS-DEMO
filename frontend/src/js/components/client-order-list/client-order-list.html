@@ -4,12 +4,12 @@
     }
     
     .selectedStyle {
-        background: lightyellow;
+        background: #fffacd;
     }
 </style>
 <div class="row" ng-controller="CoListCtrl">
     <div class="col-lg-12" style="height:90%;width:95%;position:absolute;">
-        <ui-layout>
+        <div ui-layout="{disableToggle: 'true'}">
             <div ui-layout-container>
                 <rd-widget style="height:500px;">
                     <rd-widget-header icon="fa-tasks" title="Client Orders">
@@ -81,14 +81,16 @@
 
             </div>
             <div ui-layout-container ng-if="selectedClientOrderId">
-                <div ui-layout="{flow: 'column'}">
-                    <div ui-layout-container></div>
+                <div ui-layout="{flow: 'column', disableToggle: 'true'}">
+                    <div ui-layout-container>
+                        <co-pie></co-pie>
+                    </div>
                     <div ui-layout-container>
                         <market-order-list></market-order-list>
                     </div>
                 </div>
             </div>
-        </ui-layout>
+        </div>
 
 
     </div>

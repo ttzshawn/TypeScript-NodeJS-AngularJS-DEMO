@@ -91,9 +91,9 @@
             "totalAmount": 235000,
             "bookedOn": 1458281700000,
             "tradedOn": 1458281700000,
-            "status": "Filled"
+            "status": "Done"
         }, {
-                "id": "03182016021502130000001",
+                "id": "0318201602871502130000001",
                 "brokerId": "0000000010",
                 "uuId": "_DDD",
                 "ric": "DDD",
@@ -109,7 +109,7 @@
                 "tradedOn": 1458281700000,
                 "status": "Processing"
             }, {
-                "id": "031822221500000001",
+                "id": "0318222215000000001",
                 "brokerId": "0000000010",
                 "uuId": "_DDD",
                 "ric": "DDD",
@@ -123,7 +123,151 @@
                 "totalAmount": 235000,
                 "bookedOn": 1458281700000,
                 "tradedOn": 1458281700000,
-                "status": "Filled"
+                "status": "Done"
+            }, {
+                "id": "0318222215000900001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222215000800001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222271500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222261500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318252221500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222421500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318232221500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222221500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
+            }, {
+                "id": "0318222211500000001",
+                "brokerId": "0000000010",
+                "uuId": "_DDD",
+                "ric": "DDD",
+                "name": "3D Systems Corporation",
+                "shares": 500,
+                "amount": 10000,
+                "type": "Buy",
+                "strategy": "VWAP",
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "bookedOn": 1458281700000,
+                "tradedOn": 1458281700000,
+                "status": "Done"
             }];
 
         this.getData = function() {
@@ -230,7 +374,7 @@
             "fills": 100,
             "totalShares": 5000,
             "totalAmount": 235000,
-            "status": "Filled"
+            "status": "Done"
         }, {
                 "market_order_id": "0318201",
                 "client_order_id": "03182016021500000001",
@@ -240,7 +384,87 @@
                 "fills": 100,
                 "totalShares": 5000,
                 "totalAmount": 235000,
-                "status": "Filled"
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
+            }, {
+                "market_order_id": "0318201",
+                "client_order_id": "03182016021500000001",
+                "exchange": "NYSE",
+                "shares": 500,
+                "amount": 10000,
+                "fills": 100,
+                "totalShares": 5000,
+                "totalAmount": 235000,
+                "status": "Done"
             }];
 
         this.getData = function() {

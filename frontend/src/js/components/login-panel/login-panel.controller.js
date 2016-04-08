@@ -46,8 +46,7 @@
                     $scope.Alerts.add({ type: "danger", msg: 'Login failed. Please try again.' });
                 }
             }, function(res) {
-                console.log(res)
-                $scope.Alerts.add({ type: "danger", msg: res.data.reason });
+                $scope.Alerts.add({ type: "danger", msg: res.data.reason || "Login failed." });
             });
 
             console.log(user);
