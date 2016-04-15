@@ -4,30 +4,27 @@
  */
 
 // For test
-var commonTest = true;
+const commonTest = true;
 
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.core')
         .factory('AuthInterceptor', AuthInterceptor)
-        .factory('Session', Session)
         .factory('CommonService', CommonService)
         .factory('AuthService', AuthService)
         .factory('registerService', registerService)
         .factory('userService', userService);
 
-    Session.$inject = ['$cookies', '$window'];
     AuthInterceptor.$inject = ['$rootScope', '$q', '$window', 'AUTH_EVENTS'];
     AuthService.$inject = ['$http', '$rootScope', 'AUTH_EVENTS', '$window', 'CommonService'];
-    CommonService.$inject = ['$http', 'Session'];
+    CommonService.$inject = ['$http'];
     registerService.$inject = ['$http', '$rootScope', 'CommonService'];
-    userService.$inject = ['$http', '$rootScope', 'Session', 'CommonService'];
+    userService.$inject = ['$http', '$rootScope', 'CommonService'];
 
 
+    // Interceptor
     function AuthInterceptor($rootScope, $q, $window, AUTH_EVENTS) {
-        var service = {
+        const service = {
             request: requestHandler,
             response: responseHandler,
             responseError: responseErrorHandler
@@ -36,8 +33,8 @@ var commonTest = true;
 
         function requestHandler(config) {
             config.headers = config.headers || {};
-            if ($window.sessionStorage.token) {
-                config.headers['X-AuthToken'] = $window.sessionStorage.token;
+            if ($window.localStorage.token) {
+                config.headers['X-AuthToken'] = $window.localStorage.token;
             }
             return config;
         }
@@ -65,84 +62,94 @@ var commonTest = true;
         }
     }
 
+    function AuthService($http, $rootScope, AUTH_EVENTS, $window, CommonService) {
 
-    function Session($cookies, $window) {
-        var aName = "USERID";
-        var bName = "SID";
+        const service = {};
 
-        this.create = function(sessionId, userId) {
-            $cookies.put(aName, userId);
-            $cookies.put(bName, sessionId);
+        let storageTokenTitle = 'token',
+            storageUserTitle = 'username';
+
+        // forn user infomation (include token)
+        service.createUserInfo = (username, token) => {
+            $window.localStorage.setItem(storageUserTitle, username);
+            $window.localStorage.setItem(storageTokenTitle, token);
         }
-        // this.create = function(sessionId, userId) {
-        //     document.cookie = aName + '=' + userId;
-        //     document.cookie = bName + '=' + sessionId;
-        //     this.id = sessionId;
-        //     this.userId = userId;
-        // };
+        service.destroy = () => {
+            $window.localStorage.removeItem(storageUserTitle);
+            $window.localStorage.removeItem(storageTokenTitle);
+        }
 
-        this.get = function(name) {
-            return $cookies.getObject(name);
-            // if (document.cookie.length > 0) {
-            //     var start = document.cookie.indexOf(name + "=");
-            //     if (start != -1) {
-            //         start = start + name.length + 1;
-            //         var end = document.cookie.indexOf(";", start);
-            //         if (end == -1) end = document.cookie.length;
-            //         return unescape(document.cookie.substring(start, end));
-            //     }
-            // }
-            // return "";
+        // only for Token
+        service.createToken = (token) => {
+            $window.localStorage.setItem(storageTokenTitle, token);
         };
-        this.getUserName = function() {
-            return this.get(aName);
+
+        service.getToken = () => $window.localStorage.getItem(storageTokenTitle);
+
+        service.removeToken = () => {
+            $window.localStorage.removeItem(storageTokenTitle);
+        }
+
+        // only for username
+        service.getUsername = () => {
+            $window.localStorage.getItem(storageUserTitle)
         };
-        this.getSessionId = function() {
-            return this.get(bName);
+
+        service.login = user => CommonService.post("login", user);
+
+        service.logout = () => CommonService.post("logout");
+
+        // is session avalid
+        service.isAuthenticated = () => {
+            console.log(`isAuthenticated: ${!!$window.localStorage.token}`);
+            return !!$window.localStorage.token;
         };
-        this.getObj = function() {
-            return {
-                'accountname': this.get(aName),
-                'sessionid': this.get(bName)
-            }
-        };
-        this.destroy = function() {
-            $window.sessionStorage.removeItem('token');
-            // document.cookie = aName + '=';
-            // document.cookie = bName + '=';
-            // this.id = null;
-            // this.userId = null;
-        };
-        return this;
+
+        return service;
+    }
+
+
+    function registerService($http, $rootScope, CommonService) {
+        const service = {};
+
+        service.register = user => CommonService.post("register", user);
+
+        return service;
+    }
+
+    function userService($http, $rootScope, CommonService) {
+        const service = {};
+
+        return service;
     }
 
 
     // Global Services
-    function CommonService($http, Session) {
+    function CommonService($http) {
         // Set Content-Type to form-data which back-end can accept
         // $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
-        var urlBackEnd = 'http://lofewfcalhost:8080/ws/';
+        const urlBackEnd = 'http://lofewfcalhost:8080/ws/';
         // var urlBackEnd = 'http://10.22.16.124:8088/ws/marketorder/getByClientOrderId/';
-        var urlMiddleEnd = 'https://ExampleURL.92/';
+        const urlMiddleEnd = 'https://ExampleURL.92/';
 
         // requests status handle
-        this.isReqSuccess = function(res) {
+        this.isReqSuccess = res => {
             console.log(res);
             return res.data.errCode == 0 ? true : false;
         };
 
         // handle Http error
-        this.handleHttpErr = function(res) {
+        this.handleHttpErr = res => {
             console.log('Req Error', res);
         };
 
         // handle response error (base on API)
-        this.handleResErr = function(res) {
+        this.handleResErr = res => {
             console.log(res);
             if (res.data.errDesc == undefined) {
                 console.log('Error without discription');
-                console.log('msg: ' + res.errDesc);
+                console.log(`msg: ${res.errDesc}`);
             } else {
                 alert(res.data.errDesc);
                 console.log(res.data);
@@ -150,25 +157,17 @@ var commonTest = true;
         };
 
         // post single command to back-end server
-        this.post = function(command, data) {
-            // Request parameters structure
-            // var data111 = $.extend({
-            //     "command": command
-            // }, Session.getObj(), data);
-
-            // console.log(angular.toJson(data));
-            return commonTest ? $http({
-                url: 'test-data/ws/' + command,
-                method: 'GET'
-            }) : $http({
-                url: urlBackEnd + command,
-                method: 'POST',
-                data: data
-            })
-        };
+        this.post = (command, data) => commonTest ? $http({
+            url: `test-data/ws/${command}`,
+            method: 'GET'
+        }) : $http({
+            url: urlBackEnd + command,
+            method: 'POST',
+            data
+        });
 
         // post multi commands to server
-        this.postMulti = function() {
+        this.postMulti = () => {
 
         };
 
@@ -176,42 +175,5 @@ var commonTest = true;
     }
 
 
-    function AuthService($http, $rootScope, AUTH_EVENTS, $window, CommonService) {
-
-        var authService = {};
-
-        authService.login = function(user) {
-            return CommonService.post("login", user);
-        };
-
-        authService.logout = function() {
-            return CommonService.post("logout");
-        };
-
-        // is session avalid
-        authService.isAuthenticated = function() {
-            console.log('isAuthenticated: ' + !!$window.sessionStorage.token);
-            return !!$window.sessionStorage.token;
-        };
-
-        return authService;
-    }
-
-
-    function registerService($http, $rootScope, CommonService) {
-        var service = {};
-
-        service.register = function(user) {
-            return CommonService.post("register", user);
-        };
-
-        return service;
-    }
-
-    function userService($http, $rootScope, Session, CommonService) {
-        var service = {};
-
-        return service;
-    }
 
 })();

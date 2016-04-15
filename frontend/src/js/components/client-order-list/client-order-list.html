@@ -56,7 +56,6 @@
                                         <td>{{item.bookedOn}}</td>
                                         <td>{{item.tradeOn}}</td>
                                         <td>{{item.status}}</td>
-
                                         <td>
                                             <button class="btn btn-xs btn-danger" ng-if="item.status=='Processing'">CANCEL</button>
                                         </td>
@@ -78,12 +77,13 @@
                         <div class="clearfix"></div>
                     </rd-widget-footer>
                 </rd-widget>
-
             </div>
+
             <div ui-layout-container ng-if="selectedClientOrderId">
+                <div style="float:right;margin-right: 20px;"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
                 <div ui-layout="{flow: 'column', disableToggle: 'true'}">
-                    <div ui-layout-container>
-                        <co-pie></co-pie>
+                    <div ui-layout-container size="500px" min-size="500px" max-size="600px">
+                        <client-order-pie></client-order-pie>
                     </div>
                     <div ui-layout-container>
                         <market-order-list></market-order-list>
@@ -91,7 +91,5 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>

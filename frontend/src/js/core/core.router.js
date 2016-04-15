@@ -2,19 +2,16 @@
  * @author Shawn
  * @desc router of app.core
  */
-(function() {
-    'use strict';
-
+(() => {
     angular.module('app.core')
 
-        .config(function($stateProvider, $httpProvider, $urlRouterProvider, $locationProvider) {
+        .config(
+        ($stateProvider, $httpProvider, $urlRouterProvider, $locationProvider) => {
 
             // Interceptor of Requests
             $httpProvider.interceptors.push([
                 '$injector',
-                function($injector) {
-                    return $injector.get('AuthInterceptor');
-                }
+                $injector => $injector.get('AuthInterceptor')
             ]);
 
             $locationProvider.html5Mode({
@@ -30,20 +27,20 @@
             $stateProvider
 
                 // main page
-                .state('home', {
+                .state('dashboard', {
                     url: '/',
                     templateUrl: 'html/dashboard.html'
                 })
 
-                .state("home.dash1", {
-                    url: "dash1",
-                    templateUrl: "html/rdash/dashboard.html"
-                }).state("home.order", {
+                .state("dashboard.order", {
                     url: "order",
                     templateUrl: "js/components/client-order-list/client-order-list.html"
-                }).state("home.dash2", {
-                    url: "dash2",
-                    templateUrl: "html/rdash/tables.html"
+                }).state("dashboard.addClientOrder", {
+                    url: "orderadd",
+                    templateUrl: "js/components/client-order-add/client-order-add.html"
+                }).state("dashboard.demo", {
+                    url: "demo",
+                    templateUrl: "html/demo.html"
                 })
 
                 .state('login', {
@@ -69,5 +66,6 @@
                     templateUrl: 'html/test-angular-ui-bootstrap.html',
                     controller: 'testCtrl'
                 })
-        });
+        }
+        );
 })();

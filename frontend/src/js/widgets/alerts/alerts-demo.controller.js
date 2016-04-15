@@ -1,5 +1,4 @@
-(function() {
-    'use strict';
+(() => {
     angular.module('app.widgets')
         .controller('AlertsCtrl', AlertsCtrl);
 
@@ -13,13 +12,13 @@
                 msg: 'Found a bug? Create an issue with as many details as you can.'
             }];
 
-        $scope.addAlert = function() {
+        $scope.addAlert = () => {
             $scope.alerts.push({
                 msg: 'Another alert!'
             });
         };
 
-        $scope.closeAlert = function(index) {
+        $scope.closeAlert = index => {
             $scope.alerts.splice(index, 1);
         };
     }

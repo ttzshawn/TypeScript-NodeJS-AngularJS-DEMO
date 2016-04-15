@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .controller('CoListCtrl', CoListCtrl);
@@ -10,15 +8,14 @@
     /* @ngInject */
     function CoListCtrl($scope, $rootScope, clientOrder, marketOrder) {
 
-        $scope.selectCo = function(coId) {
+        $scope.selectCo = coId => {
              $rootScope.selectedClientOrderId = $rootScope.selectedClientOrderId == coId ? "" : coId;
         }
 
         // init
-        clientOrder.query({}, function(res) {
+        clientOrder.query({}, res => {
             $scope.clientOrderItems = res;
         });
 
     }
-
 })();

@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular.module('app.layout')
         // dashboard Sidebar
         .controller("MasterCtrl", MasterCtrl);
@@ -12,11 +10,9 @@
         /**
          * Sidebar Toggle & Cookies Control
          */
-        var mobileView = 992;
-        $scope.getWidth = function() {
-            return window.innerWidth;
-        };
-        $scope.$watch($scope.getWidth, function(newValue, oldValue) {
+        const mobileView = 992;
+        $scope.getWidth = () => window.innerWidth;
+        $scope.$watch($scope.getWidth, (newValue, oldValue) => {
             if (newValue >= mobileView) {
                 if (angular.isDefined($cookies.get('toggle'))) {
                     $scope.toggle = !$cookies.get('toggle') ? true : false;
@@ -27,14 +23,12 @@
                 $scope.toggle = true;
             }
         });
-        $scope.toggleSidebar = function() {
+        $scope.toggleSidebar = () => {
             $scope.toggle = !$scope.toggle;
             $cookies.put('toggle', $scope.toggle);
         };
-        window.onresize = function() {
+        window.onresize = () => {
             $scope.$apply();
         };
     }
-
-
 })();

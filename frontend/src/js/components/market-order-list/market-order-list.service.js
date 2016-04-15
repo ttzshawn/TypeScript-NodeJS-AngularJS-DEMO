@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .factory('marketOrder', marketOrder);
@@ -11,5 +9,4 @@
     function marketOrder($resource) {
         return $resource('ws/marketorder/list/:coId', { coId: '@coId' });
     }
-
 })();

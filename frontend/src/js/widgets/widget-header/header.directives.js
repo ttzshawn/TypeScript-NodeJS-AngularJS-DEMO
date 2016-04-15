@@ -1,13 +1,11 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.widgets')
         .directive("rdWidgetHeader", rdWidgetTitle);
 
 
     function rdWidgetTitle() {
-        var e = {
+        const e = {
             requires: "^rdWidget",
             scope: {
                 title: "@",
@@ -19,5 +17,4 @@
         };
         return e
     }
-
 })();

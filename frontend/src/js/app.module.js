@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular.module('mainApp', [
         'app.core',
         'app.layout',
@@ -25,5 +23,10 @@
         'app.core',
         'app.widgets'
     ]);
+
+    angular.module('app.layout', [
+        'app.core'
+    ]);
+
 
 })();

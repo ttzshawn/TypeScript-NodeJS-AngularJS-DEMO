@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.widgets')
 
@@ -16,13 +14,12 @@
             item: $scope.items[0]
         };
 
-        $scope.ok = function() {
+        $scope.ok = () => {
             $uibModalInstance.close($scope.selected.item);
         };
 
-        $scope.cancel = function() {
+        $scope.cancel = () => {
             $uibModalInstance.dismiss('cancel');
         };
     }
-
 })();

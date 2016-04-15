@@ -1,13 +1,10 @@
-(function() {
-    'use strict';
-
-
+(() => {
     angular
         .module('app.widgets')
         .directive('rdWidget', rdWidget);
 
     function rdWidget() {
-        var directive = {
+        const directive = {
             transclude: true,
             template: '<div class="widget" ng-transclude></div>',
             restrict: 'EA'
@@ -17,6 +14,5 @@
         function link(scope, element, attrs) {
             /* */
         }
-    };
-
+    }
 })();

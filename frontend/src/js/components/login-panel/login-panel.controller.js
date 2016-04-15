@@ -1,17 +1,26 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService', 'Login'];
+    LoginCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', 'AUTH_EVENTS', 'CommonService', 'AuthService', 'Login'];
 
     /* @ngInject */
-    function LoginCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, AUTH_EVENTS, CommonService, Session, AuthService, Login) {
+    function LoginCtrl(
+        $scope,
+        $rootScope,
+        $location,
+        $http,
+        $window,
+        $cookies,
+        $state,
+        AUTH_EVENTS,
+        CommonService,
+        AuthService,
+        Login) {
 
         // TODO check if user is Login
-        if ($window.sessionStorage.token != undefined && $window.sessionStorage.token != '') {
+        if (AuthService.isAuthenticated()) {
             $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
         }
 
@@ -22,35 +31,34 @@
         $scope.Alerts = {
             isShow: false,
             alerts: [],
-            add: function(msg) {
+            add(msg) {
                 this.isShow = true;
                 this.alerts = [];
                 this.alerts.push(msg);
             },
-            close: function(index) {
+            close(index) {
                 this.isShow = false;
                 this.alerts.splice(index, 1);
             }
         };
 
 
-        $scope.login = function(user) {
+        $scope.login = user => {
 
-            Login.login(user, function(res) {
+            Login.login(user, res => {
                 if (res.token != undefined && res.token != '') {
-                    $window.sessionStorage.token = res.token;
+                    AuthService.createUserInfo(user.username, res.token);
                     $rootScope.currentUser = user.username;
                     $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                     $scope.Alerts.close();
                 } else {
                     $scope.Alerts.add({ type: "danger", msg: 'Login failed. Please try again.' });
                 }
-            }, function(res) {
+            }, res => {
                 $scope.Alerts.add({ type: "danger", msg: res.data.reason || "Login failed." });
             });
 
             console.log(user);
         };
     }
-
 })();

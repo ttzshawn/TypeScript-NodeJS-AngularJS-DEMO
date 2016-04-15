@@ -1,15 +1,13 @@
-(function() {
-    'use strict';
-
-    var mocks = angular.module('mocks', ['ngMockE2E']);
+(() => {
+    const mocks = angular.module('mocks', ['ngMockE2E']);
 
     // Inject mocks module into mainApp (Only dev environment)
     angular.module('mainApp').requires.push('mocks');
 
-    mocks.run(function($httpBackend, coModel, moModel) {
+    mocks.run(($httpBackend, coModel, moModel) => {
 
         // this is the creation(201) of a new resource
-        $httpBackend.whenPOST('ws/login').respond(function(method, url, data) {
+        $httpBackend.whenPOST('ws/login').respond((method, url, data) => {
             // var params = angular.fromJson(data);
 
             // var game = coModel.addOne(params);
@@ -27,19 +25,19 @@
 
         $httpBackend.whenGET('ws/clientorder/list').respond(coModel.getData());
 
-        $httpBackend.whenGET('ws/marketorder').respond(function(method, url, data) {
-            var games = coModel.findAll();
+        $httpBackend.whenGET('ws/marketorder').respond((method, url, data) => {
+            const games = coModel.findAll();
             return [200, games, {}];
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenGET(/\/marketorder\/list\/\d+/).respond(function(method, url, data) {
+        $httpBackend.whenGET(/\/marketorder\/list\/\d+/).respond((method, url, data) => {
             // var params = angular.fromJson(data);
 
             // parse the matching URL to pull out the id (/games/:id)
-            var moid = url.split('/')[2];
+            const moid = url.split('/')[2];
 
-            var serverData = moModel.getData();
+            const serverData = moModel.getData();
 
             return [200, serverData, {}];
 
@@ -49,21 +47,21 @@
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenPOST(/\/marketorder\/\d+/).respond(function(method, url, data) {
-            var params = angular.fromJson(data);
+        $httpBackend.whenPOST(/\/marketorder\/\d+/).respond((method, url, data) => {
+            const params = angular.fromJson(data);
 
             // parse the matching URL to pull out the id (/games/:id)
-            var gameid = url.split('/')[2];
+            const gameid = url.split('/')[2];
 
-            var game = coModel.updateOne(gameid, params);
+            const game = coModel.updateOne(gameid, params);
 
-            return [400, game, { Location: '/games/' + gameid }];
+            return [400, game, { Location: `/games/${gameid}` }];
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
-        $httpBackend.whenDELETE(/\/marketorder\/\d+/).respond(function(method, url, data) {
+        $httpBackend.whenDELETE(/\/marketorder\/\d+/).respond((method, url, data) => {
             // parse the matching URL to pull out the id (/games/:id)
-            var gameid = url.split('/')[2];
+            const gameid = url.split('/')[2];
 
             coModel.deleteOne(gameid);
 
@@ -280,9 +278,7 @@
 
         this.findOne = function(gameid) {
             // find the game that matches that id
-            var list = $.grep(this.getData(), function(element, index) {
-                return (element.gameid == gameid);
-            });
+            const list = $.grep(this.getData(), (element, index) => element.gameid == gameid);
             if (list.length === 0) {
                 return {};
             }
@@ -298,9 +294,9 @@
         // in this simple implementation, value is limited to a single value (no arrays)
         this.findMany = function(options) {
             // find games that match all of the options
-            var list = $.grep(this.getData(), function(element, index) {
-                var matchAll = true;
-                $.each(options, function(optionKey, optionValue) {
+            const list = $.grep(this.getData(), (element, index) => {
+                let matchAll = true;
+                $.each(options, (optionKey, optionValue) => {
                     if (element[optionKey] != optionValue) {
                         matchAll = false;
                         return false;
@@ -314,7 +310,7 @@
         // must compute a new unique id and backfill in
         this.addOne = function(dataItem) {
             // must calculate a unique ID to add the new data
-            var newId = this.newId();
+            const newId = this.newId();
             dataItem.gameid = newId;
             this.data.push(dataItem);
             return dataItem;
@@ -323,18 +319,18 @@
         // return an id to insert a new data item at
         this.newId = function() {
             // find all current ids
-            var currentIds = $.map(this.getData(), function(dataItem) { return dataItem.gameid; });
+            const currentIds = $.map(this.getData(), dataItem => dataItem.gameid);
             // since id is numeric, and we will treat like an autoincrement field, find max
-            var maxId = Math.max.apply(Math, currentIds);
+            const maxId = Math.max.apply(Math, currentIds);
             // increment by one
             return maxId + 1;
         };
 
         this.updateOne = function(gameid, dataItem) {
             // find the game that matches that id
-            var games = this.getData();
-            var match = null;
-            for (var i = 0; i < games.length; i++) {
+            const games = this.getData();
+            let match = null;
+            for (let i = 0; i < games.length; i++) {
                 if (games[i].gameid == gameid) {
                     match = games[i];
                     break;
@@ -349,9 +345,9 @@
 
         this.deleteOne = function(gameid) {
             // find the game that matches that id
-            var games = this.getData();
-            var match = false;
-            for (var i = 0; i < games.length; i++) {
+            const games = this.getData();
+            let match = false;
+            for (let i = 0; i < games.length; i++) {
                 if (games[i].gameid == gameid) {
                     match = true;
                     games.splice(i, 1);
@@ -472,7 +468,4 @@
         };
 
     });
-
-
-
 })();

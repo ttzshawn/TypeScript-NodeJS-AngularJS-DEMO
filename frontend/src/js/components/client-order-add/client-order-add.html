@@ -1,0 +1,27 @@
+<style type="text/css">
+    form.tab-form-demo .tab-pane {
+        margin: 20px 20px;
+    }
+</style>
+<rd-widget>
+    <rd-widget-header icon="fa-tasks" title="New Client Orders">
+        <a href="#">Manage</a>
+    </rd-widget-header>
+    <rd-widget-body classes="medium no-padding">
+        <div ng-controller="clientOrderAddCtrl">
+            <form name="outerForm" class="tab-form-demo">
+                <uib-tabset active="activeForm">
+                    <uib-tab index="1" heading="Buy">
+                        Some Tab Content
+                    </uib-tab>
+                    <uib-tab index="2" heading="Sell">
+                        Some Tab Content
+                    </uib-tab>
+                    <uib-tab index="3" heading="Orders File Upload">
+                        More Tab Content
+                    </uib-tab>
+                </uib-tabset>
+            </form>
+        </div>
+    </rd-widget-body>
+</rd-widget>

@@ -1,5 +1,7 @@
-// Require gulp,compass
+// Front-end building
+
 const gulp = require('gulp'),
+    babel = require('gulp-babel'),
     compass = require('gulp-compass'),
     usemin = require('gulp-usemin'),
     concat = require("gulp-concat"),
@@ -24,7 +26,7 @@ const paths = {
 };
 
 // local web server
-gulp.task('connect', function() {
+gulp.task('connect', () => {
     connect.server({
         root: './src',
         port: 8080
@@ -35,6 +37,9 @@ gulp.task('connect', function() {
 gulp.task('scripts', () => {
     return gulp.src([paths.js, '!./src/js/**/main.min.js'])
         .pipe(sourcemaps.init())
+        // .pipe(babel({
+        //     presets: ['es2015']
+        // }))
         .pipe(concat('main.min.js'))
         // .pipe(minifyJs())
         .pipe(sourcemaps.write())
@@ -62,7 +67,7 @@ gulp.task('watch', () => {
 
 
 // Handle components from index
-gulp.task('build-usemin', function() {
+gulp.task('build-usemin', () => {
     return gulp.src(paths.index)
         .pipe(usemin({
             js: ['concat'],
@@ -76,42 +81,27 @@ gulp.task('build-usemin', function() {
         }))
         .pipe(gulp.dest('../webapp/static/'));
 });
-// gulp.task('build-usemin', function() {
-//     return gulp.src(paths.index)
-//         .pipe(usemin({
-//             js: [minifyJs(), 'concat'],
-//             js1: [minifyJs(), 'concat'],
-//             css: [minifyCss({
-//                 keepSpecialComments: 0
-//             }), 'concat'],
-//             css1: [minifyCss({
-//                 keepSpecialComments: 0
-//             }), 'concat']
-//         }))
-//         .pipe(gulp.dest('../webapp/static/'));
-// });
-gulp.task('build-html', function() {
+gulp.task('build-html', () => {
     return gulp.src([paths.html])
         .pipe(minifyHTML())
         .pipe(gulp.dest('../webapp/static/html'));
 });
-gulp.task('build-htmlTemplates', function() {
+gulp.task('build-htmlTemplates', () => {
     return gulp.src([paths.htmlTemplates])
         .pipe(minifyHTML())
         .pipe(gulp.dest('../webapp/static/js'));
 });
-gulp.task('build-fonts', function() {
+gulp.task('build-fonts', () => {
     return gulp.src([paths.fontsAwesome, paths.fontsBootstrap])
         .pipe(gulp.dest('../webapp/static/fonts'));
 });
-gulp.task('build-img', function() {
+gulp.task('build-img', () => {
     return gulp.src(paths.img)
         .pipe(gulp.dest('../webapp/static/img'));
 })
 
 
-
 // Default Task
-
-gulp.task('default', ['scripts','compass', 'watch']);
+gulp.task('default', ['scripts', 'compass', 'watch']);
+gulp.task('server', ['connect']);
 gulp.task('build', ['build-usemin', 'build-html', 'build-htmlTemplates', 'build-fonts', 'build-img']);

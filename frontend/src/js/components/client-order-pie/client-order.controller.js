@@ -1,17 +1,27 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .controller('coPieCtrl', coPieCtrl);
 
-    coPieCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', '$interval', 'AUTH_EVENTS', 'CommonService', 'Session', 'AuthService', 'marketOrder'];
+    coPieCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', '$interval', 'AUTH_EVENTS', 'CommonService', 'AuthService', 'marketOrder'];
 
     /* @ngInject */
-    function coPieCtrl($scope, $rootScope, $location, $http, $window, $cookies, $state, $interval, AUTH_EVENTS, CommonService, Session, AuthService, marketOrder) {
+    function coPieCtrl(
+        $scope,
+        $rootScope,
+        $location,
+        $http,
+        $window,
+        $cookies,
+        $state,
+        $interval,
+        AUTH_EVENTS,
+        CommonService,
+        AuthService,
+        marketOrder) {
 
 
-        var option = {
+        const option = {
             title: {
                 text: 'Market Order Pie',
                 subtext: '',
@@ -50,9 +60,8 @@
             ]
         };
 
-        var myChart = echarts.init(document.getElementById('main'));
+        const myChart = echarts.init(document.getElementById('main'));
         myChart.setOption(option);
 
     }
-
 })();

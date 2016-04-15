@@ -1,12 +1,10 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
     .module('app.widgets')
     .directive("rdWidgetBody", rdWidgetBody);
-    
+
     function rdWidgetBody() {
-        var d = {
+        const d = {
             requires: "^rdWidget",
             scope: {
                 loading: "@?",
@@ -18,5 +16,4 @@
         };
         return d
     }
-
 })();

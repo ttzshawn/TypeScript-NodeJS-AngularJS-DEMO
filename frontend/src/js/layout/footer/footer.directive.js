@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .directive('footer', footer);
@@ -10,9 +8,8 @@
             scope: {
                 icon: "@"
             },
-            templateUrl: 'js/components/footer/footer.html',
+            templateUrl: 'js/layout/footer/footer.html',
             restrict: "AE"
         };
     }
-
 })();

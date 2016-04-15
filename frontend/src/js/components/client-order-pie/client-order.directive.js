@@ -1,14 +1,14 @@
 (() => {
     angular
         .module('app.components')
-        .directive('marketOrderList', marketOrderList);
+        .directive('clientOrderPie', clientOrderPie);
 
-    function marketOrderList() {
+    function clientOrderPie() {
         return {
             scope: {
                 icon: "@"
             },
-            templateUrl: 'js/components/market-order-list/market-order-list.html',
+            templateUrl: 'js/components/client-order-pie/client-order-pie.html',
             restrict: "E"
         };
     }

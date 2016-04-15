@@ -1,7 +1,4 @@
-(function() {
-    'use strict';
-
-
+(() => {
     angular
         .module('app.components')
         .directive('loginPanel', loginPanel);
@@ -13,10 +10,9 @@
             restrict: 'E',
             scope: '@',
             templateUrl: 'js/components/login-panel/login-panel.html',
-            link: function(scope) {
+            link(scope) {
                 // scope.name = "hel"
             }
         };
     }
-
 })();

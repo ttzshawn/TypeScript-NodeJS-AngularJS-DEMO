@@ -1,6 +1,4 @@
-(function() {
-    'use strict';
-
+(() => {
     angular
         .module('app.components')
         .factory('Login', Login);
@@ -17,5 +15,4 @@
             }
         });
     }
-
 })();

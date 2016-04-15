@@ -4,13 +4,12 @@
 @import "mixins";
 @import "animate";
 @import "bootstrap.custom";
-
 @import "components/rdash-ui";
 
 /* main */
-
 html,body {
     height: 100%;
+    overflow-y: auto;
 }
 
 .wrapper{min-height: 100%; position: relative; padding-bottom: 60px;}
