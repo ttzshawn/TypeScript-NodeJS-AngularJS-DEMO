@@ -26,7 +26,7 @@
                                         <th>Ric</th>
                                         <th>Name</th>
                                         <th>Share</th>
-                                        <th>Amount (USD$)</th>
+                                        <th>Amount ($)</th>
                                         <th>Type</th>
                                         <th>Strategy</th>
                                         <th>Fills (%)</th>
@@ -37,7 +37,7 @@
                                         <th>Status</th>
                                         <th></th>
                                     </tr>
-                                    <tr ng-click="selectCo(item.id)" ng-class="{selectedStyle:item.id === selectedClientOrderId}" ng-repeat="item in clientOrderItems">
+                                    <tr ng-click="selectClientOrder(item.id)" ng-class="{selectedStyle:item.id === selectedClientOrderId}" ng-repeat="item in clientOrderItems">
                                         <td>{{item.id}}</td>
                                         <!--<td>{{item.brokerId}}</td>-->
                                         <td>{{item.uuId}}</td>
@@ -80,7 +80,7 @@
             </div>
 
             <div ui-layout-container ng-if="selectedClientOrderId">
-                <div style="float:right;margin-right: 20px;"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
+                <div style="float:right;position:absolute;right: 20px;z-index:999;" ng-click="closeMarketOrderList()"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
                 <div ui-layout="{flow: 'column', disableToggle: 'true'}">
                     <div ui-layout-container size="500px" min-size="500px" max-size="600px">
                         <client-order-pie></client-order-pie>

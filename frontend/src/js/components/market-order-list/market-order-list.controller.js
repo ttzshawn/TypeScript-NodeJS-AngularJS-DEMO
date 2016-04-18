@@ -20,16 +20,14 @@
         AuthService,
         marketOrder) {
 
-        // console.log($rootScope.moList)
-        // $scope.moList = [];
-        $interval(() => {
-            if ($rootScope.selectedClientOrderId != '' && $rootScope.selectedClientOrderId != undefined && AuthService.isAuthenticated()) {
-                marketOrder.query({ coId: $rootScope.selectedClientOrderId }, res => {
-                    $scope.moList = res;
-                    console.log(res)
-                });
-            }
-        }, 1000);
+        // $interval(() => {
+        //     if ($rootScope.selectedClientOrderId != '' && $rootScope.selectedClientOrderId != undefined && AuthService.isAuthenticated()) {
+        //         marketOrder.query({ coId: $rootScope.selectedClientOrderId }, res => {
+        //             $scope.marketOrderList = res;
+        //             console.log(res)
+        //         });
+        //     }
+        // }, 1000);
 
     }
 })();

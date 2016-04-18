@@ -8,14 +8,25 @@
     /* @ngInject */
     function CoListCtrl($scope, $rootScope, clientOrder, marketOrder) {
 
-        $scope.selectCo = coId => {
-             $rootScope.selectedClientOrderId = $rootScope.selectedClientOrderId == coId ? "" : coId;
+        $scope.selectedClientOrderId = "";
+
+        $scope.selectClientOrder = id => {
+            if ($scope.selectedClientOrderId == id) {
+                $scope.closeMarketOrderList(id);
+            } else {
+                $scope.selectedClientOrderId = $scope.selectedClientOrderId == id ? "" : id;
+            }
         }
 
+        $scope.closeMarketOrderList = id => {
+            $scope.selectedClientOrderId = "";
+        }
+        
         // init
         clientOrder.query({}, res => {
             $scope.clientOrderItems = res;
         });
 
     }
+
 })();
