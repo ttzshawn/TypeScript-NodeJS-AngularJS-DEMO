@@ -3,29 +3,40 @@
         .module('app.components')
         .controller('CoListCtrl', CoListCtrl);
 
-    CoListCtrl.$inject = ['$scope', '$rootScope', 'clientOrder', 'marketOrder'];
+    CoListCtrl.$inject = ['$scope', '$rootScope', 'clientOrder', 'marketOrder', 'mo'];
 
     /* @ngInject */
-    function CoListCtrl($scope, $rootScope, clientOrder, marketOrder) {
+    function CoListCtrl($scope, $rootScope, clientOrder, marketOrder, mo) {
 
         $scope.selectedClientOrderId = "";
-
-        $scope.selectClientOrder = id => {
-            if ($scope.selectedClientOrderId == id) {
-                $scope.closeMarketOrderList(id);
-            } else {
-                $scope.selectedClientOrderId = $scope.selectedClientOrderId == id ? "" : id;
+        // $scope.marketOrderList = [];
+        $scope.showMarketOrderList = id => {
+            if ($scope.selectedClientOrderId != id) {
+                queryMarketOrderList(id);
             }
         }
 
-        $scope.closeMarketOrderList = id => {
+        $scope.closeMarketOrderList = () => {
+            $scope.close = !$scope.close;
+            console.log($scope.close);
             $scope.selectedClientOrderId = "";
         }
-        
+
         // init
         clientOrder.query({}, res => {
             $scope.clientOrderItems = res;
         });
+
+
+        // $interval(queryMarketOrderList, 1000);
+
+        const queryMarketOrderList = (id) => {
+            marketOrder.query({ coId: id }, res => {
+                mo.set(res);
+                $scope.$broadcast('market-orde-have-been-set');
+                console.log(res)
+            });
+        }
 
     }
 

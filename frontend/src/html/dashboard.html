@@ -1,14 +1,14 @@
-<div ng-controller="MasterCtrl" id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+<div ng-controller="SidebarCtrl" id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <ul class="sidebar">
+        <ul class="sidebar" style="overflow:visible;">
             <li class="sidebar-main">
                 <a ng-click="toggleSidebar()">OMS<span class="menu-icon glyphicon glyphicon-transfer"></span></a>
             </li>
             <li class="sidebar-title"><span>NAVIGATION</span></li>
             <li class="sidebar-list">
-                <a href="#" ui-sref="dashboard.order">Order List <span class="menu-icon fa fa-list-alt"></span></a>
+                <a href="#" ui-sref="dashboard.order">Order List <span class="menu-icon fa fa-list-alt"  tooltip-placement="{{'right'}}" uib-tooltip="Order List" ></span></a>
             </li>
             <li class="sidebar-list">
                 <a href="#" ui-sref="dashboard.addClientOrder">New Orders <span class="menu-icon fa fa-plus"></span></a>

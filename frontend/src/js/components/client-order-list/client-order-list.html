@@ -8,88 +8,95 @@
     }
 </style>
 <div class="row" ng-controller="CoListCtrl">
-    <div class="col-lg-12" style="height:90%;width:95%;position:absolute;">
-        <div ui-layout="{disableToggle: 'true'}">
-            <div ui-layout-container>
-                <rd-widget style="height:500px;">
-                    <rd-widget-header icon="fa-tasks" title="Client Orders">
-                        <!--<a href="#">Manage</a>-->
-                    </rd-widget-header>
-                    <rd-widget-body classes="no-padding">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <tbody>
-                                    <tr>
-                                        <th>Client Order #</th>
-                                        <!--<th>broker ID</th>-->
-                                        <th>UUID</th>
-                                        <th>Ric</th>
-                                        <th>Name</th>
-                                        <th>Share</th>
-                                        <th>Amount ($)</th>
-                                        <th>Type</th>
-                                        <th>Strategy</th>
-                                        <th>Fills (%)</th>
-                                        <th>Total Shares</th>
-                                        <th>Total Amount</th>
-                                        <th>Booked On</th>
-                                        <th>Traded On</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr ng-click="selectClientOrder(item.id)" ng-class="{selectedStyle:item.id === selectedClientOrderId}" ng-repeat="item in clientOrderItems">
-                                        <td>{{item.id}}</td>
-                                        <!--<td>{{item.brokerId}}</td>-->
-                                        <td>{{item.uuId}}</td>
-                                        <td>{{item.ric}}</td>
-                                        <td>{{item.name}}</td>
-                                        <td>{{item.shares}}</td>
-
-                                        <td>{{item.amount}}</td>
-                                        <td>{{item.type}}</td>
-                                        <td>{{item.strategy}}</td>
-                                        <td ng-controller="ProgressDemoCtrl">
-                                            <uib-progressbar class="progress-striped active" value="item.fills" type="{{type}}"><b>{{item.fills}}%</b></uib-progressbar>
-                                        </td>
-                                        <td>{{item.totalShares}}</td>
-                                        <td>{{item.totalAmount}}</td>
-                                        <td>{{item.bookedOn}}</td>
-                                        <td>{{item.tradeOn}}</td>
-                                        <td>{{item.status}}</td>
-                                        <td>
-                                            <button class="btn btn-xs btn-danger" ng-if="item.status=='Processing'">CANCEL</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+    <div class="col-lg-12" style="height:92%;width:96%;position:absolute;margin-bottom:0;">
+        <ui-layout options="{disableToggle: 'true'}">
+            <ui-layout-container>
+                <div class="well">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-2">
+                            <h4>Client Order List</h4>
                         </div>
-                    </rd-widget-body>
-                    <rd-widget-footer>
-                        <ul class="pagination pagination-sm pull-right">
-                            <li><a href="#">&laquo;</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&raquo;</a></li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </rd-widget-footer>
-                </rd-widget>
-            </div>
+                        <div class="col-md-5">
+                            <h4></h4>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                <input type="text" ng-model="searchText">
+                            </div>
+                        </div>
+                    </div>
 
-            <div ui-layout-container ng-if="selectedClientOrderId">
-                <div style="float:right;position:absolute;right: 20px;z-index:999;" ng-click="closeMarketOrderList()"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
-                <div ui-layout="{flow: 'column', disableToggle: 'true'}">
-                    <div ui-layout-container size="500px" min-size="500px" max-size="600px">
-                        <client-order-pie></client-order-pie>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Client Order #</th>
+                                    <!--<th>broker ID</th>-->
+                                    <th>UUID</th>
+                                    <th>Ric</th>
+                                    <th>Name</th>
+                                    <th>Share</th>
+                                    <th>Amount ($)</th>
+                                    <th>Type</th>
+                                    <th>Strategy</th>
+                                    <th>Fills (%)</th>
+                                    <th>Total Shares</th>
+                                    <th>Total Amount</th>
+                                    <th>Booked On</th>
+                                    <th>Traded On</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                                <tr ng-click="showMarketOrderList(item.id)" ng-class="{selectedStyle:item.id === selectedClientOrderId}" ng-repeat="item in clientOrderItems">
+                                    <td>{{item.id}}</td>
+                                    <!--<td>{{item.brokerId}}</td>-->
+                                    <td>{{item.uuId}}</td>
+                                    <td>{{item.ric}}</td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.shares}}</td>
+
+                                    <td>{{item.amount}}</td>
+                                    <td>{{item.type}}</td>
+                                    <td>{{item.strategy}}</td>
+                                    <td ng-controller="ProgressDemoCtrl">
+                                        <uib-progressbar class="progress-striped active" value="item.fills" type="{{type}}"><b>{{item.fills}}%</b></uib-progressbar>
+                                    </td>
+                                    <td>{{item.totalShares}}</td>
+                                    <td>{{item.totalAmount}}</td>
+                                    <td>{{item.bookedOn}}</td>
+                                    <td>{{item.tradeOn}}</td>
+                                    <td>{{item.status}}</td>
+                                    <td>
+                                        <button class="btn btn-xs btn-danger" ng-if="item.status=='Processing'">CANCEL</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div ui-layout-container>
-                        <market-order-list></market-order-list>
-                    </div>
+                    <ul class="pagination pagination-sm pull-right">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-        </div>
+
+            </ui-layout-container>
+
+            <ui-layout-container>
+                <div style="float:right;position:absolute;right: 20px;z-index:999;" ng-click="closeMarketOrderList()"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
+                <ui-layout options="{flow: 'column', disableToggle: 'true'}">
+                    <ui-layout-container size="500px" min-size="500px" max-size="600px">
+                        <client-order-pie></client-order-pie>
+                    </ui-layout-container>
+                    <ui-layout-container>
+                        <market-order-list></market-order-list>
+                    </ui-layout-container>
+                </ui-layout>
+            </ui-layout-container>
+        </ui-layout>
     </div>
 </div>

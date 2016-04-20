@@ -3,7 +3,7 @@
         .module('app.components')
         .controller('MoListCtrl', MoListCtrl);
 
-    MoListCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', '$interval', 'AUTH_EVENTS', 'CommonService', 'AuthService', 'marketOrder'];
+    MoListCtrl.$inject = ['$scope', '$rootScope', '$location', '$http', '$window', '$cookies', '$state', '$interval', 'AUTH_EVENTS', 'CommonService', 'AuthService', 'marketOrder', 'mo'];
 
     /* @ngInject */
     function MoListCtrl(
@@ -18,16 +18,14 @@
         AUTH_EVENTS,
         CommonService,
         AuthService,
-        marketOrder) {
+        marketOrder,
+        mo) {
 
-        // $interval(() => {
-        //     if ($rootScope.selectedClientOrderId != '' && $rootScope.selectedClientOrderId != undefined && AuthService.isAuthenticated()) {
-        //         marketOrder.query({ coId: $rootScope.selectedClientOrderId }, res => {
-        //             $scope.marketOrderList = res;
-        //             console.log(res)
-        //         });
-        //     }
-        // }, 1000);
-
+        $scope.$on('market-orde-have-been-set', function (data) {
+            $scope.marketOrderList = mo.get();
+        });
+        $scope.$on('market-orde-have-been-updated', function (data) {
+            $scope.marketOrderList = mo.get();
+        });
     }
 })();
