@@ -26,8 +26,8 @@
         $httpBackend.whenGET('ws/clientorder/list').respond(coModel.getData());
 
         $httpBackend.whenGET('ws/marketorder').respond((method, url, data) => {
-            const games = coModel.findAll();
-            return [200, games, {}];
+            const marketorderlist = coModel.findAll();
+            return [200, marketorderlist, {}];
         });
 
         // this is the update of an existing resource (ngResource does not send PUT for update)
@@ -268,15 +268,15 @@
                 "status": "Done"
             }];
 
-        this.getData = function() {
+        this.getData = function () {
             return this.data;
         };
 
-        this.setData = function(data) {
+        this.setData = function (data) {
             this.data = data;
         };
 
-        this.findOne = function(gameid) {
+        this.findOne = function (gameid) {
             // find the game that matches that id
             const list = $.grep(this.getData(), (element, index) => element.gameid == gameid);
             if (list.length === 0) {
@@ -286,13 +286,13 @@
             return list[0];
         };
 
-        this.findAll = function() {
+        this.findAll = function () {
             return this.getData();
         };
 
         // options parameter is an object with key value pairs
         // in this simple implementation, value is limited to a single value (no arrays)
-        this.findMany = function(options) {
+        this.findMany = function (options) {
             // find games that match all of the options
             const list = $.grep(this.getData(), (element, index) => {
                 let matchAll = true;
@@ -308,7 +308,7 @@
 
         // add a new data item that does not exist already
         // must compute a new unique id and backfill in
-        this.addOne = function(dataItem) {
+        this.addOne = function (dataItem) {
             // must calculate a unique ID to add the new data
             const newId = this.newId();
             dataItem.gameid = newId;
@@ -317,7 +317,7 @@
         };
 
         // return an id to insert a new data item at
-        this.newId = function() {
+        this.newId = function () {
             // find all current ids
             const currentIds = $.map(this.getData(), dataItem => dataItem.gameid);
             // since id is numeric, and we will treat like an autoincrement field, find max
@@ -326,7 +326,7 @@
             return maxId + 1;
         };
 
-        this.updateOne = function(gameid, dataItem) {
+        this.updateOne = function (gameid, dataItem) {
             // find the game that matches that id
             const games = this.getData();
             let match = null;
@@ -343,7 +343,7 @@
             return match;
         };
 
-        this.deleteOne = function(gameid) {
+        this.deleteOne = function (gameid) {
             // find the game that matches that id
             const games = this.getData();
             let match = false;
@@ -463,7 +463,7 @@
                 "status": "Done"
             }];
 
-        this.getData = function() {
+        this.getData = function () {
             return this.data;
         };
 

@@ -22,6 +22,24 @@
         opacity: 0;
     }
 }
+.ng-animate.animate-fade-short {
+    -webkit-transition: all linear 0.35s;
+    transition: all linear 0.35s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    &.ng-enter {
+        opacity: 0;
+    }
+    &.ng-enter-active {
+        opacity: 1;
+    }
+    &.ng-leave {
+        opacity: 1;
+    }
+    &.ng-leave-active {
+        opacity: 0;
+    }
+}
 .ng-animate.animate-slide {
     -webkit-transition: all linear 0.75s;
     transition: all linear 0.75s;
@@ -48,6 +66,11 @@
 }
 /* use for angular animation end */
 
+/**
+ * Please check animate.css for updating below styles (Keep Clean)
+ * https://daneden.github.io/animate.css/ 
+ */
+ 
 /* copy from animate.css animation begin*/
 .animated {
   -webkit-animation-duration: 0.75s;
@@ -93,5 +116,37 @@
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
+}
+
+
+@-webkit-keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
 }
 /* copy from animate.css animation end */

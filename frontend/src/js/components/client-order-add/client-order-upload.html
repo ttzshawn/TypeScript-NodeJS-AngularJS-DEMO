@@ -1,0 +1,16 @@
+<form class="form-horizontal" enctype="multipart/form-data" action="ws/file/upload" ng-controller="clientOrderUploadCtrl">
+    <fieldset>
+        <div class="form-group">
+            <label for="" class="col-md-2 control-label">Client Orders File</label>
+            <div class="col-md-7">
+                <input type="file" file-model="myFile" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                <button type="button" class="btn btn-primary" ng-click="upload()">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

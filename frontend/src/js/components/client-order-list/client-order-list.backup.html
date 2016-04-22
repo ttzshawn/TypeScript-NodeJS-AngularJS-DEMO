@@ -11,7 +11,7 @@
     <div class="col-lg-12" style="height:92%;width:96%;position:absolute;margin-bottom:0;">
         <ui-layout options="{disableToggle: 'true'}">
             <ui-layout-container>
-                <div class="well animated slideInUp">
+                <div class="well">
                     <div class="row">
                         <div class="col-md-4 col-lg-2">
                             <h4>Client Order List</h4>
@@ -86,7 +86,7 @@
 
             </ui-layout-container>
 
-            <ui-layout-container ng-if="selectedClientOrderId" class="animate-fade-short">
+            <ui-layout-container>
                 <div style="float:right;position:absolute;right: 20px;z-index:999;" ng-click="closeMarketOrderList()"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
                 <ui-layout options="{flow: 'column', disableToggle: 'true'}">
                     <ui-layout-container size="500px" min-size="500px" max-size="600px" style="overflow:hidden;">

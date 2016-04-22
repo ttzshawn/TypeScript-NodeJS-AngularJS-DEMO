@@ -12,14 +12,16 @@
         // $scope.marketOrderList = [];
         $scope.showMarketOrderList = id => {
             if ($scope.selectedClientOrderId != id) {
+                $scope.selectedClientOrderId = id;
                 queryMarketOrderList(id);
             }
         }
 
         $scope.closeMarketOrderList = () => {
-            $scope.close = !$scope.close;
-            console.log($scope.close);
+            // $scope.close = !$scope.close;
+            console.log($scope.selectedClientOrderId);
             $scope.selectedClientOrderId = "";
+            console.log($scope.selectedClientOrderId);
         }
 
         // init

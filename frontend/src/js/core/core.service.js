@@ -67,32 +67,33 @@ const commonTest = true;
         const service = {};
 
         let storageTokenTitle = 'token',
-            storageUserTitle = 'username';
+            storageUserTitle = 'username',
+            ls = $window.localStorage;
 
         // forn user infomation (include token)
         service.createUserInfo = (username, token) => {
-            $window.localStorage.setItem(storageUserTitle, username);
-            $window.localStorage.setItem(storageTokenTitle, token);
+            ls.setItem(storageUserTitle, username);
+            ls.setItem(storageTokenTitle, token);
         }
         service.destroy = () => {
-            $window.localStorage.removeItem(storageUserTitle);
-            $window.localStorage.removeItem(storageTokenTitle);
+            ls.removeItem(storageUserTitle);
+            ls.removeItem(storageTokenTitle);
         }
 
         // only for Token
         service.createToken = (token) => {
-            $window.localStorage.setItem(storageTokenTitle, token);
+            ls.setItem(storageTokenTitle, token);
         };
 
-        service.getToken = () => $window.localStorage.getItem(storageTokenTitle);
+        service.getToken = () => ls.getItem(storageTokenTitle);
 
         service.removeToken = () => {
-            $window.localStorage.removeItem(storageTokenTitle);
+            ls.removeItem(storageTokenTitle);
         }
 
         // only for username
         service.getUsername = () => {
-            $window.localStorage.getItem(storageUserTitle)
+            ls.getItem(storageUserTitle)
         };
 
         service.login = user => CommonService.post("login", user);
@@ -101,8 +102,8 @@ const commonTest = true;
 
         // is session avalid
         service.isAuthenticated = () => {
-            console.log(`isAuthenticated: ${!!$window.localStorage.token}`);
-            return !!$window.localStorage.token;
+            console.log(`isAuthenticated: ${!!ls.token}`);
+            return !!ls.token;
         };
 
         return service;

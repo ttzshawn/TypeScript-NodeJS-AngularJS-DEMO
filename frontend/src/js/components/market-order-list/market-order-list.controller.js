@@ -20,6 +20,9 @@
         AuthService,
         marketOrder,
         mo) {
+        
+        // init
+        $scope.marketOrderList = mo.get();
 
         $scope.$on('market-orde-have-been-set', function (data) {
             $scope.marketOrderList = mo.get();

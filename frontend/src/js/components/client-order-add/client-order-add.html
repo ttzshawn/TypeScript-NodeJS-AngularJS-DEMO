@@ -2,19 +2,24 @@
 
 </style>
 
-<div class="col-lg-6 col-lg-offset-3 well">
-    <h4>New Client Orders</h4>
-    <div ng-controller="clientOrderAddCtrl">
-        <uib-tabset active="activeForm">
-            <uib-tab index="1" heading="Buy">
-                <client-order-buy></client-order-buy>
-            </uib-tab>
-            <uib-tab index="2" heading="Sell">
-                <client-order-sell></client-order-sell>
-            </uib-tab>
-            <uib-tab index="3" heading="Orders File Upload">
-                More Tab Content
-            </uib-tab>
-        </uib-tabset>
+<div class="col-lg-6 col-lg-offset-3 animated slideInUp">
+
+    <div class="panel panel-default" ng-controller="clientOrderAddCtrl">
+        <div class="panel-heading">New Client Orders</div>
+        <div class="panel-body">
+            <uib-tabset active="activeForm">
+                <uib-tab index="1" heading="Buy" style="margin-bottom: 20px;">
+                    <client-order-buy></client-order-buy>
+                </uib-tab>
+                <uib-tab index="2" heading="Sell">
+                    <client-order-sell></client-order-sell>
+                </uib-tab>
+                <uib-tab index="3" heading="Orders File Upload">
+                    <client-order-upload></client-order-upload>
+                </uib-tab>
+            </uib-tabset>
+        </div>
     </div>
+
+
 </div>
